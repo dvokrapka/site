@@ -1,0 +1,46 @@
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3.5em;
+    }
+}
+
+h2 {
+    font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+    h2 {
+        font-size: 2em;
+    }
+}
+
+p {
+    font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+
+/*Color*/
+
+.white-text {
+    color: #FFF;
+}
+
+.yellow-text {
+    color: #FBBA00;
+}
+
+.grey-text {
+    color: #2D2D2D;
+}
+
+.black-text {
+    color: #000;
+}

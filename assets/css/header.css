@@ -1,0 +1,25 @@
+header {
+    box-sizing: border-box;
+    background: #2D2D2D;
+    background: linear-gradient(rgba(0, 0, 0, .5) 5%, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .1) 80%, transparent 100%) no-repeat;
+    display: flex;
+    height: 80px;
+    left: 0;
+    margin: auto;
+    max-width: 1920px;
+    padding: 0 8vw;
+    position: fixed;
+    right: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,.5);
+    top: 0;
+    z-index: 9999;
+    transition: all .5s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+}
+
+/*Header effect on scroll*/
+
+.header-scroll {
+    background: #2D2D2D;
+		height: 55px;
+    text-shadow: none;
+}
