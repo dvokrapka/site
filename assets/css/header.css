@@ -1,7 +1,7 @@
 header {
     box-sizing: border-box;
-    background: #2D2D2D;
-    background: linear-gradient(rgba(0, 0, 0, .5) 5%, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .1) 80%, transparent 100%) no-repeat;
+    /*background: #2D2D2D;*/
+    /*background: linear-gradient(rgba(0, 0, 0, .5) 5%, rgba(0, 0, 0, .4) 30%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, .1) 80%, transparent 100%) no-repeat;*/
     display: flex;
     height: 80px;
     left: 0;

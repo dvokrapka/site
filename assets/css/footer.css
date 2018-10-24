@@ -58,9 +58,9 @@ footer {
 
 .footer-contacts>a {
     display: block;
-    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 700;
-    font-size: 1.8em;
+    font-size: 2em;
     text-align: center;
     line-height: normal;
     text-decoration: none;

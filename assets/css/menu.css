@@ -19,10 +19,11 @@
 }
 
 .main-menu {
+    display: none;
     align-items: center;
-    display: flex;
     justify-content: center;
 }
+
 
 .main-menu li {
     list-style: none;
@@ -51,6 +52,25 @@
     margin: 0 auto;
 }
 
+.change-language li {
+    list-style: none;
+}
+
+.change-language li a {
+    display: block;
+    padding: 0 8px;
+}
+
+.change-language .active {
+    font-weight: 900;
+    color: #FBBA00;
+}
+
+.lang-items {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
 
 
 /*Mobile menu*/
@@ -122,4 +142,3 @@
     position: absolute;
     width: 50px;
 }
-

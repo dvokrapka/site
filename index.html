@@ -1,288 +1,294 @@
 <!DOCTYPE html>
 <html lang="uk-UA">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<script src="assets/js/font_loader.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/uikit.min.css" />
-		<link rel="stylesheet" href="assets/css/accordion.min.css">
-		<link rel="stylesheet" href="assets/css/notify.min.css">
-		<link rel="stylesheet" href="assets/css/header.css">
-		<link rel="stylesheet" href="assets/css/template.css">
-		<link rel="stylesheet" href="assets/css/text.css">
-		<link rel="stylesheet" href="assets/css/birds.css">
-		<link rel="stylesheet" href="assets/css/menu.css">
-		<link rel="stylesheet" href="assets/css/footer.css">
-		<title>:KRAPKA</title>
-		<!-- Favicon -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">
-	</head>
-	<body>
-		<header>
-			<!-- Top menu -->
-			<div class="top-menu">
-				<img class="toplogo" src="assets/img/logo-4.svg" alt="Лого Двокрапка">
-				<div class="main-menu uk-hidden-small">
-					<ul class="menu-items">
-						<li><a href="#home">Головна</a></li>
-						<li><a href="#portfolio">Портфоліо</a></li>
-						<li><a href="#contacts">Контакти</a></li>
-					</ul>
-					<ul class="change-language">
-						<li><a href="#">UA</a></li>
-					</ul>
-				</div>
-				<img class="burger uk-visible-small" id="openMenu" src="assets/img/burger-menu.svg" alt="Бургер меню">
-			</div>
-			<!-- Mob Menu -->
-			<div class="mob-menu">
-				<div class="mob-menu-container">
-					<img id="closeMenu" class="close-menu" src="assets/img/close-menu.svg" alt="Закриття меню"/>
-					<img class="mob-menu-logo" src="assets/img/logo-4.svg" alt="Лого Двокрапка"/>
-					<div class="mob-menu-items">
-						<a href="#home">Головна</a>
-						<a href="#portfolio">Портфоліо</a>
-						<a href="#contacts">Контакти</a>
-					</div>
-					<div class="social-mob">
-						<a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
-						<a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
-						<a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
-						<a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
-					</div>
-				</div>
-			</div>
-		</header>
-		<main>
-			<!-- First screen -->
-			<section id="home" class="first-screen">
-				<div class="first-screen-bg"></div>
-				<div id="title" data-uk-parallax="{y: '0,-200'}">
-					<span class="name">:KRAPKA</span>
-					<h1 class="gaslo grey-text">Проникливий дизайн...</h1>
-					<a href="#services">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/js/font_loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/uikit.min.css" />
+    <link rel="stylesheet" href="assets/css/accordion.min.css">
+    <link rel="stylesheet" href="assets/css/notify.min.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/template.css">
+    <link rel="stylesheet" href="assets/css/text.css">
+    <link rel="stylesheet" href="assets/css/birds.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <title>:KRAPKA</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <!-- Top menu -->
+        <div class="top-menu">
+            <img class="toplogo" src="assets/img/logo-4.svg" alt="Лого Двокрапка">
+            <div class="main-menu uk-hidden-small">
+                <ul class="menu-items">
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#portfolio">Портфоліо</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+                <div class="change-language">
+                    <ul class="lang-items">
+                        <li><a class="active" href="#">UA</a></li>
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">RU</a></li>
+                    </ul>
+                </div>
+            </div>
+            <svg class="burger uk-visible-small uk-text-right" id="openMenu" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" version="1.1" viewBox="0 0 25012 21843.07" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M1703.01 12624.55c-470.2,0 -895.98,-190.66 -1204.17,-498.84 -308.18,-308.19 -498.84,-733.95 -498.84,-1204.17 0,-470.21 190.66,-895.98 498.84,-1204.18 308.19,-308.17 733.97,-498.83 1204.17,-498.83l21605.94 0c470.2,0 895.98,190.66 1204.2,498.85 308.19,308.18 498.85,733.95 498.85,1204.16 0,470.22 -190.66,895.98 -498.85,1204.17 -308.19,308.18 -734,498.84 -1204.2,498.84l-21605.94 0zm0 -9218.53c-470.2,0 -895.98,-190.66 -1204.17,-498.84 -308.18,-308.19 -498.84,-733.95 -498.84,-1204.17 0,-470.2 190.66,-895.98 498.84,-1204.17 308.19,-308.18 733.97,-498.84 1204.17,-498.84l21605.94 0c470.2,0 895.98,190.66 1204.2,498.85 308.19,308.18 498.85,733.96 498.85,1204.16 0,470.22 -190.66,895.98 -498.85,1204.17 -308.19,308.18 -734,498.84 -1204.2,498.84l-21605.94 0zm0 18437.05c-470.2,0 -895.98,-190.66 -1204.17,-498.84 -308.18,-308.19 -498.84,-733.95 -498.84,-1204.17 0,-470.21 190.66,-895.98 498.84,-1204.18 308.19,-308.17 733.97,-498.83 1204.17,-498.83l21605.94 0c470.2,0 895.98,190.66 1204.2,498.85 308.19,308.18 498.85,733.95 498.85,1204.16 0,470.22 -190.66,895.98 -498.85,1204.17 -308.19,308.18 -734,498.84 -1204.2,498.84l-21605.94 0z" />
+            </svg>
+            <!-- <img class="burger uk-visible-small" id="openMenu" src="assets/img/burger-menu2.svg" alt="Бургер меню"> -->
+        </div>
+        <!-- Mob Menu -->
+        <div class="mob-menu">
+            <div class="mob-menu-container">
+                <img id="closeMenu" class="close-menu" src="assets/img/close-menu.svg" alt="Закриття меню"/>
+                <img class="mob-menu-logo" src="assets/img/logo-4.svg" alt="Лого Двокрапка"/>
+                <div class="mob-menu-items">
+                    <a href="#home">Головна</a>
+                    <a href="#portfolio">Портфоліо</a>
+                    <a href="#contacts">Контакти</a>
+                </div>
+                <div class="social-mob">
+                    <a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
+                    <a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- First screen -->
+        <section id="home" class="first-screen">
+            <div class="first-screen-bg"></div>
+            <div id="title" data-uk-parallax="{y: '0,-200'}">
+                <span class="name">:KRAPKA</span>
+                <h1 class="gaslo grey-text">Проникливий дизайн...</h1>
+                <a href="#services">
 						<img class="scrollbottom" src="assets/img/go-down.svg" alt="Вниз">
 					</a>
-				</div>
-			</section>
-			<!-- Services -->
-			<section id="services" class="sect-container uk-text-center">
-				<h1 class="titles uk-margin-large-top" data-uk-parallax="{y: '100, 0', viewport: '0.5'}">:Вигадуємо. <span class="yellow-text">Розробляємо.</span> Малюємо</h1>
+            </div>
+        </section>
+        <!-- Services -->
+        <section id="services" class="sect-container uk-text-center">
+            <h1 class="titles uk-margin-top" data-uk-parallax="{y: '100, 0', viewport: '0.5'}">:Вигадуємо. <span class="yellow-text">Розробляємо.</span> Малюємо</h1>
+            <div class="services uk-margin-bottom">
+                <div class="services-container">
+                    <img src="assets/img/logodis.svg" alt="Фірмовий стиль">
+                    <h2 class="yellow-text">Логотипи</h2>
+                    <div class="services-hover">
+                        <div class="services-hover-block">
+                            <h2>Логотипи</h2>
+                            <p>Розробляємо фірмовий стиль та створюємо Логотипи</p>
+                            <a href="logotypes">
+									<img class="scrollright" src="assets/img/go-right.svg" alt="Вправо">
+								</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-container">
+                    <img src="assets/img/webdis.svg" alt="Фірмовий стиль">
+                    <h2 class="yellow-text">Сайти</h2>
+                    <div class="services-hover">
+                        <div class="services-hover-block">
+                            <h2>Сайти</h2>
+                            <p>Розробляємо та малюємо сайти</p>
+                            <a href="">
+									<img class="scrollright" src="assets/img/go-right.svg" alt="Вправо">
+								</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-container">
+                    <img src="assets/img/advdis.svg" alt="Фірмовий стиль">
+                    <h2 class="yellow-text">Рекламу</h2>
+                    <div class="services-hover">
+                        <div class="services-hover-block">
+                            <h2>Рекламу</h2>
+                            <p>Розробляємо макети рекламної поліграфії та зовнішньої реклами</p>
+                            <a href="">
+									<img class="scrollright" src="assets/img/go-right.svg" alt="Вправо">
+								</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio preview -->
+        <section class="dark-bg uk-text-center">
+            <div id="portfolio" class="sect-container">
+                <h1 class="titles white-text" data-uk-parallax="{y: '100, 0', viewport: '0.5'}">:Наші <span class="yellow-text">роботи</span></h1>
+                <div class="portfolio-preview uk-grid uk-grid-width-medium-1-3 uk-grid-collapse uk-margin-large-bottom">
+                    <figure class="uk-overlay uk-overlay-hover">
+                        <img src="assets/img/1.jpg" alt="Зображення 1">
+                        <figcaption class="uk-overlay-panel overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle">
+                            <div class="uk-width-medium-8-10 uk-text-left">
+                                <h2>Назва проекту</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
+                                    ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
+                                <a href="" class="uk-flex uk-flex-middle">
+								<img class="more" src="assets/img/more.svg" alt="Більше">
+								<span class="more-txt yellow-text">Переглянути</span>
+							</a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="uk-overlay uk-overlay-hover">
+                        <img src="assets/img/2.jpg" alt="Зображення 1">
+                        <figcaption class="uk-overlay-panel overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle">
+                            <div class="uk-width-medium-8-10 uk-text-left">
+                                <h2>Назва проекту</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
+                                    ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
+                                <a href="" class="uk-flex uk-flex-middle">
+								<img class="more" src="assets/img/more.svg" alt="Більше">
+								<span class="more-txt yellow-text">Переглянути</span>
+							</a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="uk-overlay uk-overlay-hover">
+                        <img src="assets/img/6.jpg" alt="Зображення 1">
+                        <figcaption class="uk-overlay-panel overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle">
+                            <div class="uk-width-medium-8-10 uk-text-left">
+                                <h2>Назва проекту</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
+                                    ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
+                                <a href="" class="uk-flex uk-flex-middle">
+								<img class="more" src="assets/img/more.svg" alt="Більше">
+								<span class="more-txt yellow-text">Переглянути</span>
+							</a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="uk-overlay uk-overlay-hover">
+                        <img src="assets/img/3.jpg" alt="Зображення 1">
+                        <figcaption class="uk-overlay-panel overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle">
+                            <div class="uk-width-medium-8-10 uk-text-left">
+                                <h2>Назва проекту</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
+                                    ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
+                                <a href="" class="uk-flex uk-flex-middle">
+								<img class="more" src="assets/img/more.svg" alt="Більше">
+								<span class="more-txt yellow-text">Переглянути</span>
+							</a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="uk-overlay uk-overlay-hover">
+                        <img src="assets/img/5.jpg" alt="Зображення 1">
+                        <figcaption class="uk-overlay-panel overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle">
+                            <div class="uk-width-medium-8-10 uk-text-left">
+                                <h2>Назва проекту</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
+                                    ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
+                                <a href="" class="uk-flex uk-flex-middle">
+								<img class="more" src="assets/img/more.svg" alt="Більше">
+								<span class="more-txt yellow-text">Переглянути</span>
+							</a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure class="uk-overlay uk-overlay-hover">
+                        <img src="assets/img/4.jpg" alt="Зображення 1">
+                        <figcaption class="uk-overlay-panel overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle">
+                            <div class="uk-width-medium-8-10 uk-text-left">
+                                <h2>Назва проекту</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
+                                    ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
+                                <a href="" class="uk-flex uk-flex-middle">
+								<img class="more" src="assets/img/more.svg" alt="Більше">
+								<span class="more-txt yellow-text">Переглянути</span>
+							</a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <a href="#" class="sm-button sm-yellow" data-uk-parallax="{y: '100, 0', viewport: '0.2'}">Хочу Більше</a>
+            </div>
+        </section>
+        <!-- About us -->
+        <section class="sect-container yellow-bg uk-text-center">
+            <h1 class="grey-text" data-uk-parallax="{y: '100, 0', viewport: '0.5'}"><span class="white-text">:Трошки</span> про нас</h1>
+            <div class="about-us-screen">
+                <div class="about-us-col">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Lyrics -->
+        <section class="home-design">
+            <h1 class="home-design-txt" data-uk-parallax="{opacity: '0,1', viewport: '0.5'}"><span class="yellow-text">:Бо</span> дизайнери...</h1>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-bg"></div>
+        <div class="footer-contacts" data-uk-parallax="{opacity: '0,1', viewport: '0.5'}">
+            <a href="tel:+0679992091">(067) 999 20 91</a>
+            <a href="mailto:email@gmail.com">email@gmail.com</a>
+            <!--Accordion-->
+            <div id="formAccordion" class="form-button uk-accordion uk-text-center" data-uk-accordion="{showfirst  : false}">
+                <button class="uk-accordion-title sm-button sm-black">Напишіть нам</button>
+                <div class="uk-accordion-content">
+                    <form id="contactMe" action="" method="POST" class="form">
+                        <input type="text" id="name" name="name" placeholder="Ім’я">
+                        <input type="email" id="email" name="email" placeholder="E-mail">
+                        <textarea placeholder="Повідомлення" rows="5"></textarea>
+                        <button type="submit" class="sm-button sm-yellow">Надіслати</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Birds -->
+        <div>
+            <div class="bird-container bird-container--one">
+                <div class="bird bird--one"></div>
+            </div>
+            <div class="bird-container bird-container--two">
+                <div class="bird bird--two"></div>
+            </div>
+            <div class="bird-container bird-container--three">
+                <div class="bird bird--three"></div>
+            </div>
+            <div class="bird-container bird-container--four">
+                <div class="bird bird--four"></div>
+            </div>
+        </div>
+        <!--Footer Social-->
+        <div id="contacts" class="footer-social">
+            <div class="social">
+                <a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
+                <a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
+                <a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
+                <a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
+            </div>
+            <div class="footer-copyright">Copyright © :KRAPKA 2018. All rights reserved
+            </div>
+        </div>
+    </footer>
+    <img id="goTop" class="scroll-top" src="assets/img/go-top.svg" alt="Вгору">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/uikit.min.js"></script>
+    <script src="assets/js/accordion.min.js"></script>
+    <script src="assets/js/fs-parallax.js"></script>
+    <script src="assets/js/parallax.min.js"></script>
+    <script src="assets/js/notify.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
 
-				<div class="services">
-					<div class="uk-grid uk-grid-width-medium-1-3" data-uk-grid-margin>
-						<div>
-							<div class="services-container">
-									<img src="assets/img/logodis.svg" alt="Фірмовий стиль">
-									<h2 class="yellow-text">Логотипи</h2>
-									<div class="services-hover">
-										<div class="services-hover-block">
-											<h2>Логотипи</h2>
-											<p>Розробляємо фірмовий стиль та створюємо Логотипи</p>
-											<a href="logotypes">
-												<img class="scrollright" src="assets/img/go-right.svg" alt="Вправо">
-											</a>
-										</div>
-									</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="services-container">
-									<img src="assets/img/webdis.svg" alt="Фірмовий стиль">
-									<h2 class="yellow-text">Сайти</h2>
-									<div class="services-hover">
-										<div class="services-hover-block">
-											<h2>Сайти</h2>
-											<p>Розробляємо та малюємо сайти</p>
-											<a href="">
-												<img class="scrollright" src="assets/img/go-right.svg" alt="Вправо">
-											</a>
-										</div>
-									</div>
-							</div>
-						</div>
-
-						<div>
-							<div class="services-container">
-									<img src="assets/img/advdis.svg" alt="Фірмовий стиль">
-									<h2 class="yellow-text">Рекламу</h2>
-									<div class="services-hover">
-										<div class="services-hover-block">
-											<h2>Рекламу</h2>
-											<p>Розробляємо макети рекламної поліграфії та зовнішньої реклами</p>
-											<a href="">
-												<img class="scrollright" src="assets/img/go-right.svg" alt="Вправо">
-											</a>
-										</div>
-									</div>
-							</div>
-						</div>
-
-
-				</div>
-
-			</section>
-			<!-- Portfolio preview -->
-			<section class="dark-bg uk-text-center">
-				<section id="portfolio" class="sect-container portfolio-preview">
-					<h1 class="titles white-text" data-uk-parallax="{y: '100, 0', viewport: '0.5'}">:Наші <span class="yellow-text">роботи</span></h1>
-					<section>
-						<div class="portfolio-container uk-width-medium-8-10 uk-align-center">
-							<div>
-								<figure class="uk-overlay uk-overlay-hover">
-									<img src="https://picsum.photos/400/400?random" alt="Зображення 1">
-									<figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle">
-									<div class="uk-width-medium-8-10 uk-text-left">
-										<h2>Назва проекту</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
-										ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
-									</div>
-									</figcaption>
-								</figure>
-							</div>
-							<div>
-								<figure class="uk-overlay uk-overlay-hover">
-									<img src="https://picsum.photos/400/400?random" alt="Зображення 2">
-									<figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle">
-									<div class="uk-width-medium-8-10 uk-text-left">
-										<h2>Назва проекту</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
-										ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
-									</div>
-									</figcaption>
-								</figure>
-							</div>
-							<div>
-								<figure class="uk-overlay uk-overlay-hover">
-									<img src="https://picsum.photos/400/400?random" alt="Зображення 3">
-									<figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle">
-									<div class="uk-width-medium-8-10 uk-text-left">
-										<h2>Назва проекту</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
-										ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
-									</div>
-									</figcaption>
-								</figure>
-							</div>
-							<div>
-								<figure class="uk-overlay uk-overlay-hover">
-									<img src="https://picsum.photos/400/400?random" alt="Зображення 4">
-									<figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle">
-									<div class="uk-width-medium-8-10 uk-text-left">
-										<h2>Назва проекту</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
-										ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
-									</div>
-									</figcaption>
-								</figure>
-							</div>
-							<div>
-								<figure class="uk-overlay uk-overlay-hover">
-									<img src="https://picsum.photos/400/400?random" alt="Зображення 5">
-									<figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle">
-									<div class="uk-width-medium-8-10 uk-text-left">
-										<h2>Назва проекту</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
-										ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
-									</div>
-									</figcaption>
-								</figure>
-							</div>
-							<div>
-								<figure class="uk-overlay uk-overlay-hover">
-									<img src="https://picsum.photos/400/400?random" alt="Зображення 6">
-									<figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle">
-									<div class="uk-width-medium-8-10 uk-text-left">
-										<h2>Назва проекту</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse. Lorem
-										ipsum dolor sit amet, consectetur adipisicing elit. Incidunt labore, numquam? Nobis delectus quis sequi, cum omnis, dicta autem voluptates, amet quasi tenetur corrupti labore porro quia itaque quas esse.</p>
-									</div>
-									</figcaption>
-								</figure>
-							</div>
-						</div>
-					</section>
-					<a href="#" class="sm-button sm-yellow" data-uk-parallax="{y: '100, 0', viewport: '0.2'}">Більше</a>
-				</section>
-			</section>
-			<!-- About us -->
-			<section class="sect-container yellow-bg uk-text-center">
-				<h1 class="grey-text" data-uk-parallax="{y: '100, 0', viewport: '0.5'}"><span class="white-text">:Трошки</span> про нас</h1>
-				<div class="about-us-screen">
-					<div class="about-us-col">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-					</div>
-				</div>
-			</section>
-			<!-- Lyrics -->
-			<section class="home-design">
-				<h1 class="home-design-txt" data-uk-parallax="{opacity: '0,1', viewport: '0.5'}"><span class="yellow-text">:Бо</span> дизайнери...</h1>
-			</section>
-		</main>
-		<footer>
-			<div class="footer-bg"></div>
-			<div class="footer-contacts" data-uk-parallax="{opacity: '0,1', viewport: '0.5'}">
-				<a href="tel:+0679992091">(067) 999 20 91</a>
-				<a href="mailto:email@gmail.com">email@gmail.com</a>
-				<!--Accordion-->
-				<div id="formAccordion" class="form-button uk-accordion uk-text-center" data-uk-accordion="{showfirst  : false}">
-					<button class="uk-accordion-title sm-button sm-black">Напишіть нам</button>
-					<div class="uk-accordion-content">
-						<form id="contactMe" action="" method="POST" class="form">
-							<input type="text" id="name" name="name" placeholder="Ім’я">
-							<input type="email" id="email" name="email" placeholder="E-mail">
-							<textarea placeholder="Повідомлення" rows="5"></textarea>
-							<button type="submit" class="sm-button sm-yellow">Надіслати</button>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Birds -->
-			<div>
-				<div class="bird-container bird-container--one">
-					<div class="bird bird--one"></div>
-				</div>
-				<div class="bird-container bird-container--two">
-					<div class="bird bird--two"></div>
-				</div>
-				<div class="bird-container bird-container--three">
-					<div class="bird bird--three"></div>
-				</div>
-				<div class="bird-container bird-container--four">
-					<div class="bird bird--four"></div>
-				</div>
-			</div>
-			<!--Footer Social-->
-			<div id="contacts" class="footer-social">
-				<div class="social">
-					<a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
-					<a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
-					<a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
-					<a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
-				</div>
-				<div class="footer-copyright">Copyright © :KRAPKA 2018. All rights reserved
-				</div>
-			</div>
-		</footer>
-		<img id="goTop" class="scroll-top" src="assets/img/go-top.svg" alt="Вгору">
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/uikit.min.js"></script>
-		<script src="assets/js/accordion.min.js"></script>
-		<script src="assets/js/fs-parallax.js"></script>
-		<script src="assets/js/parallax.min.js"></script>
-		<script src="assets/js/notify.min.js"></script>
-		<script src="assets/js/index.js"></script>
-	</body>
 </html>
