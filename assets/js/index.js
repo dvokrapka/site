@@ -50,12 +50,7 @@ function toggleMobMenu(bool) {
 // Change opacity & size of header on scroll
 function toggleHeader() {
     $('header').toggleClass('header-scroll', window.pageYOffset >= 80);
-
-    if (window.pageYOffset >= 80) {
-   		 $('.main-menu').css("display", "flex");
-    } else {
-    	$('.main-menu').css("display", "none");
-    }
+    $('.main-menu').toggleClass('main-menu-vis', window.pageYOffset >= 80);
 }
 
 // Scroll to top
