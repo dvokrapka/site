@@ -1,5 +1,4 @@
 /*Template*/
-
 html,
 body {
     margin: 0 auto;
@@ -141,7 +140,7 @@ body {
 /*Design*/
 .home-design {
     min-height: 80vh;
-    background: url('./../img/background-par3.jpg') no-repeat center center fixed;
+    background: url('../../../assets/img/background-par3.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -269,8 +268,7 @@ body {
 
 /*No outlines for a*/
 
-a,
-button {
+a {
     outline: 0;
     outline-style: none;
     outline-width: 0;
@@ -294,10 +292,10 @@ a:hover {
 
 .scrollright {
     animation: sr_animate 2s infinite;
+    cursor: pointer;
     height: 50px;
     width: 50px;
     will-change: transform;
-    cursor: pointer;
 }
 
 .scrollright:hover {
