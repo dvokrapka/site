@@ -11748,7 +11748,7 @@ footer {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: url("img/city_grey.png") no-repeat center bottom, linear-gradient(#f5f7fa, #c3cfe2);
+  background: url("../../assets/img/city_grey.png") no-repeat center bottom, linear-gradient(#f5f7fa, #c3cfe2);
   background-blend-mode: unset;
   background-size: 300%;
   animation: move-city 10s ease infinite;
@@ -12280,7 +12280,7 @@ body {
 
 .about-us-col p {
   font-size: 1.5em;
-  line-height: normal;
+  line-height: 1.5em;
 }
 
 /*Buttons*/

@@ -180,7 +180,7 @@ body {
 
 .about-us-col p {
 		font-size: 1.5em;
-		line-height: normal;
+		line-height: 1.5em;
 }
 
 
@@ -293,8 +293,6 @@ a:hover {
 .yellow-bg {
     background-color: #FBBA00;
 }
-
-
 
 .scrollright {
     animation: sr_animate 2s infinite;
