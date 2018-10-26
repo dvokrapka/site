@@ -102,16 +102,12 @@ $(function() {
             $prev = $container.find('.prev'),
             $desc = $container.find('.services-hover');
 
-        $container.mouseenter(function() {
-
-          $desc.css("display", "flex").hide().fadeIn();
-
-
-        }).mouseleave(function() {
-            $desc.fadeOut(function() {
-            		$desc.css("display", "none");
-                $prev.fadeIn();
+        $container
+            .mouseenter(function() {
+                $desc.css("display", "flex").hide().fadeIn();
+            })
+            .mouseleave(function() {
+                $desc.fadeOut('fast');
             });
-        });
     });
 });

@@ -64,17 +64,31 @@ body {
 
 .services {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .services-container {
-    min-height: 300px;
-    margin: 50px 0;
+    min-height: 84vw;
+    min-width: 84vw;
     position: relative;
-    min-width: 300px;
 }
+
+@media screen and (min-width: 768px) {
+    .services-container {
+        min-width: 25vw;
+        min-height: 25vw;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .services-container {
+        min-width: 15vw;
+        min-height: 15vw;
+    }
+}
+
 
 .services-container:hover {
     cursor: pointer;
@@ -194,6 +208,12 @@ body {
 
 .scroll-top:hover {
     transform: translateY(-10px);
+}
+
+@media screen and (min-width: 1920px) {
+    .scroll-top {
+        right: 10vw;
+    }
 }
 
 .sm-button {
