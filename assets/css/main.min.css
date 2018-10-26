@@ -12130,8 +12130,7 @@ body {
 }
 
 .first-screen-bg {
-  background: radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed,
-        #FBBA00;
+  background: radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed, #FBBA00;
   background-size: 36px 36px, cover;
   height: 130%;
   position: absolute;
@@ -12173,16 +12172,14 @@ body {
 }
 
 .services-container {
+  min-height: 300px;
   margin: 50px 0;
-  width: 300px;
-  height: 300px;
-  /*padding: 0;*/
   position: relative;
+  min-width: 300px;
 }
 
 .services-container:hover {
   cursor: pointer;
-  color: #000;
 }
 
 /*Services on hover*/
@@ -12199,27 +12196,6 @@ body {
   width: 100%;
 }
 
-.services-hover-block {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.show-services {
-  animation: sweep 1.5s ease-in-out;
-}
-
-@keyframes sweep {
-  0% {
-    margin-left: -10px;
-    opacity: 0;
-  }
-
-  100% {
-    margin-left: 0;
-    opacity: 1;
-  }
-}
-
 /*Preview Portfolio*/
 
 .portfolio-container {
@@ -12232,8 +12208,6 @@ body {
 
 .overlay-background {
   background: rgba(0, 0, 0, 0.9);
-  /*background: #000;*/
-  /*background: #2D2D2D;*/
 }
 
 /*Design*/
@@ -12312,12 +12286,12 @@ body {
 .scroll-top {
   bottom: 20px;
   cursor: pointer;
+  display: none;
   height: 50px;
   position: fixed;
   right: 20px;
   transition: transform .3s ease;
   width: 50px;
-  display: none;
 }
 
 .scroll-top:hover {

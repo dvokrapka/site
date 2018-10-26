@@ -49,7 +49,7 @@ function toggleMobMenu(bool) {
 
 // Change opacity & size of header on scroll
 function toggleHeader() {
-		var scroll = window.pageYOffset >= 80;
+    var scroll = window.pageYOffset >= 80;
 
     $('header').toggleClass('header-scroll', scroll);
     $('.main-menu').toggleClass('main-menu-vis', scroll);
@@ -95,17 +95,23 @@ $('#contactMe').on('submit', function(event) {
 
 // Toggle services on hover
 $(function() {
-    $('.services-container').mouseenter(function() {
 
-        $(this)
-            .find('.services-hover').css("display", "flex")
-            .hide()
-            .fadeIn()
-            .find('.services-hover-block > *')
-            .addClass('show-services');
+    $('.services-container').each(function() {
 
-    }).mouseleave(function() {
-        $(this)
-            .find('.services-hover').fadeOut();
+        var $container = $(this),
+            $prev = $container.find('.prev'),
+            $desc = $container.find('.services-hover');
+
+        $container.mouseenter(function() {
+
+          $desc.css("display", "flex").hide().fadeIn();
+
+
+        }).mouseleave(function() {
+            $desc.fadeOut(function() {
+            		$desc.css("display", "none");
+                $prev.fadeIn();
+            });
+        });
     });
 });
