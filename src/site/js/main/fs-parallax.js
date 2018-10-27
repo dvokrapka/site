@@ -13,7 +13,7 @@ function moveBackground() {
     var translate = 'translate(' + x*2 + 'px, ' + y*2 + 'px)';
 
     // Animate background
-    $('.first-screen-bg').css({
+    $('.fs-bg-2').css({
         '-webit-transform': translate,
         '-moz-transform': translate,
         'transform': translate

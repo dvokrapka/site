@@ -12130,37 +12130,62 @@ body {
   text-align: center;
 }
 
-.first-screen-bg {
-  background: radial-gradient(rgba(0, 0, 0, .2) 6px, transparent 6px) center center fixed, #FBBA00;
-  background-size: 36px 36px, cover;
-  height: 130%;
+.fs-bg-1 {
   position: absolute;
-  width: 130%;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  margin-top: -80px;
+  background: linear-gradient(-45deg, #FFBF00, #FBBA00, #E2A801);
+  background-size: 300% 300%;
+  animation: fs-gradient 15s ease infinite;
+}
+
+@keyframes fs-gradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.fs-bg-2 {
+  background: radial-gradient(#E2A801 6px, transparent 6px) center center fixed;
+  background-size: 36px 36px;
+  height: 120%;
+  margin-top: -80px;
+  position: absolute;
+  width: 120%;
   z-index: -1;
 }
 
-.first-screen-bg:hover {
-  will-change: transform;
-}
-
 .name {
-  color: #fff;
+  color: #E2A801;
   font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 5em;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+  text-shadow: 0 0 3px #333, 0 0 5px rgba(0,0,0,.5), 0 0 10px rgba(0,0,0,.2);
   text-transform: uppercase;
-  pointer-events: none;
+  transition: color .8s ease;
+}
+
+.gaslo {
+  margin-top: -.3em;
+  transition: color .8s, text-shadow .8s ease;
+}
+
+.name:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.gaslo:hover {
+  text-shadow: 0 0 3px #333;
+  color: #fff;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
   .name {
     font-size: 12em;
   }
-}
-
-.gaslo {
-  margin-top: -20px;
-  pointer-events: none;
 }
 
 /*Services*/
@@ -12180,8 +12205,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .services-container {
-    min-width: 20vw;
     min-height: 20vw;
+    min-width: 20vw;
   }
 }
 
@@ -12256,7 +12281,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   text-align: left;
-  background-color: #FBBA00;
 }
 
 @media screen and (min-width: 768px) {
@@ -12382,7 +12406,10 @@ a:hover {
 }
 
 .yellow-bg {
-  background-color: #FBBA00;
+  background: radial-gradient(#E2A801 5px, transparent 5px) center center fixed, #FBBA00;
+  color: #FBBA00;
+  background-size: 36px 36px, cover;
+  /*background-color: #FBBA00;*/
 }
 
 .scrollright {
