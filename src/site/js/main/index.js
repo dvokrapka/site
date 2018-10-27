@@ -104,10 +104,10 @@ $(function() {
 
         $container
             .mouseenter(function() {
-                $desc.css("display", "flex").hide().fadeIn();
+                $desc.css("display", "flex").hide().fadeIn('slow');
             })
             .mouseleave(function() {
-                $desc.fadeOut('fast');
+                $desc.fadeOut('slow');
             });
     });
 });
