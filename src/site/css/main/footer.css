@@ -18,9 +18,8 @@ footer {
 	height: 100%;
 	width: 100%;
 	background: url('../../../assets/img/city_grey.png') no-repeat center bottom, linear-gradient(#f5f7fa, #c3cfe2);
-	background-blend-mode: unset;
 	background-size: 300%;
-	animation: move-city 10s ease infinite;
+	animation: move-city 10s infinite;
 }
 
 @media screen and (min-width: 768px) {

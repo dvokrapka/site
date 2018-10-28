@@ -54,8 +54,8 @@
     list-style: none;
 }
 
-.main-menu li a {
-    color: #fff;
+.main-menu li > a {
+    color: #E2A801;
     display: block;
     font-size: 1.2em;
     font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -66,9 +66,8 @@
 }
 
 .main-menu li a:hover {
-    color: #FBBA00;
+    color: #fff;
     transform: translateX(5px);
-    will-change: transform;
 }
 
 .menu-items {

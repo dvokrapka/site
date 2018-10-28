@@ -11749,9 +11749,8 @@ footer {
   height: 100%;
   width: 100%;
   background: url("../../assets/img/city_grey.png") no-repeat center bottom, linear-gradient(#f5f7fa, #c3cfe2);
-  background-blend-mode: unset;
   background-size: 300%;
-  animation: move-city 10s ease infinite;
+  animation: move-city 10s infinite;
 }
 
 @media screen and (min-width: 768px) {
@@ -11965,8 +11964,8 @@ header {
   list-style: none;
 }
 
-.main-menu li a {
-  color: #fff;
+.main-menu li > a {
+  color: #E2A801;
   display: block;
   font-size: 1.2em;
   font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -11977,9 +11976,8 @@ header {
 }
 
 .main-menu li a:hover {
-  color: #FBBA00;
+  color: #fff;
   transform: translateX(5px);
-  will-change: transform;
 }
 
 .menu-items {
@@ -12130,20 +12128,31 @@ body {
   text-align: center;
 }
 
+.fs-bg-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #E2A801;
+  /*transition: opacity .2s ease;*/
+  animation: showfs 4s forwards;
+}
+
 .fs-bg-1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -2;
   margin-top: -80px;
-  background: linear-gradient(-45deg, #FFBF00, #FBBA00, #E2A801);
-  background-size: 300% 300%;
-  animation: fs-gradient 15s ease infinite;
+  z-index: -2;
+  background: linear-gradient(-45deg, #E2A801 20%, #FFBF00, #E2A801 82%);
+  /*background: linear-gradient(-45deg, #E2A801 20%, #FFBF00 20%, #FFBF00 80%, #E2A801 80%);*/
 }
 
-@keyframes fs-gradient {
-  50% {
-    background-position: 100% 50%;
+@keyframes showfs {
+  100% {
+    opacity: 0;
   }
 }
 
@@ -12161,23 +12170,31 @@ body {
   color: #E2A801;
   font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 5em;
-  text-shadow: 0 0 3px #333, 0 0 5px rgba(0,0,0,.5), 0 0 10px rgba(0,0,0,.2);
+  text-shadow: 0 0 3px #333, 0 0 5px rgba(0, 0, 0, .5), 0 0 10px rgba(0, 0, 0, .2);
   text-transform: uppercase;
   transition: color .8s ease;
+  /*animation: namecolor 4s forwards;*/
 }
 
-.gaslo {
-  margin-top: -.3em;
-  transition: color .8s, text-shadow .8s ease;
-}
+/*@keyframes namecolor {
+	to {
+    color: #fff;
+	 }
+}*/
 
 .name:hover {
   color: #fff;
   cursor: pointer;
 }
 
+.gaslo {
+  margin-top: -16px;
+  transition: color .8s ease, text-shadow .8s ease;
+  line-height: 1em;
+}
+
 .gaslo:hover {
-  text-shadow: 0 0 3px #333;
+  text-shadow: 0 0 5px #333;
   color: #fff;
   cursor: pointer;
 }
@@ -12189,6 +12206,11 @@ body {
 }
 
 /*Services*/
+
+.home-services {
+  background: linear-gradient(#f5f7fa, #c3cfe2);
+  text-align: center;
+}
 
 .services {
   display: flex;
@@ -12212,26 +12234,39 @@ body {
 
 @media screen and (min-width: 1920px) {
   .services-container {
-    min-width: 15vw;
     min-height: 15vw;
+    min-width: 15vw;
   }
 }
+
+.serv-pre {
+  transition: opacity .3s ease;
+}
+
+/*Services on hover*/
 
 .services-container:hover {
   cursor: pointer;
 }
 
-/*Services on hover*/
+.services-container:hover .serv-pre {
+  opacity: 0;
+}
 
-.services-hover {
+.services-container:hover .serv-desc {
+  opacity: 1;
+}
+
+.serv-desc {
   align-items: center;
-  background-color: #fff;
-  display: none;
+  display: flex;
   height: 100%;
   justify-content: center;
   left: 0;
+  opacity: 0;
   position: absolute;
   top: 0;
+  transition: opacity .8s ease;
   width: 100%;
 }
 
@@ -12407,7 +12442,6 @@ a:hover {
 
 .yellow-bg {
   background: radial-gradient(#E2A801 5px, transparent 5px) center center fixed, #FBBA00;
-  color: #FBBA00;
   background-size: 36px 36px, cover;
   /*background-color: #FBBA00;*/
 }

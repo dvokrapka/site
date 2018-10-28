@@ -96,18 +96,18 @@ $('#contactMe').on('submit', function(event) {
 // Toggle services on hover
 $(function() {
 
-    $('.services-container').each(function() {
+    // $('.services-container').each(function() {
 
-        var $container = $(this),
-            $prev = $container.find('.prev'),
-            $desc = $container.find('.services-hover');
+    //     var $container = $(this),
+    //         $prev = $container.find('.prev'),
+    //         $desc = $container.find('.services-hover');
 
-        $container
-            .mouseenter(function() {
-                $desc.css("display", "flex").hide().fadeIn('slow');
-            })
-            .mouseleave(function() {
-                $desc.fadeOut('slow');
-            });
-    });
+    //     $container
+    //         .mouseenter(function() {
+    //             $desc.css("display", "flex").hide().fadeIn('slow');
+    //         })
+    //         .mouseleave(function() {
+    //             $desc.fadeOut('slow');
+    //         });
+    // });
 });
