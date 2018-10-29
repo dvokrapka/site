@@ -1,7 +1,7 @@
 header {
     box-sizing: border-box;
     display: flex;
-    height: 80px;
+    height: 0;
     left: 0;
     max-width: 1920px;
     margin: 0 auto;
@@ -10,12 +10,14 @@ header {
     right: 0;
     top: 0;
     z-index: 9999;
-    transition: height .8s, background-color .8s ease;
+    background-color: transparent;
+    transition: background-color .8s ease, opacity .8s ease, height .8s ease;
 }
 
 /*Header effect on scroll*/
 
-.header-scroll {
+header.appear {
+    transition: background-color .8s ease, opacity .8s ease, height .8s ease;
     background-color: #2D2D2D;
 		height: 55px;
 }

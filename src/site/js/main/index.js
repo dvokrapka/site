@@ -1,30 +1,46 @@
-$(window).on('scroll', function() {
-        toggleToTop();
-        toggleHeader();
+var $goTop = $('#goTop'),
+    winH = window.innerHeight / 2,
+    $toggled = $('header').add('.main-menu').add('.burger').add('.toplogo').add($goTop);
+
+$(window)
+    .on('scroll', function() {
+        scrollToggle();
     })
     .on('load', function() {
-        toggleToTop();
-        toggleHeader();
+        scrollToggle();
     });
 
+
+// Toggle elements on window scroll
+function scrollToggle() {
+    $toggled.toggleClass('appear', window.pageYOffset >= winH);
+}
+
+// Scroll to top
+$goTop.on('click', function() {
+    $('html').animate({ scrollTop: 0 }, 1000);
+});
+
+// Scroll to anchor without changing url
+$(function() {
+    $('a[href^="#"]').on('click', function(event) {
+        event.preventDefault();
+
+        let elementClick = $(this).attr("href"),
+            destination = $(elementClick).offset().top;
+
+        $('html, body').animate({ scrollTop: destination }, 1000);
+
+        return false;
+    });
+});
+
+// Hide mob menu on href click
 $('.mob-menu').find('a').on('click', function(e) {
     e.preventDefault();
     toggleMobMenu();
 });
 
-
-// Toggle scrolltop button
-function toggleToTop() {
-
-    var $toTop = $('#goTop');
-
-    if (window.pageYOffset >= 80) {
-        $toTop.fadeIn('slow');
-
-    } else {
-        $toTop.fadeOut('slow');
-    }
-}
 
 // Show|hide mob menu
 $('#openMenu').on('click', function() {
@@ -47,35 +63,6 @@ function toggleMobMenu(bool) {
     }
 }
 
-// Change opacity & size of header on scroll
-function toggleHeader() {
-    var scroll = window.pageYOffset >= 80;
-
-    $('header').toggleClass('header-scroll', scroll);
-    $('.main-menu').toggleClass('main-menu-vis', scroll);
-    $('.burger').toggleClass('burger-scroll', scroll);
-    $('.toplogo').toggleClass('toplogo-scroll', scroll);
-}
-
-// Scroll to top
-$('#goTop').on('click', function() {
-    $('html, body').animate({ scrollTop: 0 }, 1000);
-});
-
-// Scroll to anchor without changing url
-$(function() {
-    $('a[href^="#"]').on('click', function(event) {
-        event.preventDefault();
-
-        let elementClick = $(this).attr("href"),
-            destination = $(elementClick).offset().top;
-
-        $('html, body').animate({ scrollTop: destination }, 1000);
-
-        return false;
-    });
-});
-
 // Submit form
 $('#contactMe').on('submit', function(event) {
     event.preventDefault();
@@ -89,25 +76,5 @@ $('#contactMe').on('submit', function(event) {
     accordion.toggleItem(UIkit.$('[data-wrapper]'), true, false);
 
     // Check
-    UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", { pos: 'bottom-center' });
-});
-
-
-// Toggle services on hover
-$(function() {
-
-    // $('.services-container').each(function() {
-
-    //     var $container = $(this),
-    //         $prev = $container.find('.prev'),
-    //         $desc = $container.find('.services-hover');
-
-    //     $container
-    //         .mouseenter(function() {
-    //             $desc.css("display", "flex").hide().fadeIn('slow');
-    //         })
-    //         .mouseleave(function() {
-    //             $desc.fadeOut('slow');
-    //         });
-    // });
-});
+	    UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", { pos: 'bottom-center' });
+	});
