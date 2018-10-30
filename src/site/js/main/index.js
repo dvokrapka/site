@@ -26,7 +26,7 @@ $(function() {
     $('a[href^="#"]').on('click', function(event) {
         event.preventDefault();
 
-        let elementClick = $(this).attr("href"),
+        var elementClick = $(this).attr("href"),
             destination = $(elementClick).offset().top;
 
         $('html, body').animate({ scrollTop: destination }, 1000);
@@ -36,30 +36,36 @@ $(function() {
 });
 
 // Hide mob menu on href click
-$('.mob-menu').find('a').on('click', function(e) {
+$('.mainmenu').on('click', 'a', function(e) {
     e.preventDefault();
-    toggleMobMenu();
+    toggleMenu();
 });
 
 
-// Show|hide mob menu
-$('#openMenu').on('click', function() {
-    toggleMobMenu(1);
+// Show|hide menu
+$('#burgerMenu').on('click', function() {
+    toggleMenu();
 });
 
-$('#closeMenu').on('click', function() {
-    toggleMobMenu();
-});
+// Toggle menu
+function toggleMenu() {
 
-function toggleMobMenu(bool) {
+    var $burger = $('#burgerMenu'),
+        $menu = $('.mainmenu'),
+        opened = $burger.attr('data-opened');
 
-    if (bool) {
-        $('.mob-menu')
-            .css("display", "flex")
-            .hide()
-            .slideDown();
+    // Toggle burger
+    $burger.find('> div').toggleClass('toggle');
+
+    if (opened) {
+        // Close menu
+        $burger.removeAttr('data-opened');
+        $menu.slideUp();
+
     } else {
-        $('.mob-menu').slideUp();
+        // Show menu
+        $burger.attr('data-opened', 1);
+        $menu.css("display", "flex").hide().slideDown();
     }
 }
 
@@ -71,10 +77,10 @@ $('#contactMe').on('submit', function(event) {
     $(this).trigger('reset');
 
     // Toggle accordion
-    let accordion = UIkit.accordion(UIkit.$('#formAccordion'));
+    var accordion = UIkit.accordion(UIkit.$('#formAccordion'));
 
     accordion.toggleItem(UIkit.$('[data-wrapper]'), true, false);
 
     // Check
-	    UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", { pos: 'bottom-center' });
-	});
+    UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", { pos: 'bottom-center' });
+});

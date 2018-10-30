@@ -5,13 +5,12 @@ $(function() {
         speed: 75,
         // beep: true,
         // blink: 300,
-        caret: '<span id="caret">|</span>',
-        fin:function(elm){
-        	$('#caret').fadeOut('5000');
-        	$('#name > span').addClass('blink');
-        	$('.scroll-btm').addClass('appear');
+        caret: '<span id="caret">:</span>',
+        fin: function(elm) {
+            $('#caret').css('opacity', 0);
+            $('#name > span').addClass('blink');
+            $('.scroll-btm').addClass('appear');
         }
-
     });
 
 });

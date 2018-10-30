@@ -11914,12 +11914,12 @@ header.appear {
 /*Top Menu*/
 
 .top-menu {
-  width: 100%;
-  max-width: 1680px;
-  margin: 0 auto;
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
 }
 
 .toplogo {
@@ -11932,90 +11932,68 @@ header.appear {
   visibility: visible;
 }
 
-.mob-menu-logo {
-  width: 70%;
-}
+/*Burger menu toggle button*/
 
 .burger {
   cursor: pointer;
-  height: 25px;
-  transition: fill .8s ease, height .8s ease, width .8s ease, transform .8s ease;
-  transform: translateY(30px);
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.8s;
+  z-index: 9999;
 }
 
 .burger.appear {
-  fill: #FBBA00;
-  height: 20px;
+  height: 30px;
   transform: translateY(-2px);
+  width: 30px;
 }
 
-.main-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.mb1,
+.mb2,
+.mb3 {
+  width: 100%;
+  height: 5px;
+  background-color: #333;
+  border-radius: 30px;
+  margin: 8px 0;
+  transition: all .8s ease;
+}
+
+/*Close burger*/
+
+.burger:hover .mb1:not(.toggle),
+.burger:hover .mb3:not(.toggle) {
+  height: 20px;
+  margin-bottom: -10px;
+  margin-left: 25%;
+  width: 20px;
+}
+
+.burger:hover .mb2:not(.toggle) {
   opacity: 0;
-  transition: opacity .8s ease;
-  visibility: hidden;
 }
 
-.main-menu.appear {
-  opacity: 1;
-  visibility: visible;
+.mb1.toggle {
+  transform: rotate(-45deg) translate(-10px, 8px);
 }
 
-.main-menu li {
-  list-style: none;
+.mb2.toggle {
+  opacity: 0;
 }
 
-.main-menu li>a {
-  color: #E2A801;
-  display: block;
-  font-size: 1.2em;
-  font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  padding: 0 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: transform 0.5s, color 0.3s ease;
+.mb3.toggle {
+  transform: rotate(45deg) translate(-10px, -8px);
 }
 
-.main-menu li a:hover {
-  color: #fff;
-  will-change: transform;
-  transform: translateX(5px);
-}
+/*Menu*/
 
-.menu-items {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 auto;
-}
-
-.change-language li {
-  list-style: none;
-}
-
-.change-language li a {
-  display: block;
-  padding: 0 8px;
-}
-
-.change-language.active {
-  color: #FBBA00;
-  font-weight: 900;
-}
-
-.lang-items {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 auto;
-}
-
-/*Mobile menu*/
-
-.mob-menu {
+.mainmenu {
   align-items: center;
   text-align: center;
-  background: rgba(0, 0, 0, .9);
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, .95), rgba(0, 0, 0, 1));
   box-sizing: border-box;
   display: none;
   height: 100vh;
@@ -12024,13 +12002,12 @@ header.appear {
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 9999;
+  z-index: 9998;
 }
 
-.mob-menu-container {
+.mainmenu-container {
+  /*background: #fff;*/
   align-items: center;
-  border: 3px solid #FBBA00;
-  border-radius: 30px;
   display: flex;
   flex-direction: column;
   height: 85%;
@@ -12039,14 +12016,21 @@ header.appear {
   width: 80%;
 }
 
-.mob-menu-items a {
-  color: #fff;
+.mainmenu a {
+  color: #FBBA00;
   display: block;
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 22px;
-  padding: 25px 0;
+  font-size: 3em;
+  line-height: 2em;
   text-decoration: none;
   text-transform: uppercase;
+  transition: transform 0.8s, color 0.8s ease;
+}
+
+.mainmenu a:hover {
+  color: #fff;
+  will-change: transform;
+  transform: translateX(10px);
 }
 
 .social-mob {
@@ -12058,18 +12042,7 @@ header.appear {
 }
 
 .social-mob a {
-  color: #FBBA00;
-  display: block;
-  font-size: 2em;
-}
-
-.close-menu {
-  cursor: pointer;
-  height: 50px;
-  top: -15px;
-  right: -15px;
-  position: absolute;
-  width: 50px;
+  color: #2d2d2d;
 }
 .logo-screen {
   align-items: center;
