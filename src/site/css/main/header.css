@@ -19,5 +19,99 @@ header {
 header.appear {
     transition: background-color .8s ease, opacity .8s ease, height .8s ease;
     background-color: #2D2D2D;
-		height: 55px;
+    height: 55px;
+}
+
+
+/*Top*/
+
+.top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 100%;
+}
+
+.toplogo {
+
+    height: 50%;
+    max-width: 50%;
+    /*visibility: hidden;*/
+}
+
+/*
+.toplogo.appear {
+    visibility: visible;
+}*/
+
+/*Burger menu toggle button*/
+.burger {
+    cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    transition: transform .8s ease;
+    z-index: 9999;
+}
+
+.burger.appear {
+    min-height: 30px;
+    min-width: 30px;
+    transform: translateY(-28px);
+}
+
+.mb1,
+.mb2,
+.mb3 {
+    width: 100%;
+    height: 6px;
+    background-color: #333;
+    border-radius: 30px;
+    margin: 7px 0;
+    transition: all .4s ease;
+    position: relative;
+}
+
+.burger.appear>div:not(.toggle) {
+    background-color: #FBBA00;
+    height: 10%;
+    width: 85%;
+}
+
+.burger >div.toggle {
+		background-color: #8C8C8C;
+}
+
+
+
+
+.mb1.toggle {
+    transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.mb2.toggle {
+    opacity: 0;
+}
+
+.mb3.toggle {
+    transform: rotate(45deg) translate(-10px, -8px);
+}
+
+
+/*2Col toggle*/
+.burger:hover .mb1:not(.toggle),
+.burger:hover .mb3:not(.toggle) {
+    transform: translateY(-5px);
+    height: 15px;
+    margin-bottom: -12px;
+    margin-left: 25%;
+    width: 15px;
+}
+
+.burger:hover .mb2:not(.toggle) {
+    opacity: 0;
 }

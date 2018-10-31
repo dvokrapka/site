@@ -1,84 +1,7 @@
-/*Top Menu*/
-
-.top-menu {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1920px;
-    width: 100%;
-}
-
-.toplogo {
-    height: 50%;
-    max-width: 50%;
-    visibility: hidden;
-}
-
-.toplogo.appear {
-    visibility: visible;
-}
-
-/*Burger menu toggle button*/
-.burger {
-    cursor: pointer;
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    width: 40px;
-    height: 40px;
-	  transition: transform 0.8s;
-	  z-index: 9999;
-}
-
-.burger.appear {
-    height: 30px;
-    transform: translateY(-2px);
-    width: 30px;
-}
-
-.mb1,
-.mb2,
-.mb3 {
-    width: 100%;
-    height: 5px;
-    background-color: #333;
-    border-radius: 30px;
-    margin: 8px 0;
-    transition: all .8s ease;
-}
-
-/*Close burger*/
-
-.burger:hover .mb1:not(.toggle),
-.burger:hover .mb3:not(.toggle) {
-	height: 20px;
-	margin-bottom: -10px;
-	margin-left: 25%;
-	width: 20px;
-}
-
-.burger:hover .mb2:not(.toggle) {
-	opacity: 0;
-}
-
-.mb1.toggle {
-		transform: rotate(-45deg) translate(-10px, 8px);
-}
-
-.mb2.toggle {
-    opacity: 0;
-}
-
-.mb3.toggle {
-		transform: rotate(45deg) translate(-10px, -8px);
-}
-
 /*Menu*/
 .mainmenu {
     align-items: center;
-    text-align: center;
-    background: linear-gradient(-45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, .95), rgba(0, 0, 0, 1));
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, .9), rgba(0, 0, 0, 1));
     box-sizing: border-box;
     display: none;
     height: 100vh;
@@ -91,14 +14,13 @@
 }
 
 .mainmenu-container {
-		/*background: #fff;*/
     align-items: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
     height: 85%;
     justify-content: space-around;
-    position: relative;
-    width: 80%;
+    width: 85%;
 }
 
 .mainmenu a {
@@ -109,14 +31,24 @@
     line-height: 2em;
     text-decoration: none;
     text-transform: uppercase;
-    transition: transform 0.8s, color 0.8s ease;
-
+    transition: transform 0.8s, color 0.3s ease;
 }
 
 .mainmenu a:hover {
     color: #fff;
     will-change: transform;
-    transform: translateX(10px);
+    transform: translateX(5px);
+}
+
+.mainmenu a.active {
+    color: #fff;
+}
+
+
+.lang-items a {
+    font-size: 1.5em;
+    margin: 0 10px;
+    display: inline-block;
 }
 
 .social-mob {

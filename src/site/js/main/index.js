@@ -1,6 +1,6 @@
 var $goTop = $('#goTop'),
     winH = window.innerHeight / 2,
-    $toggled = $('header').add('.main-menu').add('.burger').add('.toplogo').add($goTop);
+    $toggled = $('header').add('.burger').add('.toplogo').add($goTop);
 
 $(window)
     .on('scroll', function() {
@@ -36,7 +36,7 @@ $(function() {
 });
 
 // Hide mob menu on href click
-$('.mainmenu').on('click', 'a', function(e) {
+$('.mainmenu a').on('click', function(e) {
     e.preventDefault();
     toggleMenu();
 });
