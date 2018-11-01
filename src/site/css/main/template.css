@@ -30,29 +30,22 @@ body {
 }
 
 .fs-bg-1::before {
+    animation: showfs 3s forwards;
+    background: #E2A801;
     content: "";
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: #E2A801;
-    animation: showfs 3s forwards;
 }
 
 .fs-bg-1 {
+    background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%);
+    height: 100%;
     position: absolute;
     width: 100%;
-    height: 100%;
     z-index: -2;
-    background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%);
-    /*background: linear-gradient(-45deg, #E2A801 20%, #FFBF00 20%, #FFBF00 80%, #E2A801 80%);*/
-}
-
-@keyframes showfs {
-    100% {
-        opacity: 0;
-    }
 }
 
 .fs-bg-2 {
@@ -65,44 +58,28 @@ body {
 }
 
 .name {
-    color: #E2A801;
-    font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-size: 5em;
-    cursor: pointer;
-    text-transform: uppercase;
     animation: namecolor 3.5s forwards;
+    color: #E2A801;
+    cursor: pointer;
+    font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 4.5em;
+    text-transform: uppercase;
 }
 
-@keyframes namecolor {
-    to {
-        color: #fff;
-        text-shadow: 0 0 5px #E2A801, 0 0 15px rgba(0, 0, 0, .1);
-    }
-}
+
 
 .gaslo {
-    margin-top: -16px;
-    transition: color .8s ease, text-shadow .8s ease;
-    line-height: 1em;
+    color: #2d2d2d;
     cursor: pointer;
-    transform: translateX(.5em);
     display: none;
+    line-height: 1em;
+    margin-top: -16px;
+    transform: translateX(.5em);
 }
 
 @media screen and (min-width: 768px) {
     .name {
         font-size: 12em;
-    }
-}
-
-.blink {
-    opacity: 1;
-    animation: blink 2s infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
     }
 }
 
@@ -114,10 +91,10 @@ body {
 }
 
 .services {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .services-container {
@@ -186,16 +163,15 @@ body {
 }
 
 /*Design*/
-
 .home-design {
-    min-height: 80vh;
-    background: url('../../../assets/img/background-par3.jpg') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
     align-items: center;
+    background-size: cover;
+    background: url('../../../assets/img/background-par3.jpg') no-repeat center center fixed;
+    display: flex;
     justify-content: center;
-    position: relative;
+    min-height: 80vh;
     overflow: hidden;
+    position: relative;
 }
 
 .home-design-txt {
@@ -212,10 +188,10 @@ body {
 /*About Us*/
 
 .about-us-screen {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     text-align: left;
 }
 
@@ -231,96 +207,30 @@ body {
     line-height: 1.5em;
 }
 
-/*Buttons*/
 
-.scroll-btm {
-    opacity: 0;
-    height: 50px;
-    width: 50px;
-    transition: opacity .8s ease;
-    pointer-events: none;
+/*Homepage Portfolio*/
+.portfolio-preview p {
+    margin-top: 30px;
 }
 
-.scroll-btm.appear {
-    animation: sb_animate 2s infinite;
-    pointer-events: initial;
-    opacity: 1;
-}
-
-.scroll-btm:hover {
-    animation-play-state: paused;
-}
-
-
-
-@keyframes sb_animate {
-    0% {
-        transform: translateY(0);
-    }
-
-    25% {
-        transform: translateY(10px);
-    }
-
-    50% {
-        transform: translateY(0);
-    }
-}
-
-.scroll-top {
-    bottom: -100vh;
+.more {
     cursor: pointer;
+    height: 50px;
+    margin-top: 15px;
+    text-decoration: none;
+    width: 50px;
+}
+
+.more-txt {
     display: block;
-    height: 50px;
-    position: absolute;
-    right: 35px;
-    transform: translateY(70px);
-    transition: opacity .8s ease, transform .8s ease;
-    opacity: 0;
-    width: 50px;
-}
-
-.scroll-top:hover {
-    transform: translateY(0);
-}
-
-.scroll-top.appear {
-    opacity: 1;
-    transform: translateY(-70px);
-}
-
-.sm-button {
-    border-radius: 50px;
-    box-sizing: border-box;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: 1.5em;
-    padding: 8px 45px;
+    margin-top: 15px;
+    padding-left: 10px;
     text-transform: uppercase;
-    transition: all 0.35s ease;
 }
 
-.sm-black {
-    border: 3px solid #000;
-    color: #000;
-}
 
-.sm-black:hover {
-    background-color: #000;
-    color: #FBBA00;
-}
-
-.sm-yellow {
-    background-color: #000;
-    border: 3px solid #FBBA00;
-    color: #FBBA00;
-}
-
-.sm-yellow:hover {
-    background-color: #FBBA00;
-    color: #000;
-}
 
 /*Extra effects*/
 
@@ -356,51 +266,4 @@ a:hover {
     background: radial-gradient(#E2A801 5px, transparent 5px) center center fixed, #FBBA00;
     background-size: 36px 36px, cover;
     /*background-color: #FBBA00;*/
-}
-
-.scrollright {
-    animation: sr_animate 2s infinite;
-    cursor: pointer;
-    height: 50px;
-    width: 50px;
-    will-change: transform;
-}
-
-.scrollright:hover {
-    animation-play-state: paused;
-}
-
-@keyframes sr_animate {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(10px);
-    }
-
-    50% {
-        transform: translateX(0);
-    }
-}
-
-.portfolio-preview p {
-    margin-top: 30px;
-}
-
-.more {
-    height: 50px;
-    width: 50px;
-    margin-top: 15px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.more-txt {
-    padding-left: 10px;
-    margin-top: 15px;
-    display: block;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }

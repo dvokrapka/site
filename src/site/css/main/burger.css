@@ -11,7 +11,6 @@
     transition: transform .8s ease-in-out;
     z-index: 9999;
     padding: 5px 0;
-    /*background-color: #fff;*/
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -24,7 +23,7 @@
     border-radius: 15px;
     height: 5px;
     position: relative;
-    transition: all .5s ease-in-out;
+    transition: .2s ease;
     width: 100%;
     transform-origin: left center;
 }
@@ -40,12 +39,12 @@
 }
 
 /*Burger on menu open*/
-.appear .burger > .toggle {
+.appear .burger>.toggle {
     background-color: #404040;
 }
 
-.burger > .toggle {
-    transition: all .5s 1.5s ease-in-out;
+.burger>.toggle {
+    transition: all .5s 1s ease-in-out;
 }
 
 /*Transform burger on hover*/
@@ -58,12 +57,11 @@
 .burger:hover>span:nth-child(2):not(.toggle) {
     opacity: 0;
     width: 0;
-    height: 0;
 }
 
 /*Transform burger to close icon*/
 .burger>span:nth-child(1).toggle {
-    transform: rotate(45deg) translate(3.8px, -5px);
+    transform: rotate(45deg);
 }
 
 .burger>span:nth-child(2).toggle {
@@ -72,5 +70,6 @@
 }
 
 .burger>span:nth-child(3).toggle {
-    transform: rotate(-45deg) translate(2px, 5px);
+    top:2.5px;
+    transform: rotate(-45deg);
 }

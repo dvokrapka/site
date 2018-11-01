@@ -11562,6 +11562,67 @@ a.uk-thumbnail:focus {
   background: #fff1f0;
   color: #d85030;
 }
+/*Name color animation*/
+
+@keyframes namecolor {
+  to {
+    color: #fff;
+    text-shadow: 0 0 5px #E2A801, 0 0 15px rgba(0, 0, 0, .15);
+  }
+}
+
+/*Scroll right buttons animation*/
+
+@keyframes sr_animate {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(15%);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+}
+
+/*Scroll bottom buttons animation*/
+
+@keyframes sb_animate {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(15%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+}
+
+/*Blinking*/
+
+.blink {
+  animation: blink 2s infinite;
+  opacity: 1;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/*Firstcreen background animation*/
+
+@keyframes showfs {
+  100% {
+    opacity: 0;
+  }
+}
 .bird {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg");
   background-size: auto 100%;
@@ -11745,7 +11806,6 @@ a.uk-thumbnail:focus {
   transition: transform .8s ease-in-out;
   z-index: 9999;
   padding: 5px 0;
-  /*background-color: #fff;*/
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -11759,7 +11819,7 @@ a.uk-thumbnail:focus {
   border-radius: 15px;
   height: 5px;
   position: relative;
-  transition: all .5s ease-in-out;
+  transition: .2s ease;
   width: 100%;
   transform-origin: left center;
 }
@@ -11777,12 +11837,12 @@ a.uk-thumbnail:focus {
 
 /*Burger on menu open*/
 
-.appear .burger > .toggle {
+.appear .burger>.toggle {
   background-color: #404040;
 }
 
-.burger > .toggle {
-  transition: all .5s 1.5s ease-in-out;
+.burger>.toggle {
+  transition: all .5s 1s ease-in-out;
 }
 
 /*Transform burger on hover*/
@@ -11796,13 +11856,12 @@ a.uk-thumbnail:focus {
 .burger:hover>span:nth-child(2):not(.toggle) {
   opacity: 0;
   width: 0;
-  height: 0;
 }
 
 /*Transform burger to close icon*/
 
 .burger>span:nth-child(1).toggle {
-  transform: rotate(45deg) translate(3.8px, -5px);
+  transform: rotate(45deg);
 }
 
 .burger>span:nth-child(2).toggle {
@@ -11811,7 +11870,143 @@ a.uk-thumbnail:focus {
 }
 
 .burger>span:nth-child(3).toggle {
-  transform: rotate(-45deg) translate(2px, 5px);
+  top: 2.5px;
+  transform: rotate(-45deg);
+}
+/*Buttons*/
+
+/*SVG buttons fills*/
+
+.fil1 {
+  fill: #211F1F;
+}
+
+.fil0 {
+  fill: #2D2D2D;
+}
+
+.fil2 {
+  fill: #FBBA00;
+  fill-rule: nonzero;
+}
+
+/*Scroll bottom*/
+
+.scroll-btm {
+  height: 50px;
+  opacity: 0;
+  pointer-events: none;
+  transition: .8s ease;
+  width: 50px;
+}
+
+.scroll-btm.appear {
+  animation: sb_animate 2s infinite;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.scroll-btm:hover {
+  animation-play-state: paused;
+}
+
+/*Scroll bottom arrow animation*/
+
+.arrow-dwn {
+  transition: transform .4s ease;
+}
+
+.scroll-btm:hover .arrow-dwn {
+  transform: translateY(15%);
+}
+
+.scroll-top {
+  top: 100vh;
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  position: absolute;
+  right: 35px;
+  transition: opacity .8s, transform .8s ease-in-out;
+  opacity: 0;
+  width: 50px;
+}
+
+.scroll-top.appear {
+  transform: translateY(-80px);
+  opacity: 1;
+}
+
+/*Scroll top arrow animation*/
+
+.arrow-top {
+  transition: transform .4s ease;
+}
+
+.scroll-top:hover .arrow-top {
+  transform: translateY(-10%);
+}
+
+/*Scroll right button*/
+
+.scroll-right {
+  animation: sr_animate 2s infinite;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.scroll-right:hover {
+  animation-play-state: paused;
+}
+
+/*Scroll right arrow animation*/
+
+.arrow-right {
+  transition: transform .4s ease;
+}
+
+.scroll-right:hover .arrow-right {
+  transform: translateX(10%);
+}
+
+/*Simple button*/
+
+.sm-button {
+  border-radius: 50px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5em;
+  padding: 8px 45px;
+  text-transform: uppercase;
+  transition: all 0.35s ease;
+}
+
+/*Black button*/
+
+.sm-black {
+  border: 4px solid #2d2d2d;
+  color: #2d2d2d;
+}
+
+.sm-black:hover {
+  background-color: #2d2d2d;
+  color: #FBBA00;
+}
+
+/*Yellow button*/
+
+.sm-yellow {
+  background-color: #2d2d2d;
+  border: 4px solid #FBBA00;
+  color: #FBBA00;
+}
+
+.sm-yellow:hover {
+  background-color: #FBBA00;
+  color: #2d2d2d;
 }
 /*Footer*/
 
@@ -12142,29 +12337,22 @@ body {
 }
 
 .fs-bg-1::before {
+  animation: showfs 3s forwards;
+  background: #E2A801;
   content: "";
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background: #E2A801;
-  animation: showfs 3s forwards;
 }
 
 .fs-bg-1 {
+  background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%);
+  height: 100%;
   position: absolute;
   width: 100%;
-  height: 100%;
   z-index: -2;
-  background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%);
-  /*background: linear-gradient(-45deg, #E2A801 20%, #FFBF00 20%, #FFBF00 80%, #E2A801 80%);*/
-}
-
-@keyframes showfs {
-  100% {
-    opacity: 0;
-  }
 }
 
 .fs-bg-2 {
@@ -12177,44 +12365,26 @@ body {
 }
 
 .name {
-  color: #E2A801;
-  font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 5em;
-  cursor: pointer;
-  text-transform: uppercase;
   animation: namecolor 3.5s forwards;
-}
-
-@keyframes namecolor {
-  to {
-    color: #fff;
-    text-shadow: 0 0 5px #E2A801, 0 0 15px rgba(0, 0, 0, .1);
-  }
+  color: #E2A801;
+  cursor: pointer;
+  font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 4.5em;
+  text-transform: uppercase;
 }
 
 .gaslo {
-  margin-top: -16px;
-  transition: color .8s ease, text-shadow .8s ease;
-  line-height: 1em;
+  color: #2d2d2d;
   cursor: pointer;
-  transform: translateX(.5em);
   display: none;
+  line-height: 1em;
+  margin-top: -16px;
+  transform: translateX(.5em);
 }
 
 @media screen and (min-width: 768px) {
   .name {
     font-size: 12em;
-  }
-}
-
-.blink {
-  opacity: 1;
-  animation: blink 2s infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
   }
 }
 
@@ -12226,10 +12396,10 @@ body {
 }
 
 .services {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .services-container {
@@ -12300,14 +12470,14 @@ body {
 /*Design*/
 
 .home-design {
-  min-height: 80vh;
-  background: url("../../assets/img/background-par3.jpg") no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
   align-items: center;
+  background-size: cover;
+  background: url("../../assets/img/background-par3.jpg") no-repeat center center fixed;
+  display: flex;
   justify-content: center;
-  position: relative;
+  min-height: 80vh;
   overflow: hidden;
+  position: relative;
 }
 
 .home-design-txt {
@@ -12324,10 +12494,10 @@ body {
 /*About Us*/
 
 .about-us-screen {
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   text-align: left;
 }
 
@@ -12343,93 +12513,27 @@ body {
   line-height: 1.5em;
 }
 
-/*Buttons*/
+/*Homepage Portfolio*/
 
-.scroll-btm {
-  opacity: 0;
-  height: 50px;
-  width: 50px;
-  transition: opacity .8s ease;
-  pointer-events: none;
+.portfolio-preview p {
+  margin-top: 30px;
 }
 
-.scroll-btm.appear {
-  animation: sb_animate 2s infinite;
-  pointer-events: initial;
-  opacity: 1;
-}
-
-.scroll-btm:hover {
-  animation-play-state: paused;
-}
-
-@keyframes sb_animate {
-  0% {
-    transform: translateY(0);
-  }
-
-  25% {
-    transform: translateY(10px);
-  }
-
-  50% {
-    transform: translateY(0);
-  }
-}
-
-.scroll-top {
-  bottom: -100vh;
+.more {
   cursor: pointer;
+  height: 50px;
+  margin-top: 15px;
+  text-decoration: none;
+  width: 50px;
+}
+
+.more-txt {
   display: block;
-  height: 50px;
-  position: absolute;
-  right: 35px;
-  transform: translateY(70px);
-  transition: opacity .8s ease, transform .8s ease;
-  opacity: 0;
-  width: 50px;
-}
-
-.scroll-top:hover {
-  transform: translateY(0);
-}
-
-.scroll-top.appear {
-  opacity: 1;
-  transform: translateY(-70px);
-}
-
-.sm-button {
-  border-radius: 50px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
-  padding: 8px 45px;
+  margin-top: 15px;
+  padding-left: 10px;
   text-transform: uppercase;
-  transition: all 0.35s ease;
-}
-
-.sm-black {
-  border: 3px solid #000;
-  color: #000;
-}
-
-.sm-black:hover {
-  background-color: #000;
-  color: #FBBA00;
-}
-
-.sm-yellow {
-  background-color: #000;
-  border: 3px solid #FBBA00;
-  color: #FBBA00;
-}
-
-.sm-yellow:hover {
-  background-color: #FBBA00;
-  color: #000;
 }
 
 /*Extra effects*/
@@ -12466,53 +12570,6 @@ a:hover {
   background: radial-gradient(#E2A801 5px, transparent 5px) center center fixed, #FBBA00;
   background-size: 36px 36px, cover;
   /*background-color: #FBBA00;*/
-}
-
-.scrollright {
-  animation: sr_animate 2s infinite;
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-  will-change: transform;
-}
-
-.scrollright:hover {
-  animation-play-state: paused;
-}
-
-@keyframes sr_animate {
-  0% {
-    transform: translateX(0);
-  }
-
-  25% {
-    transform: translateX(10px);
-  }
-
-  50% {
-    transform: translateX(0);
-  }
-}
-
-.portfolio-preview p {
-  margin-top: 30px;
-}
-
-.more {
-  height: 50px;
-  width: 50px;
-  margin-top: 15px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.more-txt {
-  padding-left: 10px;
-  margin-top: 15px;
-  display: block;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 h1 {
   font-size: 2.5em;
