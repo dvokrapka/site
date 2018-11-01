@@ -5,7 +5,7 @@
     position: absolute;
     top: 10px;
     transform: translateY(30px);
-    right: 40px;
+    right: 35px;
     height: 40px;
     width: 40px;
     transition: transform .8s ease-in-out;
@@ -26,6 +26,10 @@
     transition: .2s ease;
     width: 100%;
     transform-origin: left center;
+}
+
+.burger>span:nth-child(2) {
+    width: 85%;
 }
 
 /*Burger on scroll*/
@@ -70,6 +74,6 @@
 }
 
 .burger>span:nth-child(3).toggle {
-    top:2.5px;
-    transform: rotate(-45deg);
+    /*top:2.5px;*/
+    transform: rotate(-45deg) translate(-1px, 2px);
 }

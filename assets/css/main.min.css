@@ -11800,7 +11800,7 @@ a.uk-thumbnail:focus {
   position: absolute;
   top: 10px;
   transform: translateY(30px);
-  right: 40px;
+  right: 35px;
   height: 40px;
   width: 40px;
   transition: transform .8s ease-in-out;
@@ -11822,6 +11822,10 @@ a.uk-thumbnail:focus {
   transition: .2s ease;
   width: 100%;
   transform-origin: left center;
+}
+
+.burger>span:nth-child(2) {
+  width: 85%;
 }
 
 /*Burger on scroll*/
@@ -11870,8 +11874,8 @@ a.uk-thumbnail:focus {
 }
 
 .burger>span:nth-child(3).toggle {
-  top: 2.5px;
-  transform: rotate(-45deg);
+  /*top:2.5px;*/
+  transform: rotate(-45deg) translate(-1px, 2px);
 }
 /*Buttons*/
 
@@ -11896,7 +11900,7 @@ a.uk-thumbnail:focus {
   height: 50px;
   opacity: 0;
   pointer-events: none;
-  transition: .8s ease;
+  transition: .8s ease-in-out;
   width: 50px;
 }
 
@@ -11913,7 +11917,7 @@ a.uk-thumbnail:focus {
 /*Scroll bottom arrow animation*/
 
 .arrow-dwn {
-  transition: transform .4s ease;
+  transition: transform .4s ease-in-out;
 }
 
 .scroll-btm:hover .arrow-dwn {
@@ -11933,14 +11937,14 @@ a.uk-thumbnail:focus {
 }
 
 .scroll-top.appear {
-  transform: translateY(-80px);
   opacity: 1;
+  transform: translateY(-80px);
 }
 
 /*Scroll top arrow animation*/
 
 .arrow-top {
-  transition: transform .4s ease;
+  transition: transform .4s ease-in-out;
 }
 
 .scroll-top:hover .arrow-top {
@@ -11963,11 +11967,34 @@ a.uk-thumbnail:focus {
 /*Scroll right arrow animation*/
 
 .arrow-right {
-  transition: transform .4s ease;
+  transition: transform .4s ease-in-out;
 }
 
 .scroll-right:hover .arrow-right {
   transform: translateX(10%);
+}
+
+/*More button*/
+
+.more-href {
+  align-items: center;
+  display: flex;
+}
+
+.more {
+  cursor: pointer;
+  height: 50px;
+  margin-top: 15px;
+  width: 50px;
+}
+
+.zoom {
+  transform-origin: center center;
+  transition: transform .4s ease-in-out;
+}
+
+.more-href:hover .zoom {
+  transform: scale(1.15);
 }
 
 /*Simple button*/
@@ -11981,7 +12008,7 @@ a.uk-thumbnail:focus {
   font-size: 1.5em;
   padding: 8px 45px;
   text-transform: uppercase;
-  transition: all 0.35s ease;
+  transition: all 0.35s ease-in-out;
 }
 
 /*Black button*/
@@ -12178,13 +12205,13 @@ header {
   top: 0;
   z-index: 9999;
   background-color: transparent;
-  transition: background-color .8s ease, opacity .8s ease, height .8s ease;
+  transition: background-color .8s ease, height .8s ease;
 }
 
 /*Header effect on scroll*/
 
 header.appear {
-  transition: background-color .8s ease, opacity .8s ease, height .8s ease;
+  transition: background-color .8s ease, height .8s ease;
   background-color: #2D2D2D;
   height: 60px;
 }
@@ -12201,15 +12228,20 @@ header.appear {
 }
 
 .toplogo {
-  height: 50%;
+  bottom: 10px;
+  cursor: pointer;
+  height: 40px;
+  left: 35px;
   max-width: 50%;
-  /*visibility: hidden;*/
+  opacity: 0;
+  position: absolute;
+  transition: opacity .4s;
 }
 
-/*
 .toplogo.appear {
-    visibility: visible;
-}*/
+  transition: opacity .4s;
+  opacity: 1;
+}
 /*Menu*/
 
 .mainmenu {
@@ -12517,14 +12549,6 @@ body {
 
 .portfolio-preview p {
   margin-top: 30px;
-}
-
-.more {
-  cursor: pointer;
-  height: 50px;
-  margin-top: 15px;
-  text-decoration: none;
-  width: 50px;
 }
 
 .more-txt {

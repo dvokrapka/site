@@ -213,14 +213,6 @@ body {
     margin-top: 30px;
 }
 
-.more {
-    cursor: pointer;
-    height: 50px;
-    margin-top: 15px;
-    text-decoration: none;
-    width: 50px;
-}
-
 .more-txt {
     display: block;
     font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -229,8 +221,6 @@ body {
     padding-left: 10px;
     text-transform: uppercase;
 }
-
-
 
 /*Extra effects*/
 
