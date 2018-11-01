@@ -1,0 +1,76 @@
+/*Burger menu toggle button*/
+.burger {
+    cursor: pointer;
+    box-sizing: border-box;
+    position: absolute;
+    top: 10px;
+    transform: translateY(30px);
+    right: 40px;
+    height: 40px;
+    width: 40px;
+    transition: transform .8s ease-in-out;
+    z-index: 9999;
+    padding: 5px 0;
+    /*background-color: #fff;*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*Burger bars*/
+.burger>span {
+    background-color: #2d2d2d;
+    border-radius: 15px;
+    height: 5px;
+    position: relative;
+    transition: all .5s ease-in-out;
+    width: 100%;
+    transform-origin: left center;
+}
+
+/*Burger on scroll*/
+.appear .burger {
+    transform: translateY(0);
+}
+
+.appear .burger>span {
+    background-color: #FBBA00;
+    height: 4px;
+}
+
+/*Burger on menu open*/
+.appear .burger > .toggle {
+    background-color: #404040;
+}
+
+.burger > .toggle {
+    transition: all .5s 1.5s ease-in-out;
+}
+
+/*Transform burger on hover*/
+.burger:hover>span:nth-child(1):not(.toggle),
+.burger:hover>span:nth-child(3):not(.toggle) {
+    height: 12px;
+    width: 12px;
+}
+
+.burger:hover>span:nth-child(2):not(.toggle) {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/*Transform burger to close icon*/
+.burger>span:nth-child(1).toggle {
+    transform: rotate(45deg) translate(3.8px, -5px);
+}
+
+.burger>span:nth-child(2).toggle {
+    opacity: 0;
+    width: 0;
+}
+
+.burger>span:nth-child(3).toggle {
+    transform: rotate(-45deg) translate(2px, 5px);
+}

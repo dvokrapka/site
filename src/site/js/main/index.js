@@ -43,19 +43,19 @@ $('.mainmenu a').on('click', function(e) {
 
 
 // Show|hide menu
-$('#burgerMenu').on('click', function() {
+$('.burger').on('click', function() {
     toggleMenu();
 });
 
 // Toggle menu
 function toggleMenu() {
 
-    var $burger = $('#burgerMenu'),
+    var $burger = $('.burger'),
         $menu = $('.mainmenu'),
         opened = $burger.attr('data-opened');
 
     // Toggle burger
-    $burger.find('> div').toggleClass('toggle');
+    $burger.find('> span').toggleClass('toggle');
 
     if (opened) {
         // Close menu
