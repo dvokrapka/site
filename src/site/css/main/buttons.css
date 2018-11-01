@@ -141,7 +141,7 @@
 
 /*Yellow button*/
 .sm-yellow {
-    background-color: #2d2d2d;
+    /*background-color: #2d2d2d;*/
     border: 4px solid #FBBA00;
     color: #FBBA00;
 }

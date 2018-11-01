@@ -25,10 +25,6 @@ body {
     text-align: center;
 }
 
-.hometitle {
-    margin-top: 100px;
-}
-
 .fs-bg-1::before {
     animation: showfs 3s forwards;
     background: #E2A801;
@@ -57,30 +53,12 @@ body {
     z-index: -1;
 }
 
-.name {
-    animation: namecolor 3.5s forwards;
-    color: #E2A801;
-    cursor: pointer;
-    font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-size: 4.5em;
-    text-transform: uppercase;
-}
-
-
-
 .gaslo {
     color: #2d2d2d;
-    cursor: pointer;
     display: none;
     line-height: 1em;
-    margin-top: -16px;
-    transform: translateX(.5em);
-}
-
-@media screen and (min-width: 768px) {
-    .name {
-        font-size: 12em;
-    }
+    margin-top: 50px;
+    pointer-events: none;
 }
 
 /*Services*/
@@ -165,12 +143,12 @@ body {
 /*Design*/
 .home-design {
     align-items: center;
-    background-size: cover;
-    background: url('../../../assets/img/background-par3.jpg') no-repeat center center fixed;
+    background: url('../../../assets/img/bodesign.jpg') no-repeat center center fixed;
+    background-size: 100%;
     display: flex;
     justify-content: center;
     min-height: 80vh;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
 }
 

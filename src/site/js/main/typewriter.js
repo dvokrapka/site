@@ -3,7 +3,7 @@ $(function() {
     $('#gaslo').t({
         delay: 2,
         speed: 75,
-        // beep: true,
+        beep: true,
         // blink: 300,
         caret: '<span id="caret">:</span>',
         fin: function(elm) {
