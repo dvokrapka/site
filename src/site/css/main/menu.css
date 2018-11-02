@@ -1,8 +1,8 @@
 /*Menu*/
 .mainmenu {
     align-items: center;
-    background: rgba(0, 0, 0, .96);
-    /*background: linear-gradient(-45deg, rgba(0, 0, 0, .95), rgba(0, 0, 0, .9), rgba(0, 0, 0, .95));*/
+    background: #2d2d2d;
+    background: rgba(0, 0, 0, .95);
     box-sizing: border-box;
     display: none;
     height: 100vh;
@@ -32,12 +32,11 @@
     line-height: 2em;
     text-decoration: none;
     text-transform: uppercase;
-    transition: transform 0.8s, color 0.3s ease;
+    transition: transform 0.8s ease, color 0.3s ease;
 }
 
 .mainmenu a:hover {
     color: #fff;
-    will-change: transform;
     transform: translateX(5px);
 }
 

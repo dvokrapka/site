@@ -11798,7 +11798,7 @@ a.uk-thumbnail:focus {
   cursor: pointer;
   box-sizing: border-box;
   position: absolute;
-  top: 10px;
+  top: 5px;
   transform: translateY(30px);
   right: 35px;
   height: 40px;
@@ -11819,9 +11819,9 @@ a.uk-thumbnail:focus {
   border-radius: 15px;
   height: 5px;
   position: relative;
+  transform-origin: left center;
   transition: .2s ease;
   width: 100%;
-  transform-origin: left center;
 }
 
 .burger>span:nth-child(2) {
@@ -11831,25 +11831,20 @@ a.uk-thumbnail:focus {
 /*Burger on scroll*/
 
 .appear .burger {
-  transform: translateY(0);
+  transform: translateY(5px);
 }
 
 .appear .burger>span {
   background-color: #FBBA00;
-  height: 4px;
 }
 
 /*Burger on menu open*/
-
-.appear .burger>.toggle {
-  background-color: #404040;
-}
 
 .burger>.toggle {
   transition: all .5s 1s ease-in-out;
 }
 
-/*Transform burger on hover*/
+/*Transform burger in 2colon hover*/
 
 .burger:hover>span:nth-child(1):not(.toggle),
 .burger:hover>span:nth-child(3):not(.toggle) {
@@ -11864,20 +11859,19 @@ a.uk-thumbnail:focus {
 
 /*Transform burger to close icon*/
 
-.burger>span:nth-child(1).toggle {
+.burger>.toggle:nth-child(1) {
   transform: rotate(45deg);
+  background-color: #404040;
 }
 
-.burger>span:nth-child(2).toggle {
+.burger>.toggle:nth-child(2) {
   opacity: 0;
-  width: 0;
 }
 
-.burger>span:nth-child(3).toggle {
+.burger>.toggle:nth-child(3) {
   transform: rotate(-45deg) translate(-1px, 2px);
+  background-color: #404040;
 }
-/*Buttons*/
-
 /*SVG buttons fills*/
 
 .fil1 {
@@ -11896,11 +11890,11 @@ a.uk-thumbnail:focus {
 /*Scroll bottom*/
 
 .scroll-btm {
-  height: 50px;
+  height: 45px;
   opacity: 0;
   pointer-events: none;
   transition: .8s ease-in-out;
-  width: 50px;
+  width: 45px;
 }
 
 .scroll-btm.appear {
@@ -11927,17 +11921,17 @@ a.uk-thumbnail:focus {
   top: 100vh;
   cursor: pointer;
   display: block;
-  height: 50px;
+  height: 45px;
   position: absolute;
   right: 35px;
   transition: opacity .8s, transform .8s ease-in-out;
   opacity: 0;
-  width: 50px;
+  width: 45px;
 }
 
 .scroll-top.appear {
   opacity: 1;
-  transform: translateY(-80px);
+  transform: translateY(-60px);
 }
 
 /*Scroll top arrow animation*/
@@ -11953,17 +11947,10 @@ a.uk-thumbnail:focus {
 /*Scroll right button*/
 
 .scroll-right {
-  animation: sr_animate 2s infinite;
   cursor: pointer;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
 }
-
-.scroll-right:hover {
-  animation-play-state: paused;
-}
-
-/*Scroll right arrow animation*/
 
 .arrow-right {
   transition: transform .4s ease-in-out;
@@ -12007,7 +11994,7 @@ a.uk-thumbnail:focus {
   font-size: 1.5em;
   padding: 8px 45px;
   text-transform: uppercase;
-  transition: all 0.35s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 /*Black button*/
@@ -12025,7 +12012,7 @@ a.uk-thumbnail:focus {
 /*Yellow button*/
 
 .sm-yellow {
-  /*background-color: #2d2d2d;*/
+  background: none;
   border: 4px solid #FBBA00;
   color: #FBBA00;
 }
@@ -12227,10 +12214,10 @@ header.appear {
 }
 
 .toplogo {
-  top: 0;
+  top: 5px;
   transform: translateY(30px);
   cursor: pointer;
-  height: 50px;
+  height: 40px;
   left: 35px;
   max-width: 50%;
   position: absolute;
@@ -12243,15 +12230,15 @@ header.appear {
 .toplogo.appear {
   height: 30px;
   fill: #FBBA00;
-  transform: translateY(15px);
+  transform: translateY(10px);
   transition: .8s ease-in-out;
 }
 /*Menu*/
 
 .mainmenu {
   align-items: center;
-  background: rgba(0, 0, 0, .96);
-  /*background: linear-gradient(-45deg, rgba(0, 0, 0, .95), rgba(0, 0, 0, .9), rgba(0, 0, 0, .95));*/
+  background: #2d2d2d;
+  background: rgba(0, 0, 0, .95);
   box-sizing: border-box;
   display: none;
   height: 100vh;
@@ -12281,12 +12268,11 @@ header.appear {
   line-height: 2em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: transform 0.8s, color 0.3s ease;
+  transition: transform 0.8s ease, color 0.3s ease;
 }
 
 .mainmenu a:hover {
   color: #fff;
-  will-change: transform;
   transform: translateX(5px);
 }
 
@@ -12399,7 +12385,7 @@ body {
 .gaslo {
   color: #2d2d2d;
   display: none;
-  line-height: 1em;
+  line-height: normal;
   margin-top: 50px;
   pointer-events: none;
 }
@@ -12407,7 +12393,6 @@ body {
 /*Services*/
 
 .home-services {
-  background: linear-gradient(#f5f7fa, #c3cfe2);
   text-align: center;
 }
 
@@ -12416,6 +12401,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 100px;
 }
 
 .services-container {
@@ -12431,32 +12417,9 @@ body {
   }
 }
 
-@media screen and (min-width: 1920px) {
-  .services-container {
-    min-height: 15vw;
-    min-width: 15vw;
-  }
-}
-
-.serv-pre {
-  transition: opacity .8s ease;
-}
-
-/*Services on hover*/
-
-.services-container:hover {
-  cursor: pointer;
-}
-
-.services-container:hover .serv-pre {
-  opacity: 0;
-}
-
-.services-container:hover .serv-desc {
-  opacity: 1;
-}
-
 .serv-desc {
+  box-sizing: border-box;
+  padding: 5px;
   align-items: center;
   display: flex;
   height: 100%;
@@ -12464,9 +12427,75 @@ body {
   left: 0;
   opacity: 0;
   position: absolute;
-  top: 0;
+  bottom: 0;
   transition: opacity .8s ease;
   width: 100%;
+  z-index: 1;
+}
+
+/*Hide service description*/
+
+.services-container:hover .serv-pre {
+  opacity: 0;
+}
+
+/*Show service description*/
+
+.services-container:hover .serv-desc {
+  opacity: 1;
+}
+
+.serv-pre {
+  transition: opacity .8s ease;
+}
+
+/*Border animation*/
+
+.serv-desc::before,
+.serv-desc::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/*Draw*/
+
+.draw::before,
+.draw::after {
+  border: 6px dotted transparent;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.draw::before {
+  top: 0;
+  left: 0;
+}
+
+.draw::after {
+  bottom: 0;
+  right: 0;
+}
+
+.draw:hover::before,
+.draw:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.draw:hover::before {
+  border-top-color: #fbba00;
+  border-right-color: #fbba00;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.draw:hover::after {
+  border-bottom-color: #fbba00;
+  border-left-color: #fbba00;
+  transition: width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 
 /*Preview Portfolio*/
@@ -12477,10 +12506,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 50px;
-}
-
-.overlay-background {
-  background: rgba(0, 0, 0, 0.9);
 }
 
 /*Design*/
@@ -12533,6 +12558,14 @@ body {
 
 .portfolio-preview p {
   margin-top: 30px;
+}
+
+.portfolio-preview figcaption {
+  align-items: center;
+  background: rgba(0, 0, 0, .9);
+  display: flex;
+  justify-content: center;
+  transition: .8s ease;
 }
 
 .more-txt {

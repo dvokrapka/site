@@ -1,6 +1,3 @@
-/*Buttons*/
-
-
 /*SVG buttons fills*/
 .fil1 {
     fill: #211F1F
@@ -18,11 +15,11 @@
 
 /*Scroll bottom*/
 .scroll-btm {
-    height: 50px;
+    height: 45px;
     opacity: 0;
     pointer-events: none;
     transition: .8s ease-in-out;
-    width: 50px;
+    width: 45px;
 }
 
 .scroll-btm.appear {
@@ -48,17 +45,17 @@
     top: 100vh;
     cursor: pointer;
     display: block;
-    height: 50px;
+    height: 45px;
     position: absolute;
     right: 35px;
     transition: opacity .8s, transform .8s ease-in-out;
     opacity: 0;
-    width: 50px;
+    width: 45px;
 }
 
 .scroll-top.appear {
     opacity: 1;
-    transform: translateY(-80px);
+    transform: translateY(-60px);
 }
 
 /*Scroll top arrow animation*/
@@ -73,17 +70,11 @@
 
 /*Scroll right button*/
 .scroll-right {
-    animation: sr_animate 2s infinite;
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
 }
 
-.scroll-right:hover {
-    animation-play-state: paused;
-}
-
-/*Scroll right arrow animation*/
 .arrow-right {
     transition: transform .4s ease-in-out;
 }
@@ -94,8 +85,8 @@
 
 /*More button*/
 .more-href {
-	align-items: center;
-	display: flex;
+    align-items: center;
+    display: flex;
 }
 
 .more {
@@ -125,7 +116,7 @@
     font-size: 1.5em;
     padding: 8px 45px;
     text-transform: uppercase;
-    transition: all 0.35s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 /*Black button*/
@@ -141,7 +132,7 @@
 
 /*Yellow button*/
 .sm-yellow {
-    /*background-color: #2d2d2d;*/
+    background: none;
     border: 4px solid #FBBA00;
     color: #FBBA00;
 }

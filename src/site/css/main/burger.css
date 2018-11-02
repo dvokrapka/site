@@ -3,7 +3,7 @@
     cursor: pointer;
     box-sizing: border-box;
     position: absolute;
-    top: 10px;
+    top: 5px;
     transform: translateY(30px);
     right: 35px;
     height: 40px;
@@ -23,9 +23,9 @@
     border-radius: 15px;
     height: 5px;
     position: relative;
+    transform-origin: left center;
     transition: .2s ease;
     width: 100%;
-    transform-origin: left center;
 }
 
 .burger>span:nth-child(2) {
@@ -34,24 +34,19 @@
 
 /*Burger on scroll*/
 .appear .burger {
-    transform: translateY(0);
+    transform: translateY(5px);
 }
 
 .appear .burger>span {
     background-color: #FBBA00;
-    height: 4px;
 }
 
 /*Burger on menu open*/
-.appear .burger>.toggle {
-    background-color: #404040;
-}
-
 .burger>.toggle {
     transition: all .5s 1s ease-in-out;
 }
 
-/*Transform burger on hover*/
+/*Transform burger in 2colon hover*/
 .burger:hover>span:nth-child(1):not(.toggle),
 .burger:hover>span:nth-child(3):not(.toggle) {
     height: 12px;
@@ -64,15 +59,16 @@
 }
 
 /*Transform burger to close icon*/
-.burger>span:nth-child(1).toggle {
+.burger>.toggle:nth-child(1) {
     transform: rotate(45deg);
+    background-color: #404040;
 }
 
-.burger>span:nth-child(2).toggle {
+.burger>.toggle:nth-child(2) {
     opacity: 0;
-    width: 0;
 }
 
-.burger>span:nth-child(3).toggle {
+.burger>.toggle:nth-child(3) {
     transform: rotate(-45deg) translate(-1px, 2px);
+    background-color: #404040;
 }

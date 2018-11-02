@@ -34,10 +34,10 @@ header.appear {
 }
 
 .toplogo {
-    top: 0;
+    top: 5px;
     transform: translateY(30px);
     cursor: pointer;
-    height: 50px;
+    height: 40px;
     left: 35px;
     max-width: 50%;
     position: absolute;
@@ -51,6 +51,6 @@ header.appear {
 .toplogo.appear {
     height: 30px;
     fill: #FBBA00;
-    transform: translateY(15px);
+    transform: translateY(10px);
     transition: .8s ease-in-out;
 }
