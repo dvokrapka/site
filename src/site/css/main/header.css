@@ -29,11 +29,10 @@ header.appear {
     cursor: pointer;
     fill-rule: evenodd;
     fill: #2D2D2D;
-    height: 35px;
+    height: 30px;
     left: 15px;
-    max-width: 50%;
     position: absolute;
-    top: 5px;
+    top: 7.5px;
     transform: translateY(30px);
     transition: .8s ease-in-out;
     z-index: 300;
@@ -44,17 +43,16 @@ header.appear {
     fill: #FBBA00;
     transform: translateY(10px);
     transition: .8s ease-in-out;
-    /*z-index: 300;*/
 }
 
 .toplogo:hover {
     fill-rule: initial;
 }
 
-
-@media screen and (min-width: 768px){
-	.toplogo{
-    height: 40px;
-		left: 35px;
-	}
+@media screen and (min-width: 768px) {
+    .toplogo {
+        height: 40px;
+        left: 35px;
+        top: 5px;
+    }
 }

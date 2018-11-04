@@ -11796,15 +11796,17 @@ a.uk-thumbnail:focus {
 
 .burger {
   cursor: pointer;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   position: absolute;
-  top: 5px;
+  top: 12.5px;
   transform: translateY(27.5px);
   right: 20px;
-  height: 40px;
-  width: 40px;
+  height: 25px;
+  /*height: 40px;*/
+  width: 35px;
+  /*width: 40px;*/
   transition: transform .8s ease-in-out;
-  padding: 5px 0;
+  /*padding: 5px 0;*/
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -11831,17 +11833,17 @@ a.uk-thumbnail:focus {
 }
 
 .burger>span:nth-child(2) {
-  width: 85%;
-  transform: translateX(5%);
+  width: 80%;
+  transform: translateX(10%);
 }
 
 /*Burger on scroll*/
 
-.appear .burger {
+.burger.appear {
   transform: translateY(5px);
 }
 
-.appear .burger>span {
+.burger.appear >span {
   background-color: #FBBA00;
 }
 
@@ -11855,8 +11857,8 @@ a.uk-thumbnail:focus {
 
 .burger:hover>span:nth-child(1):not(.toggle),
 .burger:hover>span:nth-child(3):not(.toggle) {
-  height: 12px;
-  width: 12px;
+  height: 10px;
+  width: 10px;
 }
 
 .burger:hover>span:nth-child(2):not(.toggle) {
@@ -11876,7 +11878,7 @@ a.uk-thumbnail:focus {
 }
 
 .burger>.toggle:nth-child(3) {
-  transform: rotate(-45deg) translate(-1px, 2px);
+  transform: rotate(-45deg) translate(-2.5px, 2.5px);
   background-color: #E2A801;
 }
 /*SVG buttons fills*/
@@ -12217,11 +12219,10 @@ header.appear {
   cursor: pointer;
   fill-rule: evenodd;
   fill: #2D2D2D;
-  height: 35px;
+  height: 30px;
   left: 15px;
-  max-width: 50%;
   position: absolute;
-  top: 5px;
+  top: 7.5px;
   transform: translateY(30px);
   transition: .8s ease-in-out;
   z-index: 300;
@@ -12232,7 +12233,6 @@ header.appear {
   fill: #FBBA00;
   transform: translateY(10px);
   transition: .8s ease-in-out;
-  /*z-index: 300;*/
 }
 
 .toplogo:hover {
@@ -12243,6 +12243,7 @@ header.appear {
   .toplogo {
     height: 40px;
     left: 35px;
+    top: 5px;
   }
 }
 /*Menu*/
