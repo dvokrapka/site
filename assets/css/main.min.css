@@ -11799,17 +11799,23 @@ a.uk-thumbnail:focus {
   box-sizing: border-box;
   position: absolute;
   top: 5px;
-  transform: translateY(30px);
-  right: 35px;
+  transform: translateY(27.5px);
+  right: 20px;
   height: 40px;
   width: 40px;
   transition: transform .8s ease-in-out;
-  z-index: 9999;
   padding: 5px 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .burger {
+    right: 35px;
+  }
 }
 
 /*Burger bars*/
@@ -11817,15 +11823,16 @@ a.uk-thumbnail:focus {
 .burger>span {
   background-color: #2d2d2d;
   border-radius: 15px;
-  height: 5px;
+  height: 4px;
   position: relative;
   transform-origin: left center;
-  transition: .2s ease;
+  transition: .2s ease, background-color .8s ease;
   width: 100%;
 }
 
 .burger>span:nth-child(2) {
   width: 85%;
+  transform: translateX(5%);
 }
 
 /*Burger on scroll*/
@@ -11861,7 +11868,7 @@ a.uk-thumbnail:focus {
 
 .burger>.toggle:nth-child(1) {
   transform: rotate(45deg);
-  background-color: #404040;
+  background-color: #E2A801;
 }
 
 .burger>.toggle:nth-child(2) {
@@ -11870,7 +11877,7 @@ a.uk-thumbnail:focus {
 
 .burger>.toggle:nth-child(3) {
   transform: rotate(-45deg) translate(-1px, 2px);
-  background-color: #404040;
+  background-color: #E2A801;
 }
 /*SVG buttons fills*/
 
@@ -11918,15 +11925,21 @@ a.uk-thumbnail:focus {
 }
 
 .scroll-top {
-  top: 100vh;
   cursor: pointer;
   display: block;
   height: 45px;
-  position: absolute;
-  right: 35px;
-  transition: opacity .8s, transform .8s ease-in-out;
   opacity: 0;
+  position: absolute;
+  right: 20px;
+  top: 100vh;
+  transition: opacity .8s, transform .8s ease-in-out;
   width: 45px;
+}
+
+@media screen and (min-width: 768px) {
+  .scroll-top {
+    right: 35px;
+  }
 }
 
 .scroll-top.appear {
@@ -11969,9 +11982,9 @@ a.uk-thumbnail:focus {
 
 .more {
   cursor: pointer;
-  height: 50px;
-  margin-top: 15px;
-  width: 50px;
+  height: 45px;
+  transform: translateY(8px);
+  width: 45px;
 }
 
 .zoom {
@@ -11994,13 +12007,15 @@ a.uk-thumbnail:focus {
   font-size: 1.5em;
   padding: 8px 45px;
   text-transform: uppercase;
-  transition: all 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  border-width: 4px;
+  border-style: solid;
 }
 
 /*Black button*/
 
 .sm-black {
-  border: 4px solid #2d2d2d;
+  border-color: #2d2d2d;
   color: #2d2d2d;
 }
 
@@ -12013,7 +12028,7 @@ a.uk-thumbnail:focus {
 
 .sm-yellow {
   background: none;
-  border: 4px solid #FBBA00;
+  border-color: #FBBA00;
   color: #FBBA00;
 }
 
@@ -12031,7 +12046,6 @@ footer {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
 .footer-bg {
@@ -12040,7 +12054,7 @@ footer {
   width: 100%;
   background: url("../../assets/img/city_grey.png") no-repeat center bottom, linear-gradient(#f5f7fa, #c3cfe2);
   background-size: 300%;
-  animation: move-city 10s infinite;
+  /*animation: move-city 10s infinite;*/
 }
 
 @media screen and (min-width: 768px) {
@@ -12068,7 +12082,7 @@ footer {
 }
 
 .footer-contacts {
-  margin-bottom: 50vh;
+  margin-bottom: 60vh;
   position: relative;
   transform: translateY(150px);
   display: flex;
@@ -12080,14 +12094,12 @@ footer {
 .footer-contacts>a {
   display: block;
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
   font-size: 2em;
-  text-align: center;
   line-height: normal;
   text-decoration: none;
   color: #000;
   padding: 3px;
-  transition: all 0.35s ease;
+  transition: .4s ease;
 }
 
 .footer-contacts>a:hover {
@@ -12097,11 +12109,11 @@ footer {
 /*Form*/
 
 .form-button {
-  padding-top: 15px;
+  margin-top: 30px;
 }
 
 .form {
-  background: #000;
+  background: #2d2d2d;
   padding: 25px;
   border-radius: 30px;
   width: 325px;
@@ -12116,70 +12128,67 @@ footer {
 }
 
 .form input,
-textarea {
+.form textarea {
   background-color: #fff;
-  border-radius: 20px;
   border: 3px solid #fff;
+  border-radius: 25px;
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin: 10px 0;
   padding: 12px;
-  transition: all 0.35s ease;
+  transition: .4s ease;
   width: 85%;
 }
 
 .form input:hover,
-textarea:hover {
+.form textarea:hover,
+.form input:focus,
+.form textarea:focus {
   background-color: #FBBA00;
   border-color: #FBBA00;
 }
 
-/*Footer social*/
+/*Footer social & copyright*/
 
-.footer-social {
+.footer-bottom {
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  display: flex;
-  flex-direction: column;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 30px;
+  padding: 15px;
   color: #8d8d8d;
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.footer-social {
+  align-items: center;
+  display: flex;
+  font-size: 2em;
+  justify-content: space-between;
+  margin: 0 auto 25px;
+}
+
+.footer-social a {
+  color: #8d8d8d;
+  transition: color .4s ease;
+}
+
+.footer-social a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
   .footer-social {
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    padding: 15px 100px;
+    font-size: 3em;
   }
-}
-
-.social {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  font-size: 1.6em;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.social a {
-  color: #8d8d8d;
-  padding-right: 40px;
-  transition: color 0.35s ease;
-}
-
-.social a:hover {
-  color: #fff;
-  text-decoration: none;
 }
 header {
   box-sizing: border-box;
+  border-bottom: 4px solid #FBBA00;
   display: flex;
   height: 0;
   left: 0;
@@ -12188,8 +12197,9 @@ header {
   padding: 0 8vw;
   position: fixed;
   right: 0;
-  top: 0;
-  z-index: 9999;
+  /*top: 0;*/
+  top: -4px;
+  z-index: 100;
   background-color: transparent;
   transition: background-color .8s ease, height .8s ease;
 }
@@ -12197,34 +12207,24 @@ header {
 /*Header effect on scroll*/
 
 header.appear {
-  transition: background-color .8s ease, height .8s ease;
   background-color: #2D2D2D;
-  height: 60px;
-}
-
-/*Top*/
-
-.top {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1920px;
-  width: 100%;
+  /*height: 60px;*/
+  height: 61px;
+  transition: background-color .8s ease, height .8s ease;
 }
 
 .toplogo {
-  top: 5px;
-  transform: translateY(30px);
   cursor: pointer;
-  height: 40px;
-  left: 35px;
+  fill-rule: evenodd;
+  fill: #2D2D2D;
+  height: 35px;
+  left: 15px;
   max-width: 50%;
   position: absolute;
-  fill: #2D2D2D;
-  fill-rule: evenodd;
-  clip-rule: evenodd;
+  top: 5px;
+  transform: translateY(30px);
   transition: .8s ease-in-out;
+  z-index: 300;
 }
 
 .toplogo.appear {
@@ -12232,61 +12232,76 @@ header.appear {
   fill: #FBBA00;
   transform: translateY(10px);
   transition: .8s ease-in-out;
+  /*z-index: 300;*/
+}
+
+.toplogo:hover {
+  fill-rule: initial;
+}
+
+@media screen and (min-width: 768px) {
+  .toplogo {
+    height: 40px;
+    left: 35px;
+  }
 }
 /*Menu*/
 
-.mainmenu {
+.main-menu {
   align-items: center;
   background: #2d2d2d;
   background: rgba(0, 0, 0, .95);
-  box-sizing: border-box;
   display: none;
-  height: 100vh;
   justify-content: center;
   left: 0;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   top: 0;
-  width: 100vw;
-  z-index: 9998;
+  z-index: 200;
 }
 
-.mainmenu-container {
+.main-menu>div {
   align-items: center;
-  text-align: center;
   display: flex;
   flex-direction: column;
   height: 85%;
   justify-content: space-around;
+  margin-top: 60px;
+  text-align: center;
   width: 85%;
 }
 
-.mainmenu a {
+.main-menu a {
   color: #FBBA00;
   display: block;
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 3em;
-  line-height: 2em;
   text-decoration: none;
   text-transform: uppercase;
   transition: transform 0.8s ease, color 0.3s ease;
 }
 
-.mainmenu a:hover {
+.main-menu a:hover {
   color: #fff;
   transform: translateX(5px);
 }
 
-.mainmenu a.active {
+.main-menu a.active {
   color: #fff;
 }
 
-.lang-items a {
-  font-size: 1.5em;
-  margin: 0 10px;
+.menu-lang a {
   display: inline-block;
+  font-size: 1.1em;
+  margin: 0 10px;
 }
 
-.social-mob {
+.menu-items a {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+.menu-social {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -12294,8 +12309,24 @@ header.appear {
   width: 100%;
 }
 
-.social-mob a {
+.menu-social a {
   color: #404040;
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-lang a {
+    font-size: 1.5em;
+  }
+
+  .menu-items a {
+    font-size: 2.3em;
+    line-height: 2em;
+  }
+
+  .menu-social a {
+    font-size: 2.3em;
+  }
 }
 .logo-screen {
   align-items: center;
@@ -12366,7 +12397,11 @@ body {
 }
 
 .fs-bg-1 {
+  /*background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%), url('../../../assets/img/bodesign-fs.jpg') no-repeat center center fixed;*/
   background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%);
+  /*background: url('../../../assets/img/bodesign.jpg') no-repeat center center fixed;*/
+  background-size: 100%;
+  /*background-blend-mode: color-burn;*/
   height: 100%;
   position: absolute;
   width: 100%;
@@ -12385,8 +12420,8 @@ body {
 .gaslo {
   color: #2d2d2d;
   display: none;
-  line-height: normal;
-  margin-top: 50px;
+  line-height: 1.1em;
+  margin-top: 75px;
   pointer-events: none;
 }
 
@@ -12394,6 +12429,7 @@ body {
 
 .home-services {
   text-align: center;
+  padding-top: 100px;
 }
 
 .services {
@@ -12401,7 +12437,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 100px;
 }
 
 .services-container {
@@ -12419,7 +12454,7 @@ body {
 
 .serv-desc {
   box-sizing: border-box;
-  padding: 5px;
+  padding: 10px;
   align-items: center;
   display: flex;
   height: 100%;
@@ -12465,14 +12500,14 @@ body {
 .draw::before,
 .draw::after {
   border: 6px dotted transparent;
-  width: 0;
   height: 0;
+  width: 0;
   z-index: -1;
 }
 
 .draw::before {
-  top: 0;
   left: 0;
+  top: 0;
 }
 
 .draw::after {
@@ -12482,20 +12517,20 @@ body {
 
 .draw:hover::before,
 .draw:hover::after {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .draw:hover::before {
-  border-top-color: #fbba00;
   border-right-color: #fbba00;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  border-top-color: #fbba00;
+  transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
 }
 
 .draw:hover::after {
   border-bottom-color: #fbba00;
   border-left-color: #fbba00;
-  transition: width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  transition: width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
 }
 
 /*Preview Portfolio*/
@@ -12517,7 +12552,6 @@ body {
   display: flex;
   justify-content: center;
   min-height: 80vh;
-  /*overflow: hidden;*/
   position: relative;
 }
 
@@ -12604,7 +12638,8 @@ a:hover {
 /*Backgrounds*/
 
 .dark-bg {
-  background-color: #000;
+  /*background-color: #000;*/
+  background-color: #2D2D2D;
 }
 
 .yellow-bg {
@@ -12619,18 +12654,16 @@ h1 {
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 3.5em;
-  }
-}
-
 h2 {
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 2em;
 }
 
 @media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.5em;
+  }
+
   h2 {
     font-size: 3em;
   }

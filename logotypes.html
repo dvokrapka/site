@@ -21,49 +21,9 @@
 </head>
 
 <body>
-	<header>
-	    <!-- Top menu -->
-	    <div class="top-menu">
-	        <img class="toplogo" src="assets/img/logo-4.svg" alt="Лого Двокрапка">
-	        <div class="main-menu uk-hidden-small">
-	            <ul class="menu-items">
-	                <li><a href="#home">Головна</a></li>
-	                <li><a href="#portfolio">Портфоліо</a></li>
-	                <li><a href="#contacts">Контакти</a></li>
-	            </ul>
-	            <div class="change-language">
-	                <ul class="lang-items">
-	                    <li><a class="active" href="#">UA</a></li>
-	                    <li><a href="#">EN</a></li>
-	                    <li><a href="#">RU</a></li>
-	                </ul>
-	            </div>
-	        </div>
-	      	<a class="uk-visible-small" href="#" id="openMenu">
-	  		  	<svg class="burger" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" version="1.1" viewBox="0 0 25012 21843.07">
-	  		  	    <path d="M1703.01 12624.55c-470.2,0 -895.98,-190.66 -1204.17,-498.84 -308.18,-308.19 -498.84,-733.95 -498.84,-1204.17 0,-470.21 190.66,-895.98 498.84,-1204.18 308.19,-308.17 733.97,-498.83 1204.17,-498.83l21605.94 0c470.2,0 895.98,190.66 1204.2,498.85 308.19,308.18 498.85,733.95 498.85,1204.16 0,470.22 -190.66,895.98 -498.85,1204.17 -308.19,308.18 -734,498.84 -1204.2,498.84l-21605.94 0zm0 -9218.53c-470.2,0 -895.98,-190.66 -1204.17,-498.84 -308.18,-308.19 -498.84,-733.95 -498.84,-1204.17 0,-470.2 190.66,-895.98 498.84,-1204.17 308.19,-308.18 733.97,-498.84 1204.17,-498.84l21605.94 0c470.2,0 895.98,190.66 1204.2,498.85 308.19,308.18 498.85,733.96 498.85,1204.16 0,470.22 -190.66,895.98 -498.85,1204.17 -308.19,308.18 -734,498.84 -1204.2,498.84l-21605.94 0zm0 18437.05c-470.2,0 -895.98,-190.66 -1204.17,-498.84 -308.18,-308.19 -498.84,-733.95 -498.84,-1204.17 0,-470.21 190.66,-895.98 498.84,-1204.18 308.19,-308.17 733.97,-498.83 1204.17,-498.83l21605.94 0c470.2,0 895.98,190.66 1204.2,498.85 308.19,308.18 498.85,733.95 498.85,1204.16 0,470.22 -190.66,895.98 -498.85,1204.17 -308.19,308.18 -734,498.84 -1204.2,498.84l-21605.94 0z"/>
-	  			  </svg>
-	      	</a>
-	    </div>
-	    <!-- Mob Menu -->
-	    <div class="mainmenu">
-	        <div class="mainmenu-container">
-	            <img id="closeMenu" class="close-menu" src="assets/img/close-menu.svg" alt="Закриття меню"/>
-	            <img class="mainmenu-logo" src="assets/img/logo-4.svg" alt="Лого Двокрапка"/>
-	            <div class="mainmenu-items">
-	                <a href="#home">Головна</a>
-	                <a href="#portfolio">Портфоліо</a>
-	                <a href="#contacts">Контакти</a>
-	            </div>
-	            <div class="social-mob">
-	                <a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
-	                <a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
-	                <a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
-	                <a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
-	            </div>
-	        </div>
-	    </div>
-	</header>
+
+		<!-- Header / insert via AJAX / -->
+
     <main>
         <!-- First logo screen -->
         <section id="home" class="logo-screen">
@@ -139,52 +99,9 @@
             <h1 class="titles black-text">:Бріф</h1>
         </section>
     </main>
-    <footer>
-        <div class="footer-bg"></div>
-        <div class="footer-contacts">
-            <a href="tel:+0679992091">(067) 999 20 91</a>
-            <a href="mailto:email@gmail.com">email@gmail.com</a>
-            <!--Accordion-->
-            <div id="formAccordion" class="form-button uk-accordion uk-text-center" data-uk-accordion="{showfirst  : false}">
-                <button class="uk-accordion-title sm-button sm-black">Напишіть нам</button>
-                <div class="uk-accordion-content">
-                    <form id="contactMe" action="" method="POST" class="form">
-                        <input type="text" id="name" name="name" placeholder="Ім’я">
-                        <input type="email" id="email" name="email" placeholder="E-mail">
-                        <textarea placeholder="Повідомлення" rows="5"></textarea>
-                        <button type="submit" class="sm-button sm-yellow">Надіслати</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- Birds -->
-        <div>
-            <div class="bird-container bird-container--one">
-                <div class="bird bird--one"></div>
-            </div>
-            <div class="bird-container bird-container--two">
-                <div class="bird bird--two"></div>
-            </div>
-            <div class="bird-container bird-container--three">
-                <div class="bird bird--three"></div>
-            </div>
-            <div class="bird-container bird-container--four">
-                <div class="bird bird--four"></div>
-            </div>
-        </div>
-        <!--Footer Social-->
-        <div id="contacts" class="footer-social">
-            <div class="social">
-                <a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
-                <a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
-                <a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
-                <a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
-            </div>
-            <div class="footer-copyright">Copyright © :KRAPKA 2018. All rights reserved
-            </div>
-        </div>
-    </footer>
-    <img id="goTop" class="scroll-top" src="assets/img/go-top.svg" alt="Вгору">
+
+		<!-- Footer / insert via AJAX / -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
 </body>

@@ -5,69 +5,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>:KRAPKA</title>
+
+		<!-- Templater -->
+		<script src="assets/js/templater.js"></script>
+
 		<!-- Font Loader -->
 		<script src="assets/js/font_loader.js"></script>
 		<!-- Styles -->
 		<link rel="stylesheet" href="assets/css/main.min.css">
-		<!-- Favicon -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">
+		<!-- Favicon / insert via AJAX /-->
 	</head>
 	<body>
-		<header>
-			<div class="top">
-				<!-- Logo -->
-				<svg class="toplogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10154.84 2105.28">
-					<path d="M276.64 1727.35c0,-58.5 14.32,-113.66 39.61,-162.19l-316.25 0 0 -189.26 625.65 0 2.47 -0.03c194.12,-0.01 351.48,157.37 351.48,351.48 0,194.12 -157.36,351.48 -351.48,351.48 -194.1,0 -351.48,-157.35 -351.48,-351.48zm5650.8 -772.56l305.41 0c35.58,0 68.69,-16.31 99.33,-48.93 30.64,-32.61 45.96,-91.42 45.96,-176.42 0,-86.98 -17.79,-146.29 -53.37,-177.91 -35.58,-31.63 -71.16,-47.45 -106.75,-47.45l-290.58 0 0 450.71zm3420.87 352.86l-186.81 -652.34 -195.7 652.34 382.51 0zm-450.71 -1307.65l527.8 0 729.44 2105.28 -587.11 0 -127.5 -412.16 -560.42 0 -124.54 412.16 -590.07 0 732.4 -2105.28zm-7818 2105.28l0 -2105.28 578.21 0 0 800.6 640.48 -800.6 652.33 0 -765.01 942.93 818.39 1162.35 -664.2 0 -521.87 -773.91 -160.12 166.05 0 607.86 -578.21 0zm2024.38 -1150.49l364.71 0c35.59,0 68.7,-19.77 99.34,-59.3 30.64,-39.54 45.96,-94.89 45.96,-166.05 0,-73.14 -17.79,-128.99 -53.38,-167.54 -35.58,-38.54 -71.16,-57.82 -106.74,-57.82l-349.89 0 0 450.71zm1916.89 352.86l-186.81 -652.34 -195.7 652.34 382.51 0zm-450.71 -1307.65l527.8 0 729.44 2105.28 -587.11 0 -127.5 -412.16 -560.42 0 -124.54 412.16 -84.41 0 -505.66 0 -146.68 0 -370.65 -646.41 -216.45 0 0 646.38 -818.37 -1162.32 765.01 -942.93 441.79 0c102.8,0 197.68,21.25 284.66,63.75 86.98,42.5 161.6,97.85 223.87,166.05 62.27,68.2 111.2,146.29 146.78,234.25 35.58,87.97 53.37,176.43 53.37,265.39 0,122.56 -26.68,236.72 -80.06,342.47 -53.37,105.76 -127.5,192.25 -222.39,259.46l129.79 225.83 541.73 -1557.2zm2236.48 2105.28l0 -909.85c-10.41,13.54 -21.29,26.73 -32.64,39.57 -60.3,68.2 -133.44,122.56 -219.43,163.08 -85.99,40.53 -180.38,60.79 -283.17,60.79l-343.96 0 0 646.41 -0.04 0 -729.44 -2105.28 1058.61 0c102.79,0 197.68,21.25 284.66,63.75 86.98,42.5 161.6,97.85 223.87,166.05 14.58,15.97 28.43,32.48 41.54,49.53l0 -279.33 578.21 0 0 800.6 640.48 -800.6 652.33 0 -765.01 942.93 372.74 529.4 -219.63 631.35 -520.79 -772.31 -160.12 166.05 0 607.86 -578.21 0zm-6367.82 -377.92c-0.01,-104.55 84.75,-189.3 189.3,-189.31 104.55,0 189.3,84.76 189.3,189.31 0,104.54 -84.75,189.3 -189.3,189.3 -104.55,0 -189.31,-84.76 -189.3,-189.3zm536.86 -579.59l-695.85 203.38 0 -224.06 498.73 -108.01 -498.73 -109.15 0 -203.38 695.85 203.38 0 237.84zm-699.04 -769.83c0,-194.1 157.38,-351.49 351.48,-351.49 194.12,0 351.48,157.39 351.48,351.49 0,194.12 -157.36,351.48 -351.48,351.48 -194.1,0 -351.48,-157.36 -351.48,-351.48zm162.17 0c0,-104.54 84.77,-189.31 189.31,-189.31 104.55,0 189.3,84.77 189.3,189.31 0,104.55 -84.75,189.3 -189.3,189.3 -104.54,0 -189.31,-84.75 -189.31,-189.3z" />
-				</svg>
-				<!-- Burger -->
-				<div class="burger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-			<!-- Menu -->
-			<div class="mainmenu">
-				<div class="mainmenu-container">
-					<div class="lang-items">
-						<a class="active" href="ua">УКР</a>
-						<a href="ru">РУС</a>
-						<a href="en">ENG</a>
-					</div>
-					<div class="mainmenu-items">
-						<a class="active" href="#home">Головна</a>
-						<a href="#portfolio">Портфоліо</a>
-						<a href="#contacts">Контакти</a>
-					</div>
-					<div class="social-mob">
-						<a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
-						<a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
-						<a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
-						<a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
-					</div>
-				</div>
-			</div>
-			<!-- Scroll top -->
-			<div id="goTop" class="scroll-top">
-				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" version="1.1" viewBox="0 0 5000 5000">
-					<path class="fil0" d="M590.55 0l3818.9 0c326.09,0 590.54,264.45 590.54,590.55l0.01 3818.9c-0.01,326.09 -264.46,590.55 -590.56,590.55l-3818.89 0c-326.09,0 -590.55,-264.46 -590.55,-590.56l0 -3818.89c0,-326.1 264.46,-590.55 590.55,-590.55l0 0z" />
-					<path class="fil1" d="M5000 3948.71c-304.75,107.87 -632.66,166.76 -974.36,166.76 -1612.51,0 -2919.71,-1307.19 -2919.71,-2919.7 0,-426.08 91.33,-830.8 255.38,-1195.77l3048.14 0c324.8,0 590.55,265.75 590.55,590.55l0 3358.16 0 0z" />
-					<path class="arrow-top fil2" d="M3888.59 2032.09c63.04,72.86 173.23,80.81 246.09,17.77 72.86,-63.04 80.81,-173.23 17.77,-246.09l-684.96 -790.9c-63.04,-72.86 -173.23,-80.81 -246.09,-17.77 -7.06,6.11 -13.49,12.65 -19.33,19.57l-685.99 789.1c-63.04,72.86 -55.09,183.05 17.77,246.09 72.86,63.04 183.05,55.09 246.09,-17.77l381.01 -438.28 -1 1237.62c0,96.27 78.05,174.32 174.32,174.32 96.27,0 174.32,-78.05 174.32,-174.32l1 -1236.96 379 437.62z" />
-				</svg>
-			</div>
-		</header>
+
+		<!-- Header / insert via AJAX / -->
+
 		<main>
 			<!-- First screen -->
 			<section id="home" class="first-screen">
 				<div class="fs-bg-1"></div>
 				<div class="fs-bg-2"></div>
-				<div data-uk-parallax="{y: '0,-200'}">
+				<div data-uk-parallax="{y: '0,-250'}">
 					<h1 id="gaslo" class="gaslo">Проникливий <br>дизайн...</h1>
 					<!-- Scroll bottom -->
 					<a href="#services">
@@ -94,7 +51,7 @@
 									<h2>Логотипи</h2>
 									<p>Розробляємо фірмовий стиль та створюємо Логотипи</p>
 									<a href="logotypes">
-										<svg class="scroll-right" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" viewBox="0 0 5000 5000">
+										<svg class="scroll-right" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 5000 5000">
 											<path class="fil0" d="M590.55 0l3818.9 0c326.09,0 590.54,264.45 590.54,590.55l0.01 3818.9c-0.01,326.09 -264.46,590.55 -590.56,590.55l-3818.89 0c-326.09,0 -590.55,-264.46 -590.55,-590.56l0 -3818.89c0,-326.1 264.46,-590.55 590.55,-590.55l0 0z"/>
 											<path class="fil1" d="M5000 3948.71c-304.75,107.87 -632.66,166.76 -974.36,166.76 -1612.51,0 -2919.71,-1307.19 -2919.71,-2919.7 0,-426.08 91.33,-830.8 255.38,-1195.77l3048.14 0c324.8,0 590.55,265.75 590.55,590.55l0 3358.16 0 0z"/>
 											<path class="arrow-right fil2" d="M3281.33 1424.83c-72.86,-63.04 -80.81,-173.23 -17.77,-246.09 63.04,-72.86 173.23,-80.81 246.09,-17.77l790.9 684.96c72.86,63.04 80.81,173.23 17.77,246.09 -6.11,7.06 -12.65,13.49 -19.57,19.33l-789.1 685.99c-72.86,63.04 -183.05,55.09 -246.09,-17.77 -63.04,-72.86 -55.09,-183.05 17.77,-246.09l438.28 -381.01 -1237.62 1c-96.27,0 -174.32,-78.05 -174.32,-174.32 0,-96.27 78.05,-174.32 174.32,-174.32l1236.96 -1 -437.62 -379z"/>
@@ -114,7 +71,7 @@
 									<h2>Сайти</h2>
 									<p>Розробляємо та малюємо сайти</p>
 									<a href="">
-										<svg class="scroll-right" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" viewBox="0 0 5000 5000">
+										<svg class="scroll-right" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 5000 5000">
 											<path class="fil0" d="M590.55 0l3818.9 0c326.09,0 590.54,264.45 590.54,590.55l0.01 3818.9c-0.01,326.09 -264.46,590.55 -590.56,590.55l-3818.89 0c-326.09,0 -590.55,-264.46 -590.55,-590.56l0 -3818.89c0,-326.1 264.46,-590.55 590.55,-590.55l0 0z"/>
 											<path class="fil1" d="M5000 3948.71c-304.75,107.87 -632.66,166.76 -974.36,166.76 -1612.51,0 -2919.71,-1307.19 -2919.71,-2919.7 0,-426.08 91.33,-830.8 255.38,-1195.77l3048.14 0c324.8,0 590.55,265.75 590.55,590.55l0 3358.16 0 0z"/>
 											<path class="arrow-right fil2" d="M3281.33 1424.83c-72.86,-63.04 -80.81,-173.23 -17.77,-246.09 63.04,-72.86 173.23,-80.81 246.09,-17.77l790.9 684.96c72.86,63.04 80.81,173.23 17.77,246.09 -6.11,7.06 -12.65,13.49 -19.57,19.33l-789.1 685.99c-72.86,63.04 -183.05,55.09 -246.09,-17.77 -63.04,-72.86 -55.09,-183.05 17.77,-246.09l438.28 -381.01 -1237.62 1c-96.27,0 -174.32,-78.05 -174.32,-174.32 0,-96.27 78.05,-174.32 174.32,-174.32l1236.96 -1 -437.62 -379z"/>
@@ -129,12 +86,12 @@
 								<img src="assets/img/advdis2.svg" alt="Фірмовий стиль">
 								<h2 class="yellow-text">Рекламу</h2>
 							</div>
-							<div class="serv-desc">
+							<div class="serv-desc draw">
 								<div>
 									<h2>Рекламу</h2>
 									<p>Розробляємо макети рекламної поліграфії та зовнішньої реклами</p>
 									<a href="">
-										<svg class="scroll-right" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" viewBox="0 0 5000 5000">
+										<svg class="scroll-right" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 5000 5000">
 											<path class="fil0" d="M590.55 0l3818.9 0c326.09,0 590.54,264.45 590.54,590.55l0.01 3818.9c-0.01,326.09 -264.46,590.55 -590.56,590.55l-3818.89 0c-326.09,0 -590.55,-264.46 -590.55,-590.56l0 -3818.89c0,-326.1 264.46,-590.55 590.55,-590.55l0 0z"/>
 											<path class="fil1" d="M5000 3948.71c-304.75,107.87 -632.66,166.76 -974.36,166.76 -1612.51,0 -2919.71,-1307.19 -2919.71,-2919.7 0,-426.08 91.33,-830.8 255.38,-1195.77l3048.14 0c324.8,0 590.55,265.75 590.55,590.55l0 3358.16 0 0z"/>
 											<path class="arrow-right fil2" d="M3281.33 1424.83c-72.86,-63.04 -80.81,-173.23 -17.77,-246.09 63.04,-72.86 173.23,-80.81 246.09,-17.77l790.9 684.96c72.86,63.04 80.81,173.23 17.77,246.09 -6.11,7.06 -12.65,13.49 -19.57,19.33l-789.1 685.99c-72.86,63.04 -183.05,55.09 -246.09,-17.77 -63.04,-72.86 -55.09,-183.05 17.77,-246.09l438.28 -381.01 -1237.62 1c-96.27,0 -174.32,-78.05 -174.32,-174.32 0,-96.27 78.05,-174.32 174.32,-174.32l1236.96 -1 -437.62 -379z"/>
@@ -149,7 +106,7 @@
 			<!-- Portfolio preview -->
 			<section class="dark-bg uk-text-center">
 				<div id="portfolio" class="sect-container">
-					<h1 class="titles white-text" data-uk-parallax="{y: '100, 0', viewport: '0.5'}">Ми<span class="blink">:</span> Те, що ми <span class="yellow-text">створили</span></h1>
+					<h1 class="titles white-text" data-uk-parallax="{y: '100, 0', viewport: '0.5'}"><span class="yellow-text">Ми</span><span class="blink">:</span> Те, що ми <span class="yellow-text">створюємо</span></h1>
 					<div class="portfolio-preview uk-grid uk-grid-width-medium-1-2 uk-grid-width-large-1-3 uk-grid-collapse uk-margin-large-bottom">
 						<figure class="uk-overlay uk-overlay-hover">
 							<img src="assets/img/1.jpg" alt="Зображення 1">
@@ -257,9 +214,10 @@
 					<a href="#" class="sm-button sm-yellow" data-uk-parallax="{y: '100, 0', viewport: '0.2'}">Хочу Більше</a>
 				</div>
 			</section>
+
 			<!-- About us -->
 			<section class="sect-container yellow-bg uk-text-center">
-				<h1 class="grey-text" data-uk-parallax="{y: '100, 0', viewport: '0.5'}"><span class="white-text"><span class="blink">Ми:</span> Те, що ми </span> думаємо</h1>
+				<h1 class="grey-text" data-uk-parallax="{y: '100, 0', viewport: '0.5'}">Ми<span class="white-text"><span class="blink">:</span> Те, що ми </span> думаємо</h1>
 				<div class="about-us-screen">
 					<div class="about-us-col black-text">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -269,57 +227,16 @@
 					</div>
 				</div>
 			</section>
+
 			<!-- Lyrics -->
 			<section class="home-design">
 				<h1 class="home-design-txt" data-uk-parallax="{opacity: '0,1', viewport: '0.5'}"><span class="yellow-text"><span class="blink">:</span>Бо</span> дизайнери...</h1>
 			</section>
 		</main>
-		<footer>
-			<div class="footer-bg"></div>
-			<div class="footer-contacts">
-				<a href="tel:+0679992091">(067) 999 20 91</a>
-				<a href="mailto:email@gmail.com">email@gmail.com</a>
-				<!--Accordion-->
-				<div id="formAccordion" class="form-button uk-accordion uk-text-center" data-uk-accordion="{showfirst  : false}">
-					<button class="uk-accordion-title sm-button sm-black">Напишіть нам</button>
-					<div class="uk-accordion-content">
-						<form id="contactMe" action="" method="POST" class="form">
-							<input type="text" id="name" name="name" placeholder="Ім’я">
-							<input type="email" id="email" name="email" placeholder="E-mail">
-							<textarea placeholder="Повідомлення" rows="5"></textarea>
-							<button type="submit" class="sm-button sm-yellow">Надіслати</button>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- Birds -->
-			<div>
-				<div class="bird-container bird-container--one">
-					<div class="bird bird--one"></div>
-				</div>
-				<div class="bird-container bird-container--two">
-					<div class="bird bird--two"></div>
-				</div>
-				<div class="bird-container bird-container--three">
-					<div class="bird bird--three"></div>
-				</div>
-				<div class="bird-container bird-container--four">
-					<div class="bird bird--four"></div>
-				</div>
-			</div>
-			<!--Footer Social-->
-			<div id="contacts" class="footer-social">
-				<div class="social">
-					<a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
-					<a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
-					<a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
-					<a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
-				</div>
-				<div class="footer-copyright">Copyright © :KRAPKA 2018. All rights reserved
-				</div>
-			</div>
-		</footer>
-		<!-- <script src="assets/js/jquery-3.3.1.min.js"></script> -->
+
+		<!-- Footer / insert via AJAX / -->
+
+		<!-- JS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="assets/js/scripts.min.js"></script>
 	</body>
