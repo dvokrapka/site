@@ -23,6 +23,7 @@ header.appear {
     /*height: 60px;*/
     height: 61px;
     transition: background-color .8s ease, height .8s ease;
+    /*box-shadow: 2px 2px 15px rgba(0,0,0,.3);*/
 }
 
 .toplogo {
