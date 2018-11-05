@@ -1,29 +1,26 @@
 header {
     box-sizing: border-box;
-    border-bottom: 4px solid #FBBA00;
+    background-color: #2D2D2D;
+    border-bottom: 4px solid transparent;
     display: flex;
-    height: 0;
+    height: 64px;
     left: 0;
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 8vw;
     position: fixed;
     right: 0;
-    /*top: 0;*/
-    top: -4px;
+    transform: translateY(-100%);
     z-index: 100;
-    background-color: transparent;
-    transition: background-color .8s ease, height .8s ease;
+    transition: transform .8s ease, border-color .8s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,.25);
 }
 
 /*Header effect on scroll*/
-
 header.appear {
-    background-color: #2D2D2D;
-    /*height: 60px;*/
-    height: 61px;
-    transition: background-color .8s ease, height .8s ease;
-    /*box-shadow: 2px 2px 15px rgba(0,0,0,.3);*/
+    border-color: #FBBA00;
+    transform: translateY(0);
+    transition: transform .8s ease, border-color .8s ease;
 }
 
 .toplogo {
@@ -32,18 +29,18 @@ header.appear {
     fill: #2D2D2D;
     height: 30px;
     left: 15px;
-    position: absolute;
-    top: 7.5px;
-    transform: translateY(30px);
-    transition: .8s ease-in-out;
+    position: fixed;
+    top: 15px;
+    transform: translateY(80px);
+    transition: .8s ease;
     z-index: 300;
 }
 
 .toplogo.appear {
-    height: 30px;
     fill: #FBBA00;
-    transform: translateY(10px);
-    transition: .8s ease-in-out;
+    height: 30px;
+    transform: translateY(0);
+    transition: .8s ease;
 }
 
 .toplogo:hover {
@@ -54,6 +51,5 @@ header.appear {
     .toplogo {
         height: 40px;
         left: 35px;
-        top: 5px;
     }
 }

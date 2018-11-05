@@ -22,13 +22,11 @@ function moveBackground() {
     window.requestAnimationFrame(moveBackground);
 }
 
-$('#home').on('mousemove click', function(e) {
-
+$('body').on('mousemove click', function(e) {
     var lMouseX = Math.max(-100, Math.min(100, winX / 2 - e.clientX));
     var lMouseY = Math.max(-100, Math.min(100, winY / 2 - e.clientY));
     lFollowX = (20 * lMouseX) / 100;
     lFollowY = (10 * lMouseY) / 100;
-
 });
 
 moveBackground();

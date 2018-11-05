@@ -11796,17 +11796,15 @@ a.uk-thumbnail:focus {
 
 .burger {
   cursor: pointer;
-  /*box-sizing: border-box;*/
   position: absolute;
-  top: 12.5px;
-  transform: translateY(27.5px);
+  top: 17.5px;
+  /*top: 17.5px;*/
+  transform: translateY(80px);
   right: 20px;
   height: 25px;
-  /*height: 40px;*/
+  padding: 0;
   width: 35px;
-  /*width: 40px;*/
-  transition: transform .8s ease-in-out;
-  /*padding: 5px 0;*/
+  transition: transform .8s ease;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -11840,10 +11838,10 @@ a.uk-thumbnail:focus {
 /*Burger on scroll*/
 
 .burger.appear {
-  transform: translateY(5px);
+  transform: translateY(0);
 }
 
-.burger.appear >span {
+.burger.appear>span {
   background-color: #FBBA00;
 }
 
@@ -11869,8 +11867,8 @@ a.uk-thumbnail:focus {
 /*Transform burger to close icon*/
 
 .burger>.toggle:nth-child(1) {
-  transform: rotate(45deg);
   background-color: #E2A801;
+  transform: rotate(45deg);
 }
 
 .burger>.toggle:nth-child(2) {
@@ -11878,8 +11876,8 @@ a.uk-thumbnail:focus {
 }
 
 .burger>.toggle:nth-child(3) {
-  transform: rotate(-45deg) translate(-2.5px, 2.5px);
   background-color: #E2A801;
+  transform: rotate(-45deg) translate(-2.5px, 2.5px);
 }
 /*SVG buttons fills*/
 
@@ -12038,8 +12036,6 @@ a.uk-thumbnail:focus {
   background-color: #FBBA00;
   color: #2d2d2d;
 }
-/*Footer*/
-
 footer {
   min-height: 100vh;
   position: relative;
@@ -12065,17 +12061,6 @@ footer {
   }
 }
 
-/*@keyframes move-city {
-	0% {
-		transform: translateX(-100vw);
-	}
-
-	100% {
-		transform: translateX(100vw);
-	}
-}
-*/
-
 .contacts {
   display: flex;
   align-items: center;
@@ -12094,13 +12079,13 @@ footer {
 }
 
 .footer-contacts>a {
+  color: #000;
   display: block;
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 2em;
   line-height: normal;
-  text-decoration: none;
-  color: #000;
   padding: 3px;
+  text-decoration: none;
   transition: .4s ease;
 }
 
@@ -12116,11 +12101,11 @@ footer {
 
 .form {
   background: #2d2d2d;
-  padding: 25px;
   border-radius: 30px;
-  width: 325px;
   box-sizing: border-box;
+  padding: 25px;
   text-align: center;
+  width: 325px;
 }
 
 @media screen and (min-width: 768px) {
@@ -12175,12 +12160,12 @@ footer {
 
 .footer-social a {
   color: #8d8d8d;
-  transition: color .4s ease;
+  transition: transform .4s ease, color .2s ease;
 }
 
 .footer-social a:hover {
-  color: #fff;
-  text-decoration: none;
+  color: #FBBA00;
+  transform: translateX(5px);
 }
 
 @media screen and (min-width: 768px) {
@@ -12190,30 +12175,28 @@ footer {
 }
 header {
   box-sizing: border-box;
-  border-bottom: 4px solid #FBBA00;
+  background-color: #2D2D2D;
+  border-bottom: 4px solid transparent;
   display: flex;
-  height: 0;
+  height: 64px;
   left: 0;
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 8vw;
   position: fixed;
   right: 0;
-  /*top: 0;*/
-  top: -4px;
+  transform: translateY(-100%);
   z-index: 100;
-  background-color: transparent;
-  transition: background-color .8s ease, height .8s ease;
+  transition: transform .8s ease, border-color .8s ease;
+  box-shadow: 2px 0 10px rgba(0,0,0,.25);
 }
 
 /*Header effect on scroll*/
 
 header.appear {
-  background-color: #2D2D2D;
-  /*height: 60px;*/
-  height: 61px;
-  transition: background-color .8s ease, height .8s ease;
-  /*box-shadow: 2px 2px 15px rgba(0,0,0,.3);*/
+  border-color: #FBBA00;
+  transform: translateY(0);
+  transition: transform .8s ease, border-color .8s ease;
 }
 
 .toplogo {
@@ -12222,18 +12205,18 @@ header.appear {
   fill: #2D2D2D;
   height: 30px;
   left: 15px;
-  position: absolute;
-  top: 7.5px;
-  transform: translateY(30px);
-  transition: .8s ease-in-out;
+  position: fixed;
+  top: 15px;
+  transform: translateY(80px);
+  transition: .8s ease;
   z-index: 300;
 }
 
 .toplogo.appear {
-  height: 30px;
   fill: #FBBA00;
-  transform: translateY(10px);
-  transition: .8s ease-in-out;
+  height: 30px;
+  transform: translateY(0);
+  transition: .8s ease;
 }
 
 .toplogo:hover {
@@ -12244,7 +12227,6 @@ header.appear {
   .toplogo {
     height: 40px;
     left: 35px;
-    top: 5px;
   }
 }
 /*Menu*/
@@ -12255,8 +12237,8 @@ header.appear {
   background: rgba(0, 0, 0, .95);
   display: none;
   justify-content: center;
+  height: calc(100vh + 64px);
   left: 0;
-  height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -12280,7 +12262,7 @@ header.appear {
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
-  transition: transform 0.8s ease, color 0.3s ease;
+  transition: transform .4s ease, color .2s ease;
 }
 
 .main-menu a:hover {
@@ -12645,7 +12627,7 @@ a:hover {
 /*Backgrounds*/
 
 .dark-bg {
-  /*background-color: #000;*/
+  /*background-color: #222;*/
   background-color: #2D2D2D;
 }
 

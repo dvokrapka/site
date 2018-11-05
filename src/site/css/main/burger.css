@@ -2,18 +2,19 @@
 .burger {
     cursor: pointer;
     position: absolute;
-    top: 12.5px;
-    transform: translateY(27.5px);
+    top: 17.5px;
+    /*top: 17.5px;*/
+    transform: translateY(80px);
     right: 20px;
     height: 25px;
+    padding: 0;
     width: 35px;
-    transition: transform .8s ease-in-out;
+    transition: transform .8s ease;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
     z-index: 300;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -40,10 +41,10 @@
 
 /*Burger on scroll*/
 .burger.appear {
-    transform: translateY(5px);
+    transform: translateY(0);
 }
 
-.burger.appear >span {
+.burger.appear>span {
     background-color: #FBBA00;
 }
 
@@ -66,8 +67,8 @@
 
 /*Transform burger to close icon*/
 .burger>.toggle:nth-child(1) {
-    transform: rotate(45deg);
     background-color: #E2A801;
+    transform: rotate(45deg);
 }
 
 .burger>.toggle:nth-child(2) {
@@ -75,6 +76,6 @@
 }
 
 .burger>.toggle:nth-child(3) {
-    transform: rotate(-45deg) translate(-2.5px, 2.5px);
     background-color: #E2A801;
+    transform: rotate(-45deg) translate(-2.5px, 2.5px);
 }

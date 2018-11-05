@@ -18,7 +18,7 @@
 	</div>
 
 	<!-- Birds -->
-	<!-- <div>
+	<div>
 		<div class="bird-container bird-container--one">
 			<div class="bird bird--one"></div>
 		</div>
@@ -31,7 +31,7 @@
 		<div class="bird-container bird-container--four">
 			<div class="bird bird--four"></div>
 		</div>
-	</div> -->
+	</div>
 
 	<div class="footer-bottom">
 
