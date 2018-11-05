@@ -58,3 +58,9 @@ function templateHelper() {
 }
 
 templateHelper();
+
+
+// Templater - 2
+// function tplLoader (argument) {
+// 	// body...
+// }

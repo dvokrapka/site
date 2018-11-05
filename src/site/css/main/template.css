@@ -175,7 +175,7 @@ body {
 
 
 
-/*Preview Portfolio*/
+/*Homepage Portfolio*/
 .portfolio-container {
     align-items: center;
     display: flex;
@@ -184,30 +184,29 @@ body {
     margin-bottom: 50px;
 }
 
-/*Design*/
-.home-design {
+
+.portfolio-preview p {
+    margin-top: 30px;
+}
+
+.portfolio-preview figcaption {
     align-items: center;
-    background: url('../../../assets/img/bodesign.jpg') no-repeat center center fixed;
-    background-size: 100%;
+    background: rgba(0, 0, 0, .9);
     display: flex;
     justify-content: center;
-    min-height: 80vh;
-    position: relative;
+    transition: .8s ease;
 }
 
-.home-design-txt {
-    color: #fff;
-    max-width: 80%;
-}
-
-@media screen and (min-width: 768px) {
-    .home-design-txt {
-        font-size: 5em;
-    }
+.more-txt {
+    display: block;
+    font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.5em;
+    margin-top: 15px;
+    padding-left: 10px;
+    text-transform: uppercase;
 }
 
 /*About Us*/
-
 .about-us-screen {
     align-items: center;
     display: flex;
@@ -229,26 +228,35 @@ body {
 }
 
 
-/*Homepage Portfolio*/
-.portfolio-preview p {
-    margin-top: 30px;
-}
 
-.portfolio-preview figcaption {
+/*Design*/
+.home-design {
     align-items: center;
-    background: rgba(0, 0, 0, .9);
+    background: url('../../../assets/img/bodesign.jpg') no-repeat center center fixed;
+    background-size: 100%;
     display: flex;
     justify-content: center;
-    transition: .8s ease;
+    min-height: 100vh;
+    position: relative;
 }
 
-.more-txt {
-    display: block;
-    font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-size: 1.5em;
-    margin-top: 15px;
-    padding-left: 10px;
-    text-transform: uppercase;
+.home-design-txt {
+    color: #fff;
+    max-width: 80%;
+    text-shadow: 3px 3px 15px rgba(0,0,0,.2);
+}
+
+@media screen and (min-width: 768px) {
+    .home-design-txt {
+        font-size: 5em;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .home-design {
+    background-size: auto 100%;
+
+    }
 }
 
 /*Extra effects*/
