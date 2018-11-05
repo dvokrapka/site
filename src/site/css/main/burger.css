@@ -1,17 +1,13 @@
 /*Burger menu toggle button*/
 .burger {
     cursor: pointer;
-    /*box-sizing: border-box;*/
     position: absolute;
     top: 12.5px;
     transform: translateY(27.5px);
     right: 20px;
     height: 25px;
-    /*height: 40px;*/
     width: 35px;
-    /*width: 40px;*/
     transition: transform .8s ease-in-out;
-    /*padding: 5px 0;*/
     display: flex;
     align-items: center;
     flex-direction: column;

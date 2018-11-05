@@ -52,15 +52,9 @@ function templateHelper() {
 
     let el = Object.values(tpl);
 
-    for (let i = 0, l = el.length; i < l; i++) {
-    		xhttpLoad(el[i].url, el[i].selector, el[i].addType);
-    }
+        for (let i = 0, l = el.length; i < l; i++) {
+            xhttpLoad(el[i].url, el[i].selector, el[i].addType);
+        }
 }
 
 templateHelper();
-
-
-// Templater - 2
-// function tplLoader (argument) {
-// 	// body...
-// }

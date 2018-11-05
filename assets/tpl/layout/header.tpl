@@ -26,8 +26,8 @@
                 <a href="en">ENG</a>
             </div>
             <div class="menu-items">
-                <a class="active" href="#home">Головна</a>
-                <a href="#portfolio">Портфоліо</a>
+                <a class="active" href="http://dvokrapka">Головна</a>
+                <a href="http://dvokrapka/portfolio">Портфоліо</a>
                 <a href="#contacts">Контакти</a>
             </div>
             <div class="menu-social">

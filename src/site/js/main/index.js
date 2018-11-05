@@ -34,7 +34,7 @@ var jsAPI = function() {
     });
 
     // Hide mob menu on href click
-    $('#mainMenu').find('a').on('click', function(e) {
+    $('#mainMenu').find('a[href^="#"]').on('click', function(e) {
         e.preventDefault();
         toggleMenu();
     });
