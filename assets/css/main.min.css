@@ -11798,7 +11798,6 @@ a.uk-thumbnail:focus {
   cursor: pointer;
   position: absolute;
   top: 17.5px;
-  /*top: 17.5px;*/
   transform: translateY(80px);
   right: 20px;
   height: 25px;
@@ -12069,13 +12068,13 @@ footer {
 }
 
 .footer-contacts {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 60vh;
   position: relative;
   transform: translateY(150px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .footer-contacts>a {
@@ -12288,9 +12287,10 @@ header.appear {
 .menu-social {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
+  font-size: 1.4em;
+  justify-content: space-between;
+  margin: 0 auto 25px;
+  width: 60%;
 }
 
 .menu-social a {
@@ -12311,6 +12311,77 @@ header.appear {
   .menu-social a {
     font-size: 2.3em;
   }
+}
+.dv-modal-box {
+  background-color: #FBBA00;
+  box-sizing: border-box;
+  display: none;
+  /*display: flex;*/
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 9999;
+}
+
+.dv-modal-box>.left {
+  box-sizing: border-box;
+  height: 100%;
+  width: 75%;
+  overflow-y: auto;
+  position: relative;
+  background-color: red;
+}
+
+.dv-modal-box>.left img {
+  width: 100%;
+}
+
+.dv-modal-box>.right {
+  text-align: left;
+  width: 25%;
+  height: 100%;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+/* The Close Button */
+
+.modal-close {
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.modal-close:before,
+.modal-close:after {
+  position: absolute;
+  left: 15px;
+  content: '';
+  height: 35px;
+  width: 5px;
+  border-radius: 10px;
+  background-color: #2d2d2d;
+}
+
+.modal-close:before {
+  transform: rotate(45deg);
+}
+
+.modal-close:after {
+  transform: rotate(-45deg);
+}
+
+.dv-modal-box>.image {
+  background-color: red;
+  width: 100%;
+  height: 500vh;
 }
 .logo-screen {
   align-items: center;

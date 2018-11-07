@@ -32,13 +32,13 @@ footer {
 }
 
 .footer-contacts {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-bottom: 60vh;
     position: relative;
     transform: translateY(150px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .footer-contacts>a {

@@ -57,9 +57,10 @@
 .menu-social {
     align-items: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+    font-size: 1.4em;
+    justify-content: space-between;
+    margin: 0 auto 25px;
+    width: 60%;
 }
 
 .menu-social a {
