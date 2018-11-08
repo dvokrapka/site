@@ -1,5 +1,5 @@
 $(function() {
-	jsAPI();
+    jsAPI();
 });
 
 // Main app js
@@ -25,10 +25,17 @@ var jsAPI = function() {
     $('a[href^="#"]').on('click', function(event) {
         event.preventDefault();
 
-        var elementClick = $(this).attr("href"),
-            destination = $(elementClick).offset().top;
+        var clicked = $(this),
+        		tag = clicked.attr('data-scrolldown'),
+            scrollTo;
 
-        $('html, body').animate({ scrollTop: destination }, 1000);
+        if (tag) {
+            scrollTo = clicked.closest(tag).next(tag);
+        } else {
+            scrollTo = clicked.attr("href");
+        }
+
+        $('html, body').animate({ scrollTop: $(scrollTo).offset().top }, 1000);
 
         return false;
     });
@@ -44,6 +51,13 @@ var jsAPI = function() {
     $('#burger').on('click', function() {
         toggleMenu();
     });
+
+    // Toggle header for dark|light background
+    var $dark = $('[data-dark]');
+
+    if ($dark.length) {
+        $('header').addClass('dark-header');
+    }
 
     // Submit form
     $('#contactMe').on('submit', function(event) {
@@ -76,12 +90,12 @@ function toggleMenu() {
 
     // Show menu
     if (!opened) {
-    		$burger.attr('data-opened', 1);
-    		$menu.css("display", "flex").hide().slideDown();
+        $burger.attr('data-opened', 1);
+        $menu.css("display", "flex").hide().slideDown();
 
-    // Close menu
+        // Close menu
     } else {
-    		$burger.removeAttr('data-opened');
-    		$menu.slideUp();
+        $burger.removeAttr('data-opened');
+        $menu.slideUp();
     }
 }

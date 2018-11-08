@@ -18,7 +18,7 @@
     height: 45px;
     opacity: 0;
     pointer-events: none;
-    transition: .8s ease-in-out;
+    transition: .8s ease;
     width: 45px;
 }
 
@@ -34,7 +34,7 @@
 
 /*Scroll bottom arrow animation*/
 .arrow-dwn {
-    transition: transform .4s ease-in-out;
+    transition: transform .4s ease;
 }
 
 .scroll-btm:hover .arrow-dwn {
@@ -65,7 +65,7 @@
 
 /*Scroll top arrow animation*/
 .arrow-top {
-    transition: transform .4s ease-in-out;
+    transition: transform .4s ease;
 }
 
 .scroll-top:hover .arrow-top {

@@ -11829,6 +11829,10 @@ a.uk-thumbnail:focus {
   width: 100%;
 }
 
+.dark-header .burger > span {
+  background-color: #ffba00;
+}
+
 .burger>span:nth-child(2) {
   width: 80%;
   transform: translateX(10%);
@@ -11841,7 +11845,7 @@ a.uk-thumbnail:focus {
 }
 
 .burger.appear>span {
-  background-color: #FBBA00;
+  background-color: #fbba00;
 }
 
 /*Burger on menu open*/
@@ -11899,7 +11903,7 @@ a.uk-thumbnail:focus {
   height: 45px;
   opacity: 0;
   pointer-events: none;
-  transition: .8s ease-in-out;
+  transition: .8s ease;
   width: 45px;
 }
 
@@ -11916,7 +11920,7 @@ a.uk-thumbnail:focus {
 /*Scroll bottom arrow animation*/
 
 .arrow-dwn {
-  transition: transform .4s ease-in-out;
+  transition: transform .4s ease;
 }
 
 .scroll-btm:hover .arrow-dwn {
@@ -11948,7 +11952,7 @@ a.uk-thumbnail:focus {
 /*Scroll top arrow animation*/
 
 .arrow-top {
-  transition: transform .4s ease-in-out;
+  transition: transform .4s ease;
 }
 
 .scroll-top:hover .arrow-top {
@@ -12208,6 +12212,10 @@ header.appear {
   transform: translateY(80px);
   transition: .8s ease;
   z-index: 300;
+}
+
+.dark-header .toplogo {
+  fill: #FBBA00;
 }
 
 .toplogo.appear {
@@ -12472,7 +12480,7 @@ header.appear {
   overflow: hidden;
   position: relative;
   text-align: center;
-  background: url("../../assets/img/background-logo.jpg") no-repeat center center fixed;
+  background: url("../../assets/img/logo-bg.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 

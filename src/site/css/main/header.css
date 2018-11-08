@@ -36,6 +36,10 @@ header.appear {
     z-index: 300;
 }
 
+.dark-header .toplogo {
+    fill: #FBBA00;
+}
+
 .toplogo.appear {
     fill: #FBBA00;
     height: 30px;

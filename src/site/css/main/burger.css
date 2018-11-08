@@ -33,6 +33,11 @@
     width: 100%;
 }
 
+.dark-header .burger > span {
+    background-color: #ffba00;
+
+}
+
 .burger>span:nth-child(2) {
     width: 80%;
     transform: translateX(10%);
@@ -44,7 +49,7 @@
 }
 
 .burger.appear>span {
-    background-color: #FBBA00;
+    background-color: #fbba00;
 }
 
 /*Burger on menu open*/
