@@ -1,5 +1,4 @@
 $(function() {
-
     var $modal = $('#modalBox');
 
     // Open modal

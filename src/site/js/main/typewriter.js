@@ -1,5 +1,5 @@
 $(function() {
-    $('#gaslo').t({
+    $('.typing').t({
         delay: 2,
         speed: 75,
         // beep: true,

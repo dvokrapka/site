@@ -1,0 +1,36 @@
+.portfolio-screen {
+    min-height: 80vh;
+    background: #222;
+}
+
+.portfolio-screen h1 {
+	margin-top: 75px;
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio-screen h1 {
+        text-align: center;
+        margin-top: 0;
+    }
+}
+
+.filter-btns {
+display: flex;
+
+flex-wrap: wrap;
+max-width: 1920px;
+margin: 0 auto;
+margin-bottom: 50px;
+justify-content: center;
+}
+
+.filter-btns > * {
+	margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .filter-btns {
+        justify-content: space-between;
+    }
+}
