@@ -1,10 +1,10 @@
 /*SVG buttons fills*/
 .fil1 {
-    fill: #211F1F
+    fill: #1A1A1A
 }
 
 .fil0 {
-    fill: #2D2D2D
+    fill: #222
 }
 
 .fil2 {
@@ -128,12 +128,12 @@
 
 /*Black button*/
 .sm-black {
-    border-color: #2d2d2d;
-    color: #2d2d2d;
+    border-color: #222;
+    color: #222;
 }
 
 .sm-black:hover {
-    background-color: #2d2d2d;
+    background-color: #222;
     color: #FBBA00;
 }
 
@@ -146,5 +146,5 @@
 
 .sm-yellow:hover {
     background-color: #FBBA00;
-    color: #2d2d2d;
+    color: #222;
 }

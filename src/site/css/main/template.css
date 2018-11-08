@@ -60,7 +60,7 @@ body {
 }
 
 .gaslo {
-    color: #2d2d2d;
+    color: #222;
     display: none;
     line-height: 1.1em;
     margin-top: 75px;
@@ -286,12 +286,10 @@ a:hover {
 /*Backgrounds*/
 
 .dark-bg {
-    /*background-color: #222;*/
-    background-color: #2D2D2D;
+    background-color: #1a1a1a;
 }
 
 .yellow-bg {
     background: radial-gradient(#E2A801 5px, transparent 5px) center center fixed, #FBBA00;
     background-size: 36px 36px, cover;
-    /*background-color: #FBBA00;*/
 }

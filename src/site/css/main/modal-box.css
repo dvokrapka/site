@@ -2,7 +2,6 @@
     background-color: #FBBA00;
     box-sizing: border-box;
     display: none;
-    /*display: flex;*/
     flex-direction: row;
     height: 100vh;
     justify-content: center;
@@ -53,7 +52,7 @@
     height: 35px;
     width: 5px;
     border-radius: 10px;
-    background-color: #2d2d2d;
+    background-color: #222;
 }
 
 .modal-close:before {
