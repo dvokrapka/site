@@ -4,7 +4,7 @@
 		<a href="tel:+0679992091">(067) 999 20 91</a>
 		<a href="mailto:email@gmail.com">email@gmail.com</a>
 		<!--Accordion-->
-		<div id="formAccordion" class="form-button uk-accordion uk-text-center" data-uk-accordion="{showfirst  : false}">
+		<div id="formAccordion" class="form-button uk-accordion uk-text-center" data-uk-accordion="{showfirst : false}">
 			<button class="uk-accordion-title sm-button sm-black" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true}">Напишіть нам</button>
 			<div class="uk-accordion-content">
 				<form id="contactMe" action="" method="POST" class="form">
