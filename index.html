@@ -7,9 +7,12 @@
 		<title>:KRAPKA</title>
 		<!-- Font Loader -->
 		<script src="assets/js/font_loader.js"></script>
+		<!-- Templater -->
+		<script src="assets/js/templater.js"></script>
 		<!-- Styles -->
 		<link rel="stylesheet" href="assets/css/main.min.css">
 		<!-- Favicon / insert via AJAX /-->
+		<script data-tpl="meta/favicon">insertTpl('meta/favicon');</script>
 	</head>
 	<body>
 
@@ -20,6 +23,9 @@
 
 
 		<!-- Header / insert via AJAX / -->
+		<script data-tpl="header">insertTpl('header');</script>
+
+		<!-- Main content -->
 		<main>
 			<!-- First screen -->
 			<section id="home" class="first-screen">
@@ -241,10 +247,10 @@
 				<h1 class="home-design-txt" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}"><span class="yellow-text"><span class="blink">:</span>Бо</span> дизайнери...</h1>
 			</section>
 		</main>
-		<!-- Footer / insert via AJAX / -->
 
-		<!-- Templater -->
-		<script src="assets/js/templater.js"></script>
+		<!-- Footer / insert via AJAX / -->
+		<script data-tpl="footer">insertTpl('footer');</script>
+
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<!-- App js -->

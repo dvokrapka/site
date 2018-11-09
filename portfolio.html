@@ -10,9 +10,11 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="assets/css/main.min.css">
 		<!-- Favicon / insert via AJAX /-->
+		<script data-tpl="meta/favicon">insertTpl('meta/favicon');</script>
 	</head>
 	<body>
 		<!-- Header / insert via AJAX / -->
+		<script data-tpl="header">insertTpl('header');</script>
 		<main>
 			<section id="home" class="portfolio-screen sect-container" data-dark="1">
 				<div>
@@ -189,9 +191,10 @@
 				</div>
 			</section>
 		</main>
+
 		<!-- Footer / insert via AJAX / -->
-		<!-- Templater -->
-		<script src="assets/js/templater.js"></script>
+		<script data-tpl="footer">insertTpl('footer');</script>
+
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<!-- App js -->
