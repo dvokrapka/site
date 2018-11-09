@@ -8,14 +8,15 @@
     overflow: auto;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100vw;
     z-index: 9999;
 }
 
 .dv-modal-box>.left {
     box-sizing: border-box;
-    height: 100%;
-    width: 75%;
+    height: 100vh;
+    width: 75vw;
     overflow-y: auto;
     position: relative;
     background-color: red;
@@ -27,8 +28,8 @@
 
 .dv-modal-box>.right {
     text-align: left;
-    width: 25%;
-    height: 100%;
+    width: 25vw;
+    height: 100vh;
     padding: 35px;
     box-sizing: border-box;
 }
