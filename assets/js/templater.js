@@ -13,6 +13,6 @@ function insertTpl(tpl) {
         }
     };
 
-    xhttp.open("GET", 'assets/tpl/layout/' + tpl + '.tpl', true);
+    xhttp.open("GET", 'assets/tpl/layout/' + tpl + '.tpl?t=' + Math.random(), true);
     xhttp.send();
 }
