@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<!-- Font Loader -->
+		<script src="assets/js/font_loader.js"></script>
+		<!-- Templater -->
+		<script src="assets/js/templater.js"></script>
+		<!-- Styles -->
+		<link rel="stylesheet" href="assets/css/main.min.css">
+		<!-- Favicon / insert via AJAX /-->
+		<script data-tpl="meta/favicon">insertTpl('meta/favicon');</script>
+	</head>
+	<body class="noscroll">
+
+		<!-- Header / insert via AJAX / -->
+		<script data-tpl="header">insertTpl('header');</script>
+
+		<!-- Main content -->
+		<main>
+			<!-- First screen -->
+			<section class="first-screen">
+				<div class="fs-bg-1"></div>
+				<div class="fs-bg-2"></div>
+				<div id="preLoad" class="preload"></div>
+				<div data-uk-parallax="{y: '0,-200'}">
+					<h1 class="gaslo typing" data-typing="DVOKRAPKA">Дизайн,<br>який пояснює</h1>
+					<!-- Scroll bottom -->
+					<a href="#" data-scrolldown="section">
+						<script data-tpl="gobtm">insertTpl('gobtm');</script>
+					</a>
+				</div>
+			</section>
+			<!-- Services -->
+			<section id="services" class="home-services sect-container">
+				<h1 data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200}"><span class="blink">:</span>Вигадуємо. <span class="yellow-text">Розробляємо.</span> Малюємо</h1>
+				<div class="services">
+					<!-- Logos -->
+					<div class="services-container">
+						<div class="serv-pre">
+							<img src="assets/img/logo-design.svg" alt="">
+							<h3 class="yellow-text">Логотипи</h3>
+						</div>
+						<div class="serv-desc draw">
+							<div>
+								<p>Тут і неймінг, і фірмовий стиль з брендбуком, і всяка інша брендувальна термінологія. Адже головне - <b>пізнаваність</b></p>
+								<script data-tpl="goright">insertTpl('goright');</script>
+								<a class="uk-position-cover" href="logotypes"></a>
+							</div>
+						</div>
+					</div>
+					<!-- Sites -->
+					<div class="services-container">
+						<div class="serv-pre">
+							<img src="assets/img/web-design.svg" alt="">
+							<h3 class="yellow-text">Сайти</h3>
+						</div>
+						<div class="serv-desc draw">
+							<div>
+								<p>Наша улюблена справа - малювання та розробка <b>сайтів від А до Я</b>. Ну і звісно, їх підтримка та просування ))</p>
+								<script data-tpl="goright">insertTpl('goright');</script>
+								<a class="uk-position-cover" href="web-design"></a>
+							</div>
+						</div>
+					</div>
+					<!-- Advertisement -->
+					<div class="services-container">
+						<div class="serv-pre">
+							<img src="assets/img/adv-design.svg" alt="">
+							<h3 class="yellow-text">Рекламу</h3>
+						</div>
+						<div class="serv-desc draw">
+							<div>
+								<p>Коли комусь потрібен рекламний буклет, аплікація на вітрину чи вивіска - ми тут, як тут!</p>
+								<script data-tpl="goright">insertTpl('goright');</script>
+								<a class="uk-position-cover" href="advertisement"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Portfolio preview -->
+			<section class="dark-bg uk-text-center">
+
+				<!-- The Modal -->
+				<div id="modalBox" class="dv-modal-box">
+					<span class="modal-close"></span>
+					<div class="left">
+						<img src="https://picsum.photos/1000/2000" alt="">
+					</div>
+					<div class="right">
+						<h2>Назва проекту</h2>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse non totam vitae aliquam molestias voluptas eum, distinctio possimus voluptatem suscipit hic, fugiat alias dolorum ipsam vel provident necessitatibus explicabo! Nemo!
+						</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse non totam vitae aliquam molestias voluptas eum, distinctio possimus voluptatem suscipit hic, fugiat alias dolorum ipsam vel provident necessitatibus explicabo! Nemo!
+						</p>
+					</div>
+				</div>
+
+				<!-- Portfolio -->
+				<div id="portfolio" class="sect-container">
+					<h1 class="titles white-text" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}"><span class="yellow-text">Ми<span class="blink">:</span></span> Те, що ми <span class="yellow-text">створюємо</span></h1>
+					<div class="portfolio-preview uk-grid uk-grid-width-medium-1-2 uk-grid-width-large-1-3 uk-grid-collapse uk-margin-large-bottom">
+
+						<figure class="uk-overlay uk-overlay-hover">
+							<img src="assets/img/1.jpg" alt="Зображення 1">
+							<figcaption class="uk-overlay-panel">
+							<div class="portfolio-desc">
+								<h4>Молочний Острів</h4>
+								<p>фірмовий стиль</p>
+								<a class="more-href" href="">
+									<script data-tpl="viewmore">insertTpl('viewmore');</script>
+								</a>
+							</div>
+							</figcaption>
+						</figure>
+
+						<figure class="uk-overlay uk-overlay-hover">
+							<img src="assets/img/2.jpg" alt="Зображення 1">
+														<figcaption class="uk-overlay-panel">
+							<div class="portfolio-desc">
+								<h4>Молочний Острів</h4>
+								<p>фірмовий стиль</p>
+								<a class="more-href" href="">
+									<script data-tpl="viewmore">insertTpl('viewmore');</script>
+								</a>
+							</div>
+							</figcaption>
+						</figure>
+						<figure class="uk-overlay uk-overlay-hover">
+							<img src="assets/img/6.jpg" alt="Зображення 1">
+														<figcaption class="uk-overlay-panel">
+							<div class="portfolio-desc">
+								<h4>Молочний Острів</h4>
+								<p>фірмовий стиль</p>
+								<a class="more-href" href="">
+									<script data-tpl="viewmore">insertTpl('viewmore');</script>
+								</a>
+							</div>
+							</figcaption>
+						</figure>
+						<figure class="uk-overlay uk-overlay-hover">
+							<img src="assets/img/3.jpg" alt="Зображення 1">
+														<figcaption class="uk-overlay-panel">
+							<div class="portfolio-desc">
+								<h4>Молочний Острів</h4>
+								<p>фірмовий стиль</p>
+								<a class="more-href" href="">
+									<script data-tpl="viewmore">insertTpl('viewmore');</script>
+								</a>
+							</div>
+							</figcaption>
+						</figure>
+						<figure class="uk-overlay uk-overlay-hover">
+							<img src="assets/img/5.jpg" alt="Зображення 1">
+														<figcaption class="uk-overlay-panel">
+							<div class="portfolio-desc">
+								<h4>Молочний Острів</h4>
+								<p>фірмовий стиль</p>
+								<a class="more-href" href="">
+									<script data-tpl="viewmore">insertTpl('viewmore');</script>
+								</a>
+							</div>
+							</figcaption>
+						</figure>
+						<figure class="uk-overlay uk-overlay-hover">
+							<img src="assets/img/4.jpg" alt="Зображення 1">
+														<figcaption class="uk-overlay-panel">
+							<div class="portfolio-desc">
+								<h4>Молочний Острів</h4>
+								<p>фірмовий стиль</p>
+								<a class="more-href" href="">
+									<script data-tpl="viewmore">insertTpl('viewmore');</script>
+								</a>
+							</div>
+							</figcaption>
+						</figure>
+					</div>
+					<a href="portfolio" class="sm-button sm-yellow" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}">Хочу Більше</a>
+				</div>
+			</section>
+			<!-- About us -->
+			<section class="sect-container yellow-bg uk-text-center">
+				<h1 class="grey-text" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}">Ми<span class="blink">:</span><span class="white-text"> Те, що ми </span> думаємо</h1>
+				<div class="about-us-screen">
+					<div class="about-us-col black-text">
+						<p>Ми <b>:DVOKRAPKA</b> - компанія звичайних, проте креативних людей, які просто навчились помічати навколо себе гарні речі та реалізовувати отримані емоції у своїх творчих проектах. Те, що можна зробити - ми робимо. Те, що можна удосконалити - не залишається поза нашою увагою. Головний принцип, яким ми керуємось, беручись до роботи - не завершуй її, поки не будеш нею тішитись та пишатись. Ми намагаємось допомогти людям робити те ж саме, тому якщо у Вас є цікаві ідеї або питання - звертайтесь, ми радо посприяємо!
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- Lyrics -->
+			<section class="home-design">
+				<h1 class="home-design-txt" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}"><span class="yellow-text"><span class="blink">:</span>Тому, що</span> дизайнери...</h1>
+			</section>
+		</main>
+
+		<!-- Footer / insert via AJAX / -->
+		<script data-tpl="footer">insertTpl('footer');</script>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- App js -->
+		<script src="assets/js/scripts.min.js"></script>
+	</body>
+</html>
