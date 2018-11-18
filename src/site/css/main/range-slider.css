@@ -6,6 +6,7 @@
 }
 
 /*Between symbol*/
+
 .srange-spans span {
     display: block;
     width: 35px;
@@ -29,11 +30,13 @@
 }
 
 /* Контейнер слайдера */
+
 .ui-slider {
     position: relative;
 }
 
 /* Ползунок */
+
 .ui-slider .ui-slider-handle {
     position: absolute;
     z-index: 2;
@@ -56,6 +59,7 @@
 }
 
 /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+
 .ui-slider-horizontal {
     cursor: pointer;
     height: 10px;
@@ -64,6 +68,7 @@
 }
 
 /* позиционируем ползунки */
+
 .ui-slider-horizontal .ui-slider-handle {
     top: -13px;
     margin-left: -13px;
@@ -87,19 +92,21 @@
 }
 
 /* оформление полосы по которой ходит ползунок */
+
 .ui-widget-content {
     background: #fff;
 }
 
 /* оформление активного участка (между двумя ползунками) */
+
 .ui-widget-header {
     background: #222;
-
     /*margin-left: 2px;*/
     /*margin-right: 2px;*/
 }
 
 /* скругление для полосы слайдера */
+
 .ui-corner-all {
     border-radius: 10px;
 }

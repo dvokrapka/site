@@ -35,7 +35,7 @@ var jsAPI = function() {
             scrollTo = clicked.attr("href");
         }
 
-        $('html, body').animate({ scrollTop: $(scrollTo).offset().top }, 1000);
+        $('html, body').animate({ scrollTop: $(scrollTo).offset().top}, 800);
 
         return false;
     });

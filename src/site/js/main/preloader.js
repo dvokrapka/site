@@ -4,9 +4,17 @@ function typeWrite() {
 				$typing = $('[data-typing]'),
 		    afterTxt = $typing.html();
 
-		if (!$preLoader.length) {
-		    $('body').removeClass('noscroll');
-		    $('header').removeClass('hidden');
+      // Get url & check if its an anchor
+      var url = window.location.href,
+    			arr = url.split('/'),
+    			href = arr[arr.length - 1],
+    			anchor = /^#/.test(href);
+
+    // Check if preloader is active
+		if (!$preLoader.length || anchor) {
+				$preLoader.removeClass('preload');
+				$('body').removeClass('noscroll');
+				$('header').removeClass('hidden');
 		} else {
 		    $typing.addClass('yellow-text');
 		}
@@ -25,10 +33,10 @@ function typeWrite() {
                         clearInterval(elm.data('bi'));
                         elm.removeClass('yellow-text').html(afterTxt).fadeIn(1500);
 
-                        // Hide preloader
-                        if ($preLoader.length) {
+                        // Hide preloader (or skip, if an anchor load)
+                        if ($preLoader.length && !anchor) {
                             $preLoader
-                                .fadeOut(1500, function() {
+                                .fadeOut(1000, function() {
                                     $('header').removeClass('hidden');
                                     $('body').removeClass('noscroll');
 
@@ -38,7 +46,7 @@ function typeWrite() {
                                 });
                         } else {
                             $('.scroll-btm').fadeOut(function() {
-                                $(this).fadeIn(1500).addClass('appear');
+                                $(this).fadeIn(1000).addClass('appear');
                             });
                         }
                     });

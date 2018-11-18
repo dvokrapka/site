@@ -1,3 +1,19 @@
+.brief-intro {
+    display: block;
+    width: 100%;
+    background: #fbba00;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.brief-intro-ps {
+    display: block;
+    text-align: center;
+}
+
+/*Brief inputs*/
+
 .brief-form .write-answer {
     background-color: #fff;
     border-radius: 28px;
@@ -13,9 +29,11 @@
 }
 
 /*Style tricks*/
+
 .brief-form textarea {
     resize: none;
 }
+
 .brief-form input[type="number"]::-webkit-outer-spin-button,
 .brief-form input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -127,6 +145,7 @@
 }
 
 /* When the radio button is checked, add a black background */
+
 .chk-row input:checked~.checkmark-radio {
     background-color: #222;
 }
@@ -177,11 +196,13 @@
 }
 
 /* On mouse-over, add a white border */
+
 .chk-row:hover input:not(:checked)~.checkmark-checkbox {
     border-color: #fbba00;
 }
 
 /* When the checkbox is checked, add a black background */
+
 .chk-row input:checked~.checkmark-checkbox {
     background-color: #222;
 }
@@ -232,32 +253,38 @@
 
 .dv-file-upload {
     border-radius: 30px;
-    border: 4px dashed #222;
+    border: 6px dotted #222;
     box-sizing: border-box;
-    margin-right: 0;
     position: relative;
     transition: border-color .4s ease;
 }
 
-.dv-file-upload:hover {
-    border-color: #fff;
+/*Upload icon*/
+
+.upload-ico {
+    height: 120px;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    fill: #222;
+    transition: fill .4s ease;
 }
 
 .upload-ico .top {
     transition: transform .4s ease;
 }
 
-.dv-file-upload:hover .upload-ico .top {
+.dv-file-upload:hover .upload-ico>.top {
     transform: translateY(-5%);
 }
 
+.dv-file-upload:hover {
+    border-color: #fff;
+}
 
-.upload-ico {
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
+.dv-file-upload:hover .upload-ico {
+    fill: #fff;
 }
