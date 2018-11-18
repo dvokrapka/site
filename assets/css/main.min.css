@@ -11616,11 +11616,15 @@ a.uk-thumbnail:focus {
   }
 }
 
-/*Firstcreen background animation*/
+/*Footer city animation*/
 
-@keyframes showfs {
-  100% {
-    opacity: 0;
+@keyframes citymove {
+  from {
+    background-position: 0 bottom;
+  }
+
+  to {
+    background-position: 80vw bottom;
   }
 }
 .bird {
@@ -11792,6 +11796,273 @@ a.uk-thumbnail:focus {
     transform: translateY(0vh) scale(0.45);
   }
 }
+.brief-form .write-answer {
+  background-color: #fff;
+  border-radius: 28px;
+  border: 4px solid #222;
+  box-sizing: border-box;
+  font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5em;
+  margin: 5px 0;
+  padding: 12px 18px;
+  position: relative;
+  transition: .4s ease;
+  width: 100%;
+}
+
+/*Style tricks*/
+
+.brief-form textarea {
+  resize: none;
+}
+
+.brief-form input[type="number"]::-webkit-outer-spin-button,
+.brief-form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.brief-form input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.brief-form .write-answer:hover,
+.brief-form .write-answer:focus {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.dv-form-row {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.dv-form-row>div {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .dv-form-row>div {
+    width: 50%;
+  }
+}
+
+.dv-form-row {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.dv-form-row span {
+  color: #222;
+  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+@media screen and (min-width: 768px) {
+  .dv-form-row span {
+    font-size: 2em;
+  }
+}
+
+.dv-form-title {
+  box-sizing: border-box;
+  padding-right: 50px;
+  padding-top: 12px;
+  text-align: right;
+}
+
+/* Customize the label (the container) */
+
+.chk-row {
+  color: #222;
+  cursor: pointer;
+  display: block;
+  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  margin-bottom: 24px;
+  padding-left: 50px;
+  position: relative;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+
+.chk-row input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.dv-box .write-answer {
+  margin-top: -10px;
+}
+
+/* Create a custom radio button */
+
+.checkmark-radio {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  background-color: #fff;
+  border: 4px solid #222;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: .4s ease;
+}
+
+/* On mouse-over, add a white border */
+
+.chk-row:hover input:not(:checked)~.checkmark-radio {
+  border-color: #fbba00;
+}
+
+/* When the radio button is checked, add a black background */
+
+.chk-row input:checked~.checkmark-radio {
+  background-color: #222;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.checkmark-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+
+.chk-row input:checked~.checkmark-radio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+
+.chk-row .checkmark-radio:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background: #FBBA00;
+}
+
+.dv-box {
+  padding-top: 19px;
+}
+
+/* Create a custom checkbox */
+
+.checkmark-checkbox {
+  background-color: #fff;
+  border-radius: 7px;
+  border: 4px solid #222;
+  box-sizing: border-box;
+  height: 35px;
+  left: 0;
+  position: absolute;
+  top: -5px;
+  transition: .4s ease;
+  width: 35px;
+}
+
+/* On mouse-over, add a white border */
+
+.chk-row:hover input:not(:checked)~.checkmark-checkbox {
+  border-color: #fbba00;
+}
+
+/* When the checkbox is checked, add a black background */
+
+.chk-row input:checked~.checkmark-checkbox {
+  background-color: #222;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.chk-row input:checked~.checkmark-checkbox:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.chk-row .checkmark-checkbox:after {
+  top: 5%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 15px;
+  border: solid #FBBA00;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+}
+
+/*Submit btn for bief*/
+
+.form-submit-btn {
+  text-align: center;
+  padding: 40px;
+}
+
+.dv-file-upload input {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+  outline: 0;
+  height: 175px;
+}
+
+.dv-file-upload {
+  border-radius: 30px;
+  border: 4px dashed #222;
+  box-sizing: border-box;
+  margin-right: 0;
+  position: relative;
+  transition: border-color .4s ease;
+}
+
+.dv-file-upload:hover {
+  border-color: #fff;
+}
+
+.upload-ico .top {
+  transition: transform .4s ease;
+}
+
+.dv-file-upload:hover .upload-ico .top {
+  transform: translateY(-5%);
+}
+
+.upload-ico {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
 /*Burger menu toggle button*/
 
 .burger {
@@ -11894,7 +12165,6 @@ a.uk-thumbnail:focus {
 
 .fil2 {
   fill: #FBBA00;
-  fill-rule: nonzero;
 }
 
 /*Scroll bottom*/
@@ -11934,7 +12204,7 @@ a.uk-thumbnail:focus {
   position: absolute;
   right: 20px;
   top: calc(100vh - 60px);
-  transform: translateY(130px);
+  transform: translateY(260px);
   transition: transform .8s ease;
   width: 45px;
 }
@@ -11978,15 +12248,11 @@ a.uk-thumbnail:focus {
 /*More button*/
 
 .more-href {
-  align-items: center;
-  display: flex;
-}
-
-.more {
+  display: block;
   cursor: pointer;
   height: 45px;
-  transform: translateY(8px);
   width: 45px;
+  margin: 30px auto 0;
 }
 
 .zoom {
@@ -12038,36 +12304,189 @@ a.uk-thumbnail:focus {
   background-color: #FBBA00;
   color: #222;
 }
+/*
+ * 1. Highest z-index
+ * 2. Reset dropdown width
+ * 3. Set animation
+ * 4. Needed for scale animation
+ */
+
+.uk-datepicker {
+  /* 1 */
+  z-index: 1050;
+  /* 2 */
+  width: auto;
+  /* 3 */
+  animation: uk-fade 0.2s ease-in-out;
+  /* 4 */
+  transform-origin: 0 0;
+}
+
+/* Sub-object: `uk-datepicker-nav`
+========================================================================== */
+
+.uk-datepicker-nav {
+  margin-bottom: 2px;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  /*line-height: 5px;*/
+}
+
+/*
+ * Micro clearfix
+ */
+
+.uk-datepicker-nav:before,
+.uk-datepicker-nav:after {
+  content: "";
+  display: table;
+}
+
+.uk-datepicker-nav:after {
+  clear: both;
+}
+
+/*
+ * Previous and next navigation
+ */
+
+.uk-datepicker-nav a {
+  color: #FBBA00;
+  text-decoration: none;
+}
+
+.uk-datepicker-nav a:hover {
+  color: #222;
+}
+
+.uk-datepicker-previous {
+  float: left;
+}
+
+.uk-datepicker-next {
+  float: right;
+}
+
+.uk-datepicker-previous:after,
+.uk-datepicker-next:after {
+  width: 20px;
+  font-family: FontAwesome;
+}
+
+.uk-datepicker-previous:after {
+  content: "\f053";
+}
+
+.uk-datepicker-next:after {
+  content: "\f054";
+}
+
+/* Sub-object: `uk-datepicker-heading`
+========================================================================== */
+
+/* Sub-object: `uk-datepicker-table`
+========================================================================== */
+
+/* Block element behavior */
+
+.uk-datepicker-table {
+  width: 100%;
+}
+
+.uk-datepicker-table th,
+.uk-datepicker-table td {
+  padding: 7px;
+}
+
+.uk-datepicker-table th {
+  font-size: 18px;
+  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/*
+ * Item
+ */
+
+.uk-datepicker-table a {
+  display: block;
+  width: 26px;
+  font-size: 1.4em;
+  line-height: 1.3em;
+  text-align: center;
+  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #211F1F;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/*
+ * Sub-object: `uk-datepicker-table-muted`
+ */
+
+a.uk-datepicker-table-muted {
+  color: #999;
+}
+
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+
+.uk-datepicker-table a:hover,
+.uk-datepicker-table a:focus {
+  background-color: #ddd;
+  color: #444;
+  border-radius: 7px;
+  /* 2 */
+  outline: none;
+}
+
+/* OnClick */
+
+.uk-datepicker-table a:active {
+  background-color: #ccc;
+  color: #444;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+/*
+ * Active
+ */
+
+.uk-datepicker-table a.uk-active {
+  background: #FBBA00;
+  color: #fff;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.uk-dropdown {
+  border-radius: 28px;
+  padding: 18px 18px;
+  box-sizing: border-box;
+}
 footer {
+  background: linear-gradient(#ccc, #fff 30%);
   min-height: 100vh;
   position: relative;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .footer-bg {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: url("../../assets/img/city_grey.png") no-repeat center bottom, linear-gradient(#f5f7fa, #c3cfe2);
-  background-size: 300%;
-  /*animation: move-city 10s infinite;*/
-}
-
-@media screen and (min-width: 768px) {
-  .footer-bg {
-    background-size: 100%;
-  }
-}
-
-.contacts {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
+  background: url("../../assets/img/city_grey.png") repeat-x left bottom;
+  background-size: 80vw;
+  animation: citymove 20s linear infinite;
 }
 
 .footer-contacts {
@@ -12081,7 +12500,7 @@ footer {
 }
 
 .footer-contacts>a {
-  color: #000;
+  color: #222;
   display: block;
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 2em;
@@ -12125,6 +12544,7 @@ footer {
   font-size: 1.5em;
   margin: 10px 0;
   padding: 12px;
+  resize: none;
   transition: .4s ease;
   width: 85%;
 }
@@ -12140,16 +12560,16 @@ footer {
 /*Footer social & copyright*/
 
 .footer-bottom {
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  position: absolute;
   bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 15px;
   color: #8d8d8d;
+  font-size: 0.8em;
+  left: 0;
+  margin: 0 auto;
+  padding: 15px;
+  position: absolute;
+  right: 0;
   text-align: center;
   width: 50%;
-  margin: 0 auto;
 }
 
 .footer-social {
@@ -12193,6 +12613,10 @@ header {
   box-shadow: 2px 0 10px rgba(0,0,0,.25);
 }
 
+header.hidden {
+  transform: translateY(-200px);
+}
+
 /*Header effect on scroll*/
 
 header.appear {
@@ -12215,7 +12639,7 @@ header.appear {
 }
 
 .dark-header .toplogo {
-  fill: #fff;
+  fill: #FBBA00;
 }
 
 .toplogo.appear {
@@ -12225,9 +12649,19 @@ header.appear {
   transition: .8s ease;
 }
 
-.toplogo:hover {
-  fill-rule: initial;
+/*.toplogo:hover .dvo {
+		transform-origin: left top;
+		transform: rotate(90deg) scale(2);
 }
+
+.dvo,
+.krapka {
+	transition: .8s ease;
+}
+
+.toplogo:hover .krapka {
+		transform: translateX(10%);
+}*/
 
 @media screen and (min-width: 768px) {
   .toplogo {
@@ -12390,30 +12824,28 @@ header.appear {
   width: 100%;
   height: 500vh;
 }
-.portfolio-screen {
-  min-height: 80vh;
-  background: #1a1a1a;
-}
-
-.portfolio-screen h1 {
-  margin-top: 75px;
+.portfolio-intro {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .portfolio-screen h1 {
-    text-align: center;
-    margin-top: 0;
-  }
+.portfolio-screen {
+  background: #1a1a1a;
+  min-height: 100vh;
 }
 
 .filter-btns {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1920px;
-  margin: 0 auto;
-  margin-bottom: 50px;
   justify-content: center;
+  margin-bottom: 50px;
+  margin: 0 auto;
+  max-width: 1920px;
 }
 
 .filter-btns>* {
@@ -12425,82 +12857,146 @@ header.appear {
     justify-content: space-between;
   }
 }
-.preloader {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
+
+/*Portfolio preview*/
+
+.portfolio-desc h4 {
+  color: #FBBA00;
+  text-transform: uppercase;
+}
+
+.portfolio-desc p {
+  color: #dedede;
+}
+.preload {
   background-color: #222;
-  /*background-color: #222;*/
-  /*z-index: 10000;*/
-  display: flex;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+.srange-spans {
   align-items: center;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
-.eyes {
-  position: relative;
+/*Between symbol*/
+
+.srange-spans span {
   display: block;
-  width: 50px;
-  height: 20px;
-  /*background-color: #fff;*/
+  width: 35px;
+  height: 5px;
+  background-color: #222;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
-.eyes:before,
-.eyes:after {
+.srange-spans input {
+  background-color: #fff;
+  border-radius: 28px;
+  border: 4px solid #222;
+  box-sizing: border-box;
+  font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5em;
+  padding: 12px 18px;
+  position: relative;
+  transition: .4s ease;
+  text-align: center;
+}
+
+/* Контейнер слайдера */
+
+.ui-slider {
+  position: relative;
+}
+
+/* Ползунок */
+
+.ui-slider .ui-slider-handle {
   position: absolute;
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-color: #ffba00;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  background-color: #fbba00;
+  border: 4px solid #222;
   border-radius: 50%;
+  cursor: pointer;
+  outline: 0;
 }
 
-.eyes:before {
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  border: 0;
+  overflow: hidden;
+  background-color: #222;
+}
+
+/* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+
+.ui-slider-horizontal {
+  cursor: pointer;
+  height: 10px;
+  left: 13px;
+  width: calc(100% - 36px);
+}
+
+/* позиционируем ползунки */
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -13px;
+  margin-left: -13px;
+}
+
+/*.ui-slider-horizontal .ui-slider-handle:last-of-type {
+    margin-left: -36px;
+}*/
+
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+
+.ui-slider-horizontal .ui-slider-range-min {
   left: 0;
 }
 
-.eyes:after {
+.ui-slider-horizontal .ui-slider-range-max {
   right: 0;
 }
 
-@keyframes eyesloader {
-  0% {
+/* оформление полосы по которой ходит ползунок */
 
-  }
+.ui-widget-content {
+  background: #fff;
+}
 
-  10% {
+/* оформление активного участка (между двумя ползунками) */
 
-  }
+.ui-widget-header {
+  background: #222;
+  /*margin-left: 2px;*/
+  /*margin-right: 2px;*/
+}
+
+/* скругление для полосы слайдера */
+
+.ui-corner-all {
+  border-radius: 10px;
 }
 .logo-screen {
   align-items: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
   text-align: center;
   background: url("../../assets/img/logo-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-.serv-descrip {
-  font-size: 1.5em;
-  line-height: 1.5em;
-  padding-right: 100px;
-}
-
-.brif {
-  /*	align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;*/
-  min-height: 50vh;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  background: #FBBA00;
 }
 /*Template*/
 
@@ -12513,7 +13009,7 @@ body {
 
 .noscroll {
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: overlay;
 }
 
 /*Section Container*/
@@ -12534,23 +13030,9 @@ body {
   text-align: center;
 }
 
-.fs-bg-1::before {
-  animation: showfs 3s forwards;
-  background: #E2A801;
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
 .fs-bg-1 {
-  /*background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%), url('../../../assets/img/bodesign-fs.jpg') no-repeat center center fixed;*/
   background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%);
-  /*background: url('../../../assets/img/bodesign.jpg') no-repeat center center fixed;*/
   background-size: 100%;
-  /*background-blend-mode: color-burn;*/
   height: 100%;
   position: absolute;
   width: 100%;
@@ -12567,10 +13049,9 @@ body {
 }
 
 .gaslo {
-  color: #222;
   display: none;
-  line-height: 1.1em;
-  margin-top: 75px;
+  line-height: 1.2em;
+  margin-top: 50px;
   pointer-events: none;
 }
 
@@ -12617,9 +13098,9 @@ body {
   z-index: 1;
 }
 
-.serv-desc p {
-  font-size: 1.5em;
-  line-height: normal;
+.serv-desc > div {
+  box-sizing: border-box;
+  padding: 15px;
 }
 
 /*Hide service description*/
@@ -12714,7 +13195,7 @@ body {
   font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
   margin-top: 15px;
-  padding-left: 10px;
+  /*padding-left: 10px;*/
   text-transform: uppercase;
 }
 
@@ -12755,7 +13236,7 @@ body {
 .home-design-txt {
   color: #fff;
   max-width: 80%;
-  text-shadow: 3px 3px 15px rgba(0, 0, 0, .2);
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, .3);
 }
 
 @media screen and (min-width: 768px) {
@@ -12808,20 +13289,35 @@ h1 {
   font-size: 2.5em;
   text-transform: uppercase;
   font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: #222;
 }
 
 h2 {
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 2em;
+  line-height: normal;
   color: #222;
 }
 
 h3 {
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
+  line-height: normal;
   color: #222;
+}
+
+h4 {
+  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.2em;
+  line-height: normal;
+  color: #222;
+}
+
+p {
+  font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5em;
+  line-height: normal;
 }
 
 @media screen and (min-width: 768px) {
@@ -12836,10 +13332,10 @@ h3 {
   h3 {
     font-size: 2.5em;
   }
-}
 
-p {
-  font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  h4 {
+    font-size: 2em;
+  }
 }
 
 /*Color*/
@@ -12858,4 +13354,10 @@ p {
 
 .black-text {
   color: #000;
+}
+
+/*Typing text*/
+
+.typing {
+  display: none;
 }

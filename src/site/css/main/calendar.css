@@ -1,0 +1,138 @@
+/*
+ * 1. Highest z-index
+ * 2. Reset dropdown width
+ * 3. Set animation
+ * 4. Needed for scale animation
+ */
+.uk-datepicker {
+  /* 1 */
+  z-index: 1050;
+  /* 2 */
+  width: auto;
+  /* 3 */
+  animation: uk-fade 0.2s ease-in-out;
+  /* 4 */
+  transform-origin: 0 0;
+}
+/* Sub-object: `uk-datepicker-nav`
+========================================================================== */
+.uk-datepicker-nav {
+  margin-bottom: 2px;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  /*line-height: 5px;*/
+}
+/*
+ * Micro clearfix
+ */
+.uk-datepicker-nav:before,
+.uk-datepicker-nav:after {
+  content: "";
+  display: table;
+}
+.uk-datepicker-nav:after {
+  clear: both;
+}
+/*
+ * Previous and next navigation
+ */
+.uk-datepicker-nav a {
+  color: #FBBA00;
+  text-decoration: none;
+}
+.uk-datepicker-nav a:hover {
+  color: #222;
+}
+.uk-datepicker-previous {
+  float: left;
+}
+.uk-datepicker-next {
+  float: right;
+}
+.uk-datepicker-previous:after,
+.uk-datepicker-next:after {
+  width: 20px;
+  font-family: FontAwesome;
+}
+.uk-datepicker-previous:after {
+  content: "\f053";
+}
+.uk-datepicker-next:after {
+  content: "\f054";
+}
+/* Sub-object: `uk-datepicker-heading`
+========================================================================== */
+/* Sub-object: `uk-datepicker-table`
+========================================================================== */
+/* Block element behavior */
+.uk-datepicker-table {
+  width: 100%;
+}
+
+.uk-datepicker-table th,
+.uk-datepicker-table td {
+  padding: 7px;
+}
+
+.uk-datepicker-table th {
+  font-size: 18px;
+  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+/*
+ * Item
+ */
+.uk-datepicker-table a {
+  display: block;
+  width: 26px;
+  font-size: 1.4em;
+  line-height: 1.3em;
+  text-align: center;
+ font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #211F1F;
+  text-decoration: none;
+  padding: 5px;
+}
+/*
+ * Sub-object: `uk-datepicker-table-muted`
+ */
+a.uk-datepicker-table-muted {
+  color: #999;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+.uk-datepicker-table a:hover,
+.uk-datepicker-table a:focus {
+  background-color: #ddd;
+  color: #444;
+  border-radius: 7px;
+
+  /* 2 */
+  outline: none;
+}
+/* OnClick */
+.uk-datepicker-table a:active {
+  background-color: #ccc;
+  color: #444;
+  border-radius: 7px;
+  padding: 5px;
+}
+/*
+ * Active
+ */
+.uk-datepicker-table a.uk-active {
+  background: #FBBA00;
+  color: #fff;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+
+.uk-dropdown {
+	border-radius: 28px;
+	padding: 18px 18px;
+	box-sizing: border-box;
+}

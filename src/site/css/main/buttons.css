@@ -9,7 +9,6 @@
 
 .fil2 {
     fill: #FBBA00;
-    fill-rule: nonzero;
 }
 
 
@@ -48,7 +47,7 @@
     position: absolute;
     right: 20px;
     top: calc(100vh - 60px);
-    transform: translateY(130px);
+    transform: translateY(260px);
     transition: transform .8s ease;
     width: 45px;
 }
@@ -90,17 +89,12 @@
 
 /*More button*/
 .more-href {
-    align-items: center;
-    display: flex;
-}
-
-.more {
+    display: block;
     cursor: pointer;
     height: 45px;
-    transform: translateY(8px);
     width: 45px;
+    margin: 30px auto 0;
 }
-
 .zoom {
     transform-origin: center center;
     transition: transform .4s ease-in-out;

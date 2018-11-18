@@ -16,6 +16,10 @@ header {
     box-shadow: 2px 0 10px rgba(0,0,0,.25);
 }
 
+header.hidden {
+	transform: translateY(-200px);
+}
+
 /*Header effect on scroll*/
 header.appear {
     border-color: #FBBA00;
@@ -37,7 +41,7 @@ header.appear {
 }
 
 .dark-header .toplogo {
-    fill: #fff;
+    fill: #FBBA00;
 }
 
 .toplogo.appear {
@@ -47,9 +51,23 @@ header.appear {
     transition: .8s ease;
 }
 
-.toplogo:hover {
-    fill-rule: initial;
+/*.toplogo:hover .dvo {
+		transform-origin: left top;
+		transform: rotate(90deg) scale(2);
 }
+
+.dvo,
+.krapka {
+	transition: .8s ease;
+}
+
+.toplogo:hover .krapka {
+		transform: translateX(10%);
+}*/
+
+
+
+
 
 @media screen and (min-width: 768px) {
     .toplogo {

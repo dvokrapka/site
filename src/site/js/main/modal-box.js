@@ -1,4 +1,5 @@
 $(function() {
+
     var $modal = $('#modalBox');
 
     // Open modal
@@ -10,6 +11,15 @@ $(function() {
             .attr('data-scroll', window.scrollY);
 
         $('window, body').addClass('noscroll');
+
+        $(document).keypress(function(event) {
+            if (event.charCode === 0) {
+
+                $('window, body').removeClass('noscroll');
+                window.scrollTo(0, $modal.attr('data-scroll'));
+                $modal.slideUp();
+            }
+        });
     });
 
     // Close modal
@@ -21,4 +31,5 @@ $(function() {
         window.scrollTo(0, $mod.attr('data-scroll'));
         $mod.slideUp();
     });
+
 });

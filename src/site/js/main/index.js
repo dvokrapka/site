@@ -26,7 +26,7 @@ var jsAPI = function() {
         event.preventDefault();
 
         var clicked = $(this),
-        		tag = clicked.attr('data-scrolldown'),
+            tag = clicked.attr('data-scrolldown'),
             scrollTo;
 
         if (tag) {
@@ -53,26 +53,53 @@ var jsAPI = function() {
     });
 
     // Toggle header for dark|light background
-    var $dark = $('[data-dark]');
-
-    if ($dark.length) {
+    if ($('[data-dark]').length) {
         $('header').addClass('dark-header');
     }
 
-    // Submit form
-    $('#contactMe').on('submit', function(event) {
-        event.preventDefault();
+    // Any form control
+    $('form').each(function(index, el) {
 
-        // Clean form
-        $(this).trigger('reset');
+        var $form = $(this),
+            $submit = $form.find('[type=submit]'),
+            $inputs = $form.find('input').not($submit);
 
-        // Toggle accordion
-        var accordion = UIkit.accordion(UIkit.$('#formAccordion'));
+        // Submit form
+        $submit.on('click', function(event) {
+            event.preventDefault();
 
-        accordion.toggleItem(UIkit.$('[data-wrapper]'), true, false);
+            // Clean form
+            $(this).trigger('reset');
 
-        // Check
-        UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", { pos: 'bottom-center' });
+            // Toggle accordion
+            var accordion = UIkit.accordion(UIkit.$('[data-uk-accordion]'));
+
+            accordion.toggleItem(UIkit.$('[data-wrapper]'), true, false);
+
+            // Notify
+            UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", { pos: 'bottom-center' });
+        });
+
+        // Prevent form submit by enter
+        $inputs.on('keypress', function(event) {
+
+            event.preventDefault();
+
+            if (event.keyCode == 13) {
+                // Focus on next input
+                var inputs = $(this).parents("form").eq(0).find(":input"),
+                		idx = inputs.index(this);
+
+            		// Find if the last input (last == submit)
+                if (idx == inputs.length - 1) {
+                    inputs[0].select();
+                } else {
+                    inputs[idx + 1].focus();
+                    inputs[idx + 1].select();
+                }
+                return false;
+            }
+        });
     });
 };
 
@@ -85,17 +112,22 @@ function toggleMenu() {
         opened = $burger.attr('data-opened'),
         $items = $menu.find('a');
 
-    // Toggle burger
-    $burger.find('> span').toggleClass('toggle');
-
     // Show menu
     if (!opened) {
-        $burger.attr('data-opened', 1);
+        $burger.attr('data-opened', 1).find('> span').addClass('toggle');
         $menu.css("display", "flex").hide().slideDown();
+
+        $(document).keypress(function(event) {
+            if (event.charCode === 0) {
+
+                $burger.removeAttr('data-opened').find('> span').removeClass('toggle');
+                $menu.slideUp();
+            }
+        });
 
         // Close menu
     } else {
-        $burger.removeAttr('data-opened');
+        $burger.removeAttr('data-opened').find('> span').removeClass('toggle');
         $menu.slideUp();
     }
 }

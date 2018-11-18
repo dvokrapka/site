@@ -14,14 +14,15 @@
 		<!-- Favicon / insert via AJAX /-->
 		<script data-tpl="meta/favicon">insertTpl('meta/favicon');</script>
 	</head>
-	<body>
+	<body class="noscroll">
 		<!-- Header / insert via AJAX / -->
 		<script data-tpl="header">insertTpl('header');</script>
 		<main>
-			<!-- First logo screen -->
-			<section id="home" class="logo-screen" data-dark="1">
+			<!-- First screen -->
+			<section class="logo-screen" data-dark="1">
+				<!-- <div id="preLoad" class="preload"></div> -->
 				<div data-uk-parallax="{y: '0,-200'}">
-					<h1 class="white-text typing">:Логотипи</h1>
+					<h1 class="white-text typing" data-typing="DVOKRAPKA">Логотипи</h1>
 					<a href="#" data-scrolldown="section">
 						<script data-tpl="gobtm">insertTpl('gobtm');</script>
 					</a>
@@ -29,20 +30,20 @@
 			</section>
 			<!-- Services description -->
 			<section class="sect-container">
-				<h2 class="titles uk-margin-large-top yellow-text">Логотипи</h2>
+				<h2 class="titles uk-margin-large yellow-text">Логотипи</h2>
 				<div class="uk-grid uk-flex uk-flex-middle">
-					<div class="uk-width-7-10">
-						<p class="serv-descrip uk-margin-top black-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed.</p>
+					<div class="uk-width-medium-7-10">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores totam et quaerat earum enim ipsam aut deleniti tempore, repellat aliquid voluptate iure eius, quo exercitationem laborum, corporis in sed.</p>
 					</div>
-					<div class="uk-width-3-10">
-						<img src="assets/img/logodis.svg" alt="Фірмовий стиль">
+					<div class="uk-width-medium-3-10">
+						<img src="assets/img/logo-design.svg" alt="">
 					</div>
 				</div>
 			</section>
 			<!-- Part of Portfolio -->
-			<section class="sect-container">
-				<h2 class="titles black-text">:Шматочок Портфоліо</h2>
-				<div class="portfolio-preview uk-grid uk-grid-width-medium-1-3 uk-grid-collapse uk-margin-large-top">
+			<section class="portfolio-screen sect-container">
+				<h1 class="titles yellow-text uk-text-center uk-margin-large"><span class="blink">:</span>Шматочок портфоліо</h1>
+				<div class="portfolio-preview uk-grid uk-grid-width-medium-1-3 uk-grid-collapse">
 					<figure class="uk-overlay uk-overlay-hover">
 						<img src="assets/img/1.jpg" alt="Зображення 1">
 						<figcaption class="uk-overlay-panel overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle">
@@ -87,15 +88,23 @@
 					</figure>
 				</div>
 			</section>
-			<!-- Brif Logo -->
-			<section class="brif sect-container">
-				<h1 class="titles black-text">:Бріф</h1>
+				<!-- Brief -->
+				<section class="yellow-bg sect-container">
+				<h1 class="titles uk-text-center">:Бріф</h1>
+				<p class="uk-text-center">
+					Для чіткого окреслення поставленого Вами завдання, радимо заповнити цей бріф.<br>Це допоможе нам максимально точно уявити Ваш проект, визначити ціну та терміни виконання.<br>Ми гарантуємо повну конфіденційність наданих Вами матеріалів.
+				</p>
+				<!-- Brief form / insert via AJAX / -->
+				<script data-tpl="brief-sites">
+				insertTpl('brief-sites');
+				</script>
+				<h2 class="titles uk-text-center">Дякуємо за Ваш час!</h2>
 			</section>
 		</main>
-
 		<!-- Footer / insert via AJAX / -->
-		<script data-tpl="footer">insertTpl('footer');</script>
-
+		<script data-tpl="footer">
+		insertTpl('footer');
+		</script>
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<!-- App js -->

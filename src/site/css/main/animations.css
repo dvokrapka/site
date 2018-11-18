@@ -48,9 +48,14 @@
     }
 }
 
-/*Firstcreen background animation*/
-@keyframes showfs {
-    100% {
-        opacity: 0;
+
+/*Footer city animation*/
+@keyframes citymove {
+    from {
+        background-position: 0 bottom;
+    }
+
+    to {
+        background-position: 80vw bottom;
     }
 }

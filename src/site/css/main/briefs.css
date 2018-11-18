@@ -1,0 +1,263 @@
+.brief-form .write-answer {
+    background-color: #fff;
+    border-radius: 28px;
+    border: 4px solid #222;
+    box-sizing: border-box;
+    font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.5em;
+    margin: 5px 0;
+    padding: 12px 18px;
+    position: relative;
+    transition: .4s ease;
+    width: 100%;
+}
+
+/*Style tricks*/
+.brief-form textarea {
+    resize: none;
+}
+.brief-form input[type="number"]::-webkit-outer-spin-button,
+.brief-form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.brief-form input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.brief-form .write-answer:hover,
+.brief-form .write-answer:focus {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.dv-form-row {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.dv-form-row>div {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .dv-form-row>div {
+        width: 50%;
+    }
+}
+
+.dv-form-row {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.dv-form-row span {
+    color: #222;
+    font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+@media screen and (min-width: 768px) {
+    .dv-form-row span {
+        font-size: 2em;
+    }
+}
+
+.dv-form-title {
+    box-sizing: border-box;
+    padding-right: 50px;
+    padding-top: 12px;
+    text-align: right;
+}
+
+/* Customize the label (the container) */
+
+.chk-row {
+    color: #222;
+    cursor: pointer;
+    display: block;
+    font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    margin-bottom: 24px;
+    padding-left: 50px;
+    position: relative;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+
+.chk-row input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.dv-box .write-answer {
+    margin-top: -10px;
+}
+
+/* Create a custom radio button */
+
+.checkmark-radio {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    border: 4px solid #222;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: .4s ease;
+}
+
+/* On mouse-over, add a white border */
+
+.chk-row:hover input:not(:checked)~.checkmark-radio {
+    border-color: #fbba00;
+}
+
+/* When the radio button is checked, add a black background */
+.chk-row input:checked~.checkmark-radio {
+    background-color: #222;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.checkmark-radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+
+.chk-row input:checked~.checkmark-radio:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+
+.chk-row .checkmark-radio:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background: #FBBA00;
+}
+
+.dv-box {
+    padding-top: 19px;
+}
+
+/* Create a custom checkbox */
+
+.checkmark-checkbox {
+    background-color: #fff;
+    border-radius: 7px;
+    border: 4px solid #222;
+    box-sizing: border-box;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    top: -5px;
+    transition: .4s ease;
+    width: 35px;
+}
+
+/* On mouse-over, add a white border */
+.chk-row:hover input:not(:checked)~.checkmark-checkbox {
+    border-color: #fbba00;
+}
+
+/* When the checkbox is checked, add a black background */
+.chk-row input:checked~.checkmark-checkbox {
+    background-color: #222;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.chk-row input:checked~.checkmark-checkbox:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.chk-row .checkmark-checkbox:after {
+    top: 5%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 15px;
+    border: solid #FBBA00;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
+
+/*Submit btn for bief*/
+
+.form-submit-btn {
+    text-align: center;
+    padding: 40px;
+}
+
+.dv-file-upload input {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    outline: 0;
+    height: 175px;
+}
+
+.dv-file-upload {
+    border-radius: 30px;
+    border: 4px dashed #222;
+    box-sizing: border-box;
+    margin-right: 0;
+    position: relative;
+    transition: border-color .4s ease;
+}
+
+.dv-file-upload:hover {
+    border-color: #fff;
+}
+
+.upload-ico .top {
+    transition: transform .4s ease;
+}
+
+.dv-file-upload:hover .upload-ico .top {
+    transform: translateY(-5%);
+}
+
+
+.upload-ico {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}

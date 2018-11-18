@@ -1,51 +1,8 @@
-.preloader {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
+.preload {
 	background-color: #222;
-	/*background-color: #222;*/
-	/*z-index: 10000;*/
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.eyes {
-	position: relative;
-	display: block;
-	width: 50px;
-	height: 20px;
-	/*background-color: #fff;*/
-}
-
-.eyes:before,
-.eyes:after {
-	position: absolute;
-	content: '';
-	width: 20px;
-	height: 20px;
-	background-color: #ffba00;
-	border-radius: 50%;
-}
-
-.eyes:before {
+	height: 100vh;
 	left: 0;
-}
-
-.eyes:after {
-	right: 0;
-}
-
-@keyframes eyesloader {
-
-		0% {
-
-		}
-
-		10% {
-
-		}
-
-
-
+	position: fixed;
+	top: 0;
+	width: 100vw;
 }
