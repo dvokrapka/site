@@ -83,9 +83,10 @@ var jsAPI = function() {
         // Prevent form submit by enter
         $inputs.on('keypress', function(event) {
 
-            event.preventDefault();
-
             if (event.keyCode == 13) {
+
+            		event.preventDefault();
+
                 // Focus on next input
                 var inputs = $(this).parents("form").eq(0).find(":input"),
                 		idx = inputs.index(this);

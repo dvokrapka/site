@@ -13058,11 +13058,19 @@ body {
 /*Services*/
 
 .home-services {
+  min-height: 100vh;
   text-align: center;
-  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-services>div {
+  min-width: 100%;
 }
 
 .services {
+  margin-top: 50px;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -13098,7 +13106,7 @@ body {
   z-index: 1;
 }
 
-.serv-desc > div {
+.serv-desc>div {
   box-sizing: border-box;
   padding: 15px;
 }
