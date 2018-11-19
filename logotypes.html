@@ -96,14 +96,16 @@
 				</p>
 					<hr>
 					<span class="brief-intro-ps">P.S. Не "ведіться" на бюджет. Ми насправді любимо свою роботу. Якщо Ваш проект цікавіший, аніж Ви думаєте, що можете собі дозволити.. хтозна..</span>
-				<!-- Brief form / insert via AJAX / -->
-				<script data-tpl="brief-sites">
-				insertTpl('brief-sites');
-				</script>
-				<div class="titles brief-intro">
-					<h2>Дякуємо за Ваш час та терпіння!</h2>
-					<p>Ми це обов’язково компенсуємо!</p>
+
+				<div class="uk-text-center">
+					<button class="dv-acco-toggle sm-button sm-black" data-acco="#siteBrief">Хочу заповнити бріф</button>
 				</div>
+
+				<!-- Brief form / insert via AJAX / -->
+				<script data-tpl="forms/site">
+				insertTpl('forms/site');
+				</script>
+
 			</section>
 		</main>
 		<!-- Footer / insert via AJAX / -->

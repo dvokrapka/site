@@ -17,9 +17,9 @@
 /* Sub-object: `uk-datepicker-nav`
 ========================================================================== */
 .uk-datepicker-nav {
-  margin-bottom: 2px;
+  margin-bottom: 30px;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.8em;
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   /*line-height: 5px;*/
 }

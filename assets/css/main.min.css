@@ -11402,53 +11402,6 @@ a.uk-thumbnail:focus {
 /*! UIkit 2.27.5 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
 
 /* ========================================================================
-   Component: Accordion
- ========================================================================== */
-
-/* Sub-object: `uk-accordion-title`
- ========================================================================== */
-
-.uk-accordion-title {
-  margin-top: 0;
-  margin-bottom: 15px;
-  padding: 5px 15px;
-  background: #eee;
-  font-size: 18px;
-  line-height: 24px;
-  cursor: pointer;
-}
-
-/* Sub-object: `uk-accordion-content`
- ========================================================================== */
-
-.uk-accordion-content {
-  padding: 0 15px 15px 15px;
-}
-
-/*
- * Micro clearfix to make panels more robust
- */
-
-.uk-accordion-content:before,
-.uk-accordion-content:after {
-  content: "";
-  display: table;
-}
-
-.uk-accordion-content:after {
-  clear: both;
-}
-
-/*
- * Remove margin from the last-child
- */
-
-.uk-accordion-content > :last-child {
-  margin-bottom: 0;
-}
-/*! UIkit 2.27.5 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
-
-/* ========================================================================
    Component: Notify
  ========================================================================== */
 
@@ -11787,6 +11740,10 @@ a.uk-thumbnail:focus {
     transform: translateY(0vh) scale(0.45);
   }
 }
+.brief-form {
+  display: none;
+}
+
 .brief-intro {
   display: block;
   width: 100%;
@@ -11914,34 +11871,34 @@ a.uk-thumbnail:focus {
 
 /* Create a custom radio button */
 
-.checkmark-radio {
+.mark-radio {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 4px solid #222;
+  box-sizing: border-box;
+  height: 35px;
+  left: 0;
   position: absolute;
   top: -5px;
-  left: 0;
-  height: 35px;
-  width: 35px;
-  background-color: #fff;
-  border: 4px solid #222;
-  border-radius: 50%;
-  box-sizing: border-box;
   transition: .4s ease;
+  width: 35px;
 }
 
 /* On mouse-over, add a white border */
 
-.chk-row:hover input:not(:checked)~.checkmark-radio {
+.chk-row:hover input:not(:checked)~.mark-radio {
   border-color: #fbba00;
 }
 
 /* When the radio button is checked, add a black background */
 
-.chk-row input:checked~.checkmark-radio {
+.chk-row input:checked~.mark-radio {
   background-color: #222;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 
-.checkmark-radio:after {
+.mark-radio:after {
   content: "";
   position: absolute;
   display: none;
@@ -11949,13 +11906,13 @@ a.uk-thumbnail:focus {
 
 /* Show the indicator (dot/circle) when checked */
 
-.chk-row input:checked~.checkmark-radio:after {
+.chk-row input:checked~.mark-radio:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
 
-.chk-row .checkmark-radio:after {
+.chk-row .mark-radio:after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -11971,7 +11928,7 @@ a.uk-thumbnail:focus {
 
 /* Create a custom checkbox */
 
-.checkmark-checkbox {
+.mark-chkbx {
   background-color: #fff;
   border-radius: 7px;
   border: 4px solid #222;
@@ -11986,19 +11943,19 @@ a.uk-thumbnail:focus {
 
 /* On mouse-over, add a white border */
 
-.chk-row:hover input:not(:checked)~.checkmark-checkbox {
+.chk-row:hover input:not(:checked)~.mark-chkbx {
   border-color: #fbba00;
 }
 
 /* When the checkbox is checked, add a black background */
 
-.chk-row input:checked~.checkmark-checkbox {
+.chk-row input:checked~.mark-chkbx {
   background-color: #222;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 
-.checkmark-checkbox:after {
+.mark-chkbx:after {
   content: "";
   position: absolute;
   display: none;
@@ -12006,13 +11963,13 @@ a.uk-thumbnail:focus {
 
 /* Show the checkmark when checked */
 
-.chk-row input:checked~.checkmark-checkbox:after {
+.chk-row input:checked~.mark-chkbx:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
 
-.chk-row .checkmark-checkbox:after {
+.chk-row .mark-chkbx:after {
   top: 5%;
   left: 40%;
   transform: translate(-50%, -50%);
@@ -12084,6 +12041,16 @@ a.uk-thumbnail:focus {
   margin: 5px auto;
   text-align: center;
   pointer-events: none;
+}
+
+/*Accordion form*/
+
+.dv-acco-body {
+  display: none;
+}
+
+.dv-acco-toggle {
+  margin: 30px auto;
 }
 /*Burger menu toggle button*/
 
@@ -12187,6 +12154,13 @@ a.uk-thumbnail:focus {
 
 .fil2 {
   fill: #FBBA00;
+}
+
+.form-button {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /*Scroll bottom*/
@@ -12348,9 +12322,9 @@ a.uk-thumbnail:focus {
 ========================================================================== */
 
 .uk-datepicker-nav {
-  margin-bottom: 2px;
+  margin-bottom: 30px;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.8em;
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   /*line-height: 5px;*/
 }
@@ -12540,10 +12514,13 @@ footer {
 /*Form*/
 
 .form-button {
-  margin-top: 30px;
+  display: block;
+  position: relative;
+  text-align: center;
+  margin: 30px auto;
 }
 
-.form {
+.callback-form {
   background: #222;
   border-radius: 30px;
   box-sizing: border-box;
@@ -12552,8 +12529,8 @@ footer {
   width: 325px;
 }
 
-.form input,
-.form textarea {
+.callback-form input,
+.callback-form textarea {
   background-color: #fff;
   border: 3px solid #fff;
   border-radius: 25px;
@@ -12566,10 +12543,10 @@ footer {
   width: 85%;
 }
 
-.form input:hover,
-.form textarea:hover,
-.form input:focus,
-.form textarea:focus {
+.callback-form input:hover,
+.callback-form textarea:hover,
+.callback-form input:focus,
+.callback-form textarea:focus {
   background-color: #FBBA00;
   border-color: #FBBA00;
 }
@@ -12612,7 +12589,7 @@ footer {
     background-size: 100vw;
   }
 
-  .form {
+  .callback-form {
     width: 400px;
   }
 
@@ -13041,6 +13018,8 @@ body {
   overflow-y: overlay;
 }
 
+/*Divider*/
+
 hr {
   border: none;
   height: 5px;
@@ -13419,4 +13398,8 @@ p {
 
 .typing {
   display: none;
+}
+
+.small-txt {
+  font-size: .2em;
 }

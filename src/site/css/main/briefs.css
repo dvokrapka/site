@@ -1,3 +1,7 @@
+.brief-form {
+	display: none;
+}
+
 .brief-intro {
     display: block;
     width: 100%;
@@ -125,34 +129,34 @@
 
 /* Create a custom radio button */
 
-.checkmark-radio {
+.mark-radio {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 4px solid #222;
+    box-sizing: border-box;
+    height: 35px;
+    left: 0;
     position: absolute;
     top: -5px;
-    left: 0;
-    height: 35px;
-    width: 35px;
-    background-color: #fff;
-    border: 4px solid #222;
-    border-radius: 50%;
-    box-sizing: border-box;
     transition: .4s ease;
+    width: 35px;
 }
 
 /* On mouse-over, add a white border */
 
-.chk-row:hover input:not(:checked)~.checkmark-radio {
+.chk-row:hover input:not(:checked)~.mark-radio {
     border-color: #fbba00;
 }
 
 /* When the radio button is checked, add a black background */
 
-.chk-row input:checked~.checkmark-radio {
+.chk-row input:checked~.mark-radio {
     background-color: #222;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 
-.checkmark-radio:after {
+.mark-radio:after {
     content: "";
     position: absolute;
     display: none;
@@ -160,13 +164,13 @@
 
 /* Show the indicator (dot/circle) when checked */
 
-.chk-row input:checked~.checkmark-radio:after {
+.chk-row input:checked~.mark-radio:after {
     display: block;
 }
 
 /* Style the indicator (dot/circle) */
 
-.chk-row .checkmark-radio:after {
+.chk-row .mark-radio:after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -182,7 +186,7 @@
 
 /* Create a custom checkbox */
 
-.checkmark-checkbox {
+.mark-chkbx {
     background-color: #fff;
     border-radius: 7px;
     border: 4px solid #222;
@@ -197,19 +201,19 @@
 
 /* On mouse-over, add a white border */
 
-.chk-row:hover input:not(:checked)~.checkmark-checkbox {
+.chk-row:hover input:not(:checked)~.mark-chkbx {
     border-color: #fbba00;
 }
 
 /* When the checkbox is checked, add a black background */
 
-.chk-row input:checked~.checkmark-checkbox {
+.chk-row input:checked~.mark-chkbx {
     background-color: #222;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 
-.checkmark-checkbox:after {
+.mark-chkbx:after {
     content: "";
     position: absolute;
     display: none;
@@ -217,13 +221,13 @@
 
 /* Show the checkmark when checked */
 
-.chk-row input:checked~.checkmark-checkbox:after {
+.chk-row input:checked~.mark-chkbx:after {
     display: block;
 }
 
 /* Style the checkmark/indicator */
 
-.chk-row .checkmark-checkbox:after {
+.chk-row .mark-chkbx:after {
     top: 5%;
     left: 40%;
     transform: translate(-50%, -50%);
@@ -295,4 +299,14 @@
     margin: 5px auto;
     text-align: center;
     pointer-events: none;
+}
+
+
+/*Accordion form*/
+.dv-acco-body {
+	display: none;
+}
+
+.dv-acco-toggle {
+	margin: 30px auto;
 }

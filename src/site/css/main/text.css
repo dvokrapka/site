@@ -76,3 +76,7 @@ p {
 .typing {
 		display: none;
 }
+
+.small-txt {
+	font-size: .2em;
+}

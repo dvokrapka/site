@@ -1,4 +1,4 @@
-<form class="brief-form">
+<form id="siteBrief" class="brief-form">
     <div class="dv-form-row">
         <div class="dv-form-title">
             <span>Назва Вашої компанії:</span>
@@ -20,7 +20,7 @@
             <span>Як сайт назвемо?</span>
         </div>
         <div class="dv-form-input">
-            <input class="write-answer" type="text" placeholder="www.мій-крутий-сайт.com">
+            <input class="write-answer" type="text" placeholder="www.best-site-ever.com">
         </div>
     </div>
     <div class="dv-form-row">
@@ -30,35 +30,35 @@
         <div class="dv-form-input dv-box">
             <label class="chk-row">Сайт-візитка
                 <input name="type" type="radio" checked="checked">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Лендінг
                 <input name="type" type="radio">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Портфоліо/галерея
                 <input name="type" type="radio">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Корпоративний сайт
                 <input name="type" type="radio">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Сайт-каталог
                 <input name="type" type="radio">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Інтернет-магазин
                 <input name="type" type="radio">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Блог
                 <input name="type" type="radio">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Інше:
                 <input name="type" type="radio">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <input class="write-answer" type="text">
         </div>
@@ -70,35 +70,35 @@
         <div class="dv-form-input dv-box">
             <label class="chk-row">Головна
                 <input type="checkbox" checked="checked">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Про компанію
                 <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Контакти
                 <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Каталог/галерея
                 <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Послуги/товари з підрозділами
                 <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Новини
                 <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Блог
                 <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Інші:
                 <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <input class="write-answer" type="text">
         </div>
@@ -110,43 +110,43 @@
         <div class="dv-form-input dv-box">
             <label class="chk-row">Блог
                 <input name="services" type="checkbox" checked="checked">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Медіа галерея
                 <input name="services" type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Відгуки/коментарі
                 <input name="services" type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Стрічка новин
                 <input name="services" type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Форма зворотнього зв'язку
                 <input name="services" type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Калькулятор
                 <input name="services" type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Автовідповідач
                 <input name="services" type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Кнопки соціальних мереж
                 <input name="services" type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Завантаження файлів
                 <input name="services" type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Інше:
                 <input name="services" type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <input name="services" class="write-answer" type="text">
         </div>
@@ -158,16 +158,14 @@
         <div class="dv-form-input dv-box">
             <label class="chk-row">Так
                 <input name="multilang" type="radio" checked="checked">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Ні
                 <input name="multilang" type="radio">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
         </div>
     </div>
-
-
     <!-- Content -->
     <div class="dv-form-row">
         <div class="dv-form-title">
@@ -176,24 +174,23 @@
         <div class="dv-form-input dv-box">
             <label class="chk-row">Всі матеріали готові
                 <input type="radio" checked="checked" name="materials">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Потрібно редагувати
                 <input type="radio" name="materials">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Потрібно створювати контент з нуля
                 <input type="radio" name="materials">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Інше:
                 <input type="radio" name="materials">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <input class="write-answer" type="text">
         </div>
     </div>
-
     <!-- Firmstyle -->
     <div class="dv-form-row">
         <div class="dv-form-title">
@@ -202,15 +199,15 @@
         <div class="dv-form-input dv-box">
             <label class="chk-row">Звісно, що за питання?
                 <input name="firmstyle" type="radio" checked="checked">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Немаю (((... А можете зробити?
                 <input name="firmstyle" type="radio">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Просто поставте туди що-небудь
                 <input name="firmstyle" type="radio">
-                <span class="checkmark-radio"></span>
+                <span class="mark-radio"></span>
             </label>
         </div>
     </div>
@@ -219,29 +216,19 @@
             <span>Сайти, які Вам подобаються:</span>
         </div>
         <div class="dv-form-input">
-            <input name="like" class="write-answer" type="text">
+            <textarea name="like" class="write-answer" placeholder="www.site-susida.com"></textarea>
         </div>
     </div>
-
     <!-- Terms -->
-		<div class="dv-form-row">
-		    <div class="dv-form-title">
-		        <span>Бажаний термін здачі проекту:</span>
-		    </div>
-		    <div class="dv-form-input">
-		        <input class="write-answer" type="text" data-uk-datepicker="{format:'DD.MM.YYYY'}">
-		    </div>
-		</div>
-		<div class="dv-form-row">
-		    <div class="dv-form-title">
-		        <span>Обов'язковий термін здачі проекту:</span>
-		    </div>
-		    <div class="dv-form-input">
-		        <input class="write-answer" type="text" data-uk-datepicker="{format:'DD.MM.YYYY'}">
-		    </div>
-		</div>
-
-		<!-- Budget -->
+    <div class="dv-form-row">
+        <div class="dv-form-title">
+            <span>Бажаний термін здачі проекту:</span>
+        </div>
+        <div class="dv-form-input">
+            <input class="write-answer" name="term1" type="text" placeholder="на вчора" data-uk-datepicker="{format:'DD.MM.YYYY', i18n: { months:['Січень','Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'], weekdays:['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] }}">
+        </div>
+    </div>
+    <!-- Budget -->
     <div class="dv-form-row">
         <div class="dv-form-title">
             <span>Бюджет на розробку сайту ($):</span>
@@ -250,14 +237,13 @@
             <div class="dv-input-slider">
                 <div class="srange-spans">
                     <input class="min-cost" type="number" min="200" step="50">
-                  	<span></span>
+                    <span></span>
                     <input class="max-cost" type="number" max="5000" step="50">
                 </div>
                 <div class="srange-slider"></div>
             </div>
         </div>
     </div>
-
     <!-- Afterservice -->
     <div class="dv-form-row">
         <div class="dv-form-title">
@@ -265,37 +251,37 @@
         </div>
         <div class="dv-form-input dv-box">
             <label class="chk-row">Дизайнерська
-                <input type="checkbox" checked="checked">
-                <span class="checkmark-checkbox"></span>
-            </label>
-            <label class="chk-row">Технічна
                 <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
-            </label>
-            <label class="chk-row">Рекламна
-                <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Контентна
                 <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
+            </label>
+            <label class="chk-row">Технічна
+                <input type="checkbox">
+                <span class="mark-chkbx"></span>
+            </label>
+            <label class="chk-row">Рекламна
+                <input type="checkbox">
+                <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Інша:
                 <input type="checkbox">
-                <span class="checkmark-checkbox"></span>
+                <span class="mark-chkbx"></span>
             </label>
             <input class="write-answer" type="text">
         </div>
     </div>
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Вкажіть "вилку" запланованого щомісячного бюджету на просування/підтримку сайту:</span>
+            <span>Запланований щомісячний бюджет на просування/підтримку сайту:</span>
         </div>
         <div class="dv-form-input">
             <div class="dv-input-slider">
                 <div class="srange-spans">
                     <input class="min-cost" type="number" min="0" step="1">
-                  	<span></span>
+                    <span></span>
                     <input class="max-cost" type="number" max="5000" step="1">
                 </div>
                 <div class="srange-slider"></div>
@@ -307,7 +293,7 @@
             <span>Ваші коментарі/побажання</span>
         </div>
         <div class="dv-form-input">
-            <textarea class="write-answer" rows="8"></textarea>
+            <textarea class="write-answer" rows="8" name="comment"></textarea>
         </div>
     </div>
     <div class="dv-form-row">
@@ -347,6 +333,10 @@
         </div>
     </div>
     <div class="form-submit-btn">
+        <div class="titles brief-intro">
+            <h2>Дякуємо за Ваш час та терпіння!</h2>
+            <p>Натисніть НАДІСЛАТИ і ми це обов’язково компенсуємо!</p>
+        </div>
         <button type="submit" class="sm-button sm-black">Надіслати</button>
     </div>
 </form>

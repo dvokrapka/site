@@ -10,7 +10,6 @@ footer {
     overflow-x: hidden;
 }
 
-
 .footer-bg {
     position: absolute;
     height: 100%;
@@ -20,8 +19,6 @@ footer {
     /*background-size: 80vw;*/
     animation: citymove 20s linear infinite;
 }
-
-
 
 .footer-contacts {
     align-items: center;
@@ -44,17 +41,20 @@ footer {
     transition: .4s ease;
 }
 
-.footer-contacts>a:hover{
+.footer-contacts>a:hover {
     color: #FBBA00;
 }
 
 /*Form*/
 
 .form-button {
-    margin-top: 30px;
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 30px auto;
 }
 
-.form {
+.callback-form {
     background: #222;
     border-radius: 30px;
     box-sizing: border-box;
@@ -63,9 +63,8 @@ footer {
     width: 325px;
 }
 
-
-.form input,
-.form textarea {
+.callback-form input,
+.callback-form textarea {
     background-color: #fff;
     border: 3px solid #fff;
     border-radius: 25px;
@@ -78,16 +77,16 @@ footer {
     width: 85%;
 }
 
-.form input:hover,
-.form textarea:hover,
-.form input:focus,
-.form textarea:focus {
+.callback-form input:hover,
+.callback-form textarea:hover,
+.callback-form input:focus,
+.callback-form textarea:focus {
     background-color: #FBBA00;
     border-color: #FBBA00;
 }
 
-
 /*Footer social & copyright*/
+
 .footer-bottom {
     bottom: 0;
     color: #8d8d8d;
@@ -119,18 +118,17 @@ footer {
     transform: translateX(5px);
 }
 
-
 @media screen and (min-width: 768px) {
-		.footer-bg {
-		    background-size: 100vw;
-		}
+    .footer-bg {
+        background-size: 100vw;
+    }
 
-    .form {
+    .callback-form {
         width: 400px;
     }
 
     .footer-bottom {
-    	width: 50%;
+        width: 50%;
     }
 
     .footer-social {

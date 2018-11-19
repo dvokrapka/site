@@ -12,6 +12,8 @@ body {
     overflow-y: overlay;
 }
 
+/*Divider*/
+
 hr {
     border: none;
     height: 5px;
@@ -33,8 +35,6 @@ hr:after {
 .sect-container {
     padding: 8vw;
 }
-
-
 
 /*First screen*/
 
