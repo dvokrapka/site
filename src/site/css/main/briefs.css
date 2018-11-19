@@ -256,7 +256,8 @@
     border: 6px dotted #222;
     box-sizing: border-box;
     position: relative;
-    transition: border-color .4s ease;
+    transition: border-color .8s ease;
+    font-size: 0.8em;
 }
 
 /*Upload icon*/
@@ -266,11 +267,11 @@
     left: 50%;
     pointer-events: none;
     position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 45px;
+    transform: translateX(-50%);
     width: 120px;
     fill: #222;
-    transition: fill .4s ease;
+    transition: fill .8s ease;
 }
 
 .upload-ico .top {
@@ -287,4 +288,11 @@
 
 .dv-file-upload:hover .upload-ico {
     fill: #fff;
+}
+
+.upload-preview {
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    pointer-events: none;
 }

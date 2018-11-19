@@ -11562,15 +11562,6 @@ a.uk-thumbnail:focus {
   background: #fff1f0;
   color: #d85030;
 }
-/*Name color animation*/
-
-@keyframes namecolor {
-  to {
-    color: #fff;
-    text-shadow: 0 0 5px #E2A801, 0 0 15px rgba(0, 0, 0, .15);
-  }
-}
-
 /*Scroll right buttons animation*/
 
 @keyframes sr_animate {
@@ -11624,7 +11615,7 @@ a.uk-thumbnail:focus {
   }
 
   to {
-    background-position: 80vw bottom;
+    background-position: 100vw bottom;
   }
 }
 .bird {
@@ -12054,7 +12045,8 @@ a.uk-thumbnail:focus {
   border: 6px dotted #222;
   box-sizing: border-box;
   position: relative;
-  transition: border-color .4s ease;
+  transition: border-color .8s ease;
+  font-size: 0.8em;
 }
 
 /*Upload icon*/
@@ -12064,11 +12056,11 @@ a.uk-thumbnail:focus {
   left: 50%;
   pointer-events: none;
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 45px;
+  transform: translateX(-50%);
   width: 120px;
   fill: #222;
-  transition: fill .4s ease;
+  transition: fill .8s ease;
 }
 
 .upload-ico .top {
@@ -12085,6 +12077,13 @@ a.uk-thumbnail:focus {
 
 .dv-file-upload:hover .upload-ico {
   fill: #fff;
+}
+
+.upload-preview {
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+  pointer-events: none;
 }
 /*Burger menu toggle button*/
 
@@ -12508,7 +12507,8 @@ footer {
   height: 100%;
   width: 100%;
   background: url("../../assets/img/city_grey.png") repeat-x left bottom;
-  background-size: 80vw;
+  background-size: 400vw;
+  /*background-size: 80vw;*/
   animation: citymove 20s linear infinite;
 }
 
@@ -12552,12 +12552,6 @@ footer {
   width: 325px;
 }
 
-@media screen and (min-width: 768px) {
-  .form {
-    width: 400px;
-  }
-}
-
 .form input,
 .form textarea {
   background-color: #fff;
@@ -12592,15 +12586,15 @@ footer {
   position: absolute;
   right: 0;
   text-align: center;
-  width: 50%;
+  width: 60%;
 }
 
 .footer-social {
   align-items: center;
   display: flex;
-  font-size: 2em;
+  font-size: 4em;
   justify-content: space-between;
-  margin: 0 auto 25px;
+  margin: 30px auto;
 }
 
 .footer-social a {
@@ -12614,8 +12608,20 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .footer-bg {
+    background-size: 100vw;
+  }
+
+  .form {
+    width: 400px;
+  }
+
+  .footer-bottom {
+    width: 50%;
+  }
+
   .footer-social {
-    font-size: 3em;
+    font-size: 4em;
   }
 }
 header {
