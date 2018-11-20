@@ -27,6 +27,7 @@
 }
 
 .dv-modal-box>.right {
+    overflow-y: scroll;
     text-align: left;
     width: 25vw;
     height: 100vh;
@@ -37,33 +38,34 @@
 
 /* The Close Button */
 .modal-close {
-    position: fixed;
-    right: 25px;
-    top: 25px;
-    width: 35px;
-    height: 35px;
+    position: absolute;
+    right: 45px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 
-.modal-close:before,
-.modal-close:after {
+.modal-close::before,
+.modal-close::after {
     position: absolute;
     left: 15px;
     content: '';
+    cursor: pointer;
     height: 35px;
     width: 5px;
     border-radius: 10px;
     background-color: #222;
+    transition: .8s ease;
 }
 
-.modal-close:before {
+.modal-close::before {
     transform: rotate(45deg);
 }
 
-.modal-close:after {
+.modal-close::after {
     transform: rotate(-45deg);
 }
-
 
 .dv-modal-box>.image {
     background-color: red;

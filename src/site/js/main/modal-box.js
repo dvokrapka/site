@@ -1,6 +1,7 @@
 $(function() {
 
-    var $modal = $('#modalBox');
+    var $modal = $('#modalBox'),
+    		$doc = $('window, body');
 
     // Open modal
     $('.more-href').on('click', function(e) {
@@ -10,12 +11,12 @@ $(function() {
             .hide().slideDown()
             .attr('data-scroll', window.scrollY);
 
-        $('window, body').addClass('noscroll');
+        $doc.addClass('noscroll');
 
         $(document).keypress(function(event) {
             if (event.charCode === 0) {
 
-                $('window, body').removeClass('noscroll');
+                $doc.removeClass('noscroll');
                 window.scrollTo(0, $modal.attr('data-scroll'));
                 $modal.slideUp();
             }
@@ -27,7 +28,7 @@ $(function() {
 
         var $mod = $(this).closest('.dv-modal-box');
 
-        $('window, body').removeClass('noscroll');
+        $doc.removeClass('noscroll');
         window.scrollTo(0, $mod.attr('data-scroll'));
         $mod.slideUp();
     });
