@@ -243,7 +243,8 @@ hr:after {
 
 .home-design {
     align-items: center;
-    background: url('../../../assets/img/bodesign.jpg') no-repeat center center fixed;
+    /*background: url('../../../assets/img/bodesign.jpg') no-repeat center center fixed;*/
+    background: no-repeat center center fixed;
     background-size: 100%;
     display: flex;
     justify-content: center;
