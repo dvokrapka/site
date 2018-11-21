@@ -14,8 +14,8 @@ function moveBackground() {
     // var skew = 'skew(' + x/10 + 'deg, ' + y/10 + 'deg)';
     // var scale = 'scale('+ 1 + (x/1000) + ')';
 
-    // Animate background
-    $('.fs-bg-2').css({
+    // Animate
+    $('[data-paralax]').css({
         '-webit-transform': translate,
         '-moz-transform': translate,
         'transform': translate
@@ -26,9 +26,9 @@ function moveBackground() {
     window.requestAnimationFrame(moveBackground);
 }
 
-$('[data-parallax]').on('mousemove click', function(e) {
+$('[data-paralax]').closest('section').on('mousemove click', function(e) {
     var lMouseX = Math.max(-100, Math.min(100, winX / 2 - e.clientX)),
-    		lMouseY = Math.max(-100, Math.min(100, winY / 2 - e.clientY));
+        lMouseY = Math.max(-100, Math.min(100, winY / 2 - e.clientY));
     lFollowX = (20 * lMouseX) / 100;
     lFollowY = (10 * lMouseY) / 100;
 });

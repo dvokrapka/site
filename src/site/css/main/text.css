@@ -80,3 +80,8 @@ p {
 .small-txt {
 	font-size: .2em;
 }
+
+.big-txt {
+	font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-size: 3em;
+}

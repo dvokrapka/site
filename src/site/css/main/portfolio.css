@@ -1,18 +1,35 @@
-.portfolio-intro {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-}
-
 .portfolio-screen {
     background: #1a1a1a;
     min-height: 100vh;
+    text-align: center;
 }
 
+/*Portfolio preview*/
+
+.portfolio-screen p {
+    margin-top: 30px;
+}
+
+.portfolio-screen figcaption {
+    align-items: center;
+    background: rgba(0, 0, 0, .9);
+    display: flex;
+    justify-content: center;
+    transition: .8s ease;
+}
+
+.portfolio-desc h4 {
+	color: #FBBA00;
+	text-transform: uppercase;
+}
+
+.portfolio-desc p {
+	color: #dedede;
+}
+
+
+
+/*Filter controls*/
 .filter-btns {
     display: flex;
     flex-wrap: wrap;
@@ -33,13 +50,3 @@
 }
 
 
-/*Portfolio preview*/
-
-.portfolio-desc h4 {
-	color: #FBBA00;
-	text-transform: uppercase;
-}
-
-.portfolio-desc p {
-	color: #dedede;
-}
