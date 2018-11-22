@@ -13281,8 +13281,7 @@ a,
 a:hover,
 button,
 button:active,
-button:focus,
-button:focus-visible {
+button:focus {
   outline-style: none;
   outline-width: 0;
   outline: 0;
@@ -13383,4 +13382,215 @@ p {
 .big-txt {
   font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 3em;
+}
+.timeline-title {
+  padding: 8vw;
+  text-align: center;
+}
+
+.timeline-section {
+  background-color: #222;
+}
+
+/* Vertical line */
+
+.timeline {
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 100px 0;
+  position: relative;
+}
+
+/* This is the vertical line */
+
+.timeline::after {
+  background: #FBBA00;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 4px;
+  left: 5vw;
+}
+
+/* Container around content */
+
+.timeline>div {
+  position: relative;
+  width: 80vw;
+  margin: 30px 12.5vw;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.8);
+  border-radius: 30px;
+}
+
+/* The circles on the timeline */
+
+.timeline>div::after {
+  content: '';
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  background-color: #fff;
+  /*background-color: #FBBA00;*/
+  top: 0;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* All containers to the left */
+
+.left,
+.right {
+  left: -1vw;
+}
+
+/* Make sure all circles are at the same spot */
+
+.right::after,
+.left::after {
+  left: -10vw;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.8);
+  border-radius: 50%;
+}
+
+/* The actual content */
+
+.tm-content {
+  padding: 30px 10px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.timeline>div::before {
+  left: 60px;
+}
+
+.tm-content>div {
+  overflow: visible;
+  width: 90%;
+}
+
+.tm-content>img {
+  width: 55%;
+}
+
+/*List*/
+
+.tm-content ul {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  list-style: none;
+  margin-top: 30px;
+  padding-left: 5px;
+  position: relative;
+}
+
+.tm-content ul li {
+  font-size: 1.2em;
+  line-height: normal;
+  margin-left: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.tm-content ul li::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 8px;
+  left: -18px;
+  border-radius: 10px;
+  background-color: #FBBA00;
+}
+
+.tm-content h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5em;
+  /*margin-left: 15px;*/
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .tm-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 20px;
+  }
+
+  .tm-content ul {
+    padding-left: 25px;
+  }
+
+  .tm-content>div {
+    width: 65%;
+  }
+
+  .tm-content>img {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .tm-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px 30px;
+    justify-content: space-between;
+  }
+
+  .tm-content ul {
+    padding-left: 15px;
+  }
+
+  .tm-content>div {
+    width: 65%;
+  }
+
+  .tm-content>img {
+    width: 30%;
+  }
+
+  .timeline>div {
+    width: 45vw;
+    /*padding: 20px 40px;*/
+  }
+
+  .timeline::after {
+    left: 50%;
+  }
+
+  /* Place containers to the right */
+
+  .right {
+    left: 40vw;
+  }
+
+  /* Place containers to the left */
+
+  .left {
+    left: -10vw;
+  }
+
+  /* Fix the circles for containers on the left side */
+
+  .timeline>div .right::after {
+    width: 2vw;
+    height: 2vw;
+    /*left: -25px;*/
+  }
+
+  /* Fix the circles for containers on the right side */
+
+  .timeline>div .left::after {
+    /*left: auto;*/
+    /*right: -7vw;*/
+  }
 }
