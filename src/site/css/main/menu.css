@@ -2,8 +2,8 @@
 
 .main-menu {
     align-items: center;
-    background: #222;
-    background: rgba(0, 0, 0, .95);
+    background: #222 url('../../../assets/img/menu-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     display: none;
     justify-content: center;
     height: calc(100vh + 64px);
@@ -51,7 +51,7 @@
 
 .menu-items a {
     font-size: 2em;
-    line-height: 1.5em;
+    line-height: 2em;
 }
 
 .menu-social {

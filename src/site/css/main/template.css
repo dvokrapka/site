@@ -34,6 +34,7 @@ hr:after {
 
 .sect-container {
     padding: 8vw;
+    position: relative;
 }
 
 /*First screen*/
@@ -81,6 +82,7 @@ hr:after {
 /*First webdesign screen*/
 .fs-web {
     background: #222 url('../../../assets/img/web-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /*First advertisement screen*/

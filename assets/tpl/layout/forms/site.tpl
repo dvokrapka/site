@@ -230,10 +230,10 @@
             <span>Бюджет на розробку сайту ($):</span>
         </div>
         <div class="dv-form-input">
-            <div class="dv-input-slider">
+            <div>
                 <div class="srange-spans">
                     <input class="min-cost" type="number" min="200" step="50" name="cost[min]">
-                    <span></span>
+                    <span class="uk-visible-large"></span>
                     <input class="max-cost" type="number" max="5000" step="50" name="cost[max]">
                 </div>
                 <div class="srange-slider"></div>
@@ -271,13 +271,13 @@
     </div>
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Запланований щомісячний бюджет на просування/підтримку сайту:</span>
+            <span>Запланований щомісячний бюджет на просування / підтримку сайту:</span>
         </div>
         <div class="dv-form-input">
-            <div class="dv-input-slider">
+            <div>
                 <div class="srange-spans">
                     <input class="min-cost" type="number" min="0" step="1" name="supbudget[min]">
-                    <span></span>
+                    <span class="uk-visible-large"></span>
                     <input class="max-cost" type="number" max="5000" step="1" name="supbudget[max]">
                 </div>
                 <div class="srange-slider"></div>
@@ -286,7 +286,7 @@
     </div>
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Ваші коментарі/побажання</span>
+            <span>Ваші коментарі / побажання</span>
         </div>
         <div class="dv-form-input">
             <textarea class="write-answer" rows="8" name="comment"></textarea>

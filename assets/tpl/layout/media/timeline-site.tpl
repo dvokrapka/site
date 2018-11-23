@@ -1,12 +1,12 @@
 <section class="timeline-title">
-	<h1><span class="blink">:</span><span class="yellow-text">Процес розробки</span> сайту</h1>
+	<h1><span class="blink">:</span><span class="yellow-text">Як це</span> відбувається</h1>
 </section>
-<section class="timeline-section">
+<section class="yellow-bg timeline-section">
 	<div class="timeline">
-		<div class="left">
-			<div class="tm-content">
+		<div class="left" data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100, repeat: true}">
+					<span data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:400, repeat: true}">Бріф</span>
+			<div class="tm-content" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:800, repeat: true}">
 				<div>
-					<h2>Бріф</h2>
 					<ul>
 						<li>Заповнення Замовником бріфу</li>
 						<li>Визначення типу сайту та його призначення</li>
@@ -15,10 +15,10 @@
 				<img src="assets/img/timeline/brief.svg" alt="Бріф">
 			</div>
 		</div>
-		<div class="right">
-			<div class="tm-content">
+		<div class="right" data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:200, repeat: true}">
+					<span data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:400, repeat: true}">Аналіз</span>
+			<div class="tm-content" data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:800, repeat: true}">
 				<div>
-					<h2>Аналіз</h2>
 					<ul>
 						<li>Порівняння з конкурентами</li>
 						<li>Визначення концепції, функціоналу та структури сайту</li>
@@ -29,13 +29,13 @@
 				<img src="assets/img/timeline/analitics.svg" alt="Аналіз">
 			</div>
 		</div>
-		<div class="left">
-			<div class="tm-content">
+		<div class="left" data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100, repeat: true}">
+					<span data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:400, repeat: true}">Дизайн</span>
+			<div class="tm-content" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:800, repeat: true}">
 				<div>
-					<h2>Дизайн</h2>
 					<ul>
 						<li>Збір/опрацювання матеріалів</li>
-						<li>Ескіз ключових сторінок/елементів сайту</li>
+						<li>Ескіз ключових сторінок/ елементів сайту</li>
 						<li>Розробка інтерактивного прототипу</li>
 						<li>Погодження макету</li>
 						<li>Отримання авансу (50%)</li>
@@ -44,10 +44,10 @@
 				<img src="assets/img/timeline/design.svg" alt="Дизайн">
 			</div>
 		</div>
-		<div class="right">
-			<div class="tm-content">
+		<div class="right" data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:200, repeat: true}">
+					<span data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:400, repeat: true}">Розробка</span>
+			<div class="tm-content" data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:800, repeat: true}">
 				<div>
-					<h2>Розробка</h2>
 					<ul>
 						<li>Верстка макету</li>
 						<li>Програмування необхідного функціоналу</li>
@@ -58,13 +58,13 @@
 				<img src="assets/img/timeline/develop.svg" alt="Розробка">
 			</div>
 		</div>
-		<div class="left">
-			<div class="tm-content">
+		<div class="left" data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100, repeat: true}">
+					<span data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:400, repeat: true}">Фініш</span>
+			<div class="tm-content" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:800, repeat: true}">
 				<div>
-					<h2>Фініш</h2>
 					<ul>
 						<li>Розміщення сайту на хостінгу</li>
-						<li>Наповнення контентом/навчання по керуванню сайтом</li>
+						<li>Наповнення контентом/ навчання по керуванню сайтом</li>
 						<li>Презентація готової роботи</li>
 						<li>Отримання повної оплати</li>
 					</ul>

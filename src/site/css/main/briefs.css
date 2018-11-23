@@ -1,14 +1,15 @@
 .brief-form {
 	display: none;
+	background: #fbba00;
+	padding: 50px 8vw;
 }
 
-.brief-intro {
-    display: block;
-    width: 100%;
-    background: #fbba00;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
+.brief-title {
+text-align: center;
+padding: 100px 8vw 70px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .brief-intro-ps {
@@ -56,11 +57,12 @@
 
 .dv-form-row {
     align-items: flex-start;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 30px;
+    margin-bottom: 30px;
 }
 
 .dv-form-row>div {
@@ -78,25 +80,33 @@
     width: 100%;
 }
 
-.dv-form-row span {
+.dv-form-title {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+.dv-form-title span {
     color: #222;
     font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-size: 1.2em;
-    line-height: 1.2em;
+    font-size: 1.9em;
+    line-height: normal;
 }
 
 @media screen and (min-width: 768px) {
-    .dv-form-row span {
+    .dv-form-title span {
         font-size: 2em;
     }
-}
 
-.dv-form-title {
+    .dv-form-title {
     box-sizing: border-box;
     padding-right: 50px;
     padding-top: 12px;
+    padding-bottom: 0;
     text-align: right;
 }
+}
+
 
 /* Customize the label (the container) */
 
