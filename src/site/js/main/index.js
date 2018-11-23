@@ -81,7 +81,6 @@ var jsAPI = function() {
                 // Notify
                 UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", { pos: 'bottom-center' });
             });
-
         });
 
         // Prevent form submit by enter
