@@ -12664,7 +12664,7 @@ header.appear {
   justify-content: center;
   height: calc(100vh + 64px);
   left: 0;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 200;
@@ -13583,7 +13583,7 @@ p {
 
 @media screen and (min-width: 960px) {
   .timeline {
-    width: 80%;
+    width: 95%;
   }
 
   .tm-content {
