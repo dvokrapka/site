@@ -4,7 +4,7 @@
             <span>Назва Вашої компанії:</span>
         </div>
         <div class="dv-form-input">
-            <input class="write-answer" type="text" name="orgname">
+            <input class="write-answer" type="text" name="orgname" placeholder="Cosa Nostra">
         </div>
     </div>
     <div class="dv-form-row">
@@ -12,20 +12,12 @@
             <span>Чим Ви займаєтесь?</span>
         </div>
         <div class="dv-form-input">
-            <textarea class="write-answer" rows="5" name="sphere"></textarea>
+            <textarea class="write-answer" rows="5" name="sphere" placeholder="Cosa Nostra rulez"></textarea>
         </div>
     </div>
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Як сайт назвемо?</span>
-        </div>
-        <div class="dv-form-input">
-            <input class="write-answer" type="text" name="sitename" placeholder="www.best-site-ever.com">
-        </div>
-    </div>
-    <div class="dv-form-row">
-        <div class="dv-form-title">
-            <span>Тип сайту:</span>
+            <span>Який сайт Вам потрібен:</span>
         </div>
         <div class="dv-form-input dv-box">
             <label class="chk-row">Сайт-візитка
@@ -60,15 +52,23 @@
                 <input name="type" type="radio">
                 <span class="mark-radio"></span>
             </label>
-            <input class="write-answer" type="text" name="type">
+            <input class="write-answer" type="text" name="type" placeholder="Сайт для залякування боржників">
         </div>
     </div>
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Вкажіть основні сторінки/розділи сайту:</span>
+            <span>Назву придумали?</span>
+        </div>
+        <div class="dv-form-input">
+            <input class="write-answer" type="text" name="sitename" placeholder="www.cosa-nostra-4ever.com">
+        </div>
+    </div>
+    <div class="dv-form-row">
+        <div class="dv-form-title">
+            <span>Основні сторінки/розділи сайту:</span>
         </div>
         <div class="dv-form-input dv-box">
-            <label class="chk-row">Головна
+            <label class="chk-row">Головна (ну як без неї?)
                 <input type="checkbox" name="pages[home]" checked="checked">
                 <span class="mark-chkbx"></span>
             </label>
@@ -100,7 +100,8 @@
                 <input type="checkbox" >
                 <span class="mark-chkbx"></span>
             </label>
-            <input class="write-answer" type="text" name="pages[optional]">
+            <textarea class="write-answer" type="text" name="pages[optional]" placeholder=
+            '"Рецепти від улюбленої бабусі", "Як відкрити машину за допомогою лінійки", "Як зберігати соляну кислоту вдома"'></textarea>
         </div>
     </div>
     <div class="dv-form-row">
@@ -144,7 +145,7 @@
                 <input type="checkbox">
                 <span class="mark-chkbx"></span>
             </label>
-            <input name="services[optional]" class="write-answer" type="text">
+            <textarea name="services[optional]" class="write-answer" placeholder="Залякування по e-mail"></textarea>
         </div>
     </div>
     <div class="dv-form-row">
@@ -152,11 +153,11 @@
             <span>Чи потрібні іншомовні версії сайту?</span>
         </div>
         <div class="dv-form-input dv-box">
-            <label class="chk-row">Так
+            <label class="chk-row">Ні (бо ПАТРІОТИ!)
                 <input name="multilang" type="radio" checked="checked">
                 <span class="mark-radio"></span>
             </label>
-            <label class="chk-row">Ні
+            <label class="chk-row">Так
                 <input name="multilang" type="radio">
                 <span class="mark-radio"></span>
             </label>
@@ -165,18 +166,18 @@
     <!-- Content -->
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Готовність матеріалу, який буде викладений на сайт</span>
+            <span>Готовність матеріалів, які розміщуватимуться на сайті:</span>
         </div>
         <div class="dv-form-input dv-box">
-            <label class="chk-row">Всі матеріали готові
+            <label class="chk-row">Все готово до вжитку!
                 <input type="radio" checked="checked" name="materials[ready]">
                 <span class="mark-radio"></span>
             </label>
-            <label class="chk-row">Потрібно редагувати
+            <label class="chk-row">Потрібно "трішки" відредагувати / відретушувати
                 <input type="radio" name="materials[toedit]">
                 <span class="mark-radio"></span>
             </label>
-            <label class="chk-row">Потрібно створювати контент з нуля
+            <label class="chk-row">"А можете самі щось придумати?"
                 <input type="radio" name="materials[create]">
                 <span class="mark-radio"></span>
             </label>
@@ -184,7 +185,7 @@
                 <input type="radio" name="materials">
                 <span class="mark-radio"></span>
             </label>
-            <input class="write-answer" type="text" name="materials[optional]">
+            <input class="write-answer" type="text" name="materials[optional]" placeholder="Чесно - є тільки половина. Решту - додумуєм(те?)">
         </div>
     </div>
     <!-- Firmstyle -->
@@ -197,7 +198,7 @@
                 <input name="firmstyle[yes]" type="radio" checked="checked">
                 <span class="mark-radio"></span>
             </label>
-            <label class="chk-row">Немаю (((... А можете зробити?
+            <label class="chk-row">"Немаю (((... А можете зробити?"
                 <input name="firmstyle[todo]" type="radio">
                 <span class="mark-radio"></span>
             </label>
@@ -212,7 +213,7 @@
             <span>Сайти, які Вам подобаються:</span>
         </div>
         <div class="dv-form-input">
-            <textarea name="liked" class="write-answer" placeholder="www.site-susida.com"></textarea>
+            <textarea name="liked" class="write-answer" placeholder="www.yakuza.com"></textarea>
         </div>
     </div>
     <!-- Terms -->
@@ -221,7 +222,7 @@
             <span>Бажаний термін здачі проекту:</span>
         </div>
         <div class="dv-form-input">
-            <input class="write-answer" name="deadline" type="text" placeholder="на вчора" data-uk-datepicker="{format:'DD.MM.YYYY', i18n: { months:['Січень','Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'], weekdays:['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] }}">
+            <input class="write-answer" name="deadline" type="text" placeholder="На вчора. Інакше починаємо відрізати по пальцю в день" data-uk-datepicker="{format:'DD.MM.YYYY', i18n: { months:['Січень','Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'], weekdays:['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] }}">
         </div>
     </div>
     <!-- Budget -->
@@ -266,7 +267,7 @@
                 <input type="checkbox">
                 <span class="mark-chkbx"></span>
             </label>
-            <input class="write-answer" type="text" name="support[optional]">
+            <input class="write-answer" type="text" name="support[optional]" placeholder="Нові картинки від Г’ю на першому екрані щотижня">
         </div>
     </div>
     <div class="dv-form-row">
@@ -289,7 +290,7 @@
             <span>Ваші коментарі / побажання</span>
         </div>
         <div class="dv-form-input">
-            <textarea class="write-answer" rows="8" name="comment"></textarea>
+            <textarea class="write-answer" rows="8" name="comment" placeholder="...і щоб все було гарно, але без пафосу"></textarea>
         </div>
     </div>
     <div class="dv-form-row">
@@ -309,7 +310,7 @@
             <span>Контактна особа:</span>
         </div>
         <div class="dv-form-input">
-            <input class="write-answer" type="text" name="name">
+            <input class="write-answer" type="text" name="name" placeholder="Don Carleone">
         </div>
     </div>
     <div class="dv-form-row">
@@ -317,7 +318,7 @@
             <span>Контактний телефон:</span>
         </div>
         <div class="dv-form-input">
-            <input class="write-answer" type="tel" name="tel">
+            <input class="write-answer" type="tel" name="tel" placeholder="ну там... +380" >
         </div>
     </div>
     <div class="dv-form-row">
@@ -325,7 +326,7 @@
             <span>Електронна пошта:</span>
         </div>
         <div class="dv-form-input">
-            <input class="write-answer" type="email" name="email">
+            <input class="write-answer" type="email" name="email" placeholder="d.carleone@gmail.com">
         </div>
     </div>
     <div class="form-submit-btn">
