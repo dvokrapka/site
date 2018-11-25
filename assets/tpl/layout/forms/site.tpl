@@ -177,7 +177,7 @@
                 <input type="radio" name="materials[toedit]">
                 <span class="mark-radio"></span>
             </label>
-            <label class="chk-row">"А можете самі щось придумати?"
+            <label class="chk-row">А можете самі щось придумати?
                 <input type="radio" name="materials[create]">
                 <span class="mark-radio"></span>
             </label>
@@ -198,7 +198,7 @@
                 <input name="firmstyle[yes]" type="radio" checked="checked">
                 <span class="mark-radio"></span>
             </label>
-            <label class="chk-row">"Немаю (((... А можете зробити?"
+            <label class="chk-row">Немаю (((... А можете зробити?
                 <input name="firmstyle[todo]" type="radio">
                 <span class="mark-radio"></span>
             </label>
