@@ -1,15 +1,15 @@
 .brief-form {
-	display: none;
-	background: #fbba00;
-	padding: 50px 8vw;
+    display: none;
+    background: #fbba00;
+    padding: 50px 8vw;
 }
 
 .brief-title {
-text-align: center;
-padding: 100px 8vw 70px;
-display: flex;
-align-items: center;
-justify-content: center;
+    text-align: center;
+    padding: 100px 8vw 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .brief-intro-ps {
@@ -99,14 +99,13 @@ justify-content: center;
     }
 
     .dv-form-title {
-    box-sizing: border-box;
-    padding-right: 50px;
-    padding-top: 12px;
-    padding-bottom: 0;
-    text-align: right;
+        box-sizing: border-box;
+        padding-right: 50px;
+        padding-top: 12px;
+        padding-bottom: 0;
+        text-align: right;
+    }
 }
-}
-
 
 /* Customize the label (the container) */
 
@@ -311,12 +310,12 @@ justify-content: center;
     pointer-events: none;
 }
 
-
 /*Accordion form*/
+
 .dv-acco-body {
-	display: none;
+    display: none;
 }
 
 .dv-acco-toggle {
-	margin: 30px auto;
+    margin: 30px auto;
 }
