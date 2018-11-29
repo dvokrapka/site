@@ -31,6 +31,6 @@ function loadFont(t, e, n, a) {
     }
 }
 
-loadFont("Raleway-Black", "assets/fonts/Raleway-Black.css");
-loadFont("Raleway-Bold", "assets/fonts/Raleway-Bold.css");
-loadFont("Raleway-Medium", "assets/fonts/Raleway-Medium.css");
+loadFont("Dvoway-Black", "assets/fonts/Dvoway-Black.css");
+loadFont("Dvoway-Bold", "assets/fonts/Dvoway-Bold.css");
+loadFont("Dvoway-Medium", "assets/fonts/Dvoway-Medium.css");

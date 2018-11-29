@@ -75,21 +75,33 @@ hr:after {
 }
 
 /*First logo design screen*/
+
 .fs-logo {
-    background: #222 url('../../../assets/img/logo-bg.jpg') no-repeat center center fixed;
+    background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url('../../../assets/img/logo-bg.jpg') no-repeat center center fixed;
+    background-size: 36px 36px, cover;
 }
 
 /*First webdesign screen*/
+
 .fs-web {
-    background: #222 url('../../../assets/img/web-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
+/*    background: url('../../../assets/img/web-bg.jpg') no-repeat center center fixed;
+    background-size: cover;*/
+
+    background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url('../../../assets/img/web-bg.jpg') no-repeat center center fixed;
+    background-size: 36px 36px, cover;
 }
 
 /*First advertisement screen*/
+
 .fs-adv {
-    background: #222 url('../../../assets/img/adv-bg.jpg') no-repeat center center fixed;
+    background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url('../../../assets/img/adv-bg.jpg') no-repeat center center fixed;
+    background-size: 36px 36px, cover;
 }
 
+.fs-portfolio {
+    background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url('../../../assets/img/portfolio-bg.jpg') no-repeat center center fixed;
+    background-size: 36px 36px, cover;
+}
 
 /*Services*/
 
@@ -109,6 +121,7 @@ hr:after {
 
 .services {
     align-items: center;
+    margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -118,12 +131,14 @@ hr:after {
     min-height: 84vw;
     min-width: 84vw;
     position: relative;
+    margin-bottom: 75px;
 }
 
 @media screen and (min-width: 768px) {
     .services-container {
         min-height: 20vw;
         min-width: 20vw;
+        margin-bottom: 0;
     }
 
     .home-services {
@@ -167,6 +182,10 @@ hr:after {
 
 .serv-pre {
     transition: opacity .8s ease;
+}
+
+.serv-pre h2 {
+    margin-top: 0
 }
 
 /*Border animation*/
@@ -217,7 +236,6 @@ hr:after {
     border-left-color: #fbba00;
     transition: width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
 }
-
 
 /*About Us*/
 

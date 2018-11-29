@@ -11650,7 +11650,7 @@ a.uk-thumbnail:focus {
   border-radius: 28px;
   border: 4px solid #222;
   box-sizing: border-box;
-  font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
   margin: 5px 0;
   padding: 12px 18px;
@@ -11714,7 +11714,7 @@ a.uk-thumbnail:focus {
 
 .dv-form-title span {
   color: #222;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.9em;
   line-height: normal;
 }
@@ -11739,7 +11739,7 @@ a.uk-thumbnail:focus {
   color: #222;
   cursor: pointer;
   display: block;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
   line-height: 1.1em;
   margin-bottom: 24px;
@@ -12160,7 +12160,7 @@ a.uk-thumbnail:focus {
   box-sizing: border-box;
   cursor: pointer;
   display: inline-block;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
   padding: 8px 45px;
   text-transform: uppercase;
@@ -12218,7 +12218,7 @@ a.uk-thumbnail:focus {
   margin-bottom: 30px;
   text-align: center;
   font-size: 1.8em;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   /*line-height: 5px;*/
 }
 
@@ -12290,7 +12290,7 @@ a.uk-thumbnail:focus {
 
 .uk-datepicker-table th {
   font-size: 18px;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 /*
@@ -12303,7 +12303,7 @@ a.uk-thumbnail:focus {
   font-size: 1.4em;
   line-height: 1.3em;
   text-align: center;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #211F1F;
   text-decoration: none;
   padding: 5px;
@@ -12395,7 +12395,7 @@ a.uk-datepicker-table-muted {
   border-radius: 20px;
   color: #fff;
   font-size: 1.5em;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.2em;
   cursor: pointer;
 }
@@ -12478,7 +12478,7 @@ footer {
 .footer-contacts>a {
   color: #222;
   display: block;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 2em;
   line-height: normal;
   padding: 3px;
@@ -12513,7 +12513,7 @@ footer {
   background-color: #fff;
   border: 3px solid #fff;
   border-radius: 25px;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
   margin: 10px 0;
   padding: 12px;
@@ -12684,7 +12684,7 @@ header.appear {
 .main-menu a {
   color: #FBBA00;
   display: block;
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   transition: transform .4s ease, color .2s ease;
@@ -12808,13 +12808,11 @@ header.appear {
 }
 
 .dv-modal-box>.image {
-  background-color: red;
   width: 100%;
-  height: 500vh;
+  height: auto;
 }
 .portfolio-screen {
   background: #1a1a1a;
-  min-height: 100vh;
   text-align: center;
 }
 
@@ -12901,7 +12899,7 @@ header.appear {
   border-radius: 28px;
   border: 4px solid #222;
   box-sizing: border-box;
-  font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
   padding: 12px 18px;
   position: relative;
@@ -13076,20 +13074,29 @@ hr:after {
 /*First logo design screen*/
 
 .fs-logo {
-  background: #222 url("../../assets/img/logo-bg.jpg") no-repeat center center fixed;
+  background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url("../../assets/img/logo-bg.jpg") no-repeat center center fixed;
+  background-size: 36px 36px, cover;
 }
 
 /*First webdesign screen*/
 
 .fs-web {
-  background: #222 url("../../assets/img/web-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
+  /*    background: url('../../../assets/img/web-bg.jpg') no-repeat center center fixed;
+    background-size: cover;*/
+  background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url("../../assets/img/web-bg.jpg") no-repeat center center fixed;
+  background-size: 36px 36px, cover;
 }
 
 /*First advertisement screen*/
 
 .fs-adv {
-  background: #222 url("../../assets/img/adv-bg.jpg") no-repeat center center fixed;
+  background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url("../../assets/img/adv-bg.jpg") no-repeat center center fixed;
+  background-size: 36px 36px, cover;
+}
+
+.fs-portfolio {
+  background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url("../../assets/img/portfolio-bg.jpg") no-repeat center center fixed;
+  background-size: 36px 36px, cover;
 }
 
 /*Services*/
@@ -13110,6 +13117,7 @@ hr:after {
 
 .services {
   align-items: center;
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -13119,12 +13127,14 @@ hr:after {
   min-height: 84vw;
   min-width: 84vw;
   position: relative;
+  margin-bottom: 75px;
 }
 
 @media screen and (min-width: 768px) {
   .services-container {
     min-height: 20vw;
     min-width: 20vw;
+    margin-bottom: 0;
   }
 
   .home-services {
@@ -13168,6 +13178,10 @@ hr:after {
 
 .serv-pre {
   transition: opacity .8s ease;
+}
+
+.serv-pre h2 {
+  margin-top: 0;
 }
 
 /*Border animation*/
@@ -13298,34 +13312,34 @@ button:focus {
 h1 {
   font-size: 2.5em;
   text-transform: uppercase;
-  font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin-bottom: 30px;
   color: #222;
 }
 
 h2 {
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 2em;
   line-height: normal;
   color: #222;
 }
 
 h3 {
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
   line-height: normal;
   color: #222;
 }
 
 h4 {
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   line-height: normal;
   color: #222;
 }
 
 p {
-  font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
   line-height: normal;
 }
@@ -13377,7 +13391,7 @@ p {
 }
 
 .big-txt {
-  font-family: "Raleway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 3em;
 }
 .timeline-title {
@@ -13494,7 +13508,7 @@ p {
 
 .tm-content ul li {
   font-size: 1.2em;
-  font-family: "Raleway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: normal;
   margin-left: 10px;
   margin-top: 10px;
@@ -13520,7 +13534,7 @@ p {
   position: relative;
   line-height: normal;
   text-transform: uppercase;
-  font-family: "Raleway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 3em;
   text-align: left;
 }
