@@ -21,35 +21,35 @@
         </div>
         <div class="dv-form-input dv-box">
             <label class="chk-row">Сайт-візитка
-                <input name="type" type="radio" checked="checked">
+                <input name="type" type="radio" value="businesscard" checked="checked">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Лендінг
-                <input name="type" type="radio">
+                <input name="type" type="radio" value="landing">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Портфоліо/галерея
-                <input name="type" type="radio">
+                <input name="type" type="radio" value="gallery">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Корпоративний сайт
-                <input name="type" type="radio">
+                <input name="type" type="radio" value="corporate">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Сайт-каталог
-                <input name="type" type="radio">
+                <input name="type" type="radio" value="catalog">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Інтернет-магазин
-                <input name="type" type="radio">
+                <input name="type" type="radio" value="internetshop">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Блог
-                <input name="type" type="radio">
+                <input name="type" type="radio" value="blog">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Інше:
-                <input name="type" type="radio">
+                <input name="type" type="radio" value="">
                 <span class="mark-radio"></span>
             </label>
             <input class="write-answer" type="text" name="type" placeholder="Сайт для залякування боржників">
@@ -85,7 +85,7 @@
                 <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Послуги/товари з підрозділами
-                <input type="checkbox" name="pages[serices]">
+                <input type="checkbox" name="pages[services]">
                 <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Новини
@@ -154,11 +154,11 @@
         </div>
         <div class="dv-form-input dv-box">
             <label class="chk-row">Ні (бо ПАТРІОТИ!)
-                <input name="multilang" type="radio" checked="checked">
+                <input name="multilang" type="radio" value="no" checked="checked">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Так
-                <input name="multilang" type="radio">
+                <input name="multilang" value="yes" type="radio">
                 <span class="mark-radio"></span>
             </label>
         </div>
@@ -170,19 +170,19 @@
         </div>
         <div class="dv-form-input dv-box">
             <label class="chk-row">Все готово до вжитку!
-                <input type="radio" checked="checked" name="materials[ready]">
+                <input type="radio" checked="checked" name="materials" value="ready">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Потрібно "трішки" відредагувати / відретушувати
-                <input type="radio" name="materials[toedit]">
+                <input type="radio" name="materials" value="toedit">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">А можете самі щось придумати?
-                <input type="radio" name="materials[create]">
+                <input type="radio" name="materials" value="create">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Інше:
-                <input type="radio" name="materials">
+                <input type="radio" name="materials" value="">
                 <span class="mark-radio"></span>
             </label>
             <input class="write-answer" type="text" name="materials[optional]" placeholder="Чесно - є тільки половина. Решту - додумуєм(те?)">
@@ -195,15 +195,15 @@
         </div>
         <div class="dv-form-input dv-box">
             <label class="chk-row">Звісно, що за питання?
-                <input name="firmstyle[yes]" type="radio" checked="checked">
+                <input name="firmstyle" value="yes" type="radio" checked="checked">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Немаю (((... А можете зробити?
-                <input name="firmstyle[todo]" type="radio">
+                <input name="firmstyle" value="todo" type="radio">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Просто поставте туди що-небудь
-                <input name="firmstyle[none]" type="radio">
+                <input name="firmstyle" value="none" type="radio">
                 <span class="mark-radio"></span>
             </label>
         </div>

@@ -1,4 +1,5 @@
-<form id="siteBrief" class="brief-form">
+<form id="advBrief" class="brief-form">
+    <!-- About you -->
     <div class="dv-form-row">
         <div class="dv-form-title">
             <span>Назва Вашої компанії:</span>
@@ -17,203 +18,125 @@
     </div>
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Який сайт Вам потрібен:</span>
-        </div>
-        <div class="dv-form-input dv-box">
-            <label class="chk-row">Сайт-візитка
-                <input name="type" type="radio" checked="checked">
-                <span class="mark-radio"></span>
-            </label>
-            <label class="chk-row">Лендінг
-                <input name="type" type="radio">
-                <span class="mark-radio"></span>
-            </label>
-            <label class="chk-row">Портфоліо/галерея
-                <input name="type" type="radio">
-                <span class="mark-radio"></span>
-            </label>
-            <label class="chk-row">Корпоративний сайт
-                <input name="type" type="radio">
-                <span class="mark-radio"></span>
-            </label>
-            <label class="chk-row">Сайт-каталог
-                <input name="type" type="radio">
-                <span class="mark-radio"></span>
-            </label>
-            <label class="chk-row">Інтернет-магазин
-                <input name="type" type="radio">
-                <span class="mark-radio"></span>
-            </label>
-            <label class="chk-row">Блог
-                <input name="type" type="radio">
-                <span class="mark-radio"></span>
-            </label>
-            <label class="chk-row">Інше:
-                <input name="type" type="radio">
-                <span class="mark-radio"></span>
-            </label>
-            <input class="write-answer" type="text" name="type" placeholder="Сайт для залякування боржників">
-        </div>
-    </div>
-    <div class="dv-form-row">
-        <div class="dv-form-title">
-            <span>Назву придумали?</span>
+            <span>Переваги та ключові особливості Вашої компанії?</span>
         </div>
         <div class="dv-form-input">
-            <input class="write-answer" type="text" name="sitename" placeholder="www.cosa-nostra-4ever.com">
+            <textarea class="write-answer" rows="5" name="advantages" placeholder=""></textarea>
         </div>
     </div>
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Основні сторінки/розділи сайту:</span>
+            <span>З чим Ви асоціюєте Ваш бренд?</span>
+        </div>
+        <div class="dv-form-input">
+            <textarea class="write-answer" rows="5" name="associations" placeholder=""></textarea>
+        </div>
+    </div>
+    <div class="dv-form-row">
+        <div class="dv-form-title">
+            <span>Що категорично не варто використовувати в візуалізації Вашого бренду?</span>
+        </div>
+        <div class="dv-form-input">
+            <textarea class="write-answer" rows="5" name="donotuse" placeholder=""></textarea>
+        </div>
+    </div>
+    <!--  Scope of application -->
+    <div class="dv-form-row">
+        <div class="dv-form-title">
+            <span>Сфера застосування:</span>
         </div>
         <div class="dv-form-input dv-box">
-            <label class="chk-row">Головна (ну як без неї?)
-                <input type="checkbox" name="pages[home]" checked="checked">
+            <label class="chk-row">Поліграфічна продукція
+                <input type="checkbox" name="scope[printing]">
                 <span class="mark-chkbx"></span>
             </label>
-            <label class="chk-row">Про компанію
-                <input type="checkbox" name="pages[about]">
+            <label class="chk-row">Зовнішня реклама
+                <input type="checkbox" name="scope[outdooradv]">
                 <span class="mark-chkbx"></span>
             </label>
-            <label class="chk-row">Контакти
-                <input type="checkbox" name="pages[contacts]">
+            <label class="chk-row">Оформлення фасаду
+                <input type="checkbox" name="scope[facadedesign]">
                 <span class="mark-chkbx"></span>
             </label>
-            <label class="chk-row">Каталог/галерея
-                <input type="checkbox" name="pages[catalog]">
+            <label class="chk-row">Реклама на транспорті
+                <input type="checkbox" name="scope[transport]">
                 <span class="mark-chkbx"></span>
             </label>
-            <label class="chk-row">Послуги/товари з підрозділами
-                <input type="checkbox" name="pages[serices]">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Новини
-                <input type="checkbox" name="pages[news]">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Блог
-                <input type="checkbox" name="pages[blog]">
+            <label class="chk-row">Сувенірна продукція
+                <input type="checkbox" name="scope[souvenirs]">
                 <span class="mark-chkbx"></span>
             </label>
             <label class="chk-row">Інші:
-                <input type="checkbox" >
-                <span class="mark-chkbx"></span>
-            </label>
-            <textarea class="write-answer" type="text" name="pages[optional]" placeholder=
-            '"Рецепти від улюбленої бабусі", "Як відкрити машину за допомогою лінійки", "Як зберігати соляну кислоту вдома"'></textarea>
-        </div>
-    </div>
-    <div class="dv-form-row">
-        <div class="dv-form-title">
-            <span>Ключові сервіси сайту:</span>
-        </div>
-        <div class="dv-form-input dv-box">
-            <label class="chk-row">Медіа галерея
-                <input name="services[gallery]" type="checkbox">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Відгуки/коментарі
-                <input name="services[comments]" type="checkbox">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Стрічка новин
-                <input name="services[newsfeed]" type="checkbox">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Форма зворотнього зв'язку
-                <input name="services[callback]" type="checkbox">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Калькулятор
-                <input name="services[calculator]" type="checkbox">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Автовідповідач
-                <input name="services[bot]" type="checkbox">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Кнопки соціальних мереж
-                <input name="services[social]" type="checkbox">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Завантаження файлів
-                <input name="services[upload]" type="checkbox">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Інше:
                 <input type="checkbox">
                 <span class="mark-chkbx"></span>
             </label>
-            <textarea name="services[optional]" class="write-answer" placeholder="Залякування по e-mail"></textarea>
+            <textarea class="write-answer" type="text" name="scope[optional]" placeholder=''></textarea>
         </div>
     </div>
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Чи потрібні іншомовні версії сайту?</span>
+            <span>Технічне завдання (Ваше бачення кінцевого продукту):</span>
+        </div>
+        <div class="dv-form-input">
+            <textarea class="write-answer" rows="5" name="donotuse" placeholder=""></textarea>
+        </div>
+    </div>
+    <!-- Visualization -->
+    <div class="dv-form-row">
+        <div class="dv-form-title">
+            <span>Спосіб відображення:</span>
         </div>
         <div class="dv-form-input dv-box">
-            <label class="chk-row">Ні (бо ПАТРІОТИ!)
-                <input name="multilang" type="radio" checked="checked">
+            <label class="chk-row">Текстовий
+                <input name="visualization" type="radio" value="text" checked="checked">
                 <span class="mark-radio"></span>
             </label>
-            <label class="chk-row">Так
-                <input name="multilang" type="radio">
+            <label class="chk-row">Графічний (ілюстрація/фото)
+                <input name="visualization" type="radio" value="graphic">
                 <span class="mark-radio"></span>
             </label>
+            <label class="chk-row">Комбінований
+                <input name="visualization" type="radio" value="combined">
+                <span class="mark-radio"></span>
+            </label>
+            <label class="chk-row">Інше:
+                <input name="visualization" type="radio" value="">
+                <span class="mark-radio"></span>
+            </label>
+            <input class="write-answer" type="text" name="visualization" placeholder="">
+        </div>
+    </div>
+    <div class="dv-form-row">
+        <div class="dv-form-title">
+            <span>Бажане поєднання кольорів:</span>
+        </div>
+        <div class="dv-form-input">
+            <textarea class="write-answer" rows="5" name="advcolor" placeholder=""></textarea>
         </div>
     </div>
     <!-- Content -->
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Готовність матеріалів, які розміщуватимуться на сайті:</span>
+            <span>Готовність матеріалів (тексти, зображення):</span>
         </div>
         <div class="dv-form-input dv-box">
             <label class="chk-row">Все готово до вжитку!
-                <input type="radio" checked="checked" name="materials[ready]">
+                <input type="radio" checked="checked" name="materials" value="ready">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Потрібно "трішки" відредагувати / відретушувати
-                <input type="radio" name="materials[toedit]">
+                <input type="radio" name="materials" value="toedit">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">А можете самі щось придумати?
-                <input type="radio" name="materials[create]">
+                <input type="radio" name="materials" value="create">
                 <span class="mark-radio"></span>
             </label>
             <label class="chk-row">Інше:
-                <input type="radio" name="materials">
+                <input type="radio" name="materials" value="">
                 <span class="mark-radio"></span>
             </label>
             <input class="write-answer" type="text" name="materials[optional]" placeholder="Чесно - є тільки половина. Решту - додумуєм(те?)">
-        </div>
-    </div>
-    <!-- Firmstyle -->
-    <div class="dv-form-row">
-        <div class="dv-form-title">
-            <span>Маєте власний фірмовий стиль?</span>
-        </div>
-        <div class="dv-form-input dv-box">
-            <label class="chk-row">Звісно, що за питання?
-                <input name="firmstyle[yes]" type="radio" checked="checked">
-                <span class="mark-radio"></span>
-            </label>
-            <label class="chk-row">Немаю (((... А можете зробити?
-                <input name="firmstyle[todo]" type="radio">
-                <span class="mark-radio"></span>
-            </label>
-            <label class="chk-row">Просто поставте туди що-небудь
-                <input name="firmstyle[none]" type="radio">
-                <span class="mark-radio"></span>
-            </label>
-        </div>
-    </div>
-    <div class="dv-form-row">
-        <div class="dv-form-title">
-            <span>Сайти, які Вам подобаються:</span>
-        </div>
-        <div class="dv-form-input">
-            <textarea name="liked" class="write-answer" placeholder="www.yakuza.com"></textarea>
         </div>
     </div>
     <!-- Terms -->
@@ -228,12 +151,12 @@
     <!-- Budget -->
     <div class="dv-form-row">
         <div class="dv-form-title">
-            <span>Бюджет на розробку сайту ($):</span>
+            <span>Бюджет на дизайн ($):</span>
         </div>
         <div class="dv-form-input">
             <div>
                 <div class="srange-spans">
-                    <input class="min-cost" type="number" min="200" step="50" name="cost[min]">
+                    <input class="min-cost" type="number" min="0" step="50" name="cost[min]">
                     <span class="uk-visible-large"></span>
                     <input class="max-cost" type="number" max="5000" step="50" name="cost[max]">
                 </div>
@@ -242,49 +165,6 @@
         </div>
     </div>
     <!-- Afterservice -->
-    <div class="dv-form-row">
-        <div class="dv-form-title">
-            <span>Чи потрібна подальша підтримка сайту:</span>
-        </div>
-        <div class="dv-form-input dv-box">
-            <label class="chk-row">Дизайнерська
-                <input type="checkbox" name="support[design]">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Контентна
-                <input type="checkbox" name="support[content]">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Технічна
-                <input type="checkbox" name="support[tech]">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Рекламна
-                <input type="checkbox" name="support[adv]">
-                <span class="mark-chkbx"></span>
-            </label>
-            <label class="chk-row">Інша:
-                <input type="checkbox">
-                <span class="mark-chkbx"></span>
-            </label>
-            <input class="write-answer" type="text" name="support[optional]" placeholder="Нові картинки від Г’ю на першому екрані щотижня">
-        </div>
-    </div>
-    <div class="dv-form-row">
-        <div class="dv-form-title">
-            <span>Запланований щомісячний бюджет на просування / підтримку сайту:</span>
-        </div>
-        <div class="dv-form-input">
-            <div>
-                <div class="srange-spans">
-                    <input class="min-cost" type="number" min="0" step="1" name="supbudget[min]">
-                    <span class="uk-visible-large"></span>
-                    <input class="max-cost" type="number" max="5000" step="1" name="supbudget[max]">
-                </div>
-                <div class="srange-slider"></div>
-            </div>
-        </div>
-    </div>
     <div class="dv-form-row">
         <div class="dv-form-title">
             <span>Ваші коментарі / побажання</span>
@@ -305,6 +185,7 @@
             <input name="files" type="file" multiple>
         </div>
     </div>
+    <!-- Contacts -->
     <div class="dv-form-row">
         <div class="dv-form-title">
             <span>Контактна особа:</span>
@@ -318,7 +199,7 @@
             <span>Контактний телефон:</span>
         </div>
         <div class="dv-form-input">
-            <input class="write-answer" type="tel" name="tel" placeholder="ну там... +380" >
+            <input class="write-answer" type="tel" name="tel" placeholder="ну там... +380">
         </div>
     </div>
     <div class="dv-form-row">

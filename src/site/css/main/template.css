@@ -50,8 +50,27 @@ hr:after {
 }
 
 .fs-bg-1 {
+    /*background: url('../../../assets/img/fs-bg1.jpg') no-repeat center center fixed;*/
     background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%);
-    background-size: 100%;
+    /*background-size: 100%;*/
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+}
+
+.fs-bg-marker {
+    background: url('../../../assets/img/markers.png') no-repeat top 100px left -100px fixed;
+    background-size: 500px;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+}
+
+.fs-bg-tablet {
+	  background: url('../../../assets/img/tablet.png') no-repeat bottom -80px right -130px fixed;
+    background-size: 850px;
     height: 100%;
     position: absolute;
     width: 100%;

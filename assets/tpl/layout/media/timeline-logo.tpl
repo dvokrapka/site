@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		<div class="right" data-uk-scrollspy="{cls:'uk-animation-slide-top', delay:100}">
-					<span data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:400}">Фініш</span>
+					<span data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:400}">Фініш</span>
 			<div class="tm-content" data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:800}">
 				<div>
 					<ul>
