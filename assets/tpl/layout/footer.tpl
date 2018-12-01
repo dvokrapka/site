@@ -6,9 +6,9 @@
         <!--Callback-->
 				<button class="dv-acco-toggle sm-button sm-black" data-acco="#callBack">Напишіть нам</button>
 				<form id="callBack" class="dv-acco-body callback-form">
-				    <input type="text" id="name" name="name" placeholder="Ім’я">
-				    <input type="email" id="email" name="email" placeholder="E-mail">
-				    <textarea placeholder="Повідомлення" rows="5"></textarea>
+				    <input type="text" name="name" placeholder="Як до Вас звертатись">
+				    <input type="email" name="email" placeholder="Ваш e-mail">
+				    <textarea placeholder="Питання. Побажання. Привітання" rows="5"></textarea>
 				    <button type="submit" class="sm-button sm-yellow">Надіслати</button>
 				</form>
     </div>
@@ -29,15 +29,13 @@
     </div> -->
     <div class="footer-bottom">
         <!--Footer Social-->
-        <div class="footer-social" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}">
+        <div class="footer-social" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:150, repeat: true}">
             <a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
             <a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
             <a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
             <a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
         </div>
-        <!-- Coyright -->
-        <div class="footer-copyright">
-            <p data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500, repeat: true}">Copyright © DVOKRAPKA 2018. All rights reserved</p>
-        </div>
+        <!-- Copyright -->
+        <p data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:500, repeat: true}">Copyright © DVOKRAPKA 2018. All rights reserved.</p>
     </div>
 </footer>

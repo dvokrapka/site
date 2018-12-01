@@ -11,16 +11,12 @@ function moveBackground() {
     y += (lFollowY - y) * friction;
 
     var translate = 'translate(' + x * 2 + 'px, ' + y * 2 + 'px)';
-    // var skew = 'skew(' + x/10 + 'deg, ' + y/10 + 'deg)';
-    // var scale = 'scale('+ 1 + (x/1000) + ')';
 
     // Animate
     $('[data-paralax]').css({
         '-webit-transform': translate,
         '-moz-transform': translate,
         'transform': translate
-        // 'transform': translate + skew
-        // 'transform': translate + rotate
     });
 
     window.requestAnimationFrame(moveBackground);

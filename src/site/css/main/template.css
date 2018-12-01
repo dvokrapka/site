@@ -17,17 +17,17 @@ body {
 hr {
     border: none;
     height: 5px;
-    width: 100%;
     position: relative;
+    width: 100%;
 }
 
 hr:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
     background-color: #222;
     border-radius: 5px;
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
 }
 
 /*Section Container*/
@@ -50,18 +50,16 @@ hr:after {
 }
 
 .fs-bg-1 {
-    /*background: url('../../../assets/img/fs-bg1.jpg') no-repeat center center fixed;*/
-    background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%);
-    /*background-size: 100%;*/
-    height: 100%;
+    background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%) center center;
+    height: 120%;
     position: absolute;
-    width: 100%;
+    width: 120%;
     z-index: -2;
 }
 
 .fs-bg-marker {
     background: url('../../../assets/img/markers.png') no-repeat top 100px left -100px fixed;
-    background-size: 500px;
+    background-size: 30%;
     height: 100%;
     position: absolute;
     width: 100%;
@@ -70,7 +68,7 @@ hr:after {
 
 .fs-bg-tablet {
 	  background: url('../../../assets/img/tablet.png') no-repeat bottom -80px right -130px fixed;
-    background-size: 850px;
+    background-size: 50%;
     height: 100%;
     position: absolute;
     width: 100%;
@@ -80,9 +78,9 @@ hr:after {
 .fs-bg-2 {
     background: radial-gradient(#E2A801 6px, transparent 6px) center center fixed;
     background-size: 36px 36px;
-    height: 120%;
+    height: 130%;
     position: absolute;
-    width: 120%;
+    width: 130%;
     z-index: -1;
 }
 
@@ -103,9 +101,6 @@ hr:after {
 /*First webdesign screen*/
 
 .fs-web {
-/*    background: url('../../../assets/img/web-bg.jpg') no-repeat center center fixed;
-    background-size: cover;*/
-
     background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url('../../../assets/img/web-bg.jpg') no-repeat center center fixed;
     background-size: 36px 36px, cover;
 }

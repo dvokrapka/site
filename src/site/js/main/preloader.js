@@ -58,7 +58,5 @@ function typeWrite() {
 
 
 $(function() {
-
-
     typeWrite();
 });
