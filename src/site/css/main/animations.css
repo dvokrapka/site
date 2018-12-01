@@ -43,11 +43,7 @@
 
 /*Footer city animation*/
 @keyframes citymove {
-    from {
-        background-position: 0 bottom;
-    }
-
     to {
-        background-position: 100vw bottom;
+        transform: translateX(100vw);
     }
 }

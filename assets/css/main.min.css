@@ -11447,12 +11447,8 @@ a.uk-thumbnail:focus {
 /*Footer city animation*/
 
 @keyframes citymove {
-  from {
-    background-position: 0 bottom;
-  }
-
   to {
-    background-position: 100vw bottom;
+    transform: translateX(100vw);
   }
 }
 .bird {
@@ -12457,12 +12453,13 @@ footer {
 
 .footer-bg {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  background: url("../../assets/img/city_grey.png") repeat-x left bottom;
-  background-size: 400vw;
-  /*background-size: 80vw;*/
-  animation: citymove 20s linear infinite;
+  height: 50%;
+  width: 300%;
+  bottom: 0;
+  will-change: transform;
+  transform: translateX(-100vw);
+  background: url("../../assets/img/footer-bg.png") repeat-x center bottom;
+  animation: citymove 30s linear infinite;
 }
 
 .footer-contacts {
