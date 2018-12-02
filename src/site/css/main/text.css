@@ -3,6 +3,7 @@ h1 {
     text-transform: uppercase;
     font-family: "Dvoway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     margin-bottom: 30px;
+    line-height: normal;
     color: #222;
 }
 
@@ -84,4 +85,10 @@ p {
 .big-txt {
 	font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	font-size: 3em;
+}
+
+.titles {
+	margin: 0 auto 60px;
+	text-align: center;
+	color: #fbba00;
 }

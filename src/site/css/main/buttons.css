@@ -22,21 +22,20 @@
 /*Scroll bottom*/
 .scroll-btm {
     visibility: hidden;
+    opacity: 0;
     margin: 0 auto;
     height: 45px;
     pointer-events: none;
     width: 45px;
+    transition: .8s ease;
 }
 
 .scroll-btm.appear {
+    animation: sb_animate 2s 3s infinite;
     visibility: visible;
-    animation: sb_animate 2s 1.5s infinite;
-}
-
-.clickable {
+    opacity: 1;
     pointer-events: auto;
 }
-
 
 .scroll-btm:hover {
     animation-play-state: paused;

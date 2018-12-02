@@ -12088,18 +12088,18 @@ a.uk-thumbnail:focus {
 
 .scroll-btm {
   visibility: hidden;
+  opacity: 0;
   margin: 0 auto;
   height: 45px;
   pointer-events: none;
   width: 45px;
+  transition: .8s ease;
 }
 
 .scroll-btm.appear {
+  animation: sb_animate 2s 3s infinite;
   visibility: visible;
-  animation: sb_animate 2s 1.5s infinite;
-}
-
-.clickable {
+  opacity: 1;
   pointer-events: auto;
 }
 
@@ -13068,7 +13068,7 @@ hr:after {
   position: relative;
 }
 
-/*First screen*/
+/*First screen default*/
 
 .fs-screen {
   align-items: center;
@@ -13080,11 +13080,71 @@ hr:after {
   text-align: center;
 }
 
-.fs-bg-1 {
+.fs-screen h1 {
+  display: none;
+  font-size: 6em;
+  /*line-height: 1em;*/
+  margin-top: 50px;
+  pointer-events: none;
+}
+
+.fs-screen .white-text {
+  display: block;
+  text-shadow: 3px 3px 10px rgba(0,0,0,.2);
+  transform: translateY(-20%);
+}
+
+/*Homepage FS*/
+
+.fs-homepage {
   background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%) center center;
-  height: 120%;
+  height: 100%;
   position: absolute;
-  width: 120%;
+  width: 100%;
+  z-index: -2;
+}
+
+/*Portfolio FS*/
+
+.fs-portfolio {
+  background: #222 url("../../assets/img/portfolio-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+}
+
+/*Logo design FS*/
+
+.fs-logo {
+  background: #222 url("../../assets/img/logo-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+}
+
+/*Webdesign FS*/
+
+.fs-web {
+  background: #222 url("../../assets/img/web-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+}
+
+/*Advertisement FS*/
+
+.fs-adv {
+  background: #222 url("../../assets/img/adv-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
   z-index: -2;
 }
 
@@ -13099,11 +13159,13 @@ hr:after {
   z-index: -2;
   transition: transform .05s linear;
   transform: translateY(-100%);
+  opacity: 0;
 }
 
 .appear.fs-bg-marker {
   animation: marker_animate 3s ease;
   transform: translateY(0);
+  opacity: 1;
 }
 
 .fs-bg-tablet {
@@ -13117,11 +13179,13 @@ hr:after {
   z-index: -2;
   transform: translateY(100%);
   transition: transform .05s linear;
+  opacity: 0;
 }
 
 .appear.fs-bg-tablet {
   animation: tablet_animate 3s ease;
   transform: translateY(0);
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -13137,8 +13201,8 @@ hr:after {
   }
 }
 
-.fs-bg-2 {
-  background: radial-gradient(#E2A801 6px, transparent 6px) center center fixed;
+.yellow-dots {
+  background: radial-gradient(#E2A801 6px, transparent 6px) center center;
   background-size: 36px 36px;
   height: 130%;
   position: absolute;
@@ -13146,37 +13210,13 @@ hr:after {
   z-index: -1;
 }
 
-.gaslo {
-  display: none;
-  line-height: 1.2em;
-  margin-top: 50px;
-  pointer-events: none;
-}
-
-/*First logo design screen*/
-
-.fs-logo {
-  background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url("../../assets/img/logo-bg.jpg") no-repeat center center fixed;
-  background-size: 36px 36px, cover;
-}
-
-/*First webdesign screen*/
-
-.fs-web {
-  background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url("../../assets/img/web-bg.jpg") no-repeat center center fixed;
-  background-size: 36px 36px, cover;
-}
-
-/*First advertisement screen*/
-
-.fs-adv {
-  background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url("../../assets/img/adv-bg.jpg") no-repeat center center fixed;
-  background-size: 36px 36px, cover;
-}
-
-.fs-portfolio {
-  background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center, url("../../assets/img/portfolio-bg.jpg") no-repeat center center fixed;
-  background-size: 36px 36px, cover;
+.grey-dots {
+  background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center;
+  background-size: 36px 36px;
+  height: 130%;
+  position: absolute;
+  width: 130%;
+  z-index: -1;
 }
 
 /*Services*/
@@ -13393,6 +13433,7 @@ h1 {
   text-transform: uppercase;
   font-family: "Dvoway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin-bottom: 30px;
+  line-height: normal;
   color: #222;
 }
 
@@ -13472,6 +13513,12 @@ p {
 .big-txt {
   font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 3em;
+}
+
+.titles {
+  margin: 0 auto 60px;
+  text-align: center;
+  color: #fbba00;
 }
 .timeline-title {
   padding: 8vw;
