@@ -11451,6 +11451,38 @@ a.uk-thumbnail:focus {
     transform: translateX(100vw);
   }
 }
+
+/*Animate markers on homepage fs*/
+
+@keyframes marker_animate {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  25% {
+    transform: translateY(15%);
+  }
+
+  75%, 100% {
+    transform: translateY(0);
+  }
+}
+
+/*Animate table on homepage fs*/
+
+@keyframes tablet_animate {
+  0% {
+    transform: translateY(100%);
+  }
+
+  25% {
+    transform: translateY(-15%);
+  }
+
+  75%, 100% {
+    transform: translateY(0);
+  }
+}
 .bird {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg");
   background-size: auto 100%;
@@ -12055,17 +12087,20 @@ a.uk-thumbnail:focus {
 /*Scroll bottom*/
 
 .scroll-btm {
+  visibility: hidden;
+  margin: 0 auto;
   height: 45px;
-  opacity: 0;
   pointer-events: none;
-  transition: .8s ease;
   width: 45px;
 }
 
 .scroll-btm.appear {
-  animation: sb_animate 2s infinite;
-  opacity: 1;
-  pointer-events: initial;
+  visibility: visible;
+  animation: sb_animate 2s 1.5s infinite;
+}
+
+.clickable {
+  pointer-events: auto;
 }
 
 .scroll-btm:hover {
@@ -13054,21 +13089,52 @@ hr:after {
 }
 
 .fs-bg-marker {
-  background: url("../../assets/img/markers.png") no-repeat top 100px left -100px fixed;
-  background-size: 30%;
+  background: url("../../assets/img/markers.png") no-repeat top left;
+  background-size: 50% auto;
   height: 100%;
   position: absolute;
   width: 100%;
+  top: 15vh;
+  left: -10vw;
   z-index: -2;
+  transition: transform .05s linear;
+  transform: translateY(-100%);
+}
+
+.appear.fs-bg-marker {
+  animation: marker_animate 3s ease;
+  transform: translateY(0);
 }
 
 .fs-bg-tablet {
-  background: url("../../assets/img/tablet.png") no-repeat bottom -80px right -130px fixed;
-  background-size: 50%;
+  background: url("../../assets/img/tablet.png") no-repeat bottom right;
+  background-size: 80% auto;
+  bottom: -5%;
   height: 100%;
   position: absolute;
+  right: -15vw;
   width: 100%;
   z-index: -2;
+  transform: translateY(100%);
+  transition: transform .05s linear;
+}
+
+.appear.fs-bg-tablet {
+  animation: tablet_animate 3s ease;
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+  .fs-bg-marker {
+    background-size: 30% auto;
+    left: -10vw;
+  }
+
+  .fs-bg-tablet {
+    background-size: 50% auto;
+    bottom: -5%;
+    right: -15vw;
+  }
 }
 
 .fs-bg-2 {
@@ -13152,7 +13218,6 @@ hr:after {
   }
 
   .home-services {
-    /*margin-top: 100px;*/
     padding-top: 0;
   }
 }

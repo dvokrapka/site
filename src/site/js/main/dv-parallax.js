@@ -1,3 +1,5 @@
+// Paralax on mouse move
+
 var lFollowX = 0,
     lFollowY = 0,
     winX = $(window).width(),
@@ -30,3 +32,27 @@ $('[data-paralax]').closest('section').on('mousemove click', function(e) {
 });
 
 moveBackground();
+
+
+// Paralax on scroll down
+$(function() {
+
+	var $el1 = $('.fs-bg-marker');
+	var $el2 = $('.fs-bg-tablet');
+
+
+	$(window).on('scroll', function () {
+
+	    var scroll = $(document).scrollTop();
+
+	    $el1.css({
+	        'transform': 'translateX(-'+ scroll +'px)'
+	        // 'transform': 'translateY(-'+ scroll +'px)'
+	    });
+
+	    $el2.css({
+	        'transform': 'translateX('+ scroll +'px)'
+	        // 'transform': 'translateY('+ scroll +'px)'
+	    });
+	});
+});

@@ -6,7 +6,8 @@ $(function() {
 var jsAPI = function() {
 
     var $goTop = $('#goTop'),
-        winH = window.innerHeight / 2,
+        winH = 100,
+        // winH = window.innerHeight / 2,
         $toggled = $('header').add('#burger').add('.toplogo').add($goTop);
 
     // Toggle elements on window scroll

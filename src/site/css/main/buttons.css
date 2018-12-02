@@ -12,8 +12,8 @@
 }
 
 .form-button {
-		display: block;
-		position: relative;
+    display: block;
+    position: relative;
     margin: 0 auto;
     text-align: center;
 }
@@ -21,18 +21,22 @@
 
 /*Scroll bottom*/
 .scroll-btm {
+    visibility: hidden;
+    margin: 0 auto;
     height: 45px;
-    opacity: 0;
     pointer-events: none;
-    transition: .8s ease;
     width: 45px;
 }
 
 .scroll-btm.appear {
-    animation: sb_animate 2s infinite;
-    opacity: 1;
-    pointer-events: initial;
+    visibility: visible;
+    animation: sb_animate 2s 1.5s infinite;
 }
+
+.clickable {
+    pointer-events: auto;
+}
+
 
 .scroll-btm:hover {
     animation-play-state: paused;

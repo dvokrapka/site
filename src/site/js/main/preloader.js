@@ -1,26 +1,26 @@
 function typeWrite() {
 
-		var $preLoader = $('#preLoad'),
-				$typing = $('[data-typing]'),
-		    afterTxt = $typing.html();
+    var $preLoader = $('#preLoad'),
+        $typing = $('[data-typing]'),
+        afterTxt = $typing.html();
 
-      // Get url & check if its an anchor
-      var url = window.location.href,
-    			arr = url.split('/'),
-    			href = arr[arr.length - 1],
-    			anchor = /^#/.test(href);
+    // Get url & check if its an anchor
+    var url = window.location.href,
+        arr = url.split('/'),
+        href = arr[arr.length - 1],
+        anchor = /^#/.test(href);
 
     // Check if preloader is active
-		if (!$preLoader.length || anchor) {
-				$preLoader.removeClass('preload');
-				$('body').removeClass('noscroll');
-				$('header').removeClass('hidden');
-		} else {
-		    $typing.addClass('yellow-text');
-		}
+    if (!$preLoader.length || anchor) {
+        $preLoader.removeClass('preload');
+        $('body').removeClass('noscroll');
+        $('header').removeClass('hidden');
+    } else {
+        $typing.addClass('yellow-text');
+    }
 
     $typing
-  			.html($typing.attr('data-typing'))
+        .html($typing.attr('data-typing'))
         .t({
             delay: 1.2,
             speed: 100,
@@ -28,7 +28,8 @@ function typeWrite() {
             caret: ':',
             fin: function(elm) {
                 // Hide caret and replace text
-                elm.delay(500).data('blinking', 0)
+                elm
+                    .delay(500).data('blinking', 0)
                     .fadeOut(function() {
                         clearInterval(elm.data('bi'));
                         elm.removeClass('yellow-text').html(afterTxt).fadeIn(1500);
@@ -39,21 +40,30 @@ function typeWrite() {
                                 .fadeOut(1000, function() {
                                     $('header').removeClass('hidden');
                                     $('body').removeClass('noscroll');
-
-                                    $('.scroll-btm').fadeOut(function() {
-                                        $(this).fadeIn().addClass('appear');
-                                    });
+                            				homePageAnimation();
+                                    showScrollBtm();
                                 });
                         } else {
-                            $('.scroll-btm').fadeOut(function() {
-                                $(this).fadeIn(1000).addClass('appear');
-                            });
+                            homePageAnimation();
+                            showScrollBtm();
                         }
                     });
-
-
             }
         });
+}
+
+// Show scroll down button
+function showScrollBtm() {
+    $('.scroll-btm').fadeOut(function() {
+        $(this).addClass('appear').fadeIn(1500, function() {
+            $(this).addClass('clickable');
+        });
+    });
+}
+
+// FS animation
+function homePageAnimation() {
+		$('.fs-bg-marker, .fs-bg-tablet').addClass('appear');
 }
 
 
