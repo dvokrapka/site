@@ -49,20 +49,6 @@ hr:after {
     text-align: center;
 }
 
-.fs-screen h1 {
-    display: none;
-    font-size: 6em;
-    /*line-height: 1em;*/
-    margin-top: 50px;
-    pointer-events: none;
-}
-
-.fs-screen .white-text {
-	display: block;
-	text-shadow: 3px 3px 10px rgba(0,0,0,.2);
-	transform: translateY(-20%);
-}
-
 
 /*Homepage FS*/
 .fs-homepage {
@@ -75,7 +61,7 @@ hr:after {
 
 /*Portfolio FS*/
 .fs-portfolio {
-    background: #222 url('../../../assets/img/portfolio-bg.jpg') no-repeat center center fixed;
+    background: #222 url('../../../assets/img/bg/portfolio-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     position: absolute;
@@ -86,7 +72,7 @@ hr:after {
 /*Logo design FS*/
 
 .fs-logo {
-    background: #222 url('../../../assets/img/logo-bg.jpg') no-repeat center center fixed;
+    background: #222 url('../../../assets/img/bg/logo-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     position: absolute;
@@ -97,7 +83,7 @@ hr:after {
 /*Webdesign FS*/
 
 .fs-web {
-    background: #222 url('../../../assets/img/web-bg.jpg') no-repeat center center fixed;
+    background: #222 url('../../../assets/img/bg/web-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     position: absolute;
@@ -108,7 +94,7 @@ hr:after {
 /*Advertisement FS*/
 
 .fs-adv {
-    background: #222 url('../../../assets/img/adv-bg.jpg') no-repeat center center fixed;
+    background: #222 url('../../../assets/img/bg/adv-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     position: absolute;
@@ -119,7 +105,7 @@ hr:after {
 
 
 .fs-bg-marker {
-    background: url('../../../assets/img/markers.png') no-repeat top left;
+    background: url('../../../assets/img/bg/markers.png') no-repeat top left;
     background-size: 50% auto;
     height: 100%;
     position: absolute;
@@ -140,7 +126,7 @@ hr:after {
 
 
 .fs-bg-tablet {
-    background: url('../../../assets/img/tablet.png') no-repeat bottom right;
+    background: url('../../../assets/img/bg/tablet.png') no-repeat bottom right;
     background-size: 80% auto;
     bottom: -5%;
     height: 100%;
@@ -353,7 +339,7 @@ hr:after {
 
 .home-design {
     align-items: center;
-    /*background: url('../../../assets/img/bodesign.jpg') no-repeat center center fixed;*/
+    /*background: url('../../../assets/img/bg/bodesign.jpg') no-repeat center center fixed;*/
     background: no-repeat center center fixed;
     background-size: 100%;
     display: flex;

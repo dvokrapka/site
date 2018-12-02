@@ -2,7 +2,7 @@
 
 .main-menu {
     align-items: center;
-    background: #222 url('../../../assets/img/menu-bg.jpg') no-repeat center center fixed;
+    background: #222 url('../../../assets/img/bg/menu-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     display: none;
     justify-content: center;

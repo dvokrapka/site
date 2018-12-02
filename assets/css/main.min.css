@@ -12488,7 +12488,7 @@ footer {
 
 .footer-bg {
   animation: citymove 30s linear infinite;
-  background: url("../../assets/img/footer-bg.png") repeat-x center bottom;
+  background: url("../../assets/img/bg/footer-bg.png") repeat-x center bottom;
   background-size: auto 100%;
   bottom: 0;
   height: 50%;
@@ -12688,7 +12688,7 @@ header.appear {
 
 .main-menu {
   align-items: center;
-  background: #222 url("../../assets/img/menu-bg.jpg") no-repeat center center fixed;
+  background: #222 url("../../assets/img/bg/menu-bg.jpg") no-repeat center center fixed;
   background-size: cover;
   display: none;
   justify-content: center;
@@ -13080,20 +13080,6 @@ hr:after {
   text-align: center;
 }
 
-.fs-screen h1 {
-  display: none;
-  font-size: 6em;
-  /*line-height: 1em;*/
-  margin-top: 50px;
-  pointer-events: none;
-}
-
-.fs-screen .white-text {
-  display: block;
-  text-shadow: 3px 3px 10px rgba(0,0,0,.2);
-  transform: translateY(-20%);
-}
-
 /*Homepage FS*/
 
 .fs-homepage {
@@ -13107,7 +13093,7 @@ hr:after {
 /*Portfolio FS*/
 
 .fs-portfolio {
-  background: #222 url("../../assets/img/portfolio-bg.jpg") no-repeat center center fixed;
+  background: #222 url("../../assets/img/bg/portfolio-bg.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   position: absolute;
@@ -13118,7 +13104,7 @@ hr:after {
 /*Logo design FS*/
 
 .fs-logo {
-  background: #222 url("../../assets/img/logo-bg.jpg") no-repeat center center fixed;
+  background: #222 url("../../assets/img/bg/logo-bg.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   position: absolute;
@@ -13129,7 +13115,7 @@ hr:after {
 /*Webdesign FS*/
 
 .fs-web {
-  background: #222 url("../../assets/img/web-bg.jpg") no-repeat center center fixed;
+  background: #222 url("../../assets/img/bg/web-bg.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   position: absolute;
@@ -13140,7 +13126,7 @@ hr:after {
 /*Advertisement FS*/
 
 .fs-adv {
-  background: #222 url("../../assets/img/adv-bg.jpg") no-repeat center center fixed;
+  background: #222 url("../../assets/img/bg/adv-bg.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   position: absolute;
@@ -13149,7 +13135,7 @@ hr:after {
 }
 
 .fs-bg-marker {
-  background: url("../../assets/img/markers.png") no-repeat top left;
+  background: url("../../assets/img/bg/markers.png") no-repeat top left;
   background-size: 50% auto;
   height: 100%;
   position: absolute;
@@ -13169,7 +13155,7 @@ hr:after {
 }
 
 .fs-bg-tablet {
-  background: url("../../assets/img/tablet.png") no-repeat bottom right;
+  background: url("../../assets/img/bg/tablet.png") no-repeat bottom right;
   background-size: 80% auto;
   bottom: -5%;
   height: 100%;
@@ -13378,7 +13364,7 @@ hr:after {
 
 .home-design {
   align-items: center;
-  /*background: url('../../../assets/img/bodesign.jpg') no-repeat center center fixed;*/
+  /*background: url('../../../assets/img/bg/bodesign.jpg') no-repeat center center fixed;*/
   background: no-repeat center center fixed;
   background-size: 100%;
   display: flex;
@@ -13482,6 +13468,12 @@ p {
   }
 }
 
+.titles {
+  margin: 0 auto 60px;
+  text-align: center;
+  color: #fbba00;
+}
+
 /*Color*/
 
 .white-text {
@@ -13500,14 +13492,14 @@ p {
   color: #000;
 }
 
-/*Typing text*/
-
-.typing {
-  display: none;
-}
+/*Size*/
 
 .small-txt {
   font-size: .2em;
+}
+
+.smaller-txt {
+  font-size: .75em;
 }
 
 .big-txt {
@@ -13515,10 +13507,29 @@ p {
   font-size: 3em;
 }
 
-.titles {
-  margin: 0 auto 60px;
-  text-align: center;
-  color: #fbba00;
+/*Typing*/
+
+.typing {
+  display: none;
+  font-size: 3em;
+  margin-top: 40px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.white-sub-text {
+  color: #fff;
+  display: block;
+  font-size: .8em;
+  line-height: 0.5em;
+  text-shadow: 3px 3px 10px rgba(0,0,0,.2);
+  transform: translateY(-18%);
+}
+
+@media screen and (min-width: 768px) {
+  .typing {
+    font-size: 6em;
+  }
 }
 .timeline-title {
   padding: 8vw;

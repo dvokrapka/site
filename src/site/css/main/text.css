@@ -55,6 +55,14 @@ p {
 
 
 
+.titles {
+	margin: 0 auto 60px;
+	text-align: center;
+	color: #fbba00;
+}
+
+
+
 /*Color*/
 
 .white-text {
@@ -73,13 +81,12 @@ p {
     color: #000;
 }
 
-/*Typing text*/
-.typing {
-		display: none;
-}
-
+/*Size*/
 .small-txt {
 	font-size: .2em;
+}
+.smaller-txt {
+	font-size: .75em;
 }
 
 .big-txt {
@@ -87,8 +94,27 @@ p {
 	font-size: 3em;
 }
 
-.titles {
-	margin: 0 auto 60px;
-	text-align: center;
-	color: #fbba00;
+/*Typing*/
+.typing {
+	display: none;
+	font-size: 3em;
+	margin-top: 40px;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+.white-sub-text {
+	color: #fff;
+	display: block;
+	font-size: .8em;
+	line-height: 0.5em;
+	text-shadow: 3px 3px 10px rgba(0,0,0,.2);
+	transform: translateY(-18%);
+}
+
+@media screen and (min-width: 768px) {
+	.typing {
+	    font-size: 6em;
+	}
+
 }
