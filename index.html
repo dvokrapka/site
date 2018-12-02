@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="uk-UA">
 	<head>
+		<!-- Templater -->
+		<script src="assets/js/templater.js"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Двокрапка | Головна</title>
-		<!-- Templater -->
-		<script src="assets/js/templater.js"></script>
 		<!-- Font Loader -->
 		<script src="assets/js/font_loader.js"></script>
 		<!-- Styles -->
@@ -38,9 +38,9 @@
 			<section id="services" class="home-services sect-container">
 				<div>
 					<h1 data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}"><span class="blink">:</span>Вигадуємо. <span class="yellow-text">Розробляємо.</span> Малюємо</h1>
-					<div class="services">
+					<div class="services" data-uk-scrollspy="{cls:'uk-animation-fade uk-invisible', target:'> .services-container', delay:350, repeat: true}">
 						<!-- Logos -->
-						<div class="services-container">
+						<div class="services-container uk-invisible">
 							<div class="serv-pre">
 								<img class="lazy" data-src="assets/img/logo-design.svg" alt="">
 								<h2 class="yellow-text">Логотипи</h2>
@@ -54,7 +54,7 @@
 							</div>
 						</div>
 						<!-- Sites -->
-						<div class="services-container">
+						<div class="services-container uk-invisible">
 							<div class="serv-pre">
 								<img class="lazy" data-src="assets/img/web-design.svg" alt="">
 								<h2 class="yellow-text">Сайти</h2>
@@ -68,7 +68,7 @@
 							</div>
 						</div>
 						<!-- Advertisement -->
-						<div class="services-container">
+						<div class="services-container uk-invisible">
 							<div class="serv-pre">
 								<img class="lazy" data-src="assets/img/adv-design.svg" alt="">
 								<h2 class="yellow-text">Рекламу</h2>
@@ -104,9 +104,8 @@
 				<!-- Portfolio -->
 				<div class="sect-container">
 					<h1 class="titles white-text" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}"><span class="yellow-text">Ми<span class="blink">:</span></span> Те, що ми <span class="yellow-text">створюємо</span></h1>
-					<div class="uk-grid uk-grid-width-medium-1-2 uk-grid-width-large-1-3 uk-grid-collapse">
-						<a href="">
-						<figure class="uk-overlay uk-overlay-hover">
+					<div class="uk-grid uk-grid-width-medium-1-2 uk-grid-width-large-1-3 uk-grid-collapse" data-uk-scrollspy="{cls:'uk-animation-fade uk-invisible', target:'> .portfolio-prev', delay:300}">
+						<figure class="portfolio-prev uk-invisible uk-overlay uk-overlay-hover">
 							<img class="lazy" data-src="assets/img/1.jpg" alt="Зображення 1">
 							<figcaption class="uk-overlay-panel uk-overlay-slide-top">
 							<div class="portfolio-desc">
@@ -115,64 +114,48 @@
 							</div>
 							</figcaption>
 						</figure>
-								</a>
-						<figure class="uk-overlay uk-overlay-hover">
+						<figure class="portfolio-prev uk-invisible uk-overlay uk-overlay-hover">
 							<img class="lazy" data-src="assets/img/2.jpg" alt="Зображення 1">
 							<figcaption class="uk-overlay-panel uk-overlay-slide-top">
 							<div class="portfolio-desc">
 								<h4>Молочний Острів</h4>
 								<p>фірмовий стиль</p>
-								<a class="more-href" href="">
-									<script data-tpl="viewmore">insertTpl('viewmore');</script>
-								</a>
 							</div>
 							</figcaption>
 						</figure>
-						<figure class="uk-overlay uk-overlay-hover">
+						<figure class="portfolio-prev uk-invisible uk-overlay uk-overlay-hover">
 							<img class="lazy" data-src="assets/img/6.jpg" alt="Зображення 1">
 							<figcaption class="uk-overlay-panel uk-overlay-slide-top">
 							<div class="portfolio-desc">
 								<h4>Молочний Острів</h4>
 								<p>фірмовий стиль</p>
-								<a class="more-href" href="">
-									<script data-tpl="viewmore">insertTpl('viewmore');</script>
-								</a>
 							</div>
 							</figcaption>
 						</figure>
-						<figure class="uk-overlay uk-overlay-hover">
+						<figure class="portfolio-prev uk-invisible uk-overlay uk-overlay-hover">
 							<img class="lazy" data-src="assets/img/3.jpg" alt="Зображення 1">
 							<figcaption class="uk-overlay-panel uk-overlay-slide-top">
 							<div class="portfolio-desc">
 								<h4>Молочний Острів</h4>
 								<p>фірмовий стиль</p>
-								<a class="more-href" href="">
-									<script data-tpl="viewmore">insertTpl('viewmore');</script>
-								</a>
 							</div>
 							</figcaption>
 						</figure>
-						<figure class="uk-overlay uk-overlay-hover">
+						<figure class="portfolio-prev uk-invisible uk-overlay uk-overlay-hover">
 							<img class="lazy" data-src="assets/img/5.jpg" alt="Зображення 1">
 							<figcaption class="uk-overlay-panel uk-overlay-slide-top">
 							<div class="portfolio-desc">
 								<h4>Молочний Острів</h4>
 								<p>фірмовий стиль</p>
-								<a class="more-href" href="">
-									<script data-tpl="viewmore">insertTpl('viewmore');</script>
-								</a>
 							</div>
 							</figcaption>
 						</figure>
-						<figure class="uk-overlay uk-overlay-hover">
+						<figure class="portfolio-prev uk-invisible uk-overlay uk-overlay-hover">
 							<img class="lazy" data-src="assets/img/4.jpg" alt="Зображення 1">
 							<figcaption class="uk-overlay-panel uk-overlay-slide-top">
 							<div class="portfolio-desc">
 								<h4>Молочний Острів</h4>
 								<p>фірмовий стиль</p>
-								<a class="more-href" href="">
-									<script data-tpl="viewmore">insertTpl('viewmore');</script>
-								</a>
 							</div>
 							</figcaption>
 						</figure>
@@ -199,6 +182,7 @@
 		<script data-tpl="footer">insertTpl('footer');</script>
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="assets/js/jquery-3.3.1.min.js"><\/script>');</script>
 		<!-- App js -->
 		<script src="assets/js/scripts.min.js"></script>
 	</body>

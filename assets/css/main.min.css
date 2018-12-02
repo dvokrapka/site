@@ -12834,6 +12834,10 @@ header.appear {
   color: #dedede;
 }
 
+.portfolio-prev:hover {
+  cursor: pointer;
+}
+
 /*Filter controls*/
 
 .filter-btns {
