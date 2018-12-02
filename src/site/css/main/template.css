@@ -162,10 +162,9 @@ hr:after {
 .yellow-dots {
     background: radial-gradient(#E2A801 6px, transparent 6px) center center;
     background-size: 36px 36px;
-    height: 130%;
+    height: 100%;
     position: absolute;
-    width: 130%;
-    z-index: -1;
+    width: 100%;
 }
 
 .grey-dots {
@@ -177,18 +176,28 @@ hr:after {
     z-index: -1;
 }
 
+.light-dots {
+    background: radial-gradient(rgba(0, 0, 0, .02) 6px, transparent 6px) center center fixed;
+    background-size: 36px 36px;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
 
 
 
 /*Services*/
 
 .home-services {
+		background-color: #EBEBEB ;
     padding-top: 100px;
     min-height: 90vh;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .home-services>div {
@@ -314,6 +323,14 @@ hr:after {
 }
 
 /*About Us*/
+
+.about-us {
+	background: radial-gradient(#E2A801 5px, transparent 5px) center center fixed, #FBBA00;
+	background-size: 36px 36px, cover;
+	padding: 8vw;
+	position: relative;
+	text-align: center;
+}
 
 .about-us-screen {
     align-items: center;

@@ -1,6 +1,8 @@
 footer {
     align-items: center;
-    background: linear-gradient(#ccc, #fff 30%);
+    background: linear-gradient(#574103, #fbba00, #FFD765);
+    /*background: linear-gradient(#ccc, #fff 30%);*/
+    /*background: linear-gradient(#926D03, #fbba00, #FFD765);*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -11,14 +13,14 @@ footer {
 }
 
 .footer-bg {
-    animation: citymove 30s linear infinite;
+    animation: citymove 40s linear infinite;
     background: url('../../../assets/img/bg/footer-bg.png') repeat-x center bottom;
     background-size: auto 100%;
     bottom: 0;
     height: 50%;
     position: absolute;
     transform: translateX(-100vw);
-    width: 300vw;
+    width: 400vw;
     will-change: transform;
     overflow: hidden;
 }
@@ -119,6 +121,10 @@ footer {
 .footer-social a:hover {
     color: #FBBA00;
     transform: translateX(5px);
+}
+
+.footer-bottom p {
+    color: #444;
 }
 
 @media screen and (min-width: 768px) {

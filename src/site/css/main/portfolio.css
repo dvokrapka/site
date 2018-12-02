@@ -18,21 +18,20 @@
 }
 
 .portfolio-desc h4 {
-	color: #FBBA00;
-	text-transform: uppercase;
+    color: #FBBA00;
+    text-transform: uppercase;
 }
 
 .portfolio-desc p {
-	color: #dedede;
+    color: #dedede;
 }
 
 .portfolio-prev:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
-
-
 /*Filter controls*/
+
 .filter-btns {
     display: flex;
     flex-wrap: wrap;
@@ -51,5 +50,3 @@
         justify-content: space-between;
     }
 }
-
-
