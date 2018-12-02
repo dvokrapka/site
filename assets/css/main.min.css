@@ -13517,12 +13517,16 @@ p {
   visibility: hidden;
 }
 
+.typing.white-text {
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+}
+
 .white-sub-text {
   color: #fff;
   display: block;
   font-size: .8em;
   line-height: 0.5em;
-  text-shadow: 3px 3px 10px rgba(0,0,0,.2);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
   transform: translateY(-18%);
 }
 
