@@ -1,6 +1,8 @@
 footer {
     align-items: center;
-    background: linear-gradient(#574103, #fbba00, #FFD765);
+    /*background: linear-gradient(#574103, #fbba00, #FFD765);*/
+      /*background: linear-gradient(#ff8008, #ffc837);*/
+        background: linear-gradient(#ff512f, #fbba00);
     /*background: linear-gradient(#ccc, #fff 30%);*/
     /*background: linear-gradient(#926D03, #fbba00, #FFD765);*/
     display: flex;
