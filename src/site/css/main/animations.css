@@ -21,6 +21,7 @@
 
     25% {
         transform: translateY(15%);
+        box-shadow: none;
     }
 
     50% {

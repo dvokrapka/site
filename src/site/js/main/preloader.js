@@ -13,9 +13,9 @@ function typeWrite() {
     // Check if preloader is active
     if (!$preLoader.length || anchor) {
         $preLoader.removeClass('preload');
-        $('body').removeClass('noscroll');
         $('header').removeClass('hidden');
     } else {
+        $('html').addClass('noscroll');
         $typing.addClass('yellow-text');
     }
 
@@ -39,12 +39,10 @@ function typeWrite() {
                             $preLoader
                                 .fadeOut(1000, function() {
                                     $('header').removeClass('hidden');
-                                    $('body').removeClass('noscroll');
-                            				homePageAnimation();
+                                    $('html').removeClass('noscroll');
                                     showScrollBtm();
                                 });
                         } else {
-                            homePageAnimation();
                             showScrollBtm();
                         }
                     });
@@ -55,17 +53,9 @@ function typeWrite() {
 // Show scroll down button
 function showScrollBtm() {
     $('.scroll-btm').fadeOut(function() {
-        $(this).addClass('appear').fadeIn(1500, function() {
-            $(this).addClass('clickable');
-        });
+        $(this).addClass('appear').fadeIn();
     });
 }
-
-// FS animation
-function homePageAnimation() {
-		$('.fs-bg-marker, .fs-bg-tablet').addClass('appear');
-}
-
 
 $(function() {
     typeWrite();

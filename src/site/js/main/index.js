@@ -7,7 +7,6 @@ var jsAPI = function() {
 
     var $goTop = $('#goTop'),
         winH = 100,
-        // winH = window.innerHeight / 2,
         $toggled = $('header').add('#burger').add('.toplogo').add($goTop);
 
     // Toggle elements on window scroll
@@ -109,30 +108,3 @@ var jsAPI = function() {
     });
 };
 
-
-// Toggle menu
-function toggleMenu() {
-
-    var $burger = $('#burger').find('> span'),
-        $menu = $('#mainMenu'),
-        $items = $menu.find('a');
-
-    // Show menu
-    if (!$menu.is(':visible')) {
-        $burger.addClass('toggle');
-        $menu.css("display", "flex").hide().slideDown();
-
-        $(document).keypress(function(event) {
-            if (event.charCode === 0) {
-
-                $burger.removeClass('toggle');
-                $menu.slideUp();
-            }
-        });
-
-        // Close menu
-    } else {
-        $burger.removeClass('toggle');
-        $menu.slideUp();
-    }
-}

@@ -9,7 +9,8 @@ body {
 
 .noscroll {
     height: 100vh;
-    overflow-y: overlay;
+    overflow-y: scroll;
+    position: fixed;
 }
 
 /*Divider*/
@@ -52,7 +53,7 @@ hr:after {
 
 /*Homepage FS*/
 .fs-homepage {
-    background: linear-gradient(-45deg, #E2A801 15%, #FFBF00, #E2A801 87%) center center;
+    background: #222 url('../../../assets/img/bg/web-bg.jpg') no-repeat center center fixed;
     height: 100%;
     position: absolute;
     width: 100%;
@@ -170,27 +171,24 @@ hr:after {
 .grey-dots {
     background: radial-gradient(rgba(0, 0, 0, .075) 6px, transparent 6px) center center;
     background-size: 36px 36px;
-    height: 130%;
+    height: 120%;
     position: absolute;
-    width: 130%;
+    width: 120%;
     z-index: -1;
 }
 
 .light-dots {
     background: radial-gradient(rgba(0, 0, 0, .02) 6px, transparent 6px) center center fixed;
     background-size: 36px 36px;
-    height: 100%;
+    height: 120%;
     position: absolute;
-    width: 100%;
+    width: 120%;
 }
-
-
-
 
 /*Services*/
 
 .home-services {
-		background-color: #EBEBEB ;
+    background-color: #EBEBEB;
     padding-top: 100px;
     min-height: 90vh;
     text-align: center;
@@ -259,6 +257,10 @@ hr:after {
     opacity: 0;
 }
 
+.services-container:hover .scroll-right {
+    animation: sr_animate 2s .5s infinite;
+}
+
 /*Show service description*/
 
 .services-container:hover .serv-desc {
@@ -267,10 +269,6 @@ hr:after {
 
 .serv-pre {
     transition: opacity .8s ease;
-}
-
-.serv-pre h2 {
-    margin-top: 0
 }
 
 /*Border animation*/
@@ -285,7 +283,6 @@ hr:after {
 }
 
 /*Draw*/
-
 .draw::before,
 .draw::after {
     border: 6px dotted transparent;
@@ -325,11 +322,11 @@ hr:after {
 /*About Us*/
 
 .about-us {
-	background: radial-gradient(#E2A801 5px, transparent 5px) center center fixed, #FBBA00;
-	background-size: 36px 36px, cover;
-	padding: 8vw;
-	position: relative;
-	text-align: center;
+    background: radial-gradient(#E2A801 5px, transparent 5px) center center fixed, #FBBA00;
+    background-size: 36px 36px, cover;
+    padding: 8vw;
+    position: relative;
+    text-align: center;
 }
 
 .about-us-screen {

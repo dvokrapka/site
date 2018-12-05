@@ -23,7 +23,6 @@ footer {
     position: absolute;
     transform: translateX(-100vw);
     width: 400vw;
-    will-change: transform;
     overflow: hidden;
 }
 
