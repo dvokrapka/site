@@ -2,72 +2,72 @@
     background-color: #FBBA00;
     box-sizing: border-box;
     display: none;
-    flex-direction: row;
-    height: 100vh;
-    justify-content: center;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    right: 0;
+    bottom: 0;
     z-index: 9999;
 }
 
-.dv-modal-box>.left {
+.dv-modal-body {
     box-sizing: border-box;
-    height: 100vh;
-    width: 75vw;
-    overflow-y: auto;
-    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    margin: 0 auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
 }
 
-.dv-modal-box>.left img {
+.dv-modal-body img {
     width: 100%;
 }
 
-.dv-modal-box>.right {
-    overflow-y: scroll;
-    text-align: left;
-    width: 25vw;
-    height: 100vh;
-    padding: 35px;
-    box-sizing: border-box;
-}
-
-
 /* The Close Button */
-.modal-close {
+.dv-modal-close {
+    cursor: pointer;
+    height: 30px;
     position: absolute;
-    right: 45px;
+    right: 20px;
     top: 15px;
     width: 30px;
-    height: 30px;
-    cursor: pointer;
+    z-index: 10000;
 }
 
-.modal-close::before,
-.modal-close::after {
-    position: absolute;
-    left: 15px;
+@media screen and (min-width: 768px) {
+    .dv-modal-body {
+        width: 75%;
+    }
+
+    .dv-modal-close {
+        right: 45px;
+    }
+}
+
+.dv-modal-close::before,
+.dv-modal-close::after {
+    background-color: #222;
+    border-radius: 10px;
     content: '';
     cursor: pointer;
     height: 35px;
-    width: 5px;
-    border-radius: 10px;
-    background-color: #222;
+    left: 15px;
+    position: absolute;
     transition: .8s ease;
+    width: 5px;
 }
 
-.modal-close::before {
+.dv-modal-close::before {
     transform: rotate(45deg);
 }
 
-.modal-close::after {
+.dv-modal-close::after {
     transform: rotate(-45deg);
 }
 
 .dv-modal-box>.image {
-    width: 100%;
     height: auto;
+    width: 100%;
 }
