@@ -4,8 +4,8 @@ $(function() {
     		$doc = $('window, body');
 
     // Open modal
-    $('.more-href').on('click', function(e) {
-        e.preventDefault();
+    $('.portfolio-prev').on('click', function() {
+
         $modal
             .css("display", "flex")
             .hide().slideDown()

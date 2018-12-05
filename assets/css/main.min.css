@@ -12797,7 +12797,7 @@ header.appear {
   width: 75vw;
   overflow-y: auto;
   position: relative;
-  background-color: red;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
 }
 
 .dv-modal-box>.left img {
