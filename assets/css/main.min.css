@@ -12654,12 +12654,14 @@ header.appear .main-menu {
   }
 }
 .preload {
+  /*background: radial-gradient(#222, #151313);*/
   background-color: #222;
   height: 100vh;
   left: 0;
   position: fixed;
   top: 0;
   width: 100vw;
+  /*z-index: 1000;*/
 }
 .srange-spans {
   align-items: center;
@@ -12838,7 +12840,8 @@ hr:after {
 /*Homepage FS*/
 
 .fs-homepage {
-  background: #222 url("../../assets/img/bg/web-bg.jpg") no-repeat center center fixed;
+  background: #222 url("../../assets/img/bg/home-bg.jpg") no-repeat center center fixed;
+  box-shadow: inset 8px 8px 30px rgba(0, 0, 0, .3);
   height: 100%;
   position: absolute;
   width: 100%;
@@ -12849,7 +12852,7 @@ hr:after {
 
 .fs-portfolio {
   background: #222 url("../../assets/img/bg/portfolio-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
+  box-shadow: inset 8px 8px 30px rgba(0, 0, 0, .3);
   height: 100%;
   position: absolute;
   width: 100%;
@@ -12860,7 +12863,7 @@ hr:after {
 
 .fs-logo {
   background: #222 url("../../assets/img/bg/logo-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
+  box-shadow: inset 8px 8px 30px rgba(0, 0, 0, .3);
   height: 100%;
   position: absolute;
   width: 100%;
@@ -12871,7 +12874,7 @@ hr:after {
 
 .fs-web {
   background: #222 url("../../assets/img/bg/web-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
+  box-shadow: inset 8px 8px 30px rgba(0, 0, 0, .3);
   height: 100%;
   position: absolute;
   width: 100%;
@@ -12882,64 +12885,11 @@ hr:after {
 
 .fs-adv {
   background: #222 url("../../assets/img/bg/adv-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
+  box-shadow: inset 8px 8px 30px rgba(0, 0, 0, .3);
   height: 100%;
   position: absolute;
   width: 100%;
   z-index: -2;
-}
-
-.fs-bg-marker {
-  background: url("../../assets/img/bg/markers.png") no-repeat top left;
-  background-size: 50% auto;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  top: 15vh;
-  left: -10vw;
-  z-index: -2;
-  transition: transform .05s linear;
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.appear.fs-bg-marker {
-  animation: marker_animate 3s ease;
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.fs-bg-tablet {
-  background: url("../../assets/img/bg/tablet.png") no-repeat bottom right;
-  background-size: 80% auto;
-  bottom: -5%;
-  height: 100%;
-  position: absolute;
-  right: -15vw;
-  width: 100%;
-  z-index: -2;
-  transform: translateY(100%);
-  transition: transform .05s linear;
-  opacity: 0;
-}
-
-.appear.fs-bg-tablet {
-  animation: tablet_animate 3s ease;
-  transform: translateY(0);
-  opacity: 1;
-}
-
-@media screen and (min-width: 768px) {
-  .fs-bg-marker {
-    background-size: 30% auto;
-    left: -10vw;
-  }
-
-  .fs-bg-tablet {
-    background-size: 50% auto;
-    bottom: -5%;
-    right: -15vw;
-  }
 }
 
 .yellow-dots {
@@ -13139,6 +13089,7 @@ hr:after {
   /*background: url('../../../assets/img/bg/bodesign.jpg') no-repeat center center fixed;*/
   background: no-repeat center center fixed;
   background-size: 100%;
+  box-shadow: inset 8px 8px 30px rgba(0, 0, 0, .3);
   display: flex;
   justify-content: center;
   min-height: 100vh;
