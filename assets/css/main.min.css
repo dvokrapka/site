@@ -12455,6 +12455,10 @@ header.appear {
   z-index: 200;
 }
 
+header.appear .main-menu {
+  top: 0;
+}
+
 .main-menu>div {
   align-items: center;
   display: flex;
