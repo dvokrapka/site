@@ -1,6 +1,7 @@
 /*Title*/
 .timeline-title {
     padding-top: 8vw;
+    padding-bottom: 30px;
     text-align: center;
 }
 
@@ -15,7 +16,8 @@
 .timeline::after {
     background: #ffba00;
     content: '';
-    height: 81%;
+    /*height: 100%;*/
+    height: calc(100% + 45px);
     left: 30px;
     position: absolute;
     top: 8vw;
@@ -26,7 +28,7 @@
 /* Container around content */
 .timeline>div {
     box-sizing: border-box;
-    margin: 30px auto;
+    margin: 0 auto;
     padding: 5%;
     width: 80%;
 }
@@ -49,15 +51,15 @@
     width: 35px;
     padding-bottom: 7px;
     z-index: 1;
+    transition: .4s ease;
+    cursor: pointer;
 }
+
+
 
 /* Content */
 .tm-content {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    text-align: center;
 }
 
 .tm-content>img {
@@ -74,7 +76,6 @@
     margin-bottom: 5px;
     margin-top: 5px;
     position: relative;
-    text-align: left;
     text-transform: uppercase;
 }
 
@@ -93,12 +94,18 @@
     .timeline::after {
         left: 50%;
         width: 6px;
-        /*height: calc(100% + 6vw);*/
+        top: 0;
     }
 
     /*Containers*/
     .timeline>div {
+        padding: 0 5%;
         width: 45%;
+    }
+
+    .timeline>div>span:hover {
+    	transform-origin: center center;
+    	transform: translateX(-45%) scale(1.2);
     }
 
     .timeline>.left {
@@ -127,4 +134,23 @@
         width: 30%;
     }
 
+    .right .tm-content {
+        text-align: left;
+    }
+
+    .left .tm-content {
+        text-align: right;
+    }
+
+
+    /*Description*/
+    .right .tm-content>p {
+        font-size: 1.5em;
+        text-align: left;
+    }
+
+    .left .tm-content>p {
+        font-size: 1.5em;
+        text-align: right;
+    }
 }

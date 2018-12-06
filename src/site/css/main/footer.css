@@ -1,10 +1,7 @@
 footer {
     align-items: center;
-    /*background: linear-gradient(#574103, #fbba00, #FFD765);*/
-      /*background: linear-gradient(#ff8008, #ffc837);*/
-        background: linear-gradient(#ff512f, #fbba00);
-    /*background: linear-gradient(#ccc, #fff 30%);*/
-    /*background: linear-gradient(#926D03, #fbba00, #FFD765);*/
+    /*background: linear-gradient(#fbba00, #ff512f);*/
+    background: linear-gradient(#fbba00, #CF2807);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -15,13 +12,12 @@ footer {
 }
 
 .footer-bg {
-    animation: citymove 40s linear infinite;
+    animation: citymove 30s linear infinite;
     background: url('../../../assets/img/bg/footer-bg.png') repeat-x center bottom;
     background-size: auto 100%;
     bottom: 0;
     height: 50%;
     position: absolute;
-    transform: translateX(-100vw);
     width: 400vw;
     overflow: hidden;
 }
@@ -44,11 +40,11 @@ footer {
     line-height: normal;
     padding: 3px;
     text-decoration: none;
-    transition: color .4s ease;
+    transition: color .6s ease;
 }
 
 .footer-contacts>a:hover {
-    color: #FBBA00;
+    color: #fff;
 }
 
 /*Form*/

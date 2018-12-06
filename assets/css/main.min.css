@@ -11452,38 +11452,6 @@ a.uk-thumbnail:focus {
     transform: translateX(100vw);
   }
 }
-
-/*Animate markers on homepage fs*/
-
-@keyframes marker_animate {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  25% {
-    transform: translateY(15%);
-  }
-
-  75%, 100% {
-    transform: translateY(0);
-  }
-}
-
-/*Animate table on homepage fs*/
-
-@keyframes tablet_animate {
-  0% {
-    transform: translateY(100%);
-  }
-
-  25% {
-    transform: translateY(-15%);
-  }
-
-  75%, 100% {
-    transform: translateY(0);
-  }
-}
 .brief-form {
   display: none;
   background: #fbba00;
@@ -11498,9 +11466,10 @@ a.uk-thumbnail:focus {
   justify-content: center;
 }
 
-.brief-intro-ps {
+.brief-intro {
   display: block;
   text-align: center;
+  color: #fff;
 }
 
 /*Brief inputs*/
@@ -11988,25 +11957,6 @@ a.uk-thumbnail:focus {
   transform: translateX(10%);
 }
 
-/*More button*/
-
-.more-href {
-  display: block;
-  cursor: pointer;
-  height: 45px;
-  width: 45px;
-  margin: 30px auto 0;
-}
-
-.zoom {
-  transform-origin: center center;
-  transition: transform .4s ease-in-out;
-}
-
-.more-href:hover .zoom {
-  transform: scale(1.15);
-}
-
 /*Simple button*/
 
 .sm-button {
@@ -12299,11 +12249,8 @@ a.uk-datepicker-table-muted {
 }
 footer {
   align-items: center;
-  /*background: linear-gradient(#574103, #fbba00, #FFD765);*/
-  /*background: linear-gradient(#ff8008, #ffc837);*/
-  background: linear-gradient(#ff512f, #fbba00);
-  /*background: linear-gradient(#ccc, #fff 30%);*/
-  /*background: linear-gradient(#926D03, #fbba00, #FFD765);*/
+  /*background: linear-gradient(#fbba00, #ff512f);*/
+  background: linear-gradient(#fbba00, #CF2807);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12314,13 +12261,12 @@ footer {
 }
 
 .footer-bg {
-  animation: citymove 40s linear infinite;
+  animation: citymove 30s linear infinite;
   background: url("../../assets/img/bg/footer-bg.png") repeat-x center bottom;
   background-size: auto 100%;
   bottom: 0;
   height: 50%;
   position: absolute;
-  transform: translateX(-100vw);
   width: 400vw;
   overflow: hidden;
 }
@@ -12343,11 +12289,11 @@ footer {
   line-height: normal;
   padding: 3px;
   text-decoration: none;
-  transition: color .4s ease;
+  transition: color .6s ease;
 }
 
 .footer-contacts>a:hover {
-  color: #FBBA00;
+  color: #fff;
 }
 
 /*Form*/
@@ -12803,10 +12749,6 @@ header.appear {
   margin-left: -13px;
 }
 
-/*.ui-slider-horizontal .ui-slider-handle:last-of-type {
-    margin-left: -36px;
-}*/
-
 .ui-slider-horizontal .ui-slider-range {
   top: 0;
   height: 100%;
@@ -12830,8 +12772,6 @@ header.appear {
 
 .ui-widget-header {
   background: #222;
-  /*margin-left: 2px;*/
-  /*margin-right: 2px;*/
 }
 
 /* скругление для полосы слайдера */
@@ -13376,6 +13316,7 @@ p {
 
 .timeline-title {
   padding-top: 8vw;
+  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -13392,7 +13333,8 @@ p {
 .timeline::after {
   background: #ffba00;
   content: '';
-  height: 81%;
+  /*height: 100%;*/
+  height: calc(100% + 45px);
   left: 30px;
   position: absolute;
   top: 8vw;
@@ -13404,7 +13346,7 @@ p {
 
 .timeline>div {
   box-sizing: border-box;
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 5%;
   width: 80%;
 }
@@ -13428,16 +13370,14 @@ p {
   width: 35px;
   padding-bottom: 7px;
   z-index: 1;
+  transition: .4s ease;
+  cursor: pointer;
 }
 
 /* Content */
 
 .tm-content {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  text-align: center;
 }
 
 .tm-content>img {
@@ -13455,7 +13395,6 @@ p {
   margin-bottom: 5px;
   margin-top: 5px;
   position: relative;
-  text-align: left;
   text-transform: uppercase;
 }
 
@@ -13473,13 +13412,19 @@ p {
   .timeline::after {
     left: 50%;
     width: 6px;
-    /*height: calc(100% + 6vw);*/
+    top: 0;
   }
 
   /*Containers*/
 
   .timeline>div {
+    padding: 0 5%;
     width: 45%;
+  }
+
+  .timeline>div>span:hover {
+    transform-origin: center center;
+    transform: translateX(-45%) scale(1.2);
   }
 
   .timeline>.left {
@@ -13507,5 +13452,25 @@ p {
 
   .tm-content>img {
     width: 30%;
+  }
+
+  .right .tm-content {
+    text-align: left;
+  }
+
+  .left .tm-content {
+    text-align: right;
+  }
+
+  /*Description*/
+
+  .right .tm-content>p {
+    font-size: 1.5em;
+    text-align: left;
+  }
+
+  .left .tm-content>p {
+    font-size: 1.5em;
+    text-align: right;
   }
 }

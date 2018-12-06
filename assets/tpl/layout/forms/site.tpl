@@ -330,10 +330,11 @@
         </div>
     </div>
     <div class="form-submit-btn">
-        <div class="titles brief-intro">
+        <div class="brief-intro">
             <h2>Дякуємо за Ваш час та терпіння!</h2>
-            <p>Натисніть НАДІСЛАТИ і ми це обов’язково компенсуємо!</p>
+            <p>Натисніть <b>"НАДІСЛАТИ"</b> і ми це обов’язково компенсуємо!</p>
         </div>
         <button type="submit" class="sm-button sm-black">Надіслати</button>
     </div>
+    <hr>
 </form>

@@ -98,25 +98,6 @@
     transform: translateX(10%);
 }
 
-/*More button*/
-.more-href {
-    display: block;
-    cursor: pointer;
-    height: 45px;
-    width: 45px;
-    margin: 30px auto 0;
-}
-
-.zoom {
-    transform-origin: center center;
-    transition: transform .4s ease-in-out;
-}
-
-.more-href:hover .zoom {
-    transform: scale(1.15);
-}
-
-
 /*Simple button*/
 .sm-button {
     border-radius: 50px;

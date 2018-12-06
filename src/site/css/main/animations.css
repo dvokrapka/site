@@ -1,81 +1,45 @@
 /*Scroll right buttons animation*/
+
 @keyframes sr_animate {
     0% {
         transform: translateX(0);
     }
-
     25% {
         transform: translateX(15%);
     }
-
     50% {
         transform: translateX(0);
     }
 }
-
 /*Scroll bottom buttons animation*/
+
 @keyframes sb_animate {
     0% {
         transform: translateY(0);
     }
-
     25% {
         transform: translateY(15%);
         box-shadow: none;
     }
-
     50% {
         transform: translateY(0);
     }
 }
-
 /*Blinking*/
+
 .blink {
     animation: blink 2s infinite;
     opacity: 1;
 }
-
 @keyframes blink {
     50% {
         opacity: 0;
     }
 }
-
-
 /*Footer city animation*/
+
 @keyframes citymove {
     to {
         transform: translateX(100vw);
-    }
-}
-
-
-/*Animate markers on homepage fs*/
-@keyframes marker_animate {
-    0% {
-        transform: translateY(-100%);
-    }
-
-    25% {
-        transform: translateY(15%);
-    }
-
-    75%, 100% {
-        transform: translateY(0);
-    }
-}
-
-/*Animate table on homepage fs*/
-@keyframes tablet_animate {
-    0% {
-        transform: translateY(100%);
-    }
-
-    25% {
-        transform: translateY(-15%);
-    }
-
-    75%, 100% {
-        transform: translateY(0);
     }
 }
