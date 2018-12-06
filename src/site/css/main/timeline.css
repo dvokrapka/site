@@ -1,267 +1,130 @@
+/*Title*/
 .timeline-title {
-    padding: 8vw;
-    margin-bottom: -30px;
+    padding-top: 8vw;
     text-align: center;
 }
 
-.timeline-section {
-    /*background-color: #fbba00;*/
-}
-
-
-/* Vertical line */
+/* Timeline container*/
 .timeline {
-    position: relative;
-    width: 95%;
     margin: 0 auto;
     max-width: 1920px;
-    padding: 2em 0;
+    position: relative;
 }
 
-/* This is the vertical line */
+/* Vertical line */
 .timeline::after {
-    background: #fff;
-    bottom: 0;
+    background: #ffba00;
     content: '';
-    height: 100%;
-    margin-left: -5px;
+    height: 81%;
+    left: 30px;
     position: absolute;
-    top: 0;
+    top: 8vw;
     width: 4px;
-    left: 25px;
+    z-index: -1;
 }
 
 /* Container around content */
 .timeline>div {
-    position: relative;
-    width: 100%;
-    margin: 30px 0;
-    padding: 15px 20px 50px 60px;
     box-sizing: border-box;
+    margin: 30px auto;
+    padding: 5%;
+    width: 80%;
 }
 
 /* The circles on the timeline */
-.timeline>div::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: #fff;
-    border: 4px solid #FBBA00;
-    top: 15px;
+.timeline>div>span {
+    align-items: center;
+    background-color: #fbba00;
     border-radius: 50%;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    font-family: "Dvoway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 2em;
+    height: 35px;
+    justify-content: center;
+    left: 0;
+    transform: translateX(45%);
+    position: absolute;
+    width: 35px;
+    padding-bottom: 7px;
     z-index: 1;
 }
 
-/* All containers to the left */
-.left,
-.right {
-    left: -5px;
-}
-
-/* Make sure all circles are at the same spot */
-.right::after,
-.left::after {
-    left: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
-    border-radius: 50%;
-}
-
-/* The actual content */
+/* Content */
 .tm-content {
-    padding: 30px 10px;
     position: relative;
-    background-color: #fff;
-    border: 4px solid #FBBA00;
-    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, .4);
-}
-
-.timeline>div::before {
-    left: 60px;
-}
-
-.tm-content>div {
-    overflow: visible;
-    width: 90%;
 }
 
 .tm-content>img {
-    width: 75%;
+    width: 50%;
 }
 
-
-/*List*/
-.tm-content ul {
-    font-size: 1.2em;
-    line-height: 1.2em;
-    list-style: none;
-    padding-left: 5px;
-    position: relative;
-}
-
-
-.tm-content ul li {
-    font-size: 1.2em;
-    font-family: "Dvoway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    line-height: normal;
-    margin-left: 10px;
-    margin-top: 10px;
-    position: relative;
-}
-
-.tm-content ul li::before {
-    position: absolute;
-    content: '';
-    width: 10px;
-    height: 10px;
-    top: 8px;
-    left: -18px;
-    border-radius: 10px;
-    background-color: #FBBA00;
-}
-
-.right>span,
-.left>span {
-    display: block;
+/*Title*/
+.tm-content>span {
     color: #222;
-    top: -6px;
-    position: relative;
-    line-height: normal;
-    text-transform: uppercase;
+    display: block;
     font-family: "Dvoway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: 3em;
+    line-height: normal;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    position: relative;
     text-align: left;
+    text-transform: uppercase;
 }
+
+/*Description*/
+.tm-content>p {
+    font-family: "Dvoway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
 
 
 @media screen and (min-width: 768px) {
-    .timeline {
-        width: 90%;
+
+    /*Center vertical line*/
+    .timeline::after {
+        left: 50%;
+        width: 6px;
+        /*height: calc(100% + 6vw);*/
     }
 
+    /*Containers*/
     .timeline>div {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
+        width: 45%;
     }
 
-    .timeline>div::after {
-        width: 35px;
-        height: 35px;
+    .timeline>.left {
+        transform: translateX(-50%);
     }
 
-    .tm-content {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 30px 20px;
+    .timeline>.right {
+        transform: translateX(50%);
     }
 
-    .tm-content ul {
-        padding-left: 25px;
+    /*Circles*/
+    .timeline>.left>span {
+        width: 50px;
+        height: 50px;
+        left: 100%;
+        transform: translateX(-45%);
     }
 
-    .tm-content>div {
-        width: 65%;
-    }
-
-    .tm-content>img {
-        width: 35%;
-    }
-
-    /* Make all containers behave like the left ones */
-    .left,
-    .right {
-        left: -10px;
-    }
-
-    /* Make sure all circles are at the same spot */
-    .right::after,
-    .left::after {
-        left: 10px;
-    }
-
-    .right>span,
-    .left>span {
-        top: -4px;
-        font-size: 3em;
-    }
-}
-
-
-@media screen and (min-width: 960px) {
-    .timeline {
-        width: 95%;
-    }
-
-    .tm-content {
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 30px 30px;
-        justify-content: space-between;
-    }
-
-    .tm-content ul {
-        padding-left: 15px;
-    }
-
-    .tm-content>div {
-        width: 65%;
+    .timeline>.right>span {
+        width: 50px;
+        height: 50px;
+        transform: translateX(-45%);
     }
 
     .tm-content>img {
         width: 30%;
     }
 
-    .timeline>div {
-        width: 50%;
-        padding: 20px 75px;
-    }
-
-    .timeline::after {
-        left: 50%;
-    }
-
-    /* Place containers to the right */
-    .right {
-        left: 50%;
-    }
-
-    /* Place containers to the left */
-    .left {
-        left: 0;
-    }
-
-    .timeline>div::after {
-        width: 40px;
-        height: 40px;
-    }
-
-    /* Fix the circles for containers on the left side */
-    .right::after {
-        left: -26px;
-    }
-
-    /* Fix the circles for containers on the right side */
-    .left::after {
-        left: auto;
-        right: -21px;
-    }
-
-    .right>span {
-        top: -9px;
-        font-size: 3.5em;
-        text-align: left;
-    }
-
-    .left>span {
-        top: -7px;
-        font-size: 3.5em;
-        text-align: right;
-    }
 }
