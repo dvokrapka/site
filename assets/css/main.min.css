@@ -12473,7 +12473,7 @@ header.appear .main-menu {
 .main-menu a {
   color: #FBBA00;
   display: block;
-  font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Dvoway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   transition: transform .4s ease, color .2s ease;
@@ -12624,12 +12624,16 @@ header.appear .main-menu {
   transition: .8s ease;
 }
 
-.portfolio-desc h4 {
+.portfolio-desc span {
+  font-family: "Dvoway-black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.8em;
+  text-transform: uppercase;
   color: #FBBA00;
   text-transform: uppercase;
 }
 
 .portfolio-desc p {
+  margin-top: 2px;
   color: #dedede;
 }
 
@@ -12639,22 +12643,47 @@ header.appear .main-menu {
 
 /*Filter controls*/
 
-.filter-btns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 50px;
-  margin: 0 auto;
+.portfolio-filter {
+  margin: 30px auto;
   max-width: 1920px;
 }
 
-.filter-btns>* {
-  margin-top: 10px;
+.portfolio-filter>a {
+  color: #fff;
+  display: block;
+  font-family: "Dvoway-black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  padding: 0 15px;
+  line-height: 2em;
+  text-decoration: none;
+  transition: .4s ease;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+}
+
+/*Active & hover state*/
+
+.portfolio-filter>a.uk-active,
+.portfolio-filter>a:hover {
+  color: #fbba00;
 }
 
 @media screen and (min-width: 768px) {
-  .filter-btns {
-    justify-content: space-between;
+  .portfolio-filter {
+    display: flex;
+  }
+
+  .portfolio-filter>a {
+    border-bottom: 4px solid #fff;
+    width: 25%;
+  }
+
+  /*Active & hover state*/
+
+  .portfolio-filter>a.uk-active,
+  .portfolio-filter>a:hover {
+    border-color: #fbba00;
+    color: #fbba00;
   }
 }
 .preload {
