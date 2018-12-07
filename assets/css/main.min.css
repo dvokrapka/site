@@ -12656,12 +12656,12 @@ header.appear .main-menu {
   display: block;
   font-family: "Dvoway-black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.8em;
-  text-transform: uppercase;
-  padding: 0 15px;
   line-height: 2em;
+  padding: 0 15px;
   text-decoration: none;
+  text-transform: uppercase;
   transition: .4s ease;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  position: relative;
 }
 
 /*Active & hover state*/
@@ -12669,6 +12669,19 @@ header.appear .main-menu {
 .portfolio-filter>a.uk-active,
 .portfolio-filter>a:hover {
   color: #fbba00;
+  transition: .4s ease;
+}
+
+.portfolio-filter>a::before {
+  opacity: 0;
+  content: ':';
+  transform: translate(-10px, -.5px);
+  position: absolute;
+  transition: .4s ease;
+}
+
+.portfolio-filter>a.uk-active::before {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
