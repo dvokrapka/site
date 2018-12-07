@@ -11448,8 +11448,12 @@ a.uk-thumbnail:focus {
 /*Footer city animation*/
 
 @keyframes citymove {
+  from {
+    transform: translateX(-25%);
+  }
+
   to {
-    transform: translateX(100vw);
+    transform: translateX(25%);
   }
 }
 .brief-form {
@@ -12249,8 +12253,7 @@ a.uk-datepicker-table-muted {
 }
 footer {
   align-items: center;
-  /*background: linear-gradient(#fbba00, #ff512f);*/
-  background: linear-gradient(#fbba00, #CF2807);
+  background: linear-gradient(#fbba00, #ff512f);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12261,13 +12264,13 @@ footer {
 }
 
 .footer-bg {
-  animation: citymove 30s linear infinite;
+  animation: citymove 25s linear infinite;
   background: url("../../assets/img/bg/footer-bg.png") repeat-x center bottom;
   background-size: auto 100%;
   bottom: 0;
   height: 50%;
   position: absolute;
-  width: 400vw;
+  width: 200%;
   overflow: hidden;
 }
 
@@ -12629,7 +12632,6 @@ header.appear .main-menu {
   font-size: 1.8em;
   text-transform: uppercase;
   color: #FBBA00;
-  text-transform: uppercase;
 }
 
 .portfolio-desc p {

@@ -1,7 +1,6 @@
 footer {
     align-items: center;
-    /*background: linear-gradient(#fbba00, #ff512f);*/
-    background: linear-gradient(#fbba00, #CF2807);
+    background: linear-gradient(#fbba00, #ff512f);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -12,13 +11,13 @@ footer {
 }
 
 .footer-bg {
-    animation: citymove 30s linear infinite;
+    animation: citymove 25s linear infinite;
     background: url('../../../assets/img/bg/footer-bg.png') repeat-x center bottom;
     background-size: auto 100%;
     bottom: 0;
     height: 50%;
     position: absolute;
-    width: 400vw;
+    width: 200%;
     overflow: hidden;
 }
 

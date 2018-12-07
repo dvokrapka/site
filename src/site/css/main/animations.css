@@ -39,7 +39,10 @@
 /*Footer city animation*/
 
 @keyframes citymove {
+		from {
+        transform: translateX(-25%);
+		}
     to {
-        transform: translateX(100vw);
+        transform: translateX(25%);
     }
 }
