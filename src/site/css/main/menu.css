@@ -2,8 +2,8 @@
 
 .main-menu {
     align-items: center;
+    background: #222 url('../../../assets/img/bg/menu-bg-768.jpg') no-repeat center center;
     background-size: cover;
-    background: #222 url('../../../assets/img/bg/menu-bg.jpg') no-repeat center center fixed;
     display: none;
     height: 100vh;
     justify-content: center;
@@ -73,6 +73,11 @@ header.appear .main-menu {
 }
 
 @media screen and (min-width: 768px) {
+
+		.main-menu {
+		    background: #222 url('../../../assets/img/bg/menu-bg.jpg') no-repeat center center;
+		}
+
     .menu-lang a {
         font-size: 1.5em;
     }
