@@ -30,24 +30,26 @@ header.appear .main-menu {
 }
 
 .main-menu a {
-    color: #FBBA00;
+    color: #fff;
     display: block;
-    font-family: "Dvoway-Black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     transition: transform .4s ease, color .2s ease;
 }
 
 .main-menu a:hover {
-    color: #fff;
+    color: #fbba00;
     transform: translateX(5px);
 }
 
 .main-menu a.active {
-    color: #fff;
+    color: #fbba00;
+    /*color: #fff;*/
 }
 
 .menu-lang a {
+    color: #888;
     display: inline-block;
     font-size: 1.1em;
     margin: 0 10px;
@@ -68,15 +70,14 @@ header.appear .main-menu {
 }
 
 .menu-social a {
-    color: #404040;
+    color: #888;
     font-size: 1.5em;
 }
 
 @media screen and (min-width: 768px) {
-
-		.main-menu {
-		    background: #222 url('../../../assets/img/bg/menu-bg.jpg') no-repeat center center;
-		}
+    .main-menu {
+        background: #222 url('../../../assets/img/bg/menu-bg.jpg') no-repeat center center;
+    }
 
     .menu-lang a {
         font-size: 1.5em;
