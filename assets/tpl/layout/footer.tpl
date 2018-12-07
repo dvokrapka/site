@@ -1,5 +1,5 @@
 <footer>
-    <div class="footer-bg"></div>
+    <div class="lazy footer-bg" data-src="assets/img/bg/footer-bg.png"></div>
     <div id="contacts" class="footer-contacts">
         <a href="tel:+0679992091">(067) 999 20 91</a>
         <a href="mailto:email@gmail.com">email@gmail.com</a>

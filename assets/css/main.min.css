@@ -12265,7 +12265,8 @@ footer {
 
 .footer-bg {
   animation: citymove 25s linear infinite;
-  background: url("../../assets/img/bg/footer-bg.png") repeat-x center bottom;
+  /*background: url('../../../assets/img/bg/footer-bg.png') repeat-x center bottom;*/
+  background: repeat-x center bottom;
   background-size: auto 100%;
   bottom: 0;
   height: 50%;
