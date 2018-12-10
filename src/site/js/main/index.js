@@ -18,7 +18,7 @@ var jsAPI = function() {
 
     // Scroll to top
     $goTop.on('click', function() {
-        $('html').animate({ scrollTop: 0 }, 1000);
+        $('html').animate({ scrollTop: 0 }, 800);
     });
 
     // Scroll to anchor without changing url

@@ -11456,6 +11456,15 @@ a.uk-thumbnail:focus {
     transform: translateX(25%);
   }
 }
+
+/*Swing*/
+
+@keyframes sweep {
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
 .brief-form {
   display: none;
   background: #fbba00;
@@ -12469,18 +12478,24 @@ header.appear .main-menu {
   flex-direction: column;
   height: 85vh;
   justify-content: space-around;
-  margin-top: 120px;
+  margin-top: 80px;
   text-align: center;
   width: 85%;
 }
 
 .main-menu a {
+  margin-left: -15px;
   color: #fff;
   display: block;
   font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  opacity: 0;
   text-decoration: none;
   text-transform: uppercase;
   transition: transform .4s ease, color .2s ease;
+}
+
+.sweep {
+  animation: sweep 1.5s ease forwards;
 }
 
 .main-menu a:hover {
@@ -12490,14 +12505,13 @@ header.appear .main-menu {
 
 .main-menu a.active {
   color: #fbba00;
-  /*color: #fff;*/
 }
 
 .menu-lang a {
   color: #888;
   display: inline-block;
   font-size: 1.1em;
-  margin: 0 10px;
+  padding: 10px;
 }
 
 .menu-items a {
@@ -12510,8 +12524,8 @@ header.appear .main-menu {
   display: flex;
   font-size: 1.4em;
   justify-content: space-between;
-  margin: 0 auto 25px;
-  width: 60%;
+  margin: 0 auto 30px;
+  width: 80%;
 }
 
 .menu-social a {
@@ -12533,13 +12547,16 @@ header.appear .main-menu {
     line-height: 2em;
   }
 
+  .menu-social {
+    width: 60%;
+  }
+
   .menu-social a {
     font-size: 2.3em;
   }
 }
 .dv-modal-box {
   background-color: #FBBA00;
-  box-sizing: border-box;
   display: none;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -12552,12 +12569,15 @@ header.appear .main-menu {
 }
 
 .dv-modal-body {
-  box-sizing: border-box;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
-  overflow-y: scroll;
   margin: 0 auto;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+  transform: translateY(100vh);
+  transition: transform .8s ease;
+}
+
+.appear.dv-modal-body {
+  transform: translateY(0);
 }
 
 .dv-modal-body img {
@@ -12569,11 +12589,17 @@ header.appear .main-menu {
 .dv-modal-close {
   cursor: pointer;
   height: 30px;
-  position: absolute;
+  position: fixed;
   right: 20px;
   top: 15px;
   width: 30px;
   z-index: 10000;
+  transform: translateX(100px);
+  transition: transform .8s ease;
+}
+
+.appear.dv-modal-close {
+  transform: translateX(0);
 }
 
 @media screen and (min-width: 768px) {

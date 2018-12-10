@@ -46,3 +46,11 @@
         transform: translateX(25%);
     }
 }
+
+/*Swing*/
+@keyframes sweep {
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+}

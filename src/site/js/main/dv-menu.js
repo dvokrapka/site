@@ -3,7 +3,9 @@ function toggleMenu() {
 
     var $burger = $('#burger').find('> span'),
         $menu = $('#mainMenu'),
-        $html = $('html');
+        $html = $('html'),
+        $items = $menu.find('a');
+
 
     // Show/Hide menu
     if (!$menu.is(':visible')) {
@@ -23,19 +25,33 @@ function toggleMenu() {
 
         $menu
             .attr('scrollTop', $(window).scrollTop())
-            .css("display", "flex").hide().slideDown(function() {
+            .css("display", "flex")
+            .hide()
+            .slideDown(function() {
                 $html.addClass('noscroll');
                 $burger.addClass('toggle');
             });
+
+        // Show menu items
+        $items.fadeIn(function() {
+
+            $.each($items, function(i, t) {
+                setTimeout(function() {
+                    $(t).addClass('sweep');
+                }, i * 80);
+            });
+        });
     }
 
     // Hide menu
     function closeMenu() {
-
         $html
             .removeClass('noscroll')
             .scrollTop($menu.attr('scrollTop'));
-        $burger.removeClass('toggle');
-        $menu.slideUp();
+        $menu
+            .slideUp(function() {
+                $items.removeClass('sweep');
+                $burger.removeClass('toggle');
+            });
     }
 }

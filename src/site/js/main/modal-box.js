@@ -1,25 +1,39 @@
 $(function() {
     var $modal = $('#modalBox'),
+        $body = $modal.find('.dv-modal-body'),
+        $close = $modal.find('.dv-modal-close'),
         $doc = $('window, body');
 
     // Open modal
     $('.portfolio-prev').on('click', function() {
-        $modal.attr('data-scroll', window.scrollY).css("display", "flex").hide().slideDown(function(argument) {
-        		// $doc.css({overflow : 'scroll'});
-            $doc.addClass('noscroll');
-        });
+
+        $modal.attr('data-scroll', window.scrollY)
+            .css("display", "flex")
+            .hide()
+            .slideDown(function(argument) {
+                $doc.addClass('noscroll');
+                $body.addClass('appear');
+                $close.addClass('appear');
+            });
+
+        // Hide modal on ESC press
         $(document).keypress(function(event) {
             if (event.charCode === 0) {
-                $doc.removeClass('noscroll');
-                window.scrollTo(0, $modal.attr('data-scroll'));
-                $modal.slideUp();
+                closeBox();
             }
         });
+
         // Close modal
         $('.dv-modal-close').on('click', function() {
+            closeBox();
+        });
+
+        function closeBox() {
+        		$body.removeClass('appear');
+        		$close.removeClass('appear');
             $doc.removeClass('noscroll');
             window.scrollTo(0, $modal.attr('data-scroll'));
             $modal.slideUp();
-        });
+        }
     });
 });
