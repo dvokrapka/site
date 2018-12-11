@@ -1,3 +1,17 @@
+/*Scroll left buttons animation*/
+
+@keyframes sl_animate {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-15%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+}
+
 /*Scroll right buttons animation*/
 
 @keyframes sr_animate {

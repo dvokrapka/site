@@ -1,3 +1,4 @@
+<button class="dv-acco-toggle sm-button brief-button" data-acco="#advBrief">Почнімо!</button>
 <form id="advBrief" class="brief-form">
     <!-- About you -->
     <div class="dv-form-row">

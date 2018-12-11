@@ -111,6 +111,8 @@
     transition: 0.4s ease-in-out;
     border-width: 4px;
     border-style: solid;
+    border-color: transparent;
+    user-select:none;
 }
 
 /*Black button*/
@@ -135,3 +137,45 @@
     background-color: #FBBA00;
     color: #222;
 }
+
+/*Brief button*/
+.brief-button {
+		position: relative;
+    border-color: #FBBA00;
+    background-color: #FBBA00;
+    color: #222;
+    margin: 40px auto 50px;
+    text-align: center;
+    display: block;
+}
+
+.brief-button:hover {
+    background-color: #fff;
+    color: #222;
+}
+
+.brief-button::before {
+		animation: sl_animate 1.5s ease-in-out infinite;
+		color:#FBBA00;
+		content: '>>';
+		font-size: 1.5em;
+		position: absolute;
+		right: 107%;
+		top: 0;
+}
+
+.brief-button::after {
+		animation: sr_animate 1.5s ease-in-out infinite;
+		color:#FBBA00;
+		content: '<<';
+		font-size: 1.5em;
+		left: 107%;
+		position: absolute;
+		top: 0;
+}
+
+.brief-button:hover::before,
+.brief-button:hover::after {
+		animation-play-state: paused;
+}
+
