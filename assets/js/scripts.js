@@ -10350,10 +10350,73 @@ $(function() {
 
             if ($acco.is(':visible')) {
                 $acco.find('input:first').focus();
+
+                if ($('.brief-button').length) {
+                    $('.brief-button').hide('8000');
+                }
             }
         });
     });
 });
+// Toggle menu
+function toggleMenu() {
+
+    var $burger = $('#burger').find('> span'),
+        $menu = $('#mainMenu'),
+        $html = $('html'),
+        $items = $menu.find('a');
+
+
+    // Show/Hide menu
+    if (!$menu.is(':visible')) {
+
+        $(document).keypress(function(event) {
+            if (event.charCode === 0) {
+                closeMenu();
+            }
+        });
+        showMenu();
+    } else {
+        closeMenu();
+    }
+
+    // Show menu
+    function showMenu() {
+
+        $menu
+            .attr('scrollTop', $(window).scrollTop())
+            .css("display", "flex")
+            .hide()
+            .slideDown(function() {
+                $html.addClass('noscroll');
+                $burger.addClass('toggle');
+            });
+
+        // Show menu items
+        $items.fadeIn(function() {
+
+            $.each($items, function(i, t) {
+                setTimeout(function() {
+                    $(t).addClass('sweep');
+                }, i * 80);
+            });
+        });
+    }
+
+    // Hide menu
+    function closeMenu() {
+        $html
+            .removeClass('noscroll')
+            .scrollTop($menu.attr('scrollTop'));
+        $menu
+            .slideUp(function() {
+                $items.removeClass('sweep');
+                $burger.removeClass('toggle');
+            });
+    }
+}
+// Paralax on mouse move
+
 var lFollowX = 0,
     lFollowY = 0,
     winX = $(window).width(),
@@ -10367,16 +10430,12 @@ function moveBackground() {
     y += (lFollowY - y) * friction;
 
     var translate = 'translate(' + x * 2 + 'px, ' + y * 2 + 'px)';
-    // var skew = 'skew(' + x/10 + 'deg, ' + y/10 + 'deg)';
-    // var scale = 'scale('+ 1 + (x/1000) + ')';
 
     // Animate
     $('[data-paralax]').css({
         '-webit-transform': translate,
         '-moz-transform': translate,
         'transform': translate
-        // 'transform': translate + skew
-        // 'transform': translate + rotate
     });
 
     window.requestAnimationFrame(moveBackground);
@@ -10390,6 +10449,30 @@ $('[data-paralax]').closest('section').on('mousemove click', function(e) {
 });
 
 moveBackground();
+
+
+// Paralax on scroll down
+$(function() {
+
+	var $el1 = $('.fs-bg-marker');
+	var $el2 = $('.fs-bg-tablet');
+
+
+	$(window).on('scroll', function () {
+
+	    var scroll = $(document).scrollTop();
+
+	    $el1.css({
+	        'transform': 'translateX(-'+ scroll +'px)'
+	        // 'transform': 'translateY(-'+ scroll +'px)'
+	    });
+
+	    $el2.css({
+	        'transform': 'translateX('+ scroll +'px)'
+	        // 'transform': 'translateY('+ scroll +'px)'
+	    });
+	});
+});
 $(function() {
     jsAPI();
 });
@@ -10398,7 +10481,7 @@ $(function() {
 var jsAPI = function() {
 
     var $goTop = $('#goTop'),
-        winH = window.innerHeight / 2,
+        winH = 100,
         $toggled = $('header').add('#burger').add('.toplogo').add($goTop);
 
     // Toggle elements on window scroll
@@ -10410,7 +10493,7 @@ var jsAPI = function() {
 
     // Scroll to top
     $goTop.on('click', function() {
-        $('html').animate({ scrollTop: 0 }, 1000);
+        $('html').animate({ scrollTop: 0 }, 800);
     });
 
     // Scroll to anchor without changing url
@@ -10501,33 +10584,6 @@ var jsAPI = function() {
 };
 
 
-// Toggle menu
-function toggleMenu() {
-
-    var $burger = $('#burger').find('> span'),
-        $menu = $('#mainMenu'),
-        $items = $menu.find('a');
-
-    // Show menu
-    if (!$menu.is(':visible')) {
-        $burger.addClass('toggle');
-        $menu.css("display", "flex").hide().slideDown();
-
-        $(document).keypress(function(event) {
-            if (event.charCode === 0) {
-
-                $burger.removeClass('toggle');
-                $menu.slideUp();
-            }
-        });
-
-        // Close menu
-    } else {
-        $burger.removeClass('toggle');
-        $menu.slideUp();
-    }
-}
-
 var myLazyLoad = new LazyLoad({
     elements_selector: '.lazy'
 });
@@ -10549,64 +10605,69 @@ var myLazyLoad = new LazyLoad({
     window.CustomEvent = CustomEvent;
 })();
 $(function() {
-
     var $modal = $('#modalBox'),
-    		$doc = $('window, body');
+        $body = $modal.find('.dv-modal-body'),
+        $close = $modal.find('.dv-modal-close'),
+        $doc = $('window, body');
 
     // Open modal
-    $('.more-href').on('click', function(e) {
-        e.preventDefault();
+    $('.portfolio-prev').on('click', function() {
+
         $modal
+        		.attr('data-scroll', window.scrollY)
             .css("display", "flex")
-            .hide().slideDown()
-            .attr('data-scroll', window.scrollY);
+            .hide()
+            .slideDown(function(argument) {
+                $doc.addClass('noscroll');
+                $body.addClass('appear');
+                $close.addClass('appear');
+                $body.find('img').scrollTop(0);
+            });
 
-        $doc.addClass('noscroll');
-
+        // Hide modal on ESC press
         $(document).keypress(function(event) {
             if (event.charCode === 0) {
-
-                $doc.removeClass('noscroll');
-                window.scrollTo(0, $modal.attr('data-scroll'));
-                $modal.slideUp();
+                closeBox();
             }
         });
+
+        // Close modal
+        $('.dv-modal-close').on('click', function() {
+            closeBox();
+        });
+
+        function closeBox() {
+        		$body.removeClass('appear');
+        		$close.removeClass('appear');
+            $doc.removeClass('noscroll');
+            window.scrollTo(0, $modal.attr('data-scroll'));
+            $modal.slideUp().scrollTop(0);
+        }
     });
-
-    // Close modal
-    $('.modal-close').on('click', function() {
-
-        var $mod = $(this).closest('.dv-modal-box');
-
-        $doc.removeClass('noscroll');
-        window.scrollTo(0, $mod.attr('data-scroll'));
-        $mod.slideUp();
-    });
-
 });
 function typeWrite() {
 
-		var $preLoader = $('#preLoad'),
-				$typing = $('[data-typing]'),
-		    afterTxt = $typing.html();
+    var $preLoader = $('#preLoad'),
+        $typing = $('[data-typing]'),
+        afterTxt = $typing.html();
 
-      // Get url & check if its an anchor
-      var url = window.location.href,
-    			arr = url.split('/'),
-    			href = arr[arr.length - 1],
-    			anchor = /^#/.test(href);
+    // Get url & check if its an anchor
+    var url = window.location.href,
+        arr = url.split('/'),
+        href = arr[arr.length - 1],
+        anchor = /^#/.test(href);
 
     // Check if preloader is active
-		if (!$preLoader.length || anchor) {
-				$preLoader.removeClass('preload');
-				$('body').removeClass('noscroll');
-				$('header').removeClass('hidden');
-		} else {
-		    $typing.addClass('yellow-text');
-		}
+    if (!$preLoader.length || anchor) {
+        $preLoader.removeClass('preload');
+        $('header').removeClass('hidden');
+    } else {
+        $('html').addClass('noscroll');
+        $typing.addClass('yellow-text');
+    }
 
     $typing
-  			.html($typing.attr('data-typing'))
+        .html($typing.attr('data-typing'))
         .t({
             delay: 1.2,
             speed: 100,
@@ -10614,7 +10675,8 @@ function typeWrite() {
             caret: ':',
             fin: function(elm) {
                 // Hide caret and replace text
-                elm.delay(500).data('blinking', 0)
+                elm
+                    .delay(500).data('blinking', 0)
                     .fadeOut(function() {
                         clearInterval(elm.data('bi'));
                         elm.removeClass('yellow-text').html(afterTxt).fadeIn(1500);
@@ -10624,28 +10686,25 @@ function typeWrite() {
                             $preLoader
                                 .fadeOut(1000, function() {
                                     $('header').removeClass('hidden');
-                                    $('body').removeClass('noscroll');
-
-                                    $('.scroll-btm').fadeOut(function() {
-                                        $(this).fadeIn().addClass('appear');
-                                    });
+                                    $('html').removeClass('noscroll');
+                                    showScrollBtm();
                                 });
                         } else {
-                            $('.scroll-btm').fadeOut(function() {
-                                $(this).fadeIn(1000).addClass('appear');
-                            });
+                            showScrollBtm();
                         }
                     });
-
-
             }
         });
 }
 
+// Show scroll down button
+function showScrollBtm() {
+    $('.scroll-btm').fadeOut(function() {
+        $(this).addClass('appear').fadeIn();
+    });
+}
 
 $(function() {
-
-
     typeWrite();
 });
   $(function() {

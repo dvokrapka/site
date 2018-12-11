@@ -1,4 +1,5 @@
 /*Title*/
+
 .timeline-title {
     padding-top: 8vw;
     padding-bottom: 30px;
@@ -6,6 +7,7 @@
 }
 
 /* Timeline container*/
+
 .timeline {
     margin: 0 auto;
     max-width: 1920px;
@@ -13,11 +15,11 @@
 }
 
 /* Vertical line */
+
 .timeline::after {
     background: #ffba00;
     content: '';
-    /*height: 100%;*/
-    height: calc(100% + 45px);
+    height: 100%;
     left: 30px;
     position: absolute;
     top: 8vw;
@@ -26,14 +28,16 @@
 }
 
 /* Container around content */
+
 .timeline>div {
-    box-sizing: border-box;
+    cursor: pointer;
     margin: 0 auto;
     padding: 5%;
     width: 80%;
 }
 
 /* The circles on the timeline */
+
 .timeline>div>span {
     align-items: center;
     background-color: #fbba00;
@@ -55,18 +59,19 @@
     cursor: pointer;
 }
 
-
-
 /* Content */
+
 .tm-content {
     text-align: center;
 }
 
 .tm-content>img {
-    width: 50%;
+    width: 45%;
+    margin-bottom: 20px;
 }
 
 /*Title*/
+
 .tm-content>span {
     color: #222;
     display: block;
@@ -74,19 +79,18 @@
     font-size: 3em;
     line-height: normal;
     margin-bottom: 5px;
-    margin-top: 5px;
     position: relative;
     text-transform: uppercase;
 }
 
 /*Description*/
+
 .tm-content>p {
     font-family: "Dvoway-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: 1.2em;
     text-align: center;
+    padding: 10px;
 }
-
-
 
 @media screen and (min-width: 768px) {
 
@@ -95,6 +99,7 @@
         left: 50%;
         width: 6px;
         top: 0;
+        height: calc(100% + 45px);
     }
 
     /*Containers*/
@@ -103,9 +108,9 @@
         width: 45%;
     }
 
-    .timeline>div>span:hover {
-    	transform-origin: center center;
-    	transform: translateX(-45%) scale(1.2);
+    .timeline>div:hover>span {
+        transform-origin: center center;
+        transform: translateX(-45%) scale(1.2);
     }
 
     .timeline>.left {
@@ -141,7 +146,6 @@
     .left .tm-content {
         text-align: right;
     }
-
 
     /*Description*/
     .right .tm-content>p {
