@@ -12625,25 +12625,25 @@ header.appear .main-menu {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 100;
 }
 
 .dv-modal-body {
-  position: relative;
   background-color: #fff;
-  height: auto;
   box-sizing: border-box;
-  width: 85%;
+  height: auto;
   margin: 0 auto;
+  position: relative;
   transform: translateY(100vh) scale(0);
-  box-shadow: 0 0 25px rgba(0, 0, 0, .2);
   transition: .8s ease;
+  width: 100%;
 }
 
 .dv-modal-body > div {
-  position: relative;
+  box-sizing: border-box;
   background-color: #fff;
   padding: 10%;
+  position: relative;
 }
 
 .appear.dv-modal-body {
@@ -12662,10 +12662,9 @@ header.appear .main-menu {
   position: fixed;
   right: 20px;
   top: 15px;
-  width: 30px;
-  z-index: 10000;
   transform: translateX(100px);
-  transition: transform .8s ease;
+  transition: transform 1.2s ease;
+  width: 30px;
 }
 
 .appear.dv-modal-close {
@@ -12674,7 +12673,7 @@ header.appear .main-menu {
 
 @media screen and (min-width: 768px) {
   .dv-modal-body {
-    width: 75%;
+    width: 80%;
   }
 
   .dv-modal-close {
