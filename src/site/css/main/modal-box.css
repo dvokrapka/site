@@ -12,15 +12,25 @@
 }
 
 .dv-modal-body {
-    min-height: 100%;
-    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: auto;
+    box-sizing: border-box;
+    width: 85%;
     margin: 0 auto;
-		transform: translateY(100vh);
-		transition: transform .8s ease;
+    transform: translateY(100vh) scale(0);
+    box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+    transition: .8s ease;
+}
+
+.dv-modal-body > div {
+    position: relative;
+    background-color: #fff;
+    padding: 10%;
 }
 
 .appear.dv-modal-body {
-		transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
 .dv-modal-body img {
@@ -37,11 +47,11 @@
     width: 30px;
     z-index: 10000;
     transform: translateX(100px);
-		transition: transform .8s ease;
+    transition: transform .8s ease;
 }
 
 .appear.dv-modal-close {
-		transform: translateX(0);
+    transform: translateX(0);
 }
 
 @media screen and (min-width: 768px) {

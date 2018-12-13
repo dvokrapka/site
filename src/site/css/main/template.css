@@ -136,7 +136,7 @@ hr:after {
     height: 120%;
     position: absolute;
     width: 120%;
-    z-index: -1;
+    /*z-index: -1;*/
 }
 
 .light-dots {
