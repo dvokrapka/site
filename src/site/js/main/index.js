@@ -35,17 +35,9 @@ var jsAPI = function() {
             scrollTo = clicked.attr("href");
         }
 
-        $('html').scrollTop($(scrollTo).offset().top);
-
+        $('html, body').scrollTop($(scrollTo).offset().top);
         return false;
     });
-
-    // Hide mob menu on href click
-    $('#mainMenu').find('a[href^="#"]').on('click', function(e) {
-        e.preventDefault();
-        toggleMenu();
-    });
-
 
     // Show|hide menu
     $('#burger').on('click', function() {
@@ -107,4 +99,3 @@ var jsAPI = function() {
         });
     });
 };
-
