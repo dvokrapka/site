@@ -32,8 +32,7 @@
         transform: translateY(0);
     }
     25% {
-        transform: translateY(15%);
-        box-shadow: none;
+        transform: translateY(30%);
     }
     50% {
         transform: translateY(0);

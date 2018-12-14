@@ -1,7 +1,7 @@
 // Toggle menu
 function toggleMenu() {
 
-    var $burger = $('#burger').find('> span'),
+    var $burger = $('#burger'),
         $menu = $('#mainMenu'),
         $html = $('html'),
         $items = $menu.find('a');

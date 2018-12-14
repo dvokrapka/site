@@ -27,8 +27,7 @@
     height: 45px;
     pointer-events: none;
     width: 45px;
-    transition: .8s ease;
-    box-shadow: 2px 2px 5px rgba(0,0,0,.075);
+    transition: transform .8s ease;
 }
 
 .scroll-btm.appear {

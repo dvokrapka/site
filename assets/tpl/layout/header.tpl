@@ -9,8 +9,6 @@
 	<!-- Burger -->
 	<div id="burger" class="burger">
 		<span></span>
-		<span></span>
-		<span></span>
 	</div>
 	<!-- Scroll top -->
 	<div id="goTop" class="scroll-top">
