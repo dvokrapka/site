@@ -5,6 +5,7 @@ body {
     margin: 0 auto;
     max-width: 1920px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .noscroll {

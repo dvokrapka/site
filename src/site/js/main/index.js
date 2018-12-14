@@ -18,7 +18,7 @@ var jsAPI = function() {
 
     // Scroll to top
     $goTop.on('click', function() {
-        $('html').animate({ scrollTop: 0 }, 800);
+        $('html').scrollTop(0);
     });
 
     // Scroll to anchor without changing url
@@ -35,7 +35,7 @@ var jsAPI = function() {
             scrollTo = clicked.attr("href");
         }
 
-        $('html, body').animate({ scrollTop: $(scrollTo).offset().top }, 800);
+        $('html').scrollTop($(scrollTo).offset().top);
 
         return false;
     });

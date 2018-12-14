@@ -61,6 +61,15 @@
     }
 }
 
+@keyframes citymove2 {
+		from {
+        transform: translateX(25%);
+		}
+    to {
+        transform: translateX(-25%);
+    }
+}
+
 /*Swing*/
 @keyframes sweep {
     100% {
