@@ -6,7 +6,7 @@ $(function() {
 var jsAPI = function() {
 
     var $goTop = $('#goTop'),
-        winH = 100,
+        winH = $(window).height() - 300,
         $toggled = $('header').add('#burger').add('.toplogo').add($goTop);
 
     // Toggle elements on window scroll
@@ -32,6 +32,7 @@ var jsAPI = function() {
         if (tag) {
             scrollTo = clicked.closest(tag).next(tag);
         } else {
+        		toggleMenu();
             scrollTo = clicked.attr("href");
         }
 
@@ -49,6 +50,7 @@ var jsAPI = function() {
         $('header').addClass('dark-header');
     }
 
+    // Open form with accordeon
     $('.form-button').on('click', function() {
         var $form = $(this).closest('.uk-accordion').find('form');
         $form.find('input:visible:first').focus();

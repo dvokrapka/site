@@ -17,9 +17,9 @@
 
 @media screen and (min-width: 768px) {
     .burger {
-    		height: 40px;
+        height: 40px;
         right: 35px;
-    		width: 40px;
+        width: 40px;
     }
 }
 
@@ -55,9 +55,8 @@
 .burger>span {
     background-color: #ffba00;
     display: block;
-    height: 15%;
-    opacity: 0;
-    transition: .8s ease;
+    height: 0;
+    transition: .4s ease;
     width: 0;
 }
 
@@ -72,16 +71,17 @@
 .burger:not(.toggle):hover span {
     border-radius: 10%;
     height: 10%;
-    opacity: 1;
     width: 80%;
 }
 
 /*Burger on menu open*/
-
+.burger.toggle {
+}
 
 /*Transform burger to close icon*/
 .burger.toggle::before,
 .burger.toggle::after {
+    transition: all .4s .2s ease;
     width: 130%;
     height: 15%;
     border-radius: 15%;

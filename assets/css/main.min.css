@@ -11872,9 +11872,8 @@ a.uk-thumbnail:focus {
 .burger>span {
   background-color: #ffba00;
   display: block;
-  height: 15%;
-  opacity: 0;
-  transition: .8s ease;
+  height: 0;
+  transition: .4s ease;
   width: 0;
 }
 
@@ -11890,16 +11889,18 @@ a.uk-thumbnail:focus {
 .burger:not(.toggle):hover span {
   border-radius: 10%;
   height: 10%;
-  opacity: 1;
   width: 80%;
 }
 
 /*Burger on menu open*/
 
+
+
 /*Transform burger to close icon*/
 
 .burger.toggle::before,
 .burger.toggle::after {
+  transition: all .4s .2s ease;
   width: 130%;
   height: 15%;
   border-radius: 15%;
