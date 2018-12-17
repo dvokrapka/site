@@ -3,7 +3,7 @@
     <div class="footer-bg2"></div>
     <div id="contacts" class="footer-contacts">
         <a href="tel:+0679992091">(067) 999 20 91</a>
-        <a href="mailto:email@gmail.com">email@gmail.com</a>
+        <a href="mailto:studio.dvokrapka@gmail.com">studio.dvokrapka@gmail.com</a>
         <!--Callback form-->
 				<button class="dv-acco-toggle sm-button sm-black" data-acco="#callBack">Напишіть нам</button>
 				<form id="callBack" class="dv-acco-body callback-form">
