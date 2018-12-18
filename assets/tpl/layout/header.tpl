@@ -26,17 +26,12 @@
 				<a href="ru">РУС</a>
 				<a href="en">ENG</a>
 			</div>
-			<div class="menu-items">
-				<a class="active" href="http://dvokrapka">Головна</a>
-				<a href="http://dvokrapka/#services">Послуги</a>
-				<a href="http://dvokrapka/portfolio">Портфоліо</a>
-				<a href="#contacts">Контакти</a>
-			</div>
+			<?php echo Modules::run('menu/show_menu', 'header'); ?>
 			<div class="menu-social">
 				<a href="#" target="_blank"><i class="uk-icon-instagram"></i></a>
 				<a href="#" target="_blank"><i class="uk-icon-facebook"></i></a>
 				<a href="#" target="_blank"><i class="uk-icon-behance"></i></a>
-				<a href="#" target="_blank"><i class="uk-icon-github-square"></i></a>
+				<!-- <a href="#" target="_blank"><i class="uk-icon-github-square"></i></a> -->
 			</div>
 		</div>
 	</div>

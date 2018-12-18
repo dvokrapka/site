@@ -1,0 +1,65 @@
+.hidden {
+    display: none;
+}
+
+.inactive {
+    background: #d5d5d5;
+}
+
+/*File upload placeholder*/
+
+.mech-placeholder {
+    background-color: #fff;
+    border: 2px dashed #CBCBCB;
+    margin: 15px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/*Image preview placeholder*/
+
+.mech-img-preview {
+    margin-top: 15px;
+    position: relative;
+}
+
+.mech-img-preview img {
+    position: absolute;
+}
+
+.mech-crop {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*Preloader*/
+
+.mech-preloader {
+    background: #333;
+    color: #fff;
+    left: 0;
+    padding: 3px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 1000;
+}
+
+.mech-icon-button {
+    background: transparent;
+}
+
+.mech-badge {
+    background: #444;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.order-icon {
+    font-size: 5em;
+}

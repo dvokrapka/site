@@ -1,0 +1,51 @@
+
+/*Table(s)*/
+
+.mech-table {
+    background: #fff;
+    border: 1px solid #E0E0E0;
+}
+
+.mech-table tr,
+.mech-cat-table tr {
+    border: 1px solid #CCC;
+}
+
+.mech-table th {
+    background: #E0E0E0;
+}
+
+.mech-table a {
+    text-decoration: none;
+}
+
+.mech-table tbody,
+.mech-cat-table tbody {
+    cursor: pointer;
+}
+
+.mech-cat-table thead {
+    background: #e0e0e0;
+}
+
+.mech-cat-table tbody td {
+    border: 1px solid #CCC;
+    padding: 0 !important;
+}
+
+.mech-cat-table a {
+    display: block;
+    padding: 8.8px;
+    text-decoration: none;
+    color: #444;
+}
+
+.mech-active-td td {
+    background-color: #555;
+    border-color: #555;
+}
+
+.mech-active-td a {
+    color: #fff;
+    transition: all .1s ease;
+}

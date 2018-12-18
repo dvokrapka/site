@@ -18,7 +18,7 @@ header.appear .main-menu {
     top: 0;
 }
 
-.main-menu>div {
+.main-menu>* {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -60,6 +60,13 @@ header.appear .main-menu {
     padding: 10px;
 }
 
+.menu-items {
+	display: block;
+	padding: 0;
+}
+.menu-items li {
+	list-style: none;
+}
 .menu-items a {
     font-size: 2em;
     line-height: 2em;
