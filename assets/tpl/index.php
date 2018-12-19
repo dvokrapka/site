@@ -10,10 +10,10 @@
     <title><?php echo $this->page['m_title']; ?></title>
     <meta name="description" content='<?php echo $this->page['m_desc'] ?? null; ?>'>
     <meta name="keywords" content='<?php echo $this->page['m_keys'] ?? null; ?>'>
-    <?php if(isset($this->app['m_rev'])) : ?>
+    <?php if(isset($this->app['m_rev']) && $this->app['m_rev']) : ?>
   	<meta name="revisit-after" content="1 days"/>
   	<?php endif; ?>
-	  <?php if(isset($this->app['m_glob'])) : ?>
+	  <?php if(isset($this->app['m_glob']) && $this->app['m_glob']) : ?>
 		<meta name="distribution" content="Global"/>
 		<?php endif; ?>
 		<?php if (isset($this->page['options']['canonic']) && $this->page['options']['canonic']) : ?>
@@ -46,17 +46,13 @@
     <?php echo $footer; ?>
 
     <!-- jQuery -->
-    <script src="<?php echo base_url('assets/js/jquery-3.3.1.min.js'); ?>"></script>
-    <!-- <?php //echo $jquery; ?> -->
+    <!-- <script src="<?php //echo base_url('assets/js/jquery-3.3.1.min.js'); ?>"></script> -->
+    <?php echo $jquery; ?>
 
     <!-- Main APP JS -->
     <script src="<?php echo base_url('assets/js/scripts.min.js'); ?>"></script>
 
     <!-- Body JS -->
     <?php echo $body_js; ?>
-
-    <!-- GoTop -->
-    <?php echo $gotop; ?>
-
   </body>
 </html>

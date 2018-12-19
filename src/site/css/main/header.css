@@ -25,10 +25,10 @@ header.appear {
     transition: transform .8s ease;
 }
 
-.toplogo {
-    cursor: pointer;
-    fill-rule: evenodd;
-    fill: #FBBA00;
+.toplogo img {
+    /*cursor: pointer;*/
+    /*fill-rule: evenodd;
+    fill: #FBBA00;*/
     height: 30px;
     left: 15px;
     position: fixed;
@@ -38,14 +38,14 @@ header.appear {
     z-index: 300;
 }
 
-.toplogo.appear {
+.toplogo.appear img{
     height: 30px;
     transform: translateY(0);
     transition: .8s ease;
 }
 
 @media screen and (min-width: 768px) {
-    .toplogo {
+    .toplogo img {
         height: 40px;
         left: 35px;
     }

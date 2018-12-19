@@ -7,7 +7,7 @@
 		<div data-uk-parallax="{y: '0,-200', scale: '1,0.1', repeat: true}">
 			<h1 class="typing white-text" data-typing="DVOKRAPKA"><?php echo $content['fs_title']; ?></h1>
 			<!-- Scroll bottom -->
-			<a href="#" class="scroll-btm" data-scrolldown="section">
+			<a href="#" class="scroll-btm" data-scroll="section">
 				<?php load_inline('assets/img/buttons/gobtm.tpl'); ?>
 			</a>
 		</div>

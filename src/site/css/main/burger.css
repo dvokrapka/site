@@ -7,7 +7,7 @@
     justify-content: center;
     padding: 0;
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 15px;
     transform: translateY(80px);
     transition: .8s ease;
@@ -18,7 +18,7 @@
 @media screen and (min-width: 768px) {
     .burger {
         height: 40px;
-        right: 35px;
+        right: 40px;
         width: 40px;
     }
 }
@@ -35,7 +35,7 @@
 .burger::before,
 .burger::after {
     background-color: #ffba00;
-    border-radius: 50%;
+    border-radius: 25px;
     content: '';
     height: 40%;
     position: absolute;
@@ -58,25 +58,26 @@
     height: 0;
     transition: .4s ease;
     width: 0;
+    pointer-events: none;
+    border-radius: 25px;
 }
 
 /* Dots to Burger on hover*/
 .burger:hover::before,
 .burger:hover::after {
-    border-radius: 10%;
+    border-radius: 25px;
     height: 10%;
     width: 100%;
+    pointer-events: none;
 }
 
 .burger:not(.toggle):hover span {
-    border-radius: 10%;
     height: 10%;
-    width: 80%;
+    width: 60%;
 }
 
 /*Burger on menu open*/
-.burger.toggle {
-}
+
 
 /*Transform burger to close icon*/
 .burger.toggle::before,
@@ -84,7 +85,6 @@
     transition: all .4s .2s ease;
     width: 130%;
     height: 15%;
-    border-radius: 15%;
 }
 
 .burger.toggle::before {

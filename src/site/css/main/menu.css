@@ -14,7 +14,7 @@
     z-index: 200;
 }
 
-header.appear .main-menu {
+header.appear > .main-menu {
     top: 0;
 }
 
@@ -30,10 +30,10 @@ header.appear .main-menu {
 }
 
 .main-menu a {
-		margin-left: -15px;
     color: #fff;
     display: block;
     font-family: "Dvoway-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    margin-left: -15px;
     opacity: 0;
     text-decoration: none;
     text-transform: uppercase;
@@ -49,11 +49,11 @@ header.appear .main-menu {
     transform: translateX(5px);
 }
 
-.main-menu a.active {
+.main-menu .active {
     color: #fbba00;
 }
 
-.menu-lang a {
+.lang-switcher a {
     color: #888;
     display: inline-block;
     font-size: 1.1em;
@@ -61,12 +61,14 @@ header.appear .main-menu {
 }
 
 .menu-items {
-	display: block;
-	padding: 0;
+    display: block;
+    padding: 0;
 }
+
 .menu-items li {
-	list-style: none;
+    list-style: none;
 }
+
 .menu-items a {
     font-size: 2em;
     line-height: 2em;
@@ -79,6 +81,7 @@ header.appear .main-menu {
     justify-content: space-between;
     margin: 0 auto 30px;
     width: 80%;
+    z-index: 1000;
 }
 
 .menu-social a {
@@ -91,7 +94,7 @@ header.appear .main-menu {
         background: #222 url('../../../assets/img/bg/menu-bg.jpg') no-repeat center center;
     }
 
-    .menu-lang a {
+    .lang-switcher a {
         font-size: 1.5em;
     }
 
@@ -101,7 +104,7 @@ header.appear .main-menu {
     }
 
     .menu-social {
-    	width: 60%;
+        width: 60%;
     }
 
     .menu-social a {

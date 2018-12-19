@@ -21,6 +21,7 @@ footer {
 .footer-bg1 {
     background: url('../../../assets/img/bg/city-light-bg.png') repeat-x left bottom;
     background-size: auto 100%;
+    opacity: .8;
     filter: blur(1px);
 }
 
@@ -145,10 +146,10 @@ footer {
     }
 
     .footer-bg1 {
-        animation: citymove2 50s linear infinite;
+        animation: citymove2 30s linear infinite;
     }
 
     .footer-bg2 {
-        animation: citymove 40s linear infinite;
+        animation: citymove 30s linear infinite;
     }
 }

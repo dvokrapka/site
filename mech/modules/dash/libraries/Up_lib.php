@@ -29,7 +29,8 @@ class Up_lib
 
         // UPLOAD CONFIG
         $config['upload_path']      = realpath($path);
-        $config['allowed_types']    = 'gif|jpg|jpeg|png|svg';
+        $config['allowed_types']    = '*';
+        // $config['allowed_types']    = 'gif|jpg|jpeg|png|svg|svgz';
         $config['file_name']        = convert_accented_characters($filename);
         $config['overwrite']        = $overwrite;
         $config['file_ext_tolower'] = true;

@@ -53,7 +53,8 @@ class Site extends Frontend
         $this->page = ($url) ? $this->Site_model->get_page($url) : null;
 
         // IF NO PAGE FOUND
-        if (!$this->page) {
+        if (!$this->page)
+        {
             $this->page_not_found();
         }
 
@@ -269,25 +270,11 @@ class Site extends Frontend
             ? ('pages/' . ($this->page['cat'] ? 'category/' : $this->page['ptype'] . '/') . $this->page['options']['tpl'])
             : $this->tpl;
 
-        // PRELOADER
-        $this->index['preloader'] = ($this->app['preloader'])
-            ? $this->load->view('layout/preloader.tpl', null, true)
-            : null;
-
         // HEADER
-        $this->index['header'] = ($this->app['header'])
-            ? $this->load->view('layout/header.tpl', $this->contacts, true)
-            : null;
+        $this->index['header'] = $this->load->view('layout/header.tpl', $this->contacts, true);
 
         // FOOTER
-        $this->index['footer'] = ($this->app['footer'])
-            ? $this->load->view('layout/footer.tpl', $this->contacts, true)
-            : null;
-
-        // GO TOP
-        $this->index['gotop'] = ($this->app['gotop'])
-            ? $this->load->view('layout/gotop.tpl', null, true)
-            : null;
+        $this->index['footer'] = $this->load->view('layout/footer.tpl', $this->contacts, true);
 
         // BREADCRUMBS
         $this->page['breadcrumbs'] = (isset($this->page['breadcrumbs']))
@@ -300,7 +287,7 @@ class Site extends Frontend
             : null;
 
         // PAGE CONTENT
-        $this->index['content'] = $this->load->view($tpl.'.tpl', $this->page, true);
+        $this->index['content'] = $this->load->view($tpl . '.tpl', $this->page, true);
     }
 
 // ------------------------------------------------------------------------ 404
@@ -338,7 +325,7 @@ class Site extends Frontend
 // ---------------------------------------------------------- OUTPUT PAGE (w/o HTML MINIFY)
     private function show_page()
     {
-    		// SHOW COMPRESSED HTML
+        // SHOW COMPRESSED HTML
         if ($this->app['html_compress'])
         {
             $this->load->library('compress_lib');

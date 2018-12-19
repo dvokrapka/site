@@ -24,12 +24,14 @@ class Dash_model extends Admin_model
 
         // LOGO EDIT
         $logo_options = [
-            'img_w' => '100',
-            'img_h' => '50'
+            'img_w'   => '100',
+            'img_h'   => '50',
+            'thumb_w' => '100',
+            'thumb_h' => '50'
         ];
 
         $setup['logo_options'] = json_encode($logo_options);
-        $setup['logo_edit'] = $this->media_lib->edit_media('file', $setup['logo'], $this->_logo_path);
+        $setup['logo_edit']    = $this->media_lib->edit_media('file', $setup['logo'], $this->_logo_path);
 
         // SCRIPTS EDIT
         $scripts = ['head', 'body'];

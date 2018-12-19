@@ -9876,7 +9876,7 @@ var LazyLoad = function () {
 		window.dispatchEvent(event);
 	};
 
-	/* Auto initialization of one or more instances of lazyload, depending on the 
+	/* Auto initialization of one or more instances of lazyload, depending on the
      options passed in (plain object or an array) */
 	function autoInitialize(classObj, options) {
 		if (!options) {
@@ -10216,21 +10216,21 @@ $.fn.t=function($c,$o){return this.each(function(){
  b=function(_){if(bb==_)return;if(!_o.blink)return;if(_o.blink_perm)return;$$$.parent().data('blinking',bb=((!_)?0:1));},
  B={c:0,beep:function(){if(B.c==0)B.c=$('html').data().__TAC;if(B.o)B.o.stop();B.o=B.c.createOscillator();B.o.frequency.setValueAtTime(1,B.c.currentTime);B.g=B.c.createGain();B.o.connect(B.g);
  B.g.connect(B.c.destination);B.o.start();B.o.stop(B.c.currentTime+0.03);}};if(_c=='beep'&&!c.data().is_typing&&$('html').data().__TAC){B.beep();return(this);}
- 
+
  _c===''&&(_c='<del>*</del>');
  if(c.data().is_typing){if(_c==P.slice(0,-1)){c.data(P,((t(_o,'b'))?oo_=_o:((c.data(P))?(oo_=!1):(oo_=!!1))));c.data().blink&&c.data('blinking',oo_);}
  return(this);}else{if(_c==P.slice(0,-1))return(this);c.data('is_typing',1);}
- 
+
  t(_c,'o')&&(_o=_c);
- 
+
  if(/t\-/.test(c.attr('class')))return(this);
-  
- 
+
+
  if(_c=='add'&&c.data().t){
 
   var a=_o,_o=$.extend({},c.data()),$$$=c=$(':first',c),T=t(_o.typing,'f');
   a='<'+_o.tag+' class="typing-add">'+a+'</'+_o.tag+'>';
-  
+
 
  }else{
 
@@ -10254,11 +10254,11 @@ $.fn.t=function($c,$o){return this.each(function(){
 
   if(!t(_o.beep,'b'))_o.beep=!1;
   if(_o.beep===!!1&&t($('html').data().__TAC,'u')){$('html').data('__TAC',__TAC=(window.AudioContext=(window.AudioContext||window.webkitAudioContext))?new AudioContext():!1);if(!__TAC)_o.beep=!1;}
-  if(_o.repeat===!1)_o.repeat=-3;  
- 
+  if(_o.repeat===!1)_o.repeat=-3;
+
   if(_o.caret===!!1)_o.caret='\u258e';if(t(_o.caret,'s')&&!$('.t-caret',c)[0]){
   (_o.blink===!!1)&&(_o.blink=_o.speed*3);(t(_o.blink))&&(_o.blink<100)&&(_o.blink=100);(!t(_o.blink))&&(_o.blink=!1);
-   
+
    oo=$('<'+_o.tag+'/>',{'class':'t-caret',html:_o.caret}).appendTo(c);
    _o.blink&&c.append(z)&&(c.data('bi',setInterval(function(){if(($$$.parent().data().blinking|(v=(oo.css('visibility')[0]=='h')))||_o.blink_perm)oo.css({visibility:(v)?'visible':'hidden'});},_o.blink)));
   }
@@ -10281,7 +10281,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   (_o.pause_on_click===!!1)&&(c.parent().off('click').click(function(_){if($(_.target).data().click!='1')$(this).t('pause');}));
   if(_o.pause_on_tab_switch===!!1){if(t($('html').data().__TAB,'u')){$('html').data('__TAB',1);$(document).on('visibilitychange',function(){$('.t-container').parent().each(function(){h=$(document).attr('visibilityState').charAt(0);if(h=='h'&&$(this).data().paused)$(this).data('keep_paused',1);$(this).p(((h=='h')?!!1:(($(this).data().keep_paused&&$(this).removeData('keep_paused'))?!!1:!1)));});});}}
   else if(_o.pause_on_tab_switch===!1&&$('html').data().__TAB){$('html').removeData('__TAB');$(document).off('visibilitychange');}
-  
+
 
 
  }
@@ -10305,7 +10305,7 @@ $.fn.t=function($c,$o){return this.each(function(){
 
   if($$$.parent().data(P)){p=1;return;}if(tt)return;tt=!tt;
 
-  if(t(k)){if(--k>0){tt=!tt;b((c.data().ins<=.25)?0:(p==1)?(p=-1):1);return;}k=(c.data().ins)?'</>':d.shift();}   
+  if(t(k)){if(--k>0){tt=!tt;b((c.data().ins<=.25)?0:(p==1)?(p=-1):1);return;}k=(c.data().ins)?'</>':d.shift();}
   else if(_o.speed_vary&&~~(Math.random()*4)){tt=!tt;return;}b(0);
 
   if(c.data().del){$$$.parent().data().beep===!!1&&B.beep();if(c.data().s&&!k[0])c.text('');
@@ -10319,7 +10319,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   while(k[1]=='/'){c=c.parent();k=d.shift()||'';}
   while(1){$$$.parent().data().beep===!!1&&B.beep();c.append(k);T&&_o.typing($$$.parent(),k,f(),dl);!/<ins.*?>[\s\S]+</.test(k)&&/></.test(k)&&(c=c.find(':last'));
   if(d[0]&&/<\w+/.test(d[0]))k=d.shift();else break;}
-  
+
   if(!(k=d.shift())){clearInterval($$);$$$.parent().removeData(['is_typing',P]);
   t(_o.repeat)&&(--_o.repeat);if(_o.repeat>-1){_o.init=!1;$$$.parent().t(t(_c,'o')?_o:_c,_o);return;}
   else{b(1);t(_o.fin,'f')&&_o.fin($$$.parent());}return;}
@@ -10501,7 +10501,7 @@ var jsAPI = function() {
         event.preventDefault();
 
         var clicked = $(this),
-            tag = clicked.attr('data-scrolldown'),
+            tag = clicked.attr('data-scroll'),
             scrollTo;
 
         if (tag) {

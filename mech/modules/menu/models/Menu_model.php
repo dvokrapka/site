@@ -58,6 +58,7 @@ class Menu_model extends MY_Model
             // RENDER ITEMS
             $data['items'] = $this->render_menu($items, $data);
         }
+
         else
         {
             $data['items'] = null;
@@ -90,6 +91,7 @@ class Menu_model extends MY_Model
                     : $this->render_item($item);
             }
         }
+
         return $tree;
     }
 
@@ -99,7 +101,6 @@ class Menu_model extends MY_Model
         // SET SEO TITLE FOR HREF
         $seotitle = (isset($item['seo_title']) && !empty($item['seo_title']))
             ? ' title="' . $item['seo_title'] . '"' : '';
-        $scroll = null;
 
         // SET TARGET FOR LINK
         $target = (!empty($item['target'])) ? ' target="' . $item['target'] . '"' : '';
@@ -121,11 +122,15 @@ class Menu_model extends MY_Model
                     // SET ANCHOR
                     if (!empty($item['anchor']))
                     {
+                        if ($url . '/' === current_url())
+                        {
+                        		return '<a href="' . $item['anchor'] . '" data-scroll="#">' . $this->icon . $item['title'] . '</a>';
+                        }
+
                         $url .= '/' . $item['anchor'];
-                        $scroll = ' data-scroll ';
                     }
 
-                    return '<a href="' . $url . '" ' . $seotitle . $scroll . '>' . $this->icon . $item['title'] . '</a>';
+                    return '<a href="' . $url . '" ' . $seotitle . '>' . $this->icon . $item['title'] . '</a>';
                 }
 
                 // OTHER LINK
@@ -138,7 +143,7 @@ class Menu_model extends MY_Model
             // IF ANCHOR ONLY
             if (!empty($item['anchor']))
             {
-                return '<a href="' . $item['anchor'] . '">' . $this->icon . $item['title'] . '</a>';
+                return '<a href="' . $item['anchor'] . '" data-scroll="#">' . $this->icon . $item['title'] . '</a>';
             }
         }
 
@@ -168,6 +173,9 @@ class Menu_model extends MY_Model
     }
 
 // ------------------------------------------------------------------------ CATEGORY RENDER
+ /**
+ * TODO UNIVERSAL FOR HTML TEMPLATE
+ */
     public function render_category($data, $items, $item, $lvl)
     {
         switch ($data['tpl'])
