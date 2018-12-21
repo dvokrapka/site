@@ -1,6 +1,6 @@
 <!-- List menu -->
 <div id="actionPanel" class="uk-navbar uk-navbar-attached uk-margin-bottom" data-type="item" data-uk-sticky>
-	<ul class="uk-navbar-nav uk-text-uppercase">
+	<ul class="uk-navbar-nav uk-text-uppercase" data-lib-header>
 		<!-- Module -->
 		<li class="uk-active">
 			<a href="<?php echo $mod['index']; ?>">

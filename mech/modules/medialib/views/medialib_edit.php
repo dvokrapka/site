@@ -2,7 +2,7 @@
 <ul class="uk-tab" data-uk-tab="{connect:'#medialibOptions', swiping: false}">
 	<li><a href=""><i class="uk-icon-small uk-icon-file-o"></i>&ensp;Загальні</a></li>
 	<li><a href=""><i class="uk-icon-small uk-icon-list"></i>&ensp;Вміст</a></li>
-	<li><a href=""><i class="uk-icon-small uk-icon-picture-o"></i>&ensp;Медіа</a></li>
+	<li><a href=""><i class="uk-icon-small uk-icon-picture-o"></i>&ensp;Зображення</a></li>
 	<li><a href=""><i class="uk-icon-small uk-icon-sliders"></i>&ensp;Налаштування</a></li>
 </ul>
 <ul id="medialibOptions" class="uk-switcher uk-margin">

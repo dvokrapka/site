@@ -1,0 +1,23 @@
+/*Medialib Frame| modal*/
+
+.uk-modal-dialog-blank.iframe-modal {
+    background: rgba(0, 0, 0, .5);
+}
+
+.iframe-modal,
+.list-modal {
+    height: 100%;
+}
+
+.iframe-body {
+    position: absolute;
+    width: 92%;
+    height: 92%;
+    left: 4%;
+    bottom: 0;
+}
+
+.iframe-modal iframe {
+    width: 100%;
+    height: 100%;
+}

@@ -161,6 +161,9 @@ class Dash_model extends Admin_model
         // MEDIA EDIT (set allowed mimes to upload)
         $elem['media_edit'] = $this->media_lib->edit_media('file', $elem['media'], $this->path . $elem['name'] . '/', $elem['options']);
 
+        // PARENT CATEGORY SELECT
+        $elem['cat_select'] = $this->dash_lib->cat_select($this->get_groups(), $elem['pid'], 'pid');
+
         return $elem;
     }
 
@@ -198,7 +201,7 @@ class Dash_model extends Admin_model
 
         // MEDIA EDIT (set allowed mimes to upload)
         $elem['media_edit'] = (!$src || $src === $elem['src'])
-            ? $this->media_lib->edit_media($elem['src'], $elem['media'], $this->path . $lib['name'] . '/', $lib['options'])
+            ? $this->media_lib->edit_media($elem['src'], $elem['media'], $this->path . $lib['name'] . '/', $lib['options'], $elem['mime'])
             : $this->media_lib->edit_media($src);
 
         return $elem;

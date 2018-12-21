@@ -66,13 +66,13 @@ class Medialib_model extends MY_Model
     }
 
 // --------------------------------------------------------------- GET LIB ITEMS BY ID
-    public function get_items_by_id($lib, $list)
+    public function get_items_by_id($lib_id, $list, $order_by, $dir)
     {
         $items = [];
 
         foreach ($list as $id)
         {
-            $item = $this->get_item($lib['id'], $id);
+            $item = $this->get_item($lib_id, $id);
 
             // CHECK IF ITEM EXISTS & NOT EMPTY
             if (!empty($item))
@@ -87,7 +87,7 @@ class Medialib_model extends MY_Model
     }
 
 // ------------------------------------------------------------------------ RENDER LIB
-    public function render_medialib($lib_json, $page_id = 0)
+    public function render_medialib($lib_json, $page_id = 0, $filter = null)
     {
         // GET MEDIALIB
         $lib = $this->get_medialib($lib_json['id']);
@@ -99,44 +99,50 @@ class Medialib_model extends MY_Model
             $lib['options'] = json_decode($lib['options'], true);
 
             // GET SORT OPTIONS
-            $order = $lib['options']['items_sort'];
+            $order_by = $lib['options']['items_sort'];
             $dir   = $lib['options']['items_sort_dir'];
 
             // TYPE - 1
             if ($lib['tpl_type'] == 0)
             {
-                $lib['items'] = null;
-
-                // ALL/ONE ITEM(s)
-                if (!empty($lib_json['items']))
+                // NO ITEMS
+                if (!$lib_json['items'])
                 {
-                    $list = explode(',', $lib_json['items']);
-
-                    $lib['items'] = ($list[0] == -1)
-                        ? $this->get_items($lib['id'], $order, $dir)
-                        : $this->get_items_by_id($lib, $list);
+                    $lib['items'] = null;
                 }
+
                 else
                 {
-                    $lib['items'] = $this->get_items($lib['id'], $order, $dir);
+                		// ALL ITEMS
+                    if ($lib_json['items'] == -1)
+                    {
+                        $lib['items'] = $this->get_items($lib['id'], $order_by, $dir);
+                    }
+
+                    // ITEMS BY LIST
+                    else
+                    {
+                        $list = explode(',', $lib_json['items']);
+                        $lib['items'] = $this->get_items_by_id($lib['id'], $list, $order_by, $dir);
+                    }
                 }
             }
 
             // TYPE - 2
             if ($lib['tpl_type'] == 1)
             {
-                $lib['items'] = $this->get_items($lib['id'], $order, $dir, $page_id);
+                $lib['items'] = $this->get_items($lib['id'], $order_by, $dir, $page_id);
             }
 
             // RENDER ITEMS
-            return ($lib['items']) ? $this->render_items($lib) : $lib;
+            return ($lib['items']) ? $this->render_items($lib, $filter) : $lib;
         }
 
         return null;
     }
 
 // ------------------------------------------------------------------------ RENDER ITEMS
-    public function render_items($lib)
+    public function render_items($lib, $filter)
     {
         // IF ITEMS
         $count = count($lib['items']);
@@ -164,6 +170,9 @@ class Medialib_model extends MY_Model
             {
                 $lib['items'][$i]['src'] = $lib['items'][$i]['media'];
             }
+
+            // ADD JS FILTER (if isset)
+            $lib['items'][$i]['filter'] = $filter;
 
             // GET ITEM LINK
             $lib['items'][$i]['link'] = $this->render_item_link($lib['items'][$i]);

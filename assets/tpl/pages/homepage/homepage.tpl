@@ -6,7 +6,6 @@
 		<!-- <div id="preLoad" class="preload"></div> -->
 		<div data-uk-parallax="{y: '0,-200', scale: '1,0.1', repeat: true}">
 			<h1 class="typing white-text" data-typing="DVOKRAPKA"><?php echo $content['fs_title']; ?></h1>
-			<!-- Scroll bottom -->
 			<a href="#" class="scroll-btm" data-scroll="section">
 				<?php load_inline('assets/img/buttons/gobtm.tpl'); ?>
 			</a>
@@ -31,7 +30,7 @@
 		</div>
 	</section>
 	<!-- Lyrics -->
-	<section class="lazy home-design" data-src="assets/img/bg/bodesign.jpg">
+	<section class="home-design">
 		<h1 class="home-design-txt" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}"><?php echo $content['last']; ?></h1>
 	</section>
 </main>

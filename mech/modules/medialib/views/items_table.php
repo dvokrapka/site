@@ -50,10 +50,10 @@
 					<?php $type = explode('/', $el['mime']); ?>
 					<!-- Image -->
 					<?php if ($type[0] === 'image' ) { ?>
-					<?php if ($type[1] === 'svg+xml') $box = 'iframe'; $el['thumb'] = $el['media'];
+					<?php if ($type[1] === 'svg+xml') {$box = 'iframe'; $el['thumb'] = $el['media'];}
 					?>
 					<a href="<?php echo base_url($path . $el['media']); ?>" data-uk-lightbox data-lightbox-type="<?php echo $box ?? 'image';?>" title="<?php echo $el['title']; ?>">
-						<img src="<?php echo base_url($path . $el['media']); ?>" width="50" height="50" alt="<?php echo $el['title']; ?>">
+						<img src="<?php echo base_url($path . $el['thumb']); ?>" width="50" height="50" alt="<?php echo $el['title']; ?>">
 					</a>
 					<?php } ?>
 					<!-- Video -->

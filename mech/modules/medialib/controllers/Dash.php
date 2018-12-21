@@ -88,7 +88,7 @@ class Dash extends Admin
             // OPEN MODAL WITH ITEMS LIST
             $data['list'] = $this->load->view('items_modal_table', $lib, true);
 
-            echo $this->load->view('items_modal', $data, true);
+            echo $this->load->view('items_in_modal', $data, true);
         }
 
         // TEMPLATE TYPE-2

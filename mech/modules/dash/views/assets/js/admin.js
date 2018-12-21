@@ -11184,7 +11184,7 @@ function editMediaLib() {
     // Toggle medialib edit button on medialib select
     $('[data-lib-select]')
         .on('change', function() {
-            $(this).siblings('[data-lib-edit]').toggle($(this).val() > 0);
+            $(this).siblings('[data-lib-edit]').slideToggle($(this).val() > 0);
         })
         .each(function() {
             $(this).siblings('[data-lib-edit]').toggle($(this).val() > 0);
@@ -11232,7 +11232,6 @@ function editMediaLib() {
 
                     // Resize dash
                     toggleDash();
-
                     Cookies.set('page_id', $data.page_id);
 
                     // Open modal
@@ -11301,14 +11300,14 @@ function listLibItems(libName) {
     // Toggle all|none items
     showAll
         .attr('data-show-all', allState)
-        .toggleClass('uk-text-success', allState === 1)
+        .toggleClass('uk-text-success', allState == 1)
         .on('click', function() {
 
             var all = $(this),
                 state = (all.attr('data-show-all') == 1) ? 0 : 1;
 
             all
-                .toggleClass('uk-text-success', state === 1)
+                .toggleClass('uk-text-success', state == 1)
                 .attr('data-show-all', state);
 
             items.each(function() {
@@ -11588,12 +11587,14 @@ function toggleDash() {
             $sideBar = $('#mechSidebar'),
             $content = $('#mechContent');
 
-        $sideBar.css({'display':'none'});
+        $sideBar.css({ 'display': 'none' });
         $content.addClass('lg');
-        $('#medialibActive').hide();
-        $('.uk-navbar').css({width: '100%'});
+        $('.uk-navbar').css({ width: '100%' });
+        $('[data-lib-header]').find('a').on('click', function(event) {
+            event.preventDefault();
+            return false;
+        });
     }
-
 }
 // Translit char or string
 function translit(string) {

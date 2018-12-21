@@ -158,10 +158,12 @@ function toggleDash() {
             $sideBar = $('#mechSidebar'),
             $content = $('#mechContent');
 
-        $sideBar.css({'display':'none'});
+        $sideBar.css({ 'display': 'none' });
         $content.addClass('lg');
-        $('#medialibActive').hide();
-        $('.uk-navbar').css({width: '100%'});
+        $('.uk-navbar').css({ width: '100%' });
+        $('[data-lib-header]').find('a').on('click', function(event) {
+            event.preventDefault();
+            return false;
+        });
     }
-
 }

@@ -311,8 +311,7 @@ hr:after {
 
 .home-design {
     align-items: center;
-    /*background: url('../../../assets/img/bg/bodesign.jpg') no-repeat center center fixed;*/
-    background: no-repeat center center fixed;
+    background: url('../../../assets/img/bg/bodesign-768.jpg') no-repeat center center;
     background-size: 100%;
     box-shadow: inset 8px 8px 30px rgba(0, 0, 0, .3);
     display: flex;
@@ -325,12 +324,6 @@ hr:after {
     color: #fff;
     max-width: 80%;
     text-shadow: 3px 3px 15px rgba(0, 0, 0, .3);
-}
-
-@media screen and (min-width: 768px) {
-    .home-design-txt {
-        font-size: 5em;
-    }
 }
 
 @media screen and (orientation: portrait) {
@@ -385,5 +378,13 @@ hr:after {
     .about-us-col {
         column-count: 2;
         column-gap: 40px;
+    }
+
+    .home-design {
+    		background: url('../../../assets/img/bg/bodesign.jpg') no-repeat center center fixed;
+    }
+
+    .home-design-txt {
+        font-size: 5em;
     }
 }

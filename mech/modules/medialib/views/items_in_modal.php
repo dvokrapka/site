@@ -1,5 +1,5 @@
 <div id="itemsModal" class="uk-modal">
-     <div class="uk-modal-dialog uk-modal-dialog-blank tpl-items-modal">
+     <div class="uk-modal-dialog uk-modal-dialog-blank list-modal">
 				<nav class="uk-navbar uk-margin">
 				    <div class="uk-navbar-content uk-navbar-flip">
 				    	<a href="" class="uk-modal-close uk-close uk-close-alt"></a>

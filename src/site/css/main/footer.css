@@ -146,10 +146,10 @@ footer {
     }
 
     .footer-bg1 {
-        animation: citymove2 30s linear infinite;
+        animation: citymove2 90s linear infinite;
     }
 
     .footer-bg2 {
-        animation: citymove 30s linear infinite;
+        animation: citymove 60s linear infinite;
     }
 }

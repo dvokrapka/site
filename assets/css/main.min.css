@@ -11822,10 +11822,10 @@ a.uk-thumbnail:focus {
   justify-content: center;
   padding: 0;
   position: absolute;
-  right: 30px;
+  right: 20px;
   top: 15px;
   transform: translateY(80px);
-  transition: .8s ease;
+  transition: all .4s ease;
   width: 30px;
   z-index: 300;
 }
@@ -11833,7 +11833,7 @@ a.uk-thumbnail:focus {
 @media screen and (min-width: 768px) {
   .burger {
     height: 40px;
-    right: 40px;
+    right: 30px;
     width: 40px;
   }
 }
@@ -11853,10 +11853,10 @@ a.uk-thumbnail:focus {
   background-color: #ffba00;
   border-radius: 25px;
   content: '';
-  height: 40%;
+  height: 38%;
   position: absolute;
   transition: .4s ease;
-  width: 40%;
+  width: 38%;
 }
 
 .burger::before {
@@ -11877,6 +11877,7 @@ a.uk-thumbnail:focus {
   width: 0;
   pointer-events: none;
   border-radius: 25px;
+  transform: rotateZ(360deg);
 }
 
 /* Dots to Burger on hover*/
@@ -11892,17 +11893,25 @@ a.uk-thumbnail:focus {
 .burger:not(.toggle):hover span {
   height: 10%;
   width: 60%;
+  transform: rotateZ(0);
 }
 
 /*Burger on menu open*/
+
+.burger.toggle {
+  transform: translate(-25%, 80px);
+}
 
 /*Transform burger to close icon*/
 
 .burger.toggle::before,
 .burger.toggle::after {
-  transition: all .4s .2s ease;
   width: 130%;
   height: 15%;
+}
+
+.burger.toggle span {
+  width: 0;
 }
 
 .burger.toggle::before {
@@ -12498,11 +12507,11 @@ footer {
   }
 
   .footer-bg1 {
-    animation: citymove2 30s linear infinite;
+    animation: citymove2 90s linear infinite;
   }
 
   .footer-bg2 {
-    animation: citymove 30s linear infinite;
+    animation: citymove 60s linear infinite;
   }
 }
 header {
@@ -13300,8 +13309,7 @@ hr:after {
 
 .home-design {
   align-items: center;
-  /*background: url('../../../assets/img/bg/bodesign.jpg') no-repeat center center fixed;*/
-  background: no-repeat center center fixed;
+  background: url("../../assets/img/bg/bodesign-768.jpg") no-repeat center center;
   background-size: 100%;
   box-shadow: inset 8px 8px 30px rgba(0, 0, 0, .3);
   display: flex;
@@ -13314,12 +13322,6 @@ hr:after {
   color: #fff;
   max-width: 80%;
   text-shadow: 3px 3px 15px rgba(0, 0, 0, .3);
-}
-
-@media screen and (min-width: 768px) {
-  .home-design-txt {
-    font-size: 5em;
-  }
 }
 
 @media screen and (orientation: portrait) {
@@ -13375,6 +13377,14 @@ hr:after {
   .about-us-col {
     column-count: 2;
     column-gap: 40px;
+  }
+
+  .home-design {
+    background: url("../../assets/img/bg/bodesign.jpg") no-repeat center center fixed;
+  }
+
+  .home-design-txt {
+    font-size: 5em;
   }
 }
 h1 {

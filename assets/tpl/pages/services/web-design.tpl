@@ -24,7 +24,7 @@
 	</section>
 	<!-- Portfolio preview -->
 	<section class="portfolio-screen">
-		<?php echo Modules::run('medialib/show', $widget['portfolio_preview'], $this->page['id']); ?>
+		<?php echo Modules::run('medialib/show', $widget['portfolio'], $this->page['id']); ?>
 	</section>
 	<!-- Timeline -->
 	<section>

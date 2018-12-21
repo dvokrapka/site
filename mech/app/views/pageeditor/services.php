@@ -35,7 +35,7 @@
 </ul>
 
 <!-- Portfolio preview -->
-<?php echo $this->media_lib->medialib_select('Портфоліо', 'portfolio_preview', $options['widget'] ?? null, $id ?? null); ?>
+<?php echo $this->media_lib->medialib_select('Портфоліо', 'portfolio', $options['widget'] ?? null, $id ?? null); ?>
 
 <!-- Timeline -->
 <?php echo $this->media_lib->medialib_select('Таймлайн', 'timeline', $options['widget'] ?? null, $id ?? null); ?>

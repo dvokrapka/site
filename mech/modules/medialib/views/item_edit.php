@@ -1,9 +1,7 @@
 <!-- Parent id -->
 <input type="hidden" name="pid" value="<?php echo $pid ?? $medialib['id'] ?>">
-
 <!-- Show on page (w js)-->
 <input type="hidden" name="show_on" value="0" data-get-pageid>
-
 <ul class="uk-tab" data-uk-tab="{connect:'#itemOptions', swiping: false}">
 	<li><a href=""><i class="uk-icon-small uk-icon-edit"></i>&ensp;Вміст</a></li>
 	<li><a href=""><i class="uk-icon-small uk-icon-picture-o"></i>&ensp;Медіавміст</a></li>

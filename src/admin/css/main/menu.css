@@ -26,14 +26,18 @@
     background-color: #222;
 }
 
+.mech-sidebar:hover li:not(.active)>a {
+    text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+}
+
 .mech-dash-menu {
     margin-top: 15px;
 }
 
 .mech-dash-menu> li {
-    transition: .2s ease;
-    padding-top: 5px;
     padding-bottom: 5px;
+    padding-top: 5px;
+    transition: .2s ease;
 }
 
 .mech-dash-menu li a {

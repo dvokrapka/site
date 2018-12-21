@@ -9,11 +9,11 @@ class Medialib extends Frontend
     }
 
 // ------------------------------------------------------------------- SHOW MEDIA LIBRARY
-    public function show($lib, $page_id = 0)
+    public function show($lib, $page_id = 0, $filter = null)
     {
         // GET MEDIA LIBRARY DATA
         $medialib = ($lib['id'] > 0)
-            ? $this->Medialib_model->render_medialib($lib, $page_id)
+            ? $this->Medialib_model->render_medialib($lib, $page_id, $filter)
             : null;
 
         // DISPLAY MEDIA LIBARY

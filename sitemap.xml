@@ -28,7 +28,7 @@
   <loc>http://dvokrapka/portfolio</loc>
   <priority>0.8</priority>
   <changefreq>weekly</changefreq>
-  <lastmod>2018-12-19</lastmod>
+  <lastmod>2018-12-21</lastmod>
  </url>
  <url>
   <loc>http://dvokrapka/ru</loc>
@@ -58,7 +58,7 @@
   <loc>http://dvokrapka/ru/portfolio</loc>
   <priority>0.8</priority>
   <changefreq>weekly</changefreq>
-  <lastmod>2018-12-19</lastmod>
+  <lastmod>2018-12-21</lastmod>
  </url>
  <url>
   <loc>http://dvokrapka/en</loc>
@@ -88,6 +88,6 @@
   <loc>http://dvokrapka/en/portfolio</loc>
   <priority>0.8</priority>
   <changefreq>weekly</changefreq>
-  <lastmod>2018-12-19</lastmod>
+  <lastmod>2018-12-21</lastmod>
  </url>
 </urlset>

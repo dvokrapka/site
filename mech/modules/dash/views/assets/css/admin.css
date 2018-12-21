@@ -12665,10 +12665,10 @@ html {
 }
 
 label {
-  text-transform: uppercase;
   color: #555;
   display: block;
   margin-bottom: 5px;
+  text-transform: uppercase;
 }
 .hidden {
   display: none;
@@ -12769,15 +12769,19 @@ label {
   background-color: #222;
 }
 
+.mech-sidebar:hover li:not(.active)>a {
+  text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+}
+
 .mech-dash-menu {
   margin-top: 15px;
 }
 
 .mech-dash-menu> li {
+  padding-bottom: 5px;
+  padding-top: 5px;
   -webkit-transition: .2s ease;
   transition: .2s ease;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 
 .mech-dash-menu li a {
@@ -12815,6 +12819,29 @@ label {
 
 .uk-icon-hover:hover {
   cursor: pointer;
+}
+/*Medialib Frame| modal*/
+
+.uk-modal-dialog-blank.iframe-modal {
+  background: rgba(0, 0, 0, .5);
+}
+
+.iframe-modal,
+.list-modal {
+  height: 100%;
+}
+
+.iframe-body {
+  position: absolute;
+  width: 92%;
+  height: 92%;
+  left: 4%;
+  bottom: 0;
+}
+
+.iframe-modal iframe {
+  width: 100%;
+  height: 100%;
 }
 /*Table(s)*/
 

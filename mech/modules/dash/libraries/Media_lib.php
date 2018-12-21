@@ -71,7 +71,7 @@ class Media_lib
     }
 
 // ------------------------------------------------------------------------ EDIT MEDIA
-    public function edit_media($type = 'file', $name = null, $path = null, $options = null)
+    public function edit_media($type = 'file', $name = null, $path = null, $options = null, $mime = null)
     {
         // CHECK IF SRC is from url
         if ($type === 'url')
@@ -104,15 +104,15 @@ class Media_lib
         // PREVIEW/EDIT SAVED FILE
         if ($file)
         {
-            return $this->file_edit($file, $options);
+            return $this->file_edit($file, $options, $mime);
         }
     }
 
 // ------------------------------------------------------------------- FILE PREVIEW/EDIT
-    public function file_edit($file, $options)
+    public function file_edit($file, $options, $mime)
     {
         // Get type of file
-        $mime = explode('/', $file['type']);
+        $mime = explode('/', ($mime ?? $file['type']));
 
         // IMAGE
         if ($mime[0] === 'image')

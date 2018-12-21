@@ -26,8 +26,9 @@ html {
 }
 
 .url-preview {
-	margin-top: 5px;
+    margin-top: 5px;
 }
+
 /*Info*/
 .mech-info {
     background: #222;
@@ -54,7 +55,7 @@ html {
 /*Adapted uikit*/
 
 
-.uk-form-label  {
+.uk-form-label {
     text-align: right;
 }
 
@@ -63,7 +64,7 @@ html {
 }
 
 .uk-tab>li>a {
-	transition: .3s ease;
+    transition: .3s ease;
 }
 
 .uk-tab>li.uk-active>a {
@@ -92,9 +93,8 @@ html {
 }
 
 label {
-    text-transform: uppercase;
     color: #555;
     display: block;
     margin-bottom: 5px;
+    text-transform: uppercase;
 }
-
