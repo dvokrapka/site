@@ -1,6 +1,6 @@
 header {
     background-color: #222;
-    box-shadow: 4px 0 4px rgba(0, 0, 0, .5), 8px 0 16px rgba(0, 0, 0, .4);
+    box-shadow: 4px 0 4px rgba(0, 0, 0, .4), 8px 0 16px rgba(0, 0, 0, .2);
     box-sizing: border-box;
     display: flex;
     height: 60px;
@@ -11,7 +11,7 @@ header {
     position: fixed;
     right: 0;
     transform: translateY(-100%);
-    transition: transform .8s ease;
+    transition: transform .4s ease;
     z-index: 100;
 }
 
@@ -26,15 +26,12 @@ header.appear {
 }
 
 .toplogo img {
-    /*cursor: pointer;*/
-    /*fill-rule: evenodd;
-    fill: #FBBA00;*/
     height: 30px;
     left: 15px;
     position: fixed;
     top: 15px;
     transform: translateY(80px);
-    transition: .8s ease;
+    transition: .4s ease;
     z-index: 300;
 }
 
