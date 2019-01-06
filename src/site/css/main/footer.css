@@ -10,6 +10,7 @@ footer {
     width: 100%;
 }
 
+.footer-bg0,
 .footer-bg1,
 .footer-bg2 {
     bottom: 0;
@@ -18,10 +19,15 @@ footer {
     width: 200%;
 }
 
+.footer-bg0 {
+    background: url('../../../assets/img/bg/clouds.svg') repeat-x left bottom;
+    background-size: auto 100%;
+    opacity: .3;
+}
+
 .footer-bg1 {
     background: url('../../../assets/img/bg/city-light-bg.png') repeat-x left bottom;
     background-size: auto 100%;
-    opacity: .8;
     filter: blur(1px);
 }
 
@@ -53,7 +59,27 @@ footer {
 
 .footer-contacts>a:hover {
     color: #fff;
+
 }
+
+.footer-contacts a[href^="mailto"] {
+    visibility: hidden;
+}
+
+.footer-contacts a[href^="mailto"]::before {
+    font-family: FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\f003';
+    visibility: visible;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
 
 /*Form*/
 
@@ -151,5 +177,13 @@ footer {
 
     .footer-bg2 {
         animation: citymove 60s linear infinite;
+    }
+
+    .footer-contacts a[href^="mailto"] {
+        visibility: visible;
+    }
+
+    .footer-contacts a[href^="mailto"]::before {
+        content: '';
     }
 }

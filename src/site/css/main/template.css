@@ -195,7 +195,7 @@ hr:after {
 
 .serv-desc {
     box-sizing: border-box;
-    padding: 10px;
+    /*padding: 10px;*/
     align-items: center;
     display: flex;
     height: 100%;
@@ -212,6 +212,10 @@ hr:after {
 .serv-desc>div {
     box-sizing: border-box;
     padding: 15px;
+    /*min-height: 100%;*/
+    /*min-width: 100%;*/
+    /*background-color: #fbba00;*/
+    position: relative;
 }
 
 /*Hide service description*/
@@ -312,7 +316,7 @@ hr:after {
 .home-design {
     align-items: center;
     background: url('../../../assets/img/bg/bodesign-768.jpg') no-repeat center center;
-    background-size: 100%;
+    background-size: 100% auto;
     box-shadow: inset 8px 8px 30px rgba(0, 0, 0, .3);
     display: flex;
     justify-content: center;

@@ -31,17 +31,24 @@ class Medialib_model extends MY_Model
     }
 
 // ------------------------------------------------------------------------ GET LIB ITEMS
-    public function get_items($pid, $sort, $dir, $page_id = 0)
+    public function get_items($pid, $sort, $dir, $page_id = null, $num = null)
     {
-        return
         $this->db
-             ->select('medialib_items.media, medialib_items.thumb, medialib_items.href, medialib_items.link, medialib_items.url_id, medialib_items.options, medialib_items.src, medialib_items.mime')
+             ->select('medialib_items.*')
              ->select('medialib_items_desc.title, medialib_items_desc.content')
              ->select('pages.url, pages.home')
              ->from('medialib_items')
-             ->where('medialib_items.pid', $pid)
-             ->where('medialib_items.show_on', $page_id)
-             ->where('medialib_items.pub', 1)
+             ->where('medialib_items.pid', $pid);
+        if ($num)
+        {
+            $this->db->limit($num);
+        }
+        else
+        {
+            $this->db->where('medialib_items.show_on', $page_id);
+        }
+        return
+        $this->db->where('medialib_items.pub', 1)
              ->join('medialib_items_desc', 'medialib_items_desc.id=medialib_items.id AND medialib_items_desc.lang_id=' . $this->lang_id, 'left')
              ->join('pages', 'pages.id=medialib_items.url_id', 'left')
              ->order_by('medialib_items.' . $sort . ' ' . $dir)
@@ -87,7 +94,7 @@ class Medialib_model extends MY_Model
     }
 
 // ------------------------------------------------------------------------ RENDER LIB
-    public function render_medialib($lib_json, $page_id = 0, $filter = null)
+    public function render_medialib($lib_json, $page_id = null, $filter = null, $num = null)
     {
         // GET MEDIALIB
         $lib = $this->get_medialib($lib_json['id']);
@@ -100,7 +107,7 @@ class Medialib_model extends MY_Model
 
             // GET SORT OPTIONS
             $order_by = $lib['options']['items_sort'];
-            $dir   = $lib['options']['items_sort_dir'];
+            $dir      = $lib['options']['items_sort_dir'];
 
             // TYPE - 1
             if ($lib['tpl_type'] == 0)
@@ -110,20 +117,19 @@ class Medialib_model extends MY_Model
                 {
                     $lib['items'] = null;
                 }
-
                 else
                 {
-                		// ALL ITEMS
+                    // ALL ITEMS
                     if ($lib_json['items'] == -1)
                     {
-                        $lib['items'] = $this->get_items($lib['id'], $order_by, $dir);
+                        $lib['items'] = $this->get_items($lib['id'], $order_by, $dir, '0', $num);
                     }
 
                     // ITEMS BY LIST
                     else
                     {
-                        $list = explode(',', $lib_json['items']);
-                        $lib['items'] = $this->get_items_by_id($lib['id'], $list, $order_by, $dir);
+                        $list         = explode(',', $lib_json['items']);
+                        $lib['items'] = $this->get_items_by_id($lib['id'], $list, $order_by, $dir, $num);
                     }
                 }
             }
@@ -131,7 +137,7 @@ class Medialib_model extends MY_Model
             // TYPE - 2
             if ($lib['tpl_type'] == 1)
             {
-                $lib['items'] = $this->get_items($lib['id'], $order_by, $dir, $page_id);
+                $lib['items'] = $this->get_items($lib['id'], $order_by, $dir, $page_id, $num);
             }
 
             // RENDER ITEMS

@@ -60,7 +60,7 @@
     width: 0;
     pointer-events: none;
     border-radius: 25px;
-    transform: rotateZ(360deg);
+    transform: rotateZ(720deg);
 }
 
 /* Dots to Burger on hover*/
@@ -78,11 +78,6 @@
     transform: rotateZ(0);
 }
 
-/*Burger on menu open*/
-.burger.toggle {
-	transform: translate(-25%, 80px);
-}
-
 /*Transform burger to close icon*/
 .burger.toggle::before,
 .burger.toggle::after {
@@ -95,11 +90,11 @@
 }
 
 .burger.toggle::before {
-    transform-origin: top right;
-    transform: rotate(-45deg);
+    transform-origin: top left;
+    transform: rotate(45deg);
 }
 
 .burger.toggle::after {
-    transform-origin: bottom right;
-    transform: rotate(45deg);
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
 }

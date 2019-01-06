@@ -50,4 +50,4 @@
 <?php echo $this->media_lib->medialib_select('Послуги', 'services', $options['widget'] ?? null, $id ?? null); ?>
 
 <!-- Portfolio preview -->
-<?php echo $this->media_lib->medialib_select('Портфоліо', 'portfolio_preview', $options['widget'] ?? null, $id ?? null); ?>
+<?php echo $this->media_lib->medialib_select('Портфоліо', 'portfolio', $options['widget'] ?? null, $id ?? null); ?>

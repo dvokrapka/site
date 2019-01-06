@@ -44,7 +44,6 @@ class Feedback_model extends MY_Model
             // Render html message
             $feedback['subject'] = 'Запит зі сторінки ' . $input['pagetitle'];
             $feedback['message'] = '<b>Від:</b> ' . $input['name'] . '<br>'
-                . '<b>Телефон:</b> ' . $input['tel'] . '<br><br>'
                 . '<b>E-mail:</b> ' . $input['email'] . '<br><br>'
                 . $input['message'];
 

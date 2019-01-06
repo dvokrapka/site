@@ -193,17 +193,17 @@ class Site extends Frontend
                 $dim = getimagesize($logo);
             }
 
-            $img = '<img src="' . base_url($logo) . '" ' . $dim[3] . ' alt="' . $this->app['sitename'] . '"/>';
+            $img = '<img src="' . base_url($logo) . '" ' . $dim[3] . 'alt=\'' . $this->app['sitename'] . '\'/>';
 
             $this->app['logo'] = (rtrim(current_url(), '/') !== $links['home'])
-                ? '<a href="' . $links['home'] . '" title="' . $this->app['sitename'] . '">' . $img . '</a>'
+                ? '<a href="' . $links['home'] . '" title=\'' . $this->app['sitename'] . '\'>' . $img . '</a>'
                 : $img;
             $this->app['logo_path'] = base_url($logo);
         }
         else
         {
             $this->app['logo'] = (rtrim(current_url(), '/') !== $links['home'])
-                ? '<a href="' . $links['home'] . '" title="' . $this->app['sitename'] . '">' . $this->app['sitename'] . '</a>'
+                ? '<a href="' . $links['home'] . '" title=\'' . $this->app['sitename'] . '\'>' . $this->app['sitename'] . '</a>'
                 : $this->app['sitename'];
         }
 

@@ -1,11 +1,13 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
 // Form labels
+$lang['write_us']           = 'Напишіть нам';
 $lang['form_name']          = 'Ваше ім’я';
 $lang['form_name_question'] = 'Як до Вас звертатись?';
 $lang['form_email']         = 'Ваш email';
 $lang['form_tel']           = 'Контактний телефон';
 $lang['form_message']       = 'Повідомлення';
+$lang['form_message2']      = 'Питання. Побажання. Привітання';
 $lang['form_comment']       = 'Ваш коментар';
 $lang['form_send']          = 'Надіслати';
 $lang['form_cancel']        = 'Відмінити';

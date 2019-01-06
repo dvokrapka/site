@@ -53,13 +53,15 @@ function toggleMenu() {
     // Hide menu
     function closeMenu() {
         $html
-            .removeClass('noscroll')
-            .scrollTop($menu.attr('scrollTop'));
-        $menu
-            .slideUp(function() {
-                $items.removeClass('sweep');
-                $burger.removeClass('toggle');
-            });
+        	.removeClass('noscroll')
+        	.css({'scroll-behavior': 'auto'})
+        	.scrollTop($menu.attr('scrollTop'));
+
+        $menu.slideUp(function() {
+            $items.removeClass('sweep');
+            $burger.removeClass('toggle');
+            $html.css({'scroll-behavior': 'smooth'});
+        });
     }
 }
 

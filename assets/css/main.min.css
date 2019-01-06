@@ -11877,7 +11877,7 @@ a.uk-thumbnail:focus {
   width: 0;
   pointer-events: none;
   border-radius: 25px;
-  transform: rotateZ(360deg);
+  transform: rotateZ(720deg);
 }
 
 /* Dots to Burger on hover*/
@@ -11896,12 +11896,6 @@ a.uk-thumbnail:focus {
   transform: rotateZ(0);
 }
 
-/*Burger on menu open*/
-
-.burger.toggle {
-  transform: translate(-25%, 80px);
-}
-
 /*Transform burger to close icon*/
 
 .burger.toggle::before,
@@ -11915,13 +11909,13 @@ a.uk-thumbnail:focus {
 }
 
 .burger.toggle::before {
-  transform-origin: top right;
-  transform: rotate(-45deg);
+  transform-origin: top left;
+  transform: rotate(45deg);
 }
 
 .burger.toggle::after {
-  transform-origin: bottom right;
-  transform: rotate(45deg);
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
 }
 /*SVG buttons fills*/
 
@@ -12371,6 +12365,7 @@ footer {
   width: 100%;
 }
 
+.footer-bg0,
 .footer-bg1,
 .footer-bg2 {
   bottom: 0;
@@ -12379,10 +12374,15 @@ footer {
   width: 200%;
 }
 
+.footer-bg0 {
+  background: url("../../assets/img/bg/clouds.svg") repeat-x left bottom;
+  background-size: auto 100%;
+  opacity: .3;
+}
+
 .footer-bg1 {
   background: url("../../assets/img/bg/city-light-bg.png") repeat-x left bottom;
   background-size: auto 100%;
-  opacity: .8;
   filter: blur(1px);
 }
 
@@ -12414,6 +12414,21 @@ footer {
 
 .footer-contacts>a:hover {
   color: #fff;
+}
+
+.footer-contacts a[href^="mailto"] {
+  visibility: hidden;
+}
+
+.footer-contacts a[href^="mailto"]::before {
+  font-family: FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\f003';
+  visibility: visible;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*Form*/
@@ -12512,6 +12527,14 @@ footer {
 
   .footer-bg2 {
     animation: citymove 60s linear infinite;
+  }
+
+  .footer-contacts a[href^="mailto"] {
+    visibility: visible;
+  }
+
+  .footer-contacts a[href^="mailto"]::before {
+    content: '';
   }
 }
 header {
@@ -12787,16 +12810,16 @@ header.appear > .main-menu {
   transition: .8s ease;
 }
 
-.portfolio-desc span {
+.portfolio-desc .title {
+  color: #FBBA00;
   font-family: "Dvoway-black", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.8em;
   text-transform: uppercase;
-  color: #FBBA00;
 }
 
-.portfolio-desc p {
-  margin-top: 2px;
+.portfolio-desc .desc {
   color: #888;
+  margin-top: -15px;
 }
 
 .portfolio-prev:hover {
@@ -13191,7 +13214,7 @@ hr:after {
 
 .serv-desc {
   box-sizing: border-box;
-  padding: 10px;
+  /*padding: 10px;*/
   align-items: center;
   display: flex;
   height: 100%;
@@ -13208,6 +13231,10 @@ hr:after {
 .serv-desc>div {
   box-sizing: border-box;
   padding: 15px;
+  /*min-height: 100%;*/
+  /*min-width: 100%;*/
+  /*background-color: #fbba00;*/
+  position: relative;
 }
 
 /*Hide service description*/
@@ -13307,7 +13334,7 @@ hr:after {
 .home-design {
   align-items: center;
   background: url("../../assets/img/bg/bodesign-768.jpg") no-repeat center center;
-  background-size: 100%;
+  background-size: 100% auto;
   box-shadow: inset 8px 8px 30px rgba(0, 0, 0, .3);
   display: flex;
   justify-content: center;

@@ -1,14 +1,20 @@
 $(function() {
-    var $modal = $('#modalBox'),
-        $body = $modal.find('.dv-modal-body'),
-        $close = $modal.find('.dv-modal-close'),
-        $doc = $('window, body');
+
 
     // Open modal
     $('.portfolio-prev').on('click', function() {
 
+        var $modal = $('#modalBox'),
+        		$modalContent = $('#pfMedia'),
+            $body = $modal.find('.dv-modal-body'),
+            $close = $modal.find('.dv-modal-close'),
+            $media = $(this).find('[data-media]').html(),
+            $doc = $('window, body');
+
+    		$modalContent.html($media);
+
         $modal
-        		.attr('data-scroll', window.scrollY)
+            .attr('data-scroll', window.scrollY)
             .css("display", "flex")
             .hide()
             .slideDown(function(argument) {
@@ -26,13 +32,12 @@ $(function() {
         });
 
         // Close modal
-        $('.dv-modal-close').on('click', function() {
+        $close.on('click', function() {
             closeBox();
         });
 
         function closeBox() {
-        		$body.removeClass('appear');
-        		$close.removeClass('appear');
+            $body.add($close).removeClass('appear');
             $doc.removeClass('noscroll');
             window.scrollTo(0, $modal.attr('data-scroll'));
             $modal.slideUp().scrollTop(0);

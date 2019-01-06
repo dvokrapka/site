@@ -18,7 +18,7 @@
 	</section>
 	<!-- Portfolio preview -->
 	<section class="portfolio-screen">
-		<?php echo Modules::run('medialib/show', $widget['portfolio_preview'], $this->page['id']); ?>
+		<?php echo Modules::run('medialib/show_preview', $widget['portfolio'], null, null, 9); ?>
 	</section>
 	<!-- About us -->
 	<section class="about-us">
