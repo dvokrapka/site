@@ -44,6 +44,10 @@ $config = array (
     0 => 'studio.dvokrapka@gmail.com',
   ),
   'callback_email' => 'design@dvokrapka.com.ua',
+  'tels' => 
+  array (
+    0 => '',
+  ),
   'icon' => 'google-plus',
   'head_js' => 0,
   'body_js' => 0,
@@ -78,14 +82,6 @@ $config = array (
       'icon' => 'google-plus',
       'title' => 'Google+',
       'href' => 'https://plus.google.com/u/2/104341856362671481172',
-    ),
-  ),
-  'tels' => 
-  array (
-    0 => 
-    array (
-      'tel' => '(090)-000-00-00',
-      'href' => '0900000000',
     ),
   ),
 );

@@ -1,4 +1,4 @@
-<div class="uk-height-viewport uk-vertical-align uk-text-center mech-dash">
+<div class="uk-height-viewport uk-vertical-align uk-text-center dash-login">
     <div class="uk-container uk-vertical-align-middle">
         <?php echo form_open('user/login', 'id="loginForm" class="uk-form" data-redirect="' . $redirect . '"'); ?>
         <div class="uk-form-row" data-uk-margin>

@@ -8057,6 +8057,44 @@
     return UI.parallax;
 });
 
+var browserDetect = function() {
+    // Return cached result if avalible, else get result then cache it.
+    if (browserDetect.prototype._cachedResult)
+        return browserDetect.prototype._cachedResult;
+
+    // Opera 8.0+
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+    // Firefox 1.0+
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+
+    // Safari 3.0+ "[object HTMLElementConstructor]"
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function(p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+
+    // Internet Explorer 6-11
+    var isIE = /*@cc_on!@*/ false || !!document.documentMode;
+
+    // Edge 20+
+    var isEdge = !isIE && !!window.StyleMedia;
+
+    // Chrome 1+
+    var isChrome = ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.vendor.toLowerCase().indexOf("google") > -1));
+
+    // Blink engine detection
+    var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+    return browserDetect.prototype._cachedResult =
+        isOpera ? 'Opera' :
+        isFirefox ? 'Firefox' :
+        isSafari ? 'Safari' :
+        isChrome ? 'Chrome' :
+        isIE ? 'IE' :
+        isEdge ? 'Edge' :
+        isBlink ? 'Blink' :
+        "Don't know";
+};
+
+// console.log(browserDetect());
 /*! jQuery UI - v1.12.1 - 2018-11-17
 * http://jqueryui.com
 * Includes: widget.js, keycode.js, widgets/mouse.js, widgets/slider.js
@@ -9792,6 +9830,188 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 
 
 }));
+/*
+    jQuery Masked Input Plugin
+    Copyright (c) 2007 - 2015 Josh Bush (digitalbush.com)
+    Licensed under the MIT license (http://digitalbush.com/projects/masked-input-plugin/#license)
+    Version: 1.4.1
+*/
+!function(factory) {
+    "function" == typeof define && define.amd ? define([ "jquery" ], factory) : factory("object" == typeof exports ? require("jquery") : jQuery);
+}(function($) {
+    var caretTimeoutId, ua = navigator.userAgent, iPhone = /iphone/i.test(ua), chrome = /chrome/i.test(ua), android = /android/i.test(ua);
+    $.mask = {
+        definitions: {
+            "9": "[0-9]",
+            a: "[A-Za-z]",
+            "*": "[A-Za-z0-9]"
+        },
+        autoclear: !0,
+        dataName: "rawMaskFn",
+        placeholder: "_"
+    }, $.fn.extend({
+        caret: function(begin, end) {
+            var range;
+            if (0 !== this.length && !this.is(":hidden")) return "number" == typeof begin ? (end = "number" == typeof end ? end : begin, 
+            this.each(function() {
+                this.setSelectionRange ? this.setSelectionRange(begin, end) : this.createTextRange && (range = this.createTextRange(), 
+                range.collapse(!0), range.moveEnd("character", end), range.moveStart("character", begin), 
+                range.select());
+            })) : (this[0].setSelectionRange ? (begin = this[0].selectionStart, end = this[0].selectionEnd) : document.selection && document.selection.createRange && (range = document.selection.createRange(), 
+            begin = 0 - range.duplicate().moveStart("character", -1e5), end = begin + range.text.length), 
+            {
+                begin: begin,
+                end: end
+            });
+        },
+        unmask: function() {
+            return this.trigger("unmask");
+        },
+        mask: function(mask, settings) {
+            var input, defs, tests, partialPosition, firstNonMaskPos, lastRequiredNonMaskPos, len, oldVal;
+            if (!mask && this.length > 0) {
+                input = $(this[0]);
+                var fn = input.data($.mask.dataName);
+                return fn ? fn() : void 0;
+            }
+            return settings = $.extend({
+                autoclear: $.mask.autoclear,
+                placeholder: $.mask.placeholder,
+                completed: null
+            }, settings), defs = $.mask.definitions, tests = [], partialPosition = len = mask.length, 
+            firstNonMaskPos = null, $.each(mask.split(""), function(i, c) {
+                "?" == c ? (len--, partialPosition = i) : defs[c] ? (tests.push(new RegExp(defs[c])), 
+                null === firstNonMaskPos && (firstNonMaskPos = tests.length - 1), partialPosition > i && (lastRequiredNonMaskPos = tests.length - 1)) : tests.push(null);
+            }), this.trigger("unmask").each(function() {
+                function tryFireCompleted() {
+                    if (settings.completed) {
+                        for (var i = firstNonMaskPos; lastRequiredNonMaskPos >= i; i++) if (tests[i] && buffer[i] === getPlaceholder(i)) return;
+                        settings.completed.call(input);
+                    }
+                }
+                function getPlaceholder(i) {
+                    return settings.placeholder.charAt(i < settings.placeholder.length ? i : 0);
+                }
+                function seekNext(pos) {
+                    for (;++pos < len && !tests[pos]; ) ;
+                    return pos;
+                }
+                function seekPrev(pos) {
+                    for (;--pos >= 0 && !tests[pos]; ) ;
+                    return pos;
+                }
+                function shiftL(begin, end) {
+                    var i, j;
+                    if (!(0 > begin)) {
+                        for (i = begin, j = seekNext(end); len > i; i++) if (tests[i]) {
+                            if (!(len > j && tests[i].test(buffer[j]))) break;
+                            buffer[i] = buffer[j], buffer[j] = getPlaceholder(j), j = seekNext(j);
+                        }
+                        writeBuffer(), input.caret(Math.max(firstNonMaskPos, begin));
+                    }
+                }
+                function shiftR(pos) {
+                    var i, c, j, t;
+                    for (i = pos, c = getPlaceholder(pos); len > i; i++) if (tests[i]) {
+                        if (j = seekNext(i), t = buffer[i], buffer[i] = c, !(len > j && tests[j].test(t))) break;
+                        c = t;
+                    }
+                }
+                function androidInputEvent() {
+                    var curVal = input.val(), pos = input.caret();
+                    if (oldVal && oldVal.length && oldVal.length > curVal.length) {
+                        for (checkVal(!0); pos.begin > 0 && !tests[pos.begin - 1]; ) pos.begin--;
+                        if (0 === pos.begin) for (;pos.begin < firstNonMaskPos && !tests[pos.begin]; ) pos.begin++;
+                        input.caret(pos.begin, pos.begin);
+                    } else {
+                        for (checkVal(!0); pos.begin < len && !tests[pos.begin]; ) pos.begin++;
+                        input.caret(pos.begin, pos.begin);
+                    }
+                    tryFireCompleted();
+                }
+                function blurEvent() {
+                    checkVal(), input.val() != focusText && input.change();
+                }
+                function keydownEvent(e) {
+                    if (!input.prop("readonly")) {
+                        var pos, begin, end, k = e.which || e.keyCode;
+                        oldVal = input.val(), 8 === k || 46 === k || iPhone && 127 === k ? (pos = input.caret(), 
+                        begin = pos.begin, end = pos.end, end - begin === 0 && (begin = 46 !== k ? seekPrev(begin) : end = seekNext(begin - 1), 
+                        end = 46 === k ? seekNext(end) : end), clearBuffer(begin, end), shiftL(begin, end - 1), 
+                        e.preventDefault()) : 13 === k ? blurEvent.call(this, e) : 27 === k && (input.val(focusText), 
+                        input.caret(0, checkVal()), e.preventDefault());
+                    }
+                }
+                function keypressEvent(e) {
+                    if (!input.prop("readonly")) {
+                        var p, c, next, k = e.which || e.keyCode, pos = input.caret();
+                        if (!(e.ctrlKey || e.altKey || e.metaKey || 32 > k) && k && 13 !== k) {
+                            if (pos.end - pos.begin !== 0 && (clearBuffer(pos.begin, pos.end), shiftL(pos.begin, pos.end - 1)), 
+                            p = seekNext(pos.begin - 1), len > p && (c = String.fromCharCode(k), tests[p].test(c))) {
+                                if (shiftR(p), buffer[p] = c, writeBuffer(), next = seekNext(p), android) {
+                                    var proxy = function() {
+                                        $.proxy($.fn.caret, input, next)();
+                                    };
+                                    setTimeout(proxy, 0);
+                                } else input.caret(next);
+                                pos.begin <= lastRequiredNonMaskPos && tryFireCompleted();
+                            }
+                            e.preventDefault();
+                        }
+                    }
+                }
+                function clearBuffer(start, end) {
+                    var i;
+                    for (i = start; end > i && len > i; i++) tests[i] && (buffer[i] = getPlaceholder(i));
+                }
+                function writeBuffer() {
+                    input.val(buffer.join(""));
+                }
+                function checkVal(allow) {
+                    var i, c, pos, test = input.val(), lastMatch = -1;
+                    for (i = 0, pos = 0; len > i; i++) if (tests[i]) {
+                        for (buffer[i] = getPlaceholder(i); pos++ < test.length; ) if (c = test.charAt(pos - 1), 
+                        tests[i].test(c)) {
+                            buffer[i] = c, lastMatch = i;
+                            break;
+                        }
+                        if (pos > test.length) {
+                            clearBuffer(i + 1, len);
+                            break;
+                        }
+                    } else buffer[i] === test.charAt(pos) && pos++, partialPosition > i && (lastMatch = i);
+                    return allow ? writeBuffer() : partialPosition > lastMatch + 1 ? settings.autoclear || buffer.join("") === defaultBuffer ? (input.val() && input.val(""), 
+                    clearBuffer(0, len)) : writeBuffer() : (writeBuffer(), input.val(input.val().substring(0, lastMatch + 1))), 
+                    partialPosition ? i : firstNonMaskPos;
+                }
+                var input = $(this), buffer = $.map(mask.split(""), function(c, i) {
+                    return "?" != c ? defs[c] ? getPlaceholder(i) : c : void 0;
+                }), defaultBuffer = buffer.join(""), focusText = input.val();
+                input.data($.mask.dataName, function() {
+                    return $.map(buffer, function(c, i) {
+                        return tests[i] && c != getPlaceholder(i) ? c : null;
+                    }).join("");
+                }), input.one("unmask", function() {
+                    input.off(".mask").removeData($.mask.dataName);
+                }).on("focus.mask", function() {
+                    if (!input.prop("readonly")) {
+                        clearTimeout(caretTimeoutId);
+                        var pos;
+                        focusText = input.val(), pos = checkVal(), caretTimeoutId = setTimeout(function() {
+                            input.get(0) === document.activeElement && (writeBuffer(), pos == mask.replace("?", "").length ? input.caret(0, pos) : input.caret(pos));
+                        }, 10);
+                    }
+                }).on("blur.mask", blurEvent).on("keydown.mask", keydownEvent).on("keypress.mask", keypressEvent).on("input.mask paste.mask", function() {
+                    input.prop("readonly") || setTimeout(function() {
+                        var pos = checkVal(!0);
+                        input.caret(pos), tryFireCompleted();
+                    }, 0);
+                }), chrome && android && input.off("input.mask").on("input.mask", androidInputEvent), 
+                checkVal();
+            });
+        }
+    });
+});
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var LazyLoad = function () {
@@ -9876,7 +10096,7 @@ var LazyLoad = function () {
 		window.dispatchEvent(event);
 	};
 
-	/* Auto initialization of one or more instances of lazyload, depending on the
+	/* Auto initialization of one or more instances of lazyload, depending on the 
      options passed in (plain object or an array) */
 	function autoInitialize(classObj, options) {
 		if (!options) {
@@ -10216,21 +10436,21 @@ $.fn.t=function($c,$o){return this.each(function(){
  b=function(_){if(bb==_)return;if(!_o.blink)return;if(_o.blink_perm)return;$$$.parent().data('blinking',bb=((!_)?0:1));},
  B={c:0,beep:function(){if(B.c==0)B.c=$('html').data().__TAC;if(B.o)B.o.stop();B.o=B.c.createOscillator();B.o.frequency.setValueAtTime(1,B.c.currentTime);B.g=B.c.createGain();B.o.connect(B.g);
  B.g.connect(B.c.destination);B.o.start();B.o.stop(B.c.currentTime+0.03);}};if(_c=='beep'&&!c.data().is_typing&&$('html').data().__TAC){B.beep();return(this);}
-
+ 
  _c===''&&(_c='<del>*</del>');
  if(c.data().is_typing){if(_c==P.slice(0,-1)){c.data(P,((t(_o,'b'))?oo_=_o:((c.data(P))?(oo_=!1):(oo_=!!1))));c.data().blink&&c.data('blinking',oo_);}
  return(this);}else{if(_c==P.slice(0,-1))return(this);c.data('is_typing',1);}
-
+ 
  t(_c,'o')&&(_o=_c);
-
+ 
  if(/t\-/.test(c.attr('class')))return(this);
-
-
+  
+ 
  if(_c=='add'&&c.data().t){
 
   var a=_o,_o=$.extend({},c.data()),$$$=c=$(':first',c),T=t(_o.typing,'f');
   a='<'+_o.tag+' class="typing-add">'+a+'</'+_o.tag+'>';
-
+  
 
  }else{
 
@@ -10254,11 +10474,11 @@ $.fn.t=function($c,$o){return this.each(function(){
 
   if(!t(_o.beep,'b'))_o.beep=!1;
   if(_o.beep===!!1&&t($('html').data().__TAC,'u')){$('html').data('__TAC',__TAC=(window.AudioContext=(window.AudioContext||window.webkitAudioContext))?new AudioContext():!1);if(!__TAC)_o.beep=!1;}
-  if(_o.repeat===!1)_o.repeat=-3;
-
+  if(_o.repeat===!1)_o.repeat=-3;  
+ 
   if(_o.caret===!!1)_o.caret='\u258e';if(t(_o.caret,'s')&&!$('.t-caret',c)[0]){
   (_o.blink===!!1)&&(_o.blink=_o.speed*3);(t(_o.blink))&&(_o.blink<100)&&(_o.blink=100);(!t(_o.blink))&&(_o.blink=!1);
-
+   
    oo=$('<'+_o.tag+'/>',{'class':'t-caret',html:_o.caret}).appendTo(c);
    _o.blink&&c.append(z)&&(c.data('bi',setInterval(function(){if(($$$.parent().data().blinking|(v=(oo.css('visibility')[0]=='h')))||_o.blink_perm)oo.css({visibility:(v)?'visible':'hidden'});},_o.blink)));
   }
@@ -10281,7 +10501,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   (_o.pause_on_click===!!1)&&(c.parent().off('click').click(function(_){if($(_.target).data().click!='1')$(this).t('pause');}));
   if(_o.pause_on_tab_switch===!!1){if(t($('html').data().__TAB,'u')){$('html').data('__TAB',1);$(document).on('visibilitychange',function(){$('.t-container').parent().each(function(){h=$(document).attr('visibilityState').charAt(0);if(h=='h'&&$(this).data().paused)$(this).data('keep_paused',1);$(this).p(((h=='h')?!!1:(($(this).data().keep_paused&&$(this).removeData('keep_paused'))?!!1:!1)));});});}}
   else if(_o.pause_on_tab_switch===!1&&$('html').data().__TAB){$('html').removeData('__TAB');$(document).off('visibilitychange');}
-
+  
 
 
  }
@@ -10305,7 +10525,7 @@ $.fn.t=function($c,$o){return this.each(function(){
 
   if($$$.parent().data(P)){p=1;return;}if(tt)return;tt=!tt;
 
-  if(t(k)){if(--k>0){tt=!tt;b((c.data().ins<=.25)?0:(p==1)?(p=-1):1);return;}k=(c.data().ins)?'</>':d.shift();}
+  if(t(k)){if(--k>0){tt=!tt;b((c.data().ins<=.25)?0:(p==1)?(p=-1):1);return;}k=(c.data().ins)?'</>':d.shift();}   
   else if(_o.speed_vary&&~~(Math.random()*4)){tt=!tt;return;}b(0);
 
   if(c.data().del){$$$.parent().data().beep===!!1&&B.beep();if(c.data().s&&!k[0])c.text('');
@@ -10319,7 +10539,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   while(k[1]=='/'){c=c.parent();k=d.shift()||'';}
   while(1){$$$.parent().data().beep===!!1&&B.beep();c.append(k);T&&_o.typing($$$.parent(),k,f(),dl);!/<ins.*?>[\s\S]+</.test(k)&&/></.test(k)&&(c=c.find(':last'));
   if(d[0]&&/<\w+/.test(d[0]))k=d.shift();else break;}
-
+  
   if(!(k=d.shift())){clearInterval($$);$$$.parent().removeData(['is_typing',P]);
   t(_o.repeat)&&(--_o.repeat);if(_o.repeat>-1){_o.init=!1;$$$.parent().t(t(_c,'o')?_o:_c,_o);return;}
   else{b(1);t(_o.fin,'f')&&_o.fin($$$.parent());}return;}
@@ -10358,14 +10578,119 @@ $(function() {
         });
     });
 });
+$(function() {
+    BotCheck();
+});
+
+// Check for spam
+function BotCheck() {
+
+    $('form').each(function() {
+        var $form = $(this),
+            $inputs = $form.find(':input');
+
+        $inputs.each(function() {
+            $(this).on('blur', function() {
+                $form.removeAttr('data-bot');
+            });
+        });
+    });
+
+}
+
+// Open form with accordeon
+$('.form-button').on('click', function() {
+    var $form = $(this).closest('.uk-accordion').find('form');
+    $form.find('input:visible:first').focus();
+});
+
+// Any form control
+$('form').each(function(index, el) {
+
+    var $form = $(this),
+        $submit = $form.find('[type=submit]'),
+        $inputs = $form.find('input').not($submit);
+
+    // Submit form
+    $submit.on('click', function(event) {
+        event.preventDefault();
+        formSubmit($(this));
+    });
+
+    // Prevent form submit by enter
+    $inputs.on('keypress', function(event) {
+
+        if (event.keyCode == 13) {
+
+            event.preventDefault();
+
+            // Focus on next input
+            var inputs = $(this).parents("form").eq(0).find(":input"),
+                idx = inputs.index(this);
+
+            // Find if the last input (last == submit)
+            if (idx == inputs.length - 1) {
+                inputs[0].select();
+            } else {
+                inputs[idx + 1].focus();
+                inputs[idx + 1].select();
+            }
+            return false;
+        }
+    });
+});
+
+// Submit form
+function formSubmit(submit) {
+
+    var $form = submit.closest('form'),
+        $formName = $form.attr('data-form-submit'),
+        formData = new FormData($form[0]);
+
+    // Append page title
+    formData.append('pagetitle', document.title);
+
+    // Bot spam protect
+    if ($form.attr('data-bot')) {
+        formData.append('bot', true);
+    }
+
+    // Append form name
+    if (typeof($formName !== 'undefined')) {
+        formData.append('form', $formName);
+    }
+
+    $.post({
+        url: $form.attr('action'),
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function(msg) {
+
+        		// If success
+            if (IsJsonString(msg)) {
+                mechAlert.yes($.parseJSON(msg).success, function() {
+
+                    // Reset form and bot check
+                    $form.trigger('reset').attr('data-bot', 'true').slideToggle();
+
+                });
+            // If error
+            } else {
+                mechAlert.no(msg);
+            }
+        }
+    });
+    return false;
+}
 // Toggle menu
 function toggleMenu() {
 
-    var $burger = $('#burger').find('> span'),
+    var $burger = $('#burger'),
         $menu = $('#mainMenu'),
         $html = $('html'),
-        $items = $menu.find('a');
-
+        $items = $menu.find('a'),
+        loc = window.location.href;
 
     // Show/Hide menu
     if (!$menu.is(':visible')) {
@@ -10384,7 +10709,7 @@ function toggleMenu() {
     function showMenu() {
 
         $menu
-            .attr('scrollTop', $(window).scrollTop())
+            .attr('scrollTop', $('html').scrollTop())
             .css("display", "flex")
             .hide()
             .slideDown(function() {
@@ -10401,18 +10726,27 @@ function toggleMenu() {
                 }, i * 80);
             });
         });
+
+        // Make menu items active
+        $items.each(function() {
+            if (loc === this.href) {
+                $(this).addClass('active');
+            }
+        });
     }
 
     // Hide menu
     function closeMenu() {
         $html
             .removeClass('noscroll')
+            .css({ 'scroll-behavior': 'auto' })
             .scrollTop($menu.attr('scrollTop'));
-        $menu
-            .slideUp(function() {
-                $items.removeClass('sweep');
-                $burger.removeClass('toggle');
-            });
+
+        $menu.slideUp(function() {
+            $items.removeClass('sweep');
+            $burger.removeClass('toggle');
+            $html.css({ 'scroll-behavior': 'smooth' });
+        });
     }
 }
 // Paralax on mouse move
@@ -10481,8 +10815,19 @@ $(function() {
 var jsAPI = function() {
 
     var $goTop = $('#goTop'),
-        winH = 100,
-        $toggled = $('header').add('#burger').add('.toplogo').add($goTop);
+        $burger = $('#burger'),
+        winH = $(window).height() - 300,
+        $toggled = $('header').add($burger).add('.toplogo').add($goTop);
+
+    // Show|hide menu
+    $burger.on('click', function() {
+        toggleMenu();
+    });
+
+    // Scroll to top
+    $goTop.on('click', function() {
+        scrollToHash(0);
+    });
 
     // Toggle elements on window scroll
     $(window).on('scroll', function() {
@@ -10490,100 +10835,116 @@ var jsAPI = function() {
     });
 
     $toggled.toggleClass('appear', window.pageYOffset >= winH);
-
-    // Scroll to top
-    $goTop.on('click', function() {
-        $('html').animate({ scrollTop: 0 }, 800);
-    });
-
-    // Scroll to anchor without changing url
-    $('a[href^="#"]').on('click', function(event) {
-        event.preventDefault();
-
-        var clicked = $(this),
-            tag = clicked.attr('data-scroll'),
-            scrollTo;
-
-        if (tag) {
-            scrollTo = clicked.closest(tag).next(tag);
-        } else {
-            scrollTo = clicked.attr("href");
-        }
-
-        $('html, body').animate({ scrollTop: $(scrollTo).offset().top }, 800);
-
-        return false;
-    });
-
-    // Hide mob menu on href click
-    $('#mainMenu').find('a[href^="#"]').on('click', function(e) {
-        e.preventDefault();
-        toggleMenu();
-    });
-
-
-    // Show|hide menu
-    $('#burger').on('click', function() {
-        toggleMenu();
-    });
-
-    // Toggle header for dark|light background
-    if ($('[data-dark]').length) {
-        $('header').addClass('dark-header');
-    }
-
-    $('.form-button').on('click', function() {
-        var $form = $(this).closest('.uk-accordion').find('form');
-        $form.find('input:visible:first').focus();
-    });
-
-    // Any form control
-    $('form').each(function(index, el) {
-
-        var $form = $(this),
-            $submit = $form.find('[type=submit]'),
-            $inputs = $form.find('input').not($submit);
-
-        // Submit form
-        $submit.on('click', function(event) {
-
-            event.preventDefault();
-
-            // Toggle accordion
-            $form.slideToggle(function() {
-                // Clean form
-                $(this).trigger('reset');
-                // Notify
-                UIkit.notify("<i class='uk-icon-check'></i> Повідомлення надіслано!", { pos: 'bottom-center' });
-            });
-
-        });
-
-        // Prevent form submit by enter
-        $inputs.on('keypress', function(event) {
-
-            if (event.keyCode == 13) {
-
-                event.preventDefault();
-
-                // Focus on next input
-                var inputs = $(this).parents("form").eq(0).find(":input"),
-                    idx = inputs.index(this);
-
-                // Find if the last input (last == submit)
-                if (idx == inputs.length - 1) {
-                    inputs[0].select();
-                } else {
-                    inputs[idx + 1].focus();
-                    inputs[idx + 1].select();
-                }
-                return false;
-            }
-        });
-    });
 };
 
 
+
+// Scroll to anchor
+$(function() {
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+
+        var clicked = $(this),
+            tag = clicked.attr('data-scroll'),
+            menu = clicked.closest('#mainMenu'),
+            scrollTo;
+
+        if (tag && tag.length) {
+            if (menu && menu.length) {
+                toggleMenu();
+            }
+
+            scrollTo = (tag === '#') ? clicked.attr('href') : clicked.closest(tag).next(tag);
+
+            scrollToHash($(scrollTo).offset().top);
+        }
+        return false;
+    });
+});
+
+// Scroll function with browser accesibility
+function scrollToHash(top) {
+    var b = browserDetect();
+    if (b === 'Firefox' || b === 'Chrome' || b === 'Opera') {
+        $('html').scrollTop(top);
+    } else {
+        $('html, body').animate({
+            scrollTop: top
+        }, 500);
+    }
+}
+
+// Remove anchor from url
+$(function() {
+    var scrollV, scrollH, loc = window.location;
+    if ("pushState" in history)
+        history.pushState("", document.title, loc.pathname + loc.search);
+    else {
+        // Prevent scrolling by storing the page's current scroll offset
+        scrollV = document.body.scrollTop;
+        scrollH = document.body.scrollLeft;
+
+        loc.hash = "";
+
+        // Restore the scroll offset, should be flicker free
+        document.body.scrollTop = scrollV;
+        document.body.scrollLeft = scrollH;
+    }
+});
+
+
+// MechAlert
+var mechAlert = (function() {
+
+    var notify = UIkit.notify,
+        text;
+
+    return {
+        yes: function(msg, callback) {
+            if (msg || typeof(msg) === "string") {
+                text = msg;
+            } else {
+                text = '<div class="uk-text-center"><i class="uk-icon-small uk-icon-check-square-o"></i></div>';
+            }
+
+            notify(text, {
+                status: 'success',
+                timeout: 1000,
+                pos: 'top-center',
+                onClose: function() {
+                    if (callback && typeof(callback) === "function") {
+                        callback();
+                    }
+                }
+            });
+        },
+        no: function(msg) {
+            notify(msg, {
+                status: 'danger',
+                timeout: 0,
+                pos: 'top-center'
+            });
+        },
+        info: function(msg) {
+            notify(msg, {
+                timeout: 1000,
+                pos: 'top-center'
+            });
+        },
+
+    };
+})();
+
+
+// Check if string is json
+function IsJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
 var myLazyLoad = new LazyLoad({
     elements_selector: '.lazy'
 });
@@ -10605,16 +10966,22 @@ var myLazyLoad = new LazyLoad({
     window.CustomEvent = CustomEvent;
 })();
 $(function() {
-    var $modal = $('#modalBox'),
-        $body = $modal.find('.dv-modal-body'),
-        $close = $modal.find('.dv-modal-close'),
-        $doc = $('window, body');
+
 
     // Open modal
     $('.portfolio-prev').on('click', function() {
 
+        var $modal = $('#modalBox'),
+        		$modalContent = $('#pfMedia'),
+            $body = $modal.find('.dv-modal-body'),
+            $close = $modal.find('.dv-modal-close'),
+            $media = $(this).find('[data-media]').html(),
+            $doc = $('window, body');
+
+    		$modalContent.html($media);
+
         $modal
-        		.attr('data-scroll', window.scrollY)
+            .attr('data-scroll', window.scrollY)
             .css("display", "flex")
             .hide()
             .slideDown(function(argument) {
@@ -10632,13 +10999,12 @@ $(function() {
         });
 
         // Close modal
-        $('.dv-modal-close').on('click', function() {
+        $close.on('click', function() {
             closeBox();
         });
 
         function closeBox() {
-        		$body.removeClass('appear');
-        		$close.removeClass('appear');
+            $body.add($close).removeClass('appear');
             $doc.removeClass('noscroll');
             window.scrollTo(0, $modal.attr('data-scroll'));
             $modal.slideUp().scrollTop(0);

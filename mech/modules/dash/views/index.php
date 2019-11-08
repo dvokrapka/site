@@ -11,6 +11,7 @@
 
 		<!-- СSS -->
 		<link href="<?php echo base_url('mech/modules/dash/views/assets/css/admin.min.css'); ?>" rel="stylesheet">
+		<link href="<?php echo base_url('mech/app/vendor/jodit/jodit.min.css'); ?>" rel="stylesheet">
 
 		<!-- Base vars -->
 		<script>

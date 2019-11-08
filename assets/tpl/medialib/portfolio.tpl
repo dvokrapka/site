@@ -27,6 +27,6 @@
 		</figure>
 		<?php endforeach; ?>
 	</div>
-	<a href="portfolio" class="sm-button sm-yellow uk-margin-large-top" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}">Хочу більше</a>
+	<a href="<?php echo $this->frontend_lib->lang_url('portfolio'); ?>" class="sm-button sm-yellow uk-margin-large-top" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay:200, repeat: true}"><?php echo lang('more'); ?></a>
 </div>
 <?php endif; ?>

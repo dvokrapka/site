@@ -3,7 +3,7 @@
 	<section class="fs-screen">
 		<div class="fs-adv"></div>
 		<div class="grey-dots" data-paralax></div>
-		<!-- <div id="preLoad" class="preload"></div> -->
+		<div id="preLoad" class="preload"></div>
 		<div data-uk-parallax="{y: '0,-200', scale: '1,0.5', repeat: true}">
 			<h1 class="typing white-text" data-typing="DVOKRAPKA"><?php echo $content['fs_title']; ?></h1>
 			<a href="#" data-scroll="section">

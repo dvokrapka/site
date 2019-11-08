@@ -53,58 +53,14 @@ function toggleMenu() {
     // Hide menu
     function closeMenu() {
         $html
-        	.removeClass('noscroll')
-        	.css({'scroll-behavior': 'auto'})
-        	.scrollTop($menu.attr('scrollTop'));
+            .removeClass('noscroll')
+            .css({ 'scroll-behavior': 'auto' })
+            .scrollTop($menu.attr('scrollTop'));
 
         $menu.slideUp(function() {
             $items.removeClass('sweep');
             $burger.removeClass('toggle');
-            $html.css({'scroll-behavior': 'smooth'});
+            $html.css({ 'scroll-behavior': 'smooth' });
         });
     }
 }
-
-
-$(function() {
-    $('a[href^="#"]').on('click', function(e) {
-        e.preventDefault();
-
-        var clicked = $(this),
-            tag = clicked.attr('data-scroll'),
-            menu = clicked.closest('#mainMenu');
-
-        if (tag && tag.length) {
-            if (menu && menu.length) {
-                toggleMenu();
-            }
-
-            if (tag === '#') {
-                scrollTo = clicked.attr('href');
-            } else {
-                scrollTo = clicked.closest(tag).next(tag);
-            }
-
-            $('html').scrollTop($(scrollTo).offset().top);
-        }
-        return false;
-    });
-});
-
-// Remove anchor from url
-$(function() {
-    var scrollV, scrollH, loc = window.location;
-    if ("pushState" in history)
-        history.pushState("", document.title, loc.pathname + loc.search);
-    else {
-        // Prevent scrolling by storing the page's current scroll offset
-        scrollV = document.body.scrollTop;
-        scrollH = document.body.scrollLeft;
-
-        loc.hash = "";
-
-        // Restore the scroll offset, should be flicker free
-        document.body.scrollTop = scrollV;
-        document.body.scrollLeft = scrollH;
-    }
-});
